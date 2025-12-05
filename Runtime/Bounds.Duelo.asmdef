@@ -5,6 +5,8 @@
         "Bounds.Cartas",
         "Bounds.Visor",
         "Ging1991.Core",
+        "Ging1991.Relojes",
+        "Ging1991.Animaciones",
         "Ging1991.Interfaces",
         "Ging1991.Persistencia"
     ],
