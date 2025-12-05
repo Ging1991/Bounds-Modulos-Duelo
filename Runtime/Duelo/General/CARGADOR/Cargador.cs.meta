@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 53efbd2acfbb1d14d874f52f2cd9110b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - carta1: {fileID: 4900000, guid: 567a189b1bea29543869ae6039f30e71, type: 3}
+  - carta2: {fileID: 4900000, guid: cb78e6992bc287b40a7afbce5b842649, type: 3}
+  - carta3: {fileID: 4900000, guid: ecebd704777b86a4ca7b23444b0b9f08, type: 3}
+  - carta4: {fileID: 4900000, guid: 76ec5bee5d085ff4c8afaa2228c24ffd, type: 3}
+  - carta5: {fileID: 4900000, guid: 043e17045fc721542b3bd9a63b2f64c9, type: 3}
+  - carta6: {fileID: 4900000, guid: c5db2fa0d26d47c4795ae4383a958a86, type: 3}
+  - mazo1: {fileID: 4900000, guid: bdaffd857b0245942a1fbe19f9c4c6f2, type: 3}
+  - mazo2: {fileID: 4900000, guid: 74ff1e2c14eae9e4598a9a166e0a6c21, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,13 @@
+{
+	"name": "com.bounds.tcg.modulos.duelo",
+	"version": "1.0.0",
+	"displayName": "Bounds - Duelo",
+	"unity": "2021.3",
+	"description": "Módulo de duelo de Bounds TCG.",
+	"keywords": ["bounds", "tcg", "visor", "ui", "display", "test"],
+	"author": {
+		"name": "Carlos Caballero",
+		"email": "tu-email@ejemplo.com",
+		"url": "https://github.com/Ging1991/Bounds-Modulos-Duelo.git"
+	}
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Bounds.Duelo",
+    "rootNamespace": "Bounds.Modulos.Duelo",
+    "references": [
+        "Bounds.Cartas",
+        "Bounds.Visor",
+        "Ging1991.Core",
+        "Ging1991.Interfaces",
+        "Ging1991.Persistencia"
+    ],
+
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
