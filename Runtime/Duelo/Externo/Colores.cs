@@ -14,7 +14,7 @@ namespace Bounds.Infraestructura {
 
 
 		private static Color Generar(int valor1, int valor2, int valor3) {
-			return new Color(valor1 / DIVISOR, valor2 / DIVISOR, valor3  / DIVISOR);
+			return new Color(valor1 / DIVISOR, valor2 / DIVISOR, valor3 / DIVISOR);
 		}
 
 

@@ -30,6 +30,7 @@ namespace Bounds.Duelo {
 		public VisorDuelo visorDuelo;
 		public PilaVisual pilaVisual;
 		public PanelCartas panelCartas;
+		public IFinalizarDuelo finalizarDuelo;
 
 		void Start() {
 			visorDuelo.Inicializar();
@@ -46,6 +47,7 @@ namespace Bounds.Duelo {
 
 			// MAZOS
 			GlobalDuelo parametros = GlobalDuelo.GetInstancia();
+			finalizarDuelo = parametros.finalizarDuelo;
 
 			foreach (GameObject carta in cargador.CargarCartasPorCartaCofre(1, parametros.mazo1, parametros.protector1))
 				fisica.EnviarHaciaMazo(carta, 1);

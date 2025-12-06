@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Bounds.Global.Mazos;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalDuelo {
 
@@ -23,6 +24,7 @@ public class GlobalDuelo {
 		mazo2 = mazoJugador.cartas;
 		mazoVacio1 = mazoJugador.principalVacio;
 		mazoVacio2 = mazoJugador.principalVacio;
+		finalizarDuelo = new Fin();
 	}
 
 
@@ -50,5 +52,14 @@ public class GlobalDuelo {
 	public List<CartaMazo> mazo2;
 	public CartaMazo mazoVacio1;
 	public CartaMazo mazoVacio2;
+	public IFinalizarDuelo finalizarDuelo;
+
+	public class Fin : IFinalizarDuelo {
+
+		public void FinalizarDuelo(int jugadorGanador) {
+			Debug.Log($"Ha ganado el jugador {jugadorGanador}");
+			SceneManager.LoadScene("Test");
+		}
+	}
 
 }
