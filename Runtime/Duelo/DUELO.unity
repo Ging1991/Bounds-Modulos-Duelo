@@ -4281,7 +4281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 040e7b96bac91b94f915f9c59a409b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ilustradorDeCartas: {fileID: 0}
+  ilustradorDeCartas: {fileID: 1947654863}
+  haGanado: 0
 --- !u!4 &1187773312
 Transform:
   m_ObjectHideFlags: 0
@@ -6568,7 +6569,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 788868c5c7f056a448774189d98c31a5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

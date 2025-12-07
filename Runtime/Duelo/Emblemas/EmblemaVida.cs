@@ -56,12 +56,12 @@ namespace Bounds.Duelo.Emblemas {
 			if (bloque.vida < 1) {
 				if (jugador == 1) {
 					configuracion.GanarOro(100);
-					terminar.terminar(false);
+					terminar.Terminar(false);
 
 				}
 				else {
 					configuracion.GanarOro(bloque.vida / 10);
-					terminar.terminar(true);
+					terminar.Terminar(true);
 				}
 			}
 		}

@@ -99,23 +99,23 @@ namespace Bounds.Duelo.Emblemas {
 
 			if (!haGanado) {
 				if (jugador == 1) {
-					terminar.terminar(false);
+					terminar.Terminar(false);
 					configuracion.GanarOro(100);
 				}
 				else {
 					BloqueJugador bloque = BloqueJugador.getInstancia("BloqueJugador" + 1);
 					configuracion.GanarOro(bloque.vida / 10);
-					terminar.terminar(true);
+					terminar.Terminar(true);
 				}
 			}
 			else {
 				if (jugador == 1) {
 					BloqueJugador bloque = BloqueJugador.getInstancia("BloqueJugador" + 1);
 					configuracion.GanarOro(bloque.vida / 10);
-					terminar.terminar(true);
+					terminar.Terminar(true);
 				}
 				else {
-					terminar.terminar(false);
+					terminar.Terminar(false);
 					configuracion.GanarOro(100);
 				}
 			}

@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoiniciar: 0
   iteraciones: 10
+  unidadTiempo: 1
   objetivos:
   - {fileID: 5544949652439513247}
   escalaInicial: 1
@@ -188,6 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoiniciar: 0
   iteraciones: 10
+  unidadTiempo: 1
   objetivos:
   - {fileID: 5614414747912466581}
   - {fileID: 6277458360307919148}
@@ -207,6 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoiniciar: 0
   iteraciones: 10
+  unidadTiempo: 1
   objetivos:
   - {fileID: 5544949652439513247}
   rotacionInicial: {x: 0, y: 0, z: 0}
@@ -234,8 +237,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 0bf0b6d4ebac4954683a2202220e1728, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0bf0b6d4ebac4954683a2202220e1728, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1

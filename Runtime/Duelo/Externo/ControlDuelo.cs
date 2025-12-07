@@ -107,7 +107,7 @@ namespace Bounds.Duelo {
 
 		public void PresionarBotonAbandonar() {
 			TerminarJuego componente = GameObject.Find("TerminarJuego").GetComponent<TerminarJuego>();
-			componente.terminar(false);
+			componente.Terminar(false);
 		}
 
 
