@@ -15,7 +15,7 @@ namespace Bounds.Duelo.Paneles {
 		public List<GameObject> objetosDesactivables;
 		public List<GameObject> objetosConTinta;
 		public List<GameObject> objetosConTintaClara;
-		public GameObject rarezaProbabilidad;
+		public Text rarezaProbabilidad;
 		private Color colorTinta;
 		private bool fueCobrada;
 
@@ -31,7 +31,7 @@ namespace Bounds.Duelo.Paneles {
 				objeto.GetComponent<Image>().color = tinta;
 			foreach (var objeto in objetosConTintaClara)
 				objeto.GetComponent<Image>().color = fondo;
-			rarezaProbabilidad.GetComponent<Text>().text = $"Poder {probabilidad}%";
+			rarezaProbabilidad.text = $"Poder {probabilidad}%";
 		}
 
 		public void OnMouseDown() {
