@@ -59,7 +59,7 @@ namespace Bounds.Duelo.Emblemas.Jugar {
 			EmblemaVinculo.Vincular(aura, criatura);
 
 			//Visor visor = GameObject.Find("Visor").GetComponent<Visor>();
-			Estadisticas.Instancia.ModificarValor($"AURA_{jugador}_jugadas", 1);
+			EstadisticasSingleton.Instancia.ModificarValor($"AURA_{jugador}_jugadas", 1);
 			//visor.Mostrar(criatura);
 			ControlDuelo duelo = conocimiento.traerDuelo();
 			duelo.HabilitarInvocacionPerfecta();

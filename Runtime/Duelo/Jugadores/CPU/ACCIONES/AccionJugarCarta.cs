@@ -12,14 +12,14 @@ namespace Bounds.Duelo.CPU.Acciones {
 	public class AccionJugarCarta : AccionBasica {
 
 		private readonly TieneCartasEnZona tieneCartasEnZona;
-		private readonly Estadisticas estadisticas;
+		private readonly EstadisticasSingleton estadisticas;
 		private readonly string codigo;
 
 
 		public AccionJugarCarta(int prioridad, int jugador, string clase) : base(prioridad, jugador) {
 			CondicionCarta condicionClase = new CondicionClase(clase);
 			tieneCartasEnZona = new TieneCartasEnZona(jugador, condicionClase, Zonas.MANO, 1);
-			estadisticas = Estadisticas.Instancia;
+			estadisticas = EstadisticasSingleton.Instancia;
 			codigo = $"{clase}_{jugador}_jugadas";
 
 			condiciones = new List<ICondicionDeJuego>

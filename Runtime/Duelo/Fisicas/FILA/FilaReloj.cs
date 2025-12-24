@@ -1,10 +1,11 @@
+using Ging1991.Core.Interfaces;
 using Ging1991.Relojes;
 using UnityEngine;
 
 namespace Bounds.Duelo.Fila {
 
 	public class FilaReloj : MonoBehaviour, IEjecutable {
-		
+
 		private bool estaPausado = true;
 
 		public void Pausar() {

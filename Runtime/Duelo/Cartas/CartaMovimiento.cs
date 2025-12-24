@@ -1,7 +1,5 @@
-﻿using Bounds.Cartas;
-using Bounds.Modulos.Cartas;
-using Ging1991.Animaciones.Efectos;
-using Ging1991.Relojes;
+﻿using Ging1991.Animaciones.Efectos;
+using Ging1991.Core.Interfaces;
 using UnityEngine;
 
 namespace Bounds.Duelo.Carta {

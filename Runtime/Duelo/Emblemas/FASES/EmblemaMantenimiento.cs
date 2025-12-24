@@ -44,6 +44,9 @@ namespace Bounds.Duelo.Emblemas.Fases {
 				if (infoVacio.original.datoVacio.tipo == "OCEANO" && !tieneFichas) {
 					EmblemaEfectos.Activar(new EfectoCrearFicha(vacio, jugador, 146, 1));
 				}
+				if (infoVacio.original.datoVacio.tipo == "CEMENTERIO" && !tieneFichas) {
+					EmblemaEfectos.Activar(new EfectoCrearFicha(vacio, jugador, 586, 1));
+				}
 				if (infoVacio.original.datoVacio.tipo == "DIAMANTE") {
 					EmblemaEfectos.Activar(new EfectoSobreJugador(vacio, jugador, new SubRobar(1), "ROBAR"));
 				}

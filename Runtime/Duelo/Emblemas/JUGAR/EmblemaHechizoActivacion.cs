@@ -639,7 +639,7 @@ namespace Bounds.Duelo.Emblemas {
 		private static void HechizoActivadoCorrectamente(int jugador) {
 			ControlDuelo duelo = Object.FindAnyObjectByType<ControlDuelo>();
 			duelo.HabilitarInvocacionPerfecta();
-			Estadisticas.Instancia.Incrementar($"HECHIZO_{jugador}_jugadas");
+			EstadisticasSingleton.Instancia.Incrementar($"HECHIZO_{jugador}_jugadas");
 		}
 
 	}

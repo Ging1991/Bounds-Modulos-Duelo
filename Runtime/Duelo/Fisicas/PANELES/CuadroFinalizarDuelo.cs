@@ -4,6 +4,7 @@ using Bounds.Modulos.Cartas.Ilustradores;
 using Bounds.Modulos.Cartas.Persistencia;
 using Bounds.Modulos.Cartas.Tinteros;
 using Ging1991.Core;
+using Ging1991.Core.Interfaces;
 using Ging1991.Relojes;
 using UnityEngine;
 using UnityEngine.UI;

@@ -15,7 +15,7 @@ namespace Bounds.Duelo.CPU.Acciones {
 		private readonly TieneCartasEnZona tieneAuras;
 		private readonly TieneCartasEnZona tieneCriaturas;
 		private readonly string codigo;
-		private readonly Estadisticas estadisticas;
+		private readonly EstadisticasSingleton estadisticas;
 
 		public AccionJugarAura(int prioridad, int jugador) : base(prioridad, jugador) {
 
@@ -25,7 +25,7 @@ namespace Bounds.Duelo.CPU.Acciones {
 			tieneAuras = new TieneCartasEnZona(jugador, condicionAura, Zonas.MANO, 1);
 			tieneCriaturas = new TieneCartasEnZona(jugador, condicionCriatura, Zonas.CAMPO, 1);
 			codigo = $"AURA_{jugador}_jugadas";
-			estadisticas = Estadisticas.Instancia;
+			estadisticas = EstadisticasSingleton.Instancia;
 
 			condiciones = new List<ICondicionDeJuego>();
 			condiciones.Add(tieneAuras);

@@ -16,16 +16,16 @@ namespace Bounds.Duelo.Carta {
 				GameObject instancia = Instantiate(claseContador);
 				instancia.transform.SetParent(transform);
 
-				instancia.transform.localPosition = new Vector3(60,75 - contadores.Keys.Count*30,0);
-				instancia.transform.localScale = new Vector3(1,1,1);
-				
-				Quaternion rotacion = Quaternion.Euler(0,0,0);
+				instancia.transform.localPosition = new Vector3(60, 80 - contadores.Keys.Count * 30, 0);
+				instancia.transform.localScale = new Vector3(1, 1, 1);
+
+				Quaternion rotacion = Quaternion.Euler(0, 0, 0);
 				CartaMovimiento mov = GetComponent<CartaMovimiento>();
 				if (mov.estaGirado)
-					rotacion = Quaternion.Euler(0,0,0);
-				
+					rotacion = Quaternion.Euler(0, 0, 0);
+
 				instancia.transform.localRotation = rotacion;
-				
+
 				instancia.GetComponent<Contador>().setTipoContador(tipo);
 				contadores.Add(tipo, instancia);
 			}
@@ -35,7 +35,8 @@ namespace Bounds.Duelo.Carta {
 				contadores.Remove(tipo);
 				Destroy(contador);
 
-			} else {
+			}
+			else {
 				contador.GetComponent<Contador>().setNumero(cantidad);
 			}
 		}

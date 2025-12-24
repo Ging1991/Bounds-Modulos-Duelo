@@ -24,7 +24,7 @@ namespace Bounds.Duelo.CPU.Acciones {
 
 
 		public override void Ejecutar() {
-			int cantidadActual = Estadisticas.Instancia.GetValor(codigo);
+			int cantidadActual = EstadisticasSingleton.Instancia.GetValor(codigo);
 			List<GameObject> opciones = tieneInvocacionesPerfectas.GetCartas();
 			MetodoPivot(opciones, cantidadActual, codigo);
 		}
@@ -34,7 +34,7 @@ namespace Bounds.Duelo.CPU.Acciones {
 				EmblemaSeleccionInvocacionPerfecta perfecta = EmblemaSeleccionInvocacionPerfecta.GetInstancia();
 				perfecta.Seleccionar(jugador, opciones[0]);
 				SeleccionarMateriales();
-				if (Estadisticas.Instancia.GetValor(codigo) == cantidadActual)
+				if (EstadisticasSingleton.Instancia.GetValor(codigo) == cantidadActual)
 					posponer = true;
 			}
 		}

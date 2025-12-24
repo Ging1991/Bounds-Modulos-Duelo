@@ -58,7 +58,7 @@ namespace Bounds.Duelo.Emblemas.Jugar {
 			seleccionador.SeleccionarParaJugar();
 			CartaArrastrar.jugado = true;
 			ControlDuelo.Instancia.HabilitarInvocacionPerfecta();
-			Estadisticas.Instancia.ModificarValor($"{clase}_{jugador}_jugadas", 1);
+			EstadisticasSingleton.Instancia.ModificarValor($"{clase}_{jugador}_jugadas", 1);
 			if (bocaAbajo)
 				ActivarTrampas(jugador, carta);
 		}

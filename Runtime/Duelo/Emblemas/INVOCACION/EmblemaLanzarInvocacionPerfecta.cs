@@ -36,7 +36,7 @@ namespace Bounds.Duelo.Emblemas {
 			}
 
 			string codigo = $"INVOCACION_PERFECTA_{jugador}_jugadas";
-			Estadisticas.Instancia.ModificarValor(codigo, 1);
+			EstadisticasSingleton.Instancia.ModificarValor(codigo, 1);
 
 			ActivarVacios(criatura);
 			ActivarHabilidades(criatura);

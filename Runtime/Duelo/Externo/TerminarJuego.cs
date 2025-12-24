@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
-using Ging1991.Relojes;
 using Bounds.Modulos.Cartas.Ilustradores;
-using Bounds.Infraestructura;
 using System.Collections;
 using Bounds.Global;
 using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Utiles;
 using Bounds.Modulos.Cartas.Persistencia;
+using Ging1991.Core.Interfaces;
 
 namespace Bounds.Duelo {
 
@@ -14,7 +13,6 @@ namespace Bounds.Duelo {
 
 		public IlustradorDeCartas ilustradorDeCartas;
 		public bool haGanado;
-
 
 		public void Ejecutar() {
 			ControlDuelo.Instancia.finalizarDuelo.FinalizarDuelo(haGanado ? 1 : 2);
@@ -27,70 +25,6 @@ namespace Bounds.Duelo {
 				Destroy(cpu);
 			StartCoroutine(MostrarCuadroRecompensas(ganar));
 		}
-
-		/*
-		GUARDAR
-			if (parametros.modo == "LIGA") {
-				ProcesarModoLiga(parametros, haGanado);
-			}
-
-			if (parametros.modo == "LIMITADO") {
-				LectorLimitado lector = new LectorLimitado();
-				lector.GuardarResultado(parametros.jugadorMiniatura2, haGanado ? "VICTORIA" : "DERROTA");
-			}
-
-		private async void ProcesarModoLiga(GlobalDuelo duelo, bool haGanado) {
-				List<int> cartasID1 = new List<int>();
-				foreach (var carta in duelo.mazo1) {
-					cartasID1.Add(carta.cartaID);
-				}
-
-				List<int> cartasID2 = new List<int>();
-				foreach (var carta in duelo.mazo2) {
-					cartasID2.Add(carta.cartaID);
-				}
-
-				string jugador1 = "Jugador";
-				string jugador2 = duelo.jugadorNombre2;
-
-				ServicioGuardarResultadoV2 servicio = new ServicioGuardarResultadoV2();
-				if (await servicio.AutorizarAsync()) {
-					if (haGanado) {
-						servicio.LlamarAsync(jugador1, jugador2, cartasID1, cartasID2);
-					}
-					else {
-						servicio.LlamarAsync(jugador2, jugador1, cartasID2, cartasID1);
-					}
-				}
-			}
-
-						if (haGanado) {
-
-				if (parametros.dueloModo == Infraestructura.Constantes.DueloConstantes.Modo.TUTORIAL) {
-					int capituloActual = configuracion.LeerCapituloLeccion();
-					configuracion.GuardarCapituloLeccion(capituloActual + 1);
-				}
-
-				if (parametros.modo == "HISTORIA") {
-					LectorEntrenamiento lectorEntrenamiento = LectorEntrenamiento.GetInstancia();
-					lectorEntrenamiento.Habilitar(parametros.jugadorMiniatura2);
-					//ClasificatoriasControl.MejorarRarezasDeMazo();
-					int capituloActual = configuracion.LeerCapituloHistoria();
-					configuracion.GuardarCapituloHistoria(capituloActual + 1);
-				}
-
-			}
-			if (parametros.modo == "ENTRENAMIENTO") {
-				LectorEntrenamiento lectorEntrenamiento = LectorEntrenamiento.GetInstancia();
-				if (haGanado)
-					lectorEntrenamiento.IncrementarVictorias(parametros.jugadorNombre2);
-				else
-					lectorEntrenamiento.IncrementarDerrotas(parametros.jugadorNombre2);
-			}
-
-
-		*/
-
 
 
 		IEnumerator MostrarCuadroRecompensas(bool haGanado) {
@@ -107,7 +41,6 @@ namespace Bounds.Duelo {
 				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(this, true, DatosDeCartas.Instancia, ilustradorDeCartas);
 				configuracion.GanarOro(bloque1.vida / 10);
 			}
-
 			else {
 				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar("Resultado: DERROTA", "Recompensa $100");
 				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(this, false, DatosDeCartas.Instancia, ilustradorDeCartas);
