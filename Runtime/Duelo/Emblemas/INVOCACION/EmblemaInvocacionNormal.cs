@@ -109,19 +109,19 @@ namespace Bounds.Duelo.Emblemas {
 			foreach (GameObject vacio in new SubCartasControladas(0, new CondicionClase("VACIO")).Generar()) {
 				CartaInfo infoVacio = vacio.GetComponent<CartaInfo>();
 
-				if (infoVacio.original.datoVacio.tipo == "MUNDO_VOLCAN" && cartaTipo.ContieneTipo("pyro") && info.original.datoCriatura.perfeccion == "BASICO") {
+				if (infoVacio.original.datoVacio.tipo == "MUNDO_VOLCAN" && cartaTipo.ContieneTipo("PYRO") && info.original.datoCriatura.perfeccion == "BASICO") {
 					EmblemaEfectos.Activar(new EfectoSobreJugador(vacio, adversario, new SubModificarLP(-500), "EXPLOSION"));
 				}
 
-				if (infoVacio.original.datoVacio.tipo == "PLANTA_LP" && cartaTipo.ContieneTipo("planta") && info.original.datoCriatura.perfeccion == "BASICO") {
+				if (infoVacio.original.datoVacio.tipo == "PLANTA_LP" && cartaTipo.ContieneTipo("PLANTA") && info.original.datoCriatura.perfeccion == "BASICO") {
 					EmblemaEfectos.Activar(new EfectoSobreJugador(vacio, jugador, new SubModificarLP(500), "REVITALIZAR"));
 				}
 
-				if (infoVacio.original.datoVacio.tipo == "ODIO" && cartaTipo.ContieneTipo("demonio") && info.original.datoCriatura.perfeccion == "BASICO") {
+				if (infoVacio.original.datoVacio.tipo == "ODIO" && cartaTipo.ContieneTipo("DEMONIO") && info.original.datoCriatura.perfeccion == "BASICO") {
 					EmblemaEfectos.Activar(new EfectoSobreJugador(vacio, adversario, new SubDescartar(1), "VENENO"));
 				}
 
-				if (infoVacio.original.datoVacio.tipo == "TRUENO" && cartaTipo.ContieneTipo("trueno")) {
+				if (infoVacio.original.datoVacio.tipo == "TRUENO" && cartaTipo.ContieneTipo("TRUENO")) {
 					CondicionTipoCriatura condicionTrueno = new("trueno");
 					EmblemaEfectos.Activar(
 						new EfectoSobreCartas(
@@ -134,7 +134,7 @@ namespace Bounds.Duelo.Emblemas {
 					);
 				}
 
-				if (infoVacio.original.datoVacio.tipo == "VENENO" && cartaTipo.ContieneTipo("insecto") && info.original.datoCriatura.perfeccion == "BASICO") {
+				if (infoVacio.original.datoVacio.tipo == "VENENO" && cartaTipo.ContieneTipo("INSECTO") && info.original.datoCriatura.perfeccion == "BASICO") {
 					CondicionTipoCriatura condicionInsecto = new("insecto");
 
 					EmblemaEfectos.Activar(
@@ -149,8 +149,8 @@ namespace Bounds.Duelo.Emblemas {
 
 				}
 
-				if (infoVacio.original.datoVacio.tipo == "ZOMBI" && cartaTipo.ContieneTipo("zombi") && info.original.datoCriatura.perfeccion == "BASICO") {
-					CondicionTipoCriatura condicionZombi = new("zombi");
+				if (infoVacio.original.datoVacio.tipo == "ZOMBI" && cartaTipo.ContieneTipo("ZOMBI") && info.original.datoCriatura.perfeccion == "BASICO") {
+					CondicionTipoCriatura condicionZombi = new("ZOMBI");
 
 					EmblemaEfectos.Activar(
 						new EfectoSobreCartas(
@@ -164,7 +164,7 @@ namespace Bounds.Duelo.Emblemas {
 
 				}
 
-				if (infoVacio.original.datoVacio.tipo == "REY_DRAGON" && cartaTipo.ContieneTipo("dragon") && info.original.datoCriatura.perfeccion == "BASICO") {
+				if (infoVacio.original.datoVacio.tipo == "REY_DRAGON" && cartaTipo.ContieneTipo("DRAGON") && info.original.datoCriatura.perfeccion == "BASICO") {
 					info.ColocarContador("poder", 1);
 					EfectoBD efecto = new EfectoBD();
 					efecto.clave = "BRUTAL";
@@ -318,7 +318,7 @@ namespace Bounds.Duelo.Emblemas {
 					}
 				}
 
-				if (infoEnCampo.GetComponent<CartaEfecto>().TieneClave("SUPREMACIA_TRUENO") && cartaTipo.ContieneTipo("trueno")) {
+				if (infoEnCampo.GetComponent<CartaEfecto>().TieneClave("SUPREMACIA_TRUENO") && cartaTipo.ContieneTipo("TRUENO")) {
 					pila.Agregar(new EfectoTrueno(cartaEnCampo));
 					activado = true;
 				}
@@ -354,7 +354,7 @@ namespace Bounds.Duelo.Emblemas {
 					));
 				}
 
-				if (info1.GetComponent<CartaEfecto>().TieneClave("SUPREMACIA_TRUENO") && cartaTipo.ContieneTipo("trueno") && !activado)
+				if (info1.GetComponent<CartaEfecto>().TieneClave("SUPREMACIA_TRUENO") && cartaTipo.ContieneTipo("TRUENO") && !activado)
 					pila.Agregar(new EfectoTrueno(cartaEnCampo));
 			}
 

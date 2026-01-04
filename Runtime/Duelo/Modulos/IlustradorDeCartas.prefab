@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4736630844445204528}
-  - component: {fileID: 5769708324263248164}
+  - component: {fileID: 7623648452243335949}
   m_Layer: 0
   m_Name: IlustradorDeCartas
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5769708324263248164
+--- !u!114 &7623648452243335949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5816597240385466539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fdf56f37bbb7cc4b82bc0fdb5efdc3f, type: 3}
+  m_Script: {fileID: 11500000, guid: c086326481a6b6e42a857c2403b246f2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Bounds.Cartas::Bounds.Modulos.Cartas.Ilustradores.IlustradorDeCartas
-  direccion: IMAGENES/CARTAS
+  m_EditorClassIdentifier: 
+  direccion: Cartas/Imagenes
+  direccionDinamica: IMAGENES/Cartas
