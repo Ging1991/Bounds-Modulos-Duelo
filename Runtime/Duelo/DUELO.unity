@@ -1152,17 +1152,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5542040092472047098, guid: e97ceb7990493874d86dc4a6d7818b15, type: 3}
   m_PrefabInstance: {fileID: 5542040092724663883}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &336238699 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7623648452243335949, guid: c2d9e363c1d338848bbe60e99a5ae7b3, type: 3}
-  m_PrefabInstance: {fileID: 1947654862}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c086326481a6b6e42a857c2403b246f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &362674322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2834,7 +2823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ventanaMulligan: {fileID: 6809333467704982433}
   datosDeCartas: {fileID: 1488875732503342431}
-  ilustradorDeCartas: {fileID: 336238699}
+  ilustradorDeCartas: {fileID: 1947654863}
 --- !u!1 &830725087 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5184389547760170532, guid: d8963b8949585174482e0b70511de7f1, type: 3}
@@ -3721,7 +3710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 040e7b96bac91b94f915f9c59a409b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ilustradorDeCartas: {fileID: 0}
+  ilustradorDeCartas: {fileID: 1947654863}
   haGanado: 0
 --- !u!4 &1187773312
 Transform:
@@ -3793,7 +3782,7 @@ MonoBehaviour:
   - {fileID: 414145250}
   - {fileID: 1413007659}
   datosDeCartas: {fileID: 1488875732503342431}
-  ilustradorDeCartas: {fileID: 336238699}
+  ilustradorDeCartas: {fileID: 1947654863}
 --- !u!1001 &1212513897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6098,7 +6087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gestorDeSonidos: {fileID: 1902117138}
   datosDeCartas: {fileID: 1488875732503342431}
-  ilustradorDeCartas: {fileID: 336238699}
+  ilustradorDeCartas: {fileID: 1947654863}
   visorDuelo: {fileID: 876470340}
   pilaVisual: {fileID: 1195635769}
   panelCartas: {fileID: 963689930299967260}
@@ -6338,7 +6327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objCarta: {fileID: 7343909953563955627, guid: 221d6f078a012da47ba18ebedc4f1652, type: 3}
-  ilustradorDeCartas: {fileID: 336238699}
+  ilustradorDeCartas: {fileID: 1947654863}
   datosDeCartas: {fileID: 1488875732503342431}
 --- !u!1001 &1945332416
 PrefabInstance:
@@ -6503,6 +6492,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d9e363c1d338848bbe60e99a5ae7b3, type: 3}
+--- !u!114 &1947654863 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5848583370995007121, guid: c2d9e363c1d338848bbe60e99a5ae7b3, type: 3}
+  m_PrefabInstance: {fileID: 1947654862}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c086326481a6b6e42a857c2403b246f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1972867210
 GameObject:
   m_ObjectHideFlags: 0
@@ -8697,7 +8697,7 @@ PrefabInstance:
     - target: {fileID: 5436845128854018009, guid: e97ceb7990493874d86dc4a6d7818b15, type: 3}
       propertyPath: ilustradorDeCartas
       value: 
-      objectReference: {fileID: 336238699}
+      objectReference: {fileID: 1947654863}
     - target: {fileID: 5436845128854018009, guid: e97ceb7990493874d86dc4a6d7818b15, type: 3}
       propertyPath: traductorPerfecciones
       value: 
