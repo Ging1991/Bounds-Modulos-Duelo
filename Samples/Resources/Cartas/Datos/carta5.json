@@ -1,0 +1,35 @@
+{
+	"cartaID" : 5,
+	"nombre" : "Adán, encarnación del mal",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Me he rendido, seré lo que siempre han querido.",
+    "nivel" : 5,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 2700,
+		"defensa" : 2300,
+		"tipos" : ["DEMONIO", "GUERRERO"],
+
+		"efectos" : [
+			{
+				"clave" : "CAZADOR"
+			},
+			{
+				"clave" : "REFUERZOS"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 3
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 4
+		}
+	]
+
+}

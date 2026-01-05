@@ -1,0 +1,15 @@
+{
+	"cartaID" : 312,
+	"nombre" : "Cabo reptiliano",
+	"clase" : "CRIATURA",
+    "nivel" : 1,
+	"ambientacion" : "Les enseñaron solo a atacar, nadie gana una pelea defendiendose",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 800,
+		"defensa" : 0,
+        "tipos" : ["GUERRERO", "REPTIL"]
+	}
+
+}

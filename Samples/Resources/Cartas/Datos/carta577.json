@@ -1,0 +1,15 @@
+{
+	"cartaID" : 577,
+	"nombre" : "Bruja imperfecta",
+	"clase" : "CRIATURA",
+	"nivel" : 3,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"tipos" : ["HECHICERO"],
+		"ataque" : 1600,
+		"defensa" : 1200
+	}
+
+}

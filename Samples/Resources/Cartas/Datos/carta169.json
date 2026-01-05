@@ -1,0 +1,34 @@
+{
+	"cartaID" : 169,
+	"nombre" : "Alison, la defensora",
+	"clase" : "CRIATURA",
+    "nivel" : 4,
+	"ambientacion" : "El poder no es nada sin un proposito.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 1800,
+		"defensa" : 2000,
+		"efectos" : [
+			{
+				"clave" : "MURO"
+			},			
+			{
+				"clave" : "EXPLOSION"
+			}
+		],
+		"tipos" : ["GUERRERO", "PYRO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 163
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 164
+		}
+	]
+
+}

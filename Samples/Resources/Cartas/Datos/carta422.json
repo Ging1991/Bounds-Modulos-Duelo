@@ -1,0 +1,41 @@
+{
+	"cartaID" : 422,
+	"nombre" : "Trillizos del horror",
+	"clase" : "CRIATURA",
+	"ambientacion" : "El fuego infernal existe en todas las dimensiones.",
+    "nivel" : 5,
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 2650,
+		"defensa" : 3150,
+		"efectos" : [
+			{
+				"clave" : "FATAL"
+			},
+			{
+				"clave" : "ATADURAS"
+			},
+			{
+				"clave" : "ARKANO"
+			}
+		],
+		"tipos" : ["DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DEMONIO"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DEMONIO"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DEMONIO"
+		}
+	]
+
+}

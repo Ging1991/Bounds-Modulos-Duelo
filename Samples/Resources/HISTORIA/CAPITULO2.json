@@ -1,0 +1,172 @@
+{
+	"lista" : [
+		{
+			"tipo" : "PERSONAJE_CREAR",
+			"nombre" : "LAUNIX",
+			"imagen" : "LAUNIX",
+			"alto" : 600,
+			"ancho" : 400,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_POSICIONAR",
+			"posX" : -325,
+			"posY" : 0,
+			"nombre" : "LAUNIX",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_APARECER",
+			"nombre" : "LAUNIX",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_CREAR",
+			"nombre" : "VERKAN",
+			"imagen" : "VERKAN",
+			"alto" : 600,
+			"ancho" : 400,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_POSICIONAR",
+			"posX" : 300,
+			"posY" : 0,
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_APARECER",
+			"nombre" : "VERKAN"
+		},
+		{
+			"tipo" : "PERSONAJE_ACERCAR",
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_MINIATURA",
+			"imagen" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Me siento aliviado de que puedo encargarte esta importante misión, Launix."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Si logras recapturar a estas criminales te daré una recompensa, lo prometo."
+		},
+		{
+			"tipo" : "PERSONAJE_ALEJAR",
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_ACERCAR",
+			"nombre" : "LAUNIX",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_MINIATURA",
+			"imagen" : "LAUNIX",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Si no queda de otra..."
+		},
+		{
+			"tipo" : "PERSONAJE_ALEJAR",
+			"nombre" : "LAUNIX",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_DESAPARECER",
+			"nombre" : "VERKAN"
+		},
+		{
+			"tipo" : "PERSONAJE_CREAR",
+			"nombre" : "SIRENA",
+			"imagen" : "SIRENA",
+			"alto" : 600,
+			"ancho" : 400,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_POSICIONAR",
+			"posX" : 300,
+			"posY" : 0,
+			"nombre" : "SIRENA",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_APARECER",
+			"nombre" : "SIRENA"
+		},
+		{
+			"tipo" : "PERSONAJE_ACERCAR",
+			"nombre" : "SIRENA",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_MINIATURA",
+			"imagen" : "SIRENA",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "¡Finalmente libre, hace mucho que no devoro carne humana!"
+		},
+		{
+			"tipo" : "PERSONAJE_ALEJAR",
+			"nombre" : "SIRENA",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_ACERCAR",
+			"nombre" : "LAUNIX",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_MINIATURA",
+			"imagen" : "LAUNIX",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "¡Alto ahí! Estas detenida por el delito de fugarte de prisión y otros 15 delitos más que no me molesté en leer."
+		},
+		{
+			"tipo" : "PERSONAJE_ALEJAR",
+			"nombre" : "LAUNIX",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_ACERCAR",
+			"nombre" : "SIRENA",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_MINIATURA",
+			"imagen" : "SIRENA",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "¡Oh, que amable de tu parte en ofrecerte tu misma a ser mi platillo principal!"
+		},
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "DUELO",
+			"dueloNombre1" : "Launix",
+			"dueloAvatar1" : "LAUNIX",
+			"dueloLP1" : 2000,
+			"dueloMazo1" : "LAUNIX",
+			"dueloNombre2" : "Sirena",
+			"dueloAvatar2" : "SIRENA",
+			"dueloLP2" : 2000,
+			"dueloMazo2" : "SIRENA"
+		}
+	]
+}

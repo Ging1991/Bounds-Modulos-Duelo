@@ -1,0 +1,13 @@
+{
+	"cartaID" : 255,
+	"nombre" : "Cacería de brujas",
+	"ambientacion" : "Sara sabía que todo estaba perdido, pero no iba a caer sin pelear.",
+	"clase" : "TRAMPA",
+	"efecto" : "Cuando el oponente activa un efecto, niega ese efecto y destruye la carta que lo activó.",
+	"nivel" : 5,
+		
+	"datoTrampa" : {
+		"tipo": "CANCELAR_EFECTO"
+	}
+
+}

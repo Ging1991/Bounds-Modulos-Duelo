@@ -1,0 +1,44 @@
+{
+	"cartaID" : 460,
+	"nombre" : "Horror cósmico",
+	"clase" : "CRIATURA",
+    "nivel" : 15,
+	"ambientacion" : "Y un día decidió mostrarse, flotando entre las galaxias, solo para ver como perdíamos la cordura.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 10000,
+		"defensa" : 7500,
+		"efectos" : [
+			{
+				"clave" : "ATADURAS"
+			},
+			{
+				"clave" : "EXPLOSION"
+			},
+			{
+				"clave" : "DESTRUIR"
+			},
+			{
+				"clave" : "ARKANO"
+			}
+		],
+		"tipos" : ["DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DEMONIO"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DEMONIO"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DEMONIO"
+		}
+	]
+
+}

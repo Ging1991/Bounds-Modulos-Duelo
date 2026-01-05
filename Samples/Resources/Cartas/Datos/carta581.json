@@ -1,0 +1,15 @@
+{
+	"cartaID" : 581,
+	"nombre" : "Reliquia mistica",
+	"clase" : "CRIATURA",
+	"nivel" : 1,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"tipos" : ["ROCA"],
+		"ataque" : 0,
+		"defensa" : 1000
+	}
+
+}

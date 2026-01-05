@@ -1,0 +1,26 @@
+{
+	"cartaID" : 352,
+	"nombre" : "Clon de tiempo",
+	"clase" : "HECHIZO",
+	"nivel" : 2,
+	"efecto" : "Crea una copia de una criatura que controlas e invócala de forma especial.",
+	"ambientacion" : "¡La unica persona que puede ayudarme, soy yo mismo!",
+
+	"datoHechizo" : {
+		"tipo" : "CLONAR_OBJETIVO",
+		"fuentes" : ["CAMPO"],
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clase" : "CRIATURA"
+				},
+				{
+					"tipo" : "jugador",
+					"controlador" : "JUGADOR"
+				}
+			]
+		}
+	}
+
+}

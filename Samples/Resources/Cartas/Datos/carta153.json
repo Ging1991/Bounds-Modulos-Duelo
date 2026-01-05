@@ -1,0 +1,29 @@
+{
+	"cartaID" : 153,
+	"extensionesID" : [85],
+	"nombre" : "Tortuga vitalicia",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Aquellos que estan entre este mundo y el otro no podran ser indiferentes a lo que se avecina",
+    "nivel" : 4,
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 300,
+		"defensa" : 1800,
+		"efectos" : [
+			{
+				"clave" : "MURO"
+			}
+		],
+	
+		"tipos" : ["REPTIL"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 152
+		}
+	]
+
+}

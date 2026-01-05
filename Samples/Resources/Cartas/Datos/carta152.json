@@ -1,0 +1,26 @@
+{
+	"cartaID" : 152,
+	"nombre" : "Defensa vital",
+	"clase" : "HECHIZO",
+	"nivel" : 2,
+	"efecto" : "Sacrifica una criatura: Ganas LP igual a la DEF de la criatura sacrificada.",
+	"ambientacion" : "Todos tenemos a alguien que nos cuida desde las sombras.",
+
+	"datoHechizo" : {
+		"tipo" : "SACRIFICIO_MODIFICA_VIDA",
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clase" : "CRIATURA"
+				},
+				{
+					"tipo" : "jugador",
+					"controlador" : "JUGADOR"
+				}
+			]
+		}
+
+	}
+
+}

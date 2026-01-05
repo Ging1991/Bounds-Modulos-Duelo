@@ -1,0 +1,26 @@
+{
+	"cartaID" : 203,
+	"nombre" : "Espiritu traidor",
+	"clase" : "HECHIZO",
+	"nivel" : 3,
+	"efecto" : "Invoca de forma especial la criatura objetivo en el cementerio del oponente.",
+	"ambientacion" : "",
+
+	"datoHechizo" : {
+		"tipo" : "INVOCAR_OBJETIVO",
+		"fuentes" : ["DESCARTE"],
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clase" : "CRIATURA"
+				},
+				{
+					"tipo" : "jugador",
+					"controlador" : "ADVERSARIO"
+				}
+			]
+		}
+	}
+
+}

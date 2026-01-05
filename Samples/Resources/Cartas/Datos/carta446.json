@@ -1,0 +1,30 @@
+{
+	"cartaID" : 446,
+	"nombre" : "Distorsión de la soledad",
+	"clase" : "CRIATURA",
+	"nivel" : 6,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "REFLEJO",
+		"ataque" : 2350,
+		"defensa" : 2800,
+		"tipos" : ["DEMONIO"],
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			}
+		]
+	},
+	"materiales" : [
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "HECHIZO"
+		},
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "HECHIZO"
+		}
+	]
+
+}

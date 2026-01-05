@@ -1,0 +1,18 @@
+{
+	"cartaID" : 241,
+	"nombre" : "Filo mortal",
+	"clase" : "AURA",
+	"nivel" : 1,
+	"ambientacion" : "No vine aqui a jugar",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_TIPO",
+			"parametroTipo" : "ASESINO"
+		},
+		{
+			"clave" : "VINCULO_DESPERTAR"
+		}
+	]
+
+}

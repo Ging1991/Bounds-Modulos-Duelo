@@ -1,0 +1,13 @@
+{
+	"cartaID" : 392,
+	"nombre" : "El deseo de la Lamia",
+	"clase" : "HECHIZO",
+	"nivel" : 2,
+	"efecto" : "Descarta una carta, y si lo haces, encuentra hasta dos cartas de criatura básicas, de nivel 8 o mayor de tu mazo.",
+	"ambientacion" : "Para salvar a su amado, ningun precio era demasiado alto",
+
+	"datoHechizo" : {
+		"tipo" : "DESCARTE_ENCUENTRA_CARTAS_BASICO_N8_MAS"
+	}
+
+}

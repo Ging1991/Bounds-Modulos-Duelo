@@ -1,0 +1,107 @@
+{
+	"lista" : [
+		{
+			"tipo" : "PERSONAJE_CREAR",
+			"nombre" : "LAUNIX",
+			"imagen" : "LAUNIX",
+			"alto" : 600,
+			"ancho" : 400,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_POSICIONAR",
+			"posX" : -325,
+			"posY" : 0,
+			"nombre" : "LAUNIX",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_APARECER",
+			"nombre" : "LAUNIX",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_CREAR",
+			"nombre" : "VERKAN",
+			"imagen" : "VERKAN",
+			"alto" : 600,
+			"ancho" : 400,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_POSICIONAR",
+			"posX" : 300,
+			"posY" : 0,
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_APARECER",
+			"nombre" : "VERKAN"
+		},
+		{
+			"tipo" : "PERSONAJE_ACERCAR",
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_MINIATURA",
+			"imagen" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Realmente has superado todas mis expectativas."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Como recompensa serás ascendida a Jefe de Personal, son mas responsabilidades por la misma paga pero..."
+		},
+		{
+			"tipo" : "PERSONAJE_ALEJAR",
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_ACERCAR",
+			"nombre" : "LAUNIX",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_MINIATURA",
+			"imagen" : "LAUNIX",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Se terminó... ¡Renuncio!"
+		},
+		{
+			"tipo" : "PERSONAJE_DESAPARECER",
+			"nombre" : "LAUNIX"
+		},
+		{
+			"tipo" : "PERSONAJE_ACERCAR",
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_MINIATURA",
+			"imagen" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "¿Launix...? ¡Espera...!"
+		},
+		{
+			"tipo" : "PERSONAJE_ALEJAR",
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "FINAL_HISTORIA"
+		}
+	]
+}

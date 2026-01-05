@@ -1,0 +1,27 @@
+{
+	"cartaID" : 476,
+	"nombre" : "Bruja del otoño",
+	"clase" : "CRIATURA",
+	"nivel" : 5,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "VECTOR",
+		"tipos" : ["HECHICERO", "DEMONIO"],
+		"ataque" : 1700,
+		"defensa" : 1900,
+		"efectos" : [
+			{
+				"clave" : "FATAL"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "VECTOR_ATK",
+			"parametroATK" : 1550
+		}
+	]
+
+}

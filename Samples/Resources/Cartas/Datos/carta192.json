@@ -1,0 +1,21 @@
+{
+	"cartaID" : 192,
+	"nombre" : "La gracia del angel",
+	"clase" : "AURA",
+	"nivel" : 3,
+	"ambientacion" : "Siempre habra una forma mas pacifica de aniquilar a tus enemigos, usarla o no, depende de ti.",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_RESTRICCION_TIPO",
+			"parametroTipo" : "ANGEL"
+		},
+		{
+			"clave" : "VINCULO_PENDULO"
+		},
+		{
+			"clave" : "HEROE"
+		}
+	]
+
+}

@@ -1,0 +1,13 @@
+{
+	"cartaID" : 159,
+	"nombre" : "Aguas malignas",
+	"clase" : "HECHIZO",
+	"nivel" : 3,
+	"efecto" : "Envia todas las cartas en tu cementerio a tu zona de materiales.",
+	"ambientacion" : "Asi como represental el comienzo, tambien representa el final",
+
+	"datoHechizo" : {
+		"tipo" : "CEMENTERIO_MATERIAL"
+	}
+
+}

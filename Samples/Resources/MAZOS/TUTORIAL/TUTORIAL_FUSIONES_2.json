@@ -1,0 +1,10 @@
+{
+	"nombre":"Pesadilla",
+	"codigo":"PESADILLA",
+	"cartas": [
+			"026_A_N_5",
+			"027_A_N_5",
+			"014_A_N_5",
+			"028_A_N_5"
+		]
+}

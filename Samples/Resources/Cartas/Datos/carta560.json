@@ -1,0 +1,24 @@
+{
+	"cartaID" : 560,
+	"nombre" : "Posesión infernal",
+	"clase" : "AURA",
+	"nivel" : 6,
+	"ambientacion" : "La leyenda que cobra vida cada 1000 años",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_RESTRICCION_PERFECCION",
+			"parametroPerfeccion" : "BASICO"
+		},
+		{
+			"clave" : "VINCULO_INVOCACION",
+			"parametroZona" : "MAZO"
+		},
+		{
+			"clave" : "VINCULO_ESTADISTICA_ATK_DEF",
+			"parametroATK" : -5000,
+			"parametroDEF" : -5000
+		}
+	]
+
+}

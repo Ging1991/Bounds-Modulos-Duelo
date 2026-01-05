@@ -1,0 +1,31 @@
+{
+	"cartaID" : 177,
+	"nombre" : "Alma de fuego III",
+	"clase" : "CRIATURA",
+    "nivel" : 3,
+	"ambientacion" : "El fuego infernal existe en todas las dimensiones.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 1700,
+		"defensa" : 1200,
+		"efectos" : [
+			{
+				"clave" : "EXPLOSION"
+			}
+		],
+		"tipos" : ["PYRO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "PYRO"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "PYRO"
+		}
+	]
+
+}

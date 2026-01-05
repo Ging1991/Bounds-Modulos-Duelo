@@ -1,0 +1,34 @@
+{
+	"cartaID" : 387,
+	"nombre" : "Mandra de Hades",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Y pensar que antes hacia esto gratis",
+    "nivel" : 5,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 2000,
+		"defensa" : 2500,
+		"efectos" : [
+			{
+				"clave" : "HEROE"
+			},
+			{
+				"clave" : "ATADURAS"
+			}
+		],
+		"tipos" : ["GUERRERO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 386
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 385
+		}
+	]
+
+}

@@ -1,0 +1,15 @@
+{
+	"cartaID" : 229,
+	"nombre" : "Defensa ofensiva",
+	"clase" : "AURA",
+	"nivel" : 1,
+	"ambientacion" : "No puedes ganar defendiendote.",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_ESTADISTICA_DEF",
+			"parametroDEF" : 1000
+		}
+	]
+		
+}

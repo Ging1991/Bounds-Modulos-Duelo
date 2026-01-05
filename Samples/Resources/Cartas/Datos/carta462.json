@@ -1,0 +1,15 @@
+{
+	"cartaID" : 462,
+	"nombre" : "Launix",
+	"clase" : "CRIATURA",
+	"nivel" : 2,
+	"ambientacion" : "",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"tipos" : ["HADA"],
+		"ataque" : 900,
+		"defensa" : 300
+	}
+
+}

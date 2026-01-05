@@ -1,0 +1,14 @@
+{
+	"cartaID" : 568,
+	"nombre" : "Espejo rojo sangre",
+	"clase" : "HECHIZO",
+	"nivel" : 4,
+	"efecto" : "Coloca 4 contadores de debilidad en cada criatura del oponente.",
+	"ambientacion" : "-",
+
+    "datoHechizo" : {
+        "tipo" : "CONTADOR_CARTAS_DEBILIDAD",
+		"jugador" : "ADVERSARIO"
+    }
+
+}

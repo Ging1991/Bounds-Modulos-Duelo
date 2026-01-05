@@ -1,0 +1,31 @@
+{
+	"cartaID" : 469,
+	"nombre" : "Launix estafadora",
+	"clase" : "CRIATURA",
+	"ambientacion" : "-",
+	"nivel" : 2,
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"tipos" : ["HADA", "PYRO"],
+		"ataque" : 300,
+		"defensa" : 900,
+		"efectos" : [
+			{
+				"clave" : "EXPLOSION"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "HADA"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "PYRO"
+		}
+	]
+
+}

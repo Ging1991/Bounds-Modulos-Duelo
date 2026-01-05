@@ -1,0 +1,15 @@
+{
+	"cartaID" : 48,
+	"nombre" : "Serpiente trueno",
+	"clase" : "CRIATURA",
+    "nivel" : 1,
+	"ambientacion" : "Por mas pequeño que sea, sigue siendo un trueno.",
+		
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 200,
+		"defensa" : 100,
+		"tipos" : ["SERPIENTE", "TRUENO"]
+	}
+
+}

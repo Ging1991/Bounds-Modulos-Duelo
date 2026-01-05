@@ -1,0 +1,13 @@
+{
+	"cartaID" : 336,
+	"nombre" : "Mundo en erupción",
+	"clase" : "VACIO",
+	"nivel" : 6,
+	"efecto" : "Cuando un jugador invoca un PYRO BASICO de forma normal, esta carta le inflige 500 de daño a su adversario.",
+	"ambientacion" : "Realmente eres el volcán de volcanes.",
+
+	"datoVacio" : {
+		"tipo" : "MUNDO_VOLCAN"
+	}
+
+}

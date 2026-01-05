@@ -1,0 +1,21 @@
+{
+	"cartaID" : 594,
+	"nombre" : "Sueño Paladinfinito",
+	"clase" : "HECHIZO",
+	"nivel" : 8,
+	"efecto" : "Selecciona una carta de nivel 8 en tu mazo y agregala a tu mano.",
+	"ambientacion" : "A veces es peor lo que sale que lo que entra",
+
+	"datoHechizo" : {
+		"tipo" : "TUTOR",
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "nivel",
+					"nivel" : 8
+				}
+			]
+		}
+	}
+
+}

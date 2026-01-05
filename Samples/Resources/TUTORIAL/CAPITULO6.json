@@ -1,0 +1,90 @@
+{
+	"lista" : [
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "SET_CARTA_IMG",
+			"indice" : 1,
+			"cartaID" : 8,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "SET_CARTA_IMG",
+			"indice" : 2,
+			"cartaID" : 9,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "SET_CARTA_IMG",
+			"indice" : 3,
+			"cartaID" : 10,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_CREAR",
+			"nombre" : "VERKAN",
+			"imagen" : "VERKAN",
+			"alto" : 600,
+			"ancho" : 400,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_POSICIONAR",
+			"posX" : -325,
+			"posY" : 0,
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_APARECER",
+			"nombre" : "VERKAN"
+		},
+		{
+			"tipo" : "PERSONAJE_ACERCAR",
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_MINIATURA",
+			"imagen" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Las criaturas que hemos usados hasta ahora son criaturas básicas, de borde naranja, que no tienen habilidades. También existen criaturas especiales que se invocan al campo cuando tienes sus materiales."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Entre ellas estan las fusiones, que son criaturas de borde azul, combinaciones de 2 o más criaturas."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Para invocar de forma perfecta una fusión debes tener sus materiales, descritos en la carta, sobre el campo y presionar el boton de invocación, se retirarán los materiales y se invocará al campo."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Estas se invocan desde tu mazo, mano o descarte de forma especial. Sus materiales son enviados a tu zona de materiales. Mientras sigan ahi se considera que la criatura es perfecta."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Las fusiones tienen efectos, pero solo mientras sean perfectas. Puedes invocar una fusión de tu mano al campo pero si sus materiales no estan en la zona de materiales, se destruirá al comienzo de tu próximo turno."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Prueba tus conocimientos en el siguiente duelo de práctica."
+		},
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "DUELO",
+			"dueloNombre1" : "Jugador",
+			"dueloAvatar1" : "LAUNIX",
+			"dueloLP1" : 2000,
+			"dueloMazo1" : "TUTORIAL_FUSIONES_1",
+			"dueloNombre2" : "Verkan",
+			"dueloAvatar2" : "VERKAN",
+			"dueloLP2" : 1000,
+			"dueloMazo2" : "TUTORIAL_FUSIONES_1"
+		}
+	]
+}

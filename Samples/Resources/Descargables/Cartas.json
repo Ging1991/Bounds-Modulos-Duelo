@@ -1,0 +1,44 @@
+{
+	"valor": [
+		{
+			"nombre" : "carta101",
+			"pesoKB" : 29,
+			"URL" : "https://github.com/Ging1991/Bounds-Recursos/releases/download/v1.0/carta101.jpg"
+		},
+		{
+			"nombre" : "carta102",
+			"pesoKB" : 27,
+			"URL" : "https://github.com/Ging1991/Bounds-Recursos/releases/download/v1.0/carta102.jpg"
+		},
+		{
+			"nombre" : "carta103",
+			"pesoKB" : 29,
+			"URL" : "https://github.com/Ging1991/Bounds-Recursos/releases/download/v1.0/carta103.jpg"
+		},
+		{
+			"nombre" : "carta104",
+			"pesoKB" : 24,
+			"URL" : "https://github.com/Ging1991/Bounds-Recursos/releases/download/v1.0/carta104.jpg"
+		},
+		{
+			"nombre" : "carta105",
+			"pesoKB" : 30,
+			"URL" : "https://github.com/Ging1991/Bounds-Recursos/releases/download/v1.0/carta105.jpg"
+		},
+		{
+			"nombre" : "carta15",
+			"pesoKB" : 20,
+			"URL" : "https://github.com/Ging1991/Bounds-Recursos/releases/download/v1.0/carta15META.jpg"
+		},
+		{
+			"nombre" : "carta258",
+			"pesoKB" : 25,
+			"URL" : "https://github.com/Ging1991/Bounds-Recursos/releases/download/v1.0/carta258META.jpg"
+		},
+		{
+			"nombre" : "carta39",
+			"pesoKB" : 23,
+			"URL" : "https://github.com/Ging1991/Bounds-Recursos/releases/download/v1.0/carta39META.jpg"
+		}
+	]
+}

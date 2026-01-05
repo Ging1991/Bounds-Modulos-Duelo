@@ -1,0 +1,30 @@
+{
+	"cartaID" : 141,
+	"nombre" : "Control acuático",
+	"clase" : "HECHIZO",
+	"nivel" : 5,
+	"efecto" : "Toma el control de la criatura objetivo de nivel 5 o menor que controla el oponente.",
+	"ambientacion" : "Todo es agua, el agua es todo",
+
+	"datoHechizo" : {
+		"tipo" : "CONTROLAR_OBJETIVO",
+		"fuentes" : ["CAMPO"],
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clase" : "CRIATURA"
+				},
+				{
+					"tipo" : "nivel",
+					"maximo" : 5
+				},
+				{
+					"tipo" : "jugador",
+					"controlador" : "ADVERSARIO"
+				}
+			]
+		}
+	}
+
+}

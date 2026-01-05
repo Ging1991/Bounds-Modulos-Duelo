@@ -1,0 +1,25 @@
+{
+	"cartaID" : 302,
+	"nombre" : "Hoz gigante",
+	"clase" : "EQUIPO",
+	"nivel" : 6,
+	"defensa" : 2000,
+	"ambientacion" : "Los subditos no sabían que hacer con el enorme arma que encontraron, asi que se la llevaron al rey.",
+		
+	"efectos" : [
+		{
+			"clave" : "VINCULO_ESTADISTICA_ATK_DEF",
+			"parametroATK" : 1000,
+			"parametroDEF" : 1000
+		},
+		{
+			"clave" : "AUMENTAR_T",
+			"parametroTipo" : "REPTIL"
+		},
+		{
+			"clave" : "REFORZAR_T",
+			"parametroTipo" : "GUERRERO"
+		}	
+	]
+
+}

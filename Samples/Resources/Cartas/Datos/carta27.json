@@ -1,0 +1,15 @@
+{
+	"cartaID" : 27,
+	"nombre" : "Aprendiz de pyro",
+	"clase" : "CRIATURA",
+    "nivel" : 2,
+	"ambientacion" : "Incluso el mas grande maestro comienza siendo un alumno.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 1200,
+		"defensa" : 800,
+		"tipos" : ["PYRO"]
+	}
+
+}

@@ -1,0 +1,18 @@
+{
+	"cartaID" : 118,
+	"nombre" : "Ilusión vegetal",
+	"clase" : "AURA",
+	"nivel" : 1,
+	"ambientacion" : "Me ves y ya no me ves.",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_RESTRICCION_TIPO",
+			"parametroTipo" : "PLANTA"
+		},
+		{
+			"clave" : "VINCULO_SOMBRA"
+		}
+	]
+
+}

@@ -1,0 +1,29 @@
+{
+	"cartaID" : 81,
+	"nombre" : "Huevo misterioso",
+	"clase" : "HECHIZO",
+	"nivel" : 3,
+	"efecto" : "Trae una criatura de nivel 1 de tu mazo a tu mano (excepto una imperfecta).",
+	"ambientacion" : "No se lo que sea ¡Pero lo quiero!",
+
+	"datoHechizo" : {
+		"tipo" : "TUTOR",
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "nivel",
+					"nivel" : 1
+				},
+				{
+					"tipo" : "perfeccion",
+					"soloPerfectos" : true
+				},
+				{
+					"tipo" : "clase",
+					"clase" : "CRIATURA"
+				}
+			]
+		}
+	}
+
+}

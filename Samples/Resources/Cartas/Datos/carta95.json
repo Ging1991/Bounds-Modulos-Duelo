@@ -1,0 +1,15 @@
+{
+	"cartaID" : 95,
+	"nombre" : "Cien pies gigante",
+	"clase" : "CRIATURA",
+    "nivel" : 3,
+	"ambientacion" : "No tiene cien pies, pero si es gigante.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 1800,
+		"defensa" : 1000,
+		"tipos" : ["INSECTO"]
+	}
+
+}

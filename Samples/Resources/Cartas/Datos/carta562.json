@@ -1,0 +1,15 @@
+{
+	"cartaID" : 562,
+	"nombre" : "Paratemporal garrazas",
+	"clase" : "CRIATURA",
+	"nivel" : 2,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"tipos" : ["MAQUINA"],
+		"ataque" : 350,
+		"defensa" : 1650
+	}
+
+}

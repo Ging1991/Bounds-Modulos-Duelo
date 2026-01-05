@@ -1,0 +1,25 @@
+{
+	"cartaID" : 130,
+	"nombre" : "Renovación oscura",
+	"clase" : "HECHIZO",
+	"nivel" : 6,
+	"efecto" : "El oponente muele 6 cartas.",
+	"ambientacion" : "Nacer y morir, una y otra vez, por la eternidad",
+
+	"datoHechizo" : {
+		"tipo" : "MOLER",
+		"jugador" : "ADVERSARIO",
+		"cantidad" : 6
+	},
+		
+	"efectos" : [
+		{
+			"clave" : "DRENAR_T",
+			"parametroTipo" : "DEMONIO"
+		},
+		{
+			"clave" : "RECICLAR"
+		}
+	]
+
+}

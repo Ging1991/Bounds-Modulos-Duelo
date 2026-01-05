@@ -1,0 +1,15 @@
+{
+	"cartaID" : 298,
+	"nombre" : "Cañón de carne",
+	"clase" : "EQUIPO",
+	"nivel" : 2,
+	"defensa" : 4000,
+	"ambientacion" : "No quiero, pero es una obligación moral.",
+	
+	"efectos" : [
+		{
+			"clave" : "ACTIVADO_DESCARTA_DAÑO"
+		}
+	]
+
+}

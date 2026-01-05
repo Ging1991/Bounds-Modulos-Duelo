@@ -1,0 +1,13 @@
+{
+	"cartaID" : 17,
+	"nombre" : "Cambio de objetivo",
+	"clase" : "TRAMPA",
+	"ambientacion" : "Si estas seguro de jalar el gatillo, debes estar seguro de que estas apuntando bien",
+	"efecto" : "Cuando el oponente declara un ataque mientras controla alguna otra criatura: Otra criatura que controla se vuelve el nuevo objetivo del ataque.",
+	"nivel" : 2,
+
+	"datoTrampa": {
+		"tipo": "CAMBIO_OBJETIVO"
+	}
+	
+}

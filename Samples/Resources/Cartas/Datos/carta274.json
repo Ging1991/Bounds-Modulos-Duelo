@@ -1,0 +1,26 @@
+{
+	"cartaID" : 274,
+	"nombre" : "Impacto del rayo",
+	"clase" : "HECHIZO",
+	"nivel" : 3,
+	"efecto" : "Destruye la criatura o equipo objetivo que controla un oponente y que tenga 2000 de defensa o menos",
+	"ambientacion" : "Nunca te rindas, el combate puede decidirse en el último segundo.",
+
+	"datoHechizo" : {
+		"tipo" : "DESTRUIR_OBJETIVO",
+		"fuentes" : ["CAMPO"],
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "jugador",
+					"controlador" : "ADVERSARIO"
+				},
+				{
+					"tipo" : "estadisticaDEF",
+					"maximo" : 2000
+				}
+			]
+		}
+	}
+
+}

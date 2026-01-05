@@ -1,0 +1,25 @@
+{
+	"cartaID" : 167,
+	"nombre" : "Erupción volcánica",
+	"clase" : "HECHIZO",
+	"nivel" : 4,
+	"efecto" : "Destruye todas criaturas sobre el campo que sean de nivel 3 o menor",
+	"ambientacion" : "La naturaleza también tiene sus cambios de humor",
+
+	"datoHechizo" : {
+		"tipo" : "DESTRUIR_CARTAS",
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clase" : "CRIATURA"
+				},
+				{
+					"tipo" : "nivel",
+					"maximo" : 3
+				}
+			]
+		}
+	}
+
+}

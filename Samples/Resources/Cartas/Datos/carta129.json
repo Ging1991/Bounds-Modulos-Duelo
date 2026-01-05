@@ -1,0 +1,22 @@
+{
+	"cartaID" : 129,
+	"nombre" : "Devoración",
+	"clase" : "AURA",
+	"nivel" : 2,
+	"ambientacion" : "Un ojo para encontrar a su presa, 5 bocas para disfrutarla.",
+	
+	"efectos" : [
+		{
+			"clave" : "VINCULO_HABILIDAD",
+			"parametroHabilidad" : "BRUTAL"
+		},
+		{
+			"clave" : "INICIAR"
+		},
+		{
+			"clave" : "VINCULO_RESTRICCION_NIVEL_MINIMO",
+			"parametroNMinimo" : 5
+		}
+	]
+
+}

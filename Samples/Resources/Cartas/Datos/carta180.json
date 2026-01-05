@@ -1,0 +1,34 @@
+{
+	"cartaID" : 180,
+	"nombre" : "Guardian volcanico",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Incluso su viejo camarada lo acompañara en su nueva tarea.",
+    "nivel" : 5,
+	
+	"datoCriatura" : {
+		"perfeccion" : "FUSION",
+		"ataque" : 3750,
+		"defensa" : 2900,
+		"efectos" : [
+			{
+				"clave" : "EXPLOSION"
+			},
+			{
+				"clave" : "DESTRUIR"
+			}
+		],
+		"tipos" : ["GUERRERO", "AVE", "PYRO"]
+	},
+	
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 97
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 175
+		}
+	]
+
+}

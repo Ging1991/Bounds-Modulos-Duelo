@@ -1,0 +1,13 @@
+{
+	"cartaID" : 495,
+	"nombre" : "Invación alien",
+	"clase" : "TRAMPA",
+    "nivel" : 1,
+	"efecto" : "Cuando termina el turno del oponente, sin hay algun FUSION perfecto en tu cementerio, cada jugador invoca tantos monstruos FUSION perfectos de su cementerio como pueda.",
+	"ambientacion" : "-",
+    
+    "datoTrampa": {
+        "tipo": "invoca_fusion"
+    }
+	
+}

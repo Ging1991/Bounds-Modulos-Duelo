@@ -1,0 +1,13 @@
+{
+	"cartaID" : 326,
+	"nombre" : "Quema de libros",
+	"clase" : "HECHIZO",
+	"nivel" : 2,
+	"efecto" : "Descarta toda tu mano y luego roba la misma cantidad de cartas descartadas por este efecto.",
+	"ambientacion" : "Tragedia para unos, festejo para otros.",
+
+	"datoHechizo" : {
+		"tipo" : "RENOVAR_CARTAS"
+	}
+
+}

@@ -1,0 +1,85 @@
+{
+	"valores": [
+		{
+			"clave" : "ACEPTAR",
+			"valor" : "Acept"
+		},
+		{
+			"clave" : "INICIO",
+			"valor" : "Main"
+		},
+		{
+			"clave" : "MAZO",
+			"valor" : "Deck"
+		},
+		{
+			"clave" : "TIENDA",
+			"valor" : "Shop"
+		},
+		{
+			"clave" : "SOBRES",
+			"valor" : "Boosters"
+		},
+		{
+			"clave" : "ACEPTAR",
+			"valor" : "Acept"
+		},
+		{
+			"clave" : "COMENZAR",
+			"valor" : "Start"
+		},
+		{
+			"clave" : "TUTORIAL",
+			"valor" : "Tutorial"
+		},
+		{
+			"clave" : "HISTORIA",
+			"valor" : "History"
+		},
+		{
+			"clave" : "ENTRENAMIENTO",
+			"valor" : "Trainig"
+		},
+		{
+			"clave" : "AVENTURA",
+			"valor" : "Adventure"
+		},
+		{
+			"clave" : "LIMITADO",
+			"valor" : "Draft"
+		},
+		{
+			"clave" : "CLASIFICATORIAS",
+			"valor" : "Rankeds"
+		},
+		{
+			"clave" : "SALIR",
+			"valor" : "Close"
+		},
+		{
+			"clave" : "MODIFICAR",
+			"valor" : "Modify"
+		},
+		{
+			"clave" : "PREDETERMINAR",
+			"valor" : "Predeterminate"
+		},
+		{
+			"clave" : "SIGUIENTE",
+			"valor" : "Next"
+		},
+		{
+			"clave" : "SALTAR",
+			"valor" : "Skip"
+		},
+		{
+			"clave" : "VIDEO",
+			"valor" : "Video"
+		},
+		{
+			"clave" : "VOLVER",
+			"valor" : "Return"
+		}
+	]
+
+}

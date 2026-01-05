@@ -1,0 +1,21 @@
+{
+	"cartaID" : 68,
+	"nombre" : "Armadura oscura",
+	"clase" : "EQUIPO",
+	"nivel" : 2,
+    "defensa" : 3000,
+	"ambientacion" : "Una gran defensa por un pequeño precio",
+
+    "efectos" : [
+		{
+			"clave" : "VINCULO_ESTADISTICA_ATK_DEF",
+			"parametroATK" : 500,
+			"parametroDEF" : 1500
+		},
+		{
+			"clave" : "DRENAR_T",
+			"parametroTipo" : "DEMONIO"
+		}	
+	]
+
+}

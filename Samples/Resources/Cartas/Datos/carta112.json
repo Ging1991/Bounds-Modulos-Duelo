@@ -1,0 +1,33 @@
+{
+	"cartaID" : 112,
+	"nombre" : "Caballero Grill",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Debo llegar a tiempo",
+    "nivel" : 4,
+	
+	"datoCriatura" : {
+		"perfeccion" : "FUSION",
+		"ataque" : 2000,
+		"defensa" : 1300,
+		"efectos" : [
+			{
+				"clave" : "REFUERZOS"
+			},
+			{
+				"clave" : "ACOMPAÑAR"
+			}
+		],
+		"tipos" : ["GUERRERO"]
+	},
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 101
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 104
+		}
+	]
+
+}

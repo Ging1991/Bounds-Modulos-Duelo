@@ -1,0 +1,34 @@
+{
+	"cartaID" : 580,
+    "nivel" : 12,
+	"nombre" : "Serpiente oxidada",
+	"clase" : "CRIATURA",
+	"ambientacion" : "-",
+		
+	"datoCriatura" : {
+		"ataque" : 3500,
+		"defensa" : 8500,
+		"perfeccion" : "FUSION",
+		"tipos" : ["MAQUINA", "SERPIENTE"],
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			},
+			{
+				"clave" : "BRUTAL"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 35
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 228
+		}
+	]
+
+}

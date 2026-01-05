@@ -1,0 +1,34 @@
+{
+	"cartaID" : 436,
+	"nombre" : "Aikirion, el inmortal",
+	"ambientacion" : "Lanza una moneda",
+	"clase" : "CRIATURA",
+    "nivel" : 5,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 3500,
+		"defensa" : 2000,
+		"efectos" : [
+			{
+				"clave" : "CAZADOR"
+			},
+			{
+				"clave" : "DUPLICAR"
+			}
+		],
+		"tipos" : ["DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 435
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 283
+		}
+	]
+
+}

@@ -1,0 +1,37 @@
+{
+	"cartaID" : 375,
+	"nombre" : "Searfread",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Su nombre le obliga a ser leyenda. Pero el decidira por si mismo si eso sera algo bueno o malo para la humanidad",
+    "nivel" : 6,
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 4000,
+		"defensa" : 3200,
+		"efectos" : [
+			{
+				"clave" : "MASIVO"
+			},
+			{
+				"clave" : "HEROE"
+			},
+			{
+				"clave" : "ARKANO"
+			}
+		],
+		"tipos" : ["GUERRERO", "CABALLERO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "GUERRERO"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "GUERRERO"
+		}
+	]
+
+}

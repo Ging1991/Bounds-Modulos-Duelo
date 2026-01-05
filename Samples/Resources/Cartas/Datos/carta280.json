@@ -1,0 +1,34 @@
+{
+	"cartaID" : 280,
+	"nombre" : "Dragon unirayo",
+	"clase" : "CRIATURA",
+	"ambientacion" : "El poder infinito de la tormenta es algo que ningun hombre puede controlar.",
+    "nivel" : 7,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 5100,
+		"defensa" : 2900,
+		"efectos" : [
+			{
+				"clave" : "CAZADOR"
+			},
+			{
+				"clave" : "EXPLOSION"
+			}
+		],
+		"tipos" : ["DRAGON", "TRUENO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 279
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 72
+		}
+	]
+
+}

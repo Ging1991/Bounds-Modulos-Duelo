@@ -1,0 +1,27 @@
+{
+	"cartaID" : 515,
+	"nombre" : "Ilusionista Paloma",
+	"ambientacion" : "incluso el perro guardian del infierno tiene un amo",
+	"clase" : "CRIATURA",
+    "nivel" : 5,
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 1050,
+		"defensa" : 1050,
+		"tipos" : ["HECHICERO", "HADA"],
+		"efectos" : [
+			{
+				"clave" : "CENIZAS"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 514
+		}
+	]
+
+}

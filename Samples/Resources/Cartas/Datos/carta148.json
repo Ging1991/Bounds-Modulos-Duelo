@@ -1,0 +1,31 @@
+{
+	"cartaID" : 148,
+	"nombre" : "Piraña inversa",
+	"clase" : "CRIATURA",
+    "nivel" : 1,
+	"ambientacion" : "Que su nombre no te engañe, es tan carnivora como las otras.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "FANTASMA",
+		"tipos" : ["PEZ"],
+		"ataque" : 600,
+		"defensa" : 400,
+		"efectos" : [
+			{
+				"clave" : "BRUTAL"
+			},
+			{
+				"clave" : "ALIAS",
+				"parametroID" : 11
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 146
+		}
+	]
+
+}

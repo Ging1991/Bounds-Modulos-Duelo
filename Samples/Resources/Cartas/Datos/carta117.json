@@ -1,0 +1,13 @@
+{
+	"cartaID" : 117,
+	"nombre" : "Emboscada Grill",
+	"clase" : "TRAMPA",
+	"ambientacion" : "En la guerra no hay 'trucos sucios'",
+	"efecto" : "Cuando el oponente invoca una criatura de forma perfecta, destruye esa criatura.",
+	"nivel" : 6,
+		
+	"datoTrampa" : {
+		"tipo": "INVOCACION_PERFECTA_DESTRUYE"
+	}
+
+}

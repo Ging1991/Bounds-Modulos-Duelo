@@ -1,0 +1,13 @@
+{
+	"cartaID" : 212,
+	"nombre" : "Fantasmas",
+	"clase" : "HECHIZO",
+	"nivel" : 8,
+	"efecto" : "Selecciona 2 criaturas BASICAS en tu cementerio. Envialas a la zona de materiales e invoca una ficha de criatura FUSION que es una combinación de esas dos cartas. Tiene la habilidad FATAL.",
+	"ambientacion" : "Estar vivo y muerto a la vez es peor de lo que piensas.",
+
+	"datoHechizo" : {
+		"tipo" : "FUSION_HEREJE"
+	}
+
+}

@@ -1,0 +1,88 @@
+{
+	"lista" : [
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "SET_CARTA_IMG",
+			"indice" : 1,
+			"cartaID" : 3,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "SET_CARTA_IMG",
+			"indice" : 2,
+			"cartaID" : 8,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "SET_CARTA_IMG",
+			"indice" : 3,
+			"cartaID" : 9,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_CREAR",
+			"nombre" : "VERKAN",
+			"imagen" : "VERKAN",
+			"alto" : 600,
+			"ancho" : 400,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_POSICIONAR",
+			"posX" : -325,
+			"posY" : 0,
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_APARECER",
+			"nombre" : "VERKAN"
+		},
+		{
+			"tipo" : "PERSONAJE_ACERCAR",
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_MINIATURA",
+			"imagen" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Las criaturas son cartas con ataque y defensa. Para invocar una criatura arrástrala de tu mano a un lugar libre de tu lado del campo. Solo puedes invocar una vez por turno y la criatura entra girada."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Hay dos fases de juego. La fase principal donde juegas cartas de tu mano, y la fase de combate donde atacas con tus criaturas a las criaturas del oponente."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Para atacar, durante la fase de batalla, selecciona una de tus criaturas enderezadas como atacante, y luego una de las criaturas del oponente como objetivo del ataque."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Si el ataque de una criatura atacante es mayor que la defensa del objetivo, entonces ese objetivo es destruido. Cuando una carta es destruida su controlador pierde vida. Para ganar reduce la vida del oponente a cero."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Prueba tus conocimientos en el siguiente duelo de práctica."
+		},
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "DUELO",
+			"dueloNombre1" : "Jugador",
+			"dueloAvatar1" : "LAUNIX",
+			"dueloLP1" : 2000,
+			"dueloMazo1" : "TUTORIAL_CRIATURAS_1",
+			"dueloNombre2" : "Verkan",
+			"dueloAvatar2" : "VERKAN",
+			"dueloLP2" : 500,
+			"dueloMazo2" : "TUTORIAL_CRIATURAS_2"
+		}
+
+	]
+
+}

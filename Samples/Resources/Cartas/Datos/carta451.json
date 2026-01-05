@@ -1,0 +1,13 @@
+{
+	"cartaID" : 451,
+	"nombre" : "Grieta infernal",
+	"clase" : "VACIO",
+	"nivel" : 10,
+	"efecto" : "Al terminar el turno, el jugador activo pierde 500 LP.",
+	"ambientacion" : "Mientras sigan peleando entre ellos me hare mas fuerte.",
+
+	"datoVacio" : {
+		"tipo" : "ACABAR_VIDA"
+	}
+
+}

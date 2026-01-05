@@ -1,0 +1,15 @@
+{
+	"cartaID" : 195,
+	"nombre" : "Totem defensor",
+	"clase" : "EQUIPO",
+	"nivel" : 5,
+	"defensa" : 2500,
+	"ambientacion" : "Los antiguos Cemikas creian que los protegia del enemigo. Era cierto, pero lamentablemente eso no incluía enemigo internos.",
+
+	"efectos" : [
+		{
+			"clave" : "MURO"
+		}
+	]
+
+}

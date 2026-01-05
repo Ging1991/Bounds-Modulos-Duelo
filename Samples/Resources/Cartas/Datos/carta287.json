@@ -1,0 +1,27 @@
+{
+	"cartaID" : 287,
+	"nombre" : "Zamael ciber tech",
+	"ambientacion" : "La maldad pura no puede ser destruida tan facilmente",
+	"clase" : "CRIATURA",
+	"nivel" : 2,
+
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 1000,
+		"defensa" : 1000,
+		"efectos" : [
+			{
+				"clave" : "RECICLAR"
+			}
+		],
+        "tipos" : ["MAQUINA", "DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 286
+		}
+	]
+
+}

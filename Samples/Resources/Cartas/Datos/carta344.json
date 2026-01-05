@@ -1,0 +1,13 @@
+{
+	"cartaID" : 344,
+	"nombre" : "Contrataque dominado",
+	"clase" : "HECHIZO",
+	"nivel" : 8,
+	"efecto" : "Envia todas las cartas de tu mano al descarte, luego coloca al azar hasta 5 trampas 'contrataque' desde tu mazo.",
+	"ambientacion" : "Finalmente esta completo",
+
+	"datoHechizo" : {
+		"tipo" : "TUTOR_CONTRATAQUE"
+	}
+
+}

@@ -1,0 +1,22 @@
+{
+	"cartaID" : 2,
+	"nombre" : "Encierro divino",
+	"clase" : "AURA",
+	"nivel" : 1,
+	"ambientacion" : "El castigo recien comienza.",
+
+	"efectos" : [
+		{
+			"clave" : "AUMENTAR_T",
+			"parametroTipo" : "ANGEL"
+		},
+		{
+			"clave" : "VINCULO_RESTRICCION_CONTROLADOR_ADVERSARIO"
+		},
+		{
+			"clave" : "VINCULO_HABILIDAD",
+			"parametroHabilidad" : "ENCADENADO"
+		}
+	]
+
+}

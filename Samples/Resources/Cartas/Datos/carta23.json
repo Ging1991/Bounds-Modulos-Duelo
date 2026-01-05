@@ -1,0 +1,21 @@
+{
+	"cartaID" : 23,
+	"nombre" : "Espectros",
+	"clase" : "AURA",
+	"nivel" : 1,
+	"ambientacion" : "Aqui habemos muchos yo",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_MULTIPLE"
+		},
+		{
+			"clave" : "VINCULO_RESTRICCION_NIVEL_MAXIMO",
+			"parametroNMaximo" : 1
+		},
+		{
+			"clave" : "ESCUDO"
+		}
+	]
+		
+}

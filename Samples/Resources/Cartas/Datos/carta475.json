@@ -1,0 +1,27 @@
+{
+	"cartaID" : 475,
+	"nombre" : "Bruja del verano",
+	"clase" : "CRIATURA",
+	"nivel" : 5,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "VECTOR",
+		"tipos" : ["HECHICERO", "PYRO"],
+		"ataque" : 2350,
+		"defensa" : 1200,
+		"efectos" : [
+			{
+				"clave" : "EXPLOSION"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "VECTOR_ATK",
+			"parametroATK" : 1550
+		}
+	]
+
+}

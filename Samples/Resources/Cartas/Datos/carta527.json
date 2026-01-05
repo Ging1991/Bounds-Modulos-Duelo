@@ -1,0 +1,35 @@
+{
+	"cartaID" : 527,
+    "nivel" : 5,
+	"nombre" : "Parasito del alba",
+	"clase" : "CRIATURA",
+	"ambientacion" : "La peor combinación.",
+		
+	"datoCriatura" : {
+		"ataque" : 2750,
+		"defensa" : 2350,
+		"perfeccion" : "FUSION",
+		"tipos" : ["INSECTO", "DEMONIO"],
+		"efectos" : [
+			{
+				"clave" : "FATAL"
+			},
+			{
+				"clave" : "ENVENENAR_N",
+				"parametroN" : 9
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 95
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 95
+		}
+	]
+
+}

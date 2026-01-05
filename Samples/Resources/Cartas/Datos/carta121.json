@@ -1,0 +1,15 @@
+{
+	"cartaID" : 121,
+	"nombre" : "Espectro calavera",
+	"clase" : "CRIATURA",
+    "nivel" : 1,
+	"ambientacion" : "Asi que quieres hacer un trato",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 1850,
+		"defensa" : 0,
+        "tipos" : ["ZOMBI", "DEMONIO"]
+	}
+
+}

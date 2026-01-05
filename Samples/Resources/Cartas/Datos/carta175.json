@@ -1,0 +1,34 @@
+{
+	"cartaID" : 175,
+	"nombre" : "Guerrero volcánico",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Incluso en el infierno hay reglas que te haran respetar.",
+    "nivel" : 6,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 3000,
+		"defensa" : 2500,
+		"efectos" : [
+			{
+				"clave" : "CAZADOR"
+			},
+			{
+				"clave" : "EXPLOSION"
+			}
+		],
+		"tipos" : ["GUERRERO", "PYRO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 27
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 87
+		}
+	]
+
+}

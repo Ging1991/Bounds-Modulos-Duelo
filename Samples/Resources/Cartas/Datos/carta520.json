@@ -1,0 +1,28 @@
+{
+	"cartaID" : 520,
+	"nombre" : "Amo del universo",
+	"clase" : "CRIATURA",
+	"nivel" : 10,
+	"ambientacion" : "El poder absoluto corrompe absolutamente",
+
+	"datoCriatura" : {
+		"perfeccion" : "REFLEJO",
+		"ataque" : 0,
+		"defensa" : 0,
+		"tipos" : ["DIOS", "INSECTO"],
+		"efectos" : [
+			{
+				"clave" : "MASIVO"
+			}
+		]
+	},
+	
+	"materiales" : [
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "CRIATURA"
+		}
+	]
+
+
+}

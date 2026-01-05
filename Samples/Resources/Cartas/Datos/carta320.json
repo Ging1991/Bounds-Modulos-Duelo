@@ -1,0 +1,35 @@
+{
+	"cartaID" : 320,
+	"nombre" : "Abominación abisal",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Siempre habra mas abajo",
+    "nivel" : 8,
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 0,
+		"defensa" : 4800,
+		"efectos" : [
+			{
+				"clave" : "DESTRUIR"
+			}
+		],
+		"tipos" : ["REPTIL", "BESTIA"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "REPTIL"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "REPTIL"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "REPTIL"
+		}
+	]
+
+}

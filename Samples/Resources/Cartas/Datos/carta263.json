@@ -1,0 +1,15 @@
+{
+	"cartaID" : 263,
+	"nombre" : "Conciencia de la brisa",
+	"clase" : "HECHIZO",
+	"nivel" : 1,
+	"efecto" : "Ganas 500 LP",
+	"ambientacion" : "Segun los antiguos druidas, todo esta vivo, incluso el aire.",
+
+	"datoHechizo" : {
+		"tipo" : "MODIFICAR_VIDA",
+		"cantidad" : 500,
+		"jugador" : "JUGADOR"
+	}
+
+}

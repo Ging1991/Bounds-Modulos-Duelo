@@ -1,0 +1,34 @@
+{
+	"cartaID" : 500,
+	"nombre" : "Launix volcánica",
+	"clase" : "CRIATURA",
+	"nivel" : 8,
+	"ambientacion" : "-",
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"tipos" : ["HADA", "PYRO"],
+		"ataque" : 3900,
+		"defensa" : 3300,
+		"efectos" : [
+			{
+				"clave" : "EXPLOSION"
+			},
+			{
+				"clave" : "MASIVO"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 498
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 499
+		}
+	]
+
+}

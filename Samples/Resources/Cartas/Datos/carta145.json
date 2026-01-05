@@ -1,0 +1,13 @@
+{
+	"cartaID" : 145,
+	"nombre" : "Océano prolífero",
+	"clase" : "VACIO",
+	"nivel" : 9,
+	"efecto" : "Cada jugador crea al comienzo de su turno, si no controla fichas, una Ficha Pez.",
+	"ambientacion" : "El origen de la vida aun sigue trabajando.",
+
+	"datoVacio" : {
+		"tipo" : "OCEANO"
+	}
+
+}

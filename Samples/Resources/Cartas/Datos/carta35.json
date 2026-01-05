@@ -1,0 +1,15 @@
+{
+	"cartaID" : 35,
+	"nombre" : "Gárgola mecánica",
+	"clase" : "CRIATURA",
+    "nivel" : 7,
+	"ambientacion" : "Aún sigue cuidando las ancestrales ruinas del laboratorio donde fue creado.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 3500,
+		"defensa" : 2900,
+		"tipos" : ["BESTIA", "MAQUINA"]
+	}
+
+}

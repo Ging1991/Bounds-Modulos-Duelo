@@ -1,0 +1,30 @@
+{
+	"cartaID" : 569,
+	"nombre" : "Guardiana del mar",
+	"clase" : "CRIATURA",
+	"nivel" : 4,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "ROMPECABEZAS",
+		"ataque" : 2350,
+		"defensa" : 1600,
+		"tipos" : ["PEZ"],
+		"efectos" : [
+			{
+				"clave" : "CAZADOR"
+			},
+			{
+				"clave" : "INICIAR"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "PEZ"
+		}
+	]
+
+}

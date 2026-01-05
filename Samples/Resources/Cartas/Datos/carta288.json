@@ -1,0 +1,13 @@
+{
+	"cartaID" : 288,
+	"nombre" : "Lexer de la ira",
+	"clase" : "VACIO",
+	"nivel" : 10,
+	"efecto" : "Cuando un jugador invoca de forma perfecta, inflige 500 de daño a su oponente.",
+	"ambientacion" : "Cuando dijo que iria al mismo infierno para cumplir con su venganza, no estaba alardeando.",
+
+	"datoVacio" : {
+		"tipo" : "PERFECCION"
+	}
+
+}

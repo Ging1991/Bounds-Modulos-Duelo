@@ -1,0 +1,15 @@
+{
+	"cartaID" : 545,
+	"nombre" : "Kraken del diluvio",
+	"clase" : "CRIATURA",
+	"nivel" : 5,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"tipos" : ["PEZ"],
+		"ataque" : 2450,
+		"defensa" : 2350
+	}
+
+}

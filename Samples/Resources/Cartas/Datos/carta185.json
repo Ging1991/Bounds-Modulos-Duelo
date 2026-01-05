@@ -1,0 +1,30 @@
+{
+	"cartaID" : 185,
+	"nombre" : "Caballero prisma",
+	"clase" : "CRIATURA",
+	"ambientacion" : "El que golpea primero, golpea dos veces.",
+	"nivel" : 4,
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 3000,
+		"defensa" : 0,
+		"efectos" : [
+			{
+				"clave" : "CAZADOR"
+			},
+			{
+				"clave" : "ACOMPAÑAR"
+			}
+		],
+		"tipos" : ["CABALLERO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 184
+		}
+	]
+
+}

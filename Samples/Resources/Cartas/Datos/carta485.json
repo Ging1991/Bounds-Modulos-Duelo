@@ -1,0 +1,19 @@
+{
+	"cartaID" : 485,
+	"nombre" : "100 pajaros volando",
+	"clase" : "HECHIZO",
+	"nivel" : 1,
+	"efecto" : "Selecciona un AVE en tu mazo y agregala a tu mano.",
+	"ambientacion" : "-",
+
+	"datoHechizo" : {
+		"tipo" : "TUTOR",
+		"condicionCarta": {
+			"condicion" : {
+				"tipo" : "tipoCriatura",
+				"tipoCriatura" : "AVE"
+			}
+		}
+	}
+
+}

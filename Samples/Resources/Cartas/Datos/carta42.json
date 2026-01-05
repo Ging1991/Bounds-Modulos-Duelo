@@ -1,0 +1,15 @@
+{
+	"cartaID" : 42,
+	"clase" : "CRIATURA",
+	"nombre" : "Lamia, mujer demonio",
+	"nivel" : 8,
+	"ambientacion" : "La vengaza no distingue bandos de 'buenos y 'malos'.",
+		
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 4200,
+		"defensa" : 3700,
+		"tipos" : ["DEMONIO"]
+	}
+
+}

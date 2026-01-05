@@ -1,0 +1,34 @@
+{
+	"cartaID" : 93,
+	"nombre" : "Vigilantes del bosque",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Parejas poco probables",
+    "nivel" : 2,
+	
+	"datoCriatura" : {
+		"perfeccion" : "FUSION",
+		"ataque" : 800,
+		"defensa" : 900,
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			},
+			{
+				"clave" : "HEROE"
+			}
+		],
+		"tipos" : ["AVE", "HADA"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 26
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 92
+		}
+	]
+
+}

@@ -1,0 +1,19 @@
+{
+	"cartaID" : 165,
+	"nombre" : "Ira sin límites",
+	"clase" : "AURA",
+	"nivel" : 1,
+	"ambientacion" : "¿Contra quien irá a descargar toda esa furia?",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_RESTRICCION_NIVEL_MAXIMO",
+			"parametroNMaximo" : 3
+		},
+		{
+			"clave" : "VINCULO_HABILIDAD",
+			"parametroHabilidad" : "CARBONIZAR"
+		}
+	]
+
+}

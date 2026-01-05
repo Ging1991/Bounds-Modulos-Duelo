@@ -1,0 +1,14 @@
+{
+	"cartaID" : 426,
+	"nombre" : "Doppelganger",
+	"clase" : "AURA",
+	"nivel" : 1,
+	"ambientacion" : "Te juro que yo no lo hice, fue mi otro yo.",
+
+	"efectos" : [
+		{
+			"clave" : "ESCUDO"
+		}
+	]
+
+}

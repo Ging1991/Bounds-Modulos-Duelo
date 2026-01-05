@@ -1,0 +1,13 @@
+{
+	"cartaID" : 357,
+	"nombre" : "Ofrenda no voluntaria",
+	"clase" : "HECHIZO",
+	"nivel" : 10,
+	"efecto" : "Mira la mano de tu oponente, selecciona una carta y colocala en tu mano.",
+	"ambientacion" : "No creen en la pena de muerte, los criminales siempre sirven para algo.",
+
+	"datoHechizo" : {
+		"tipo" : "OFRENDA"
+	}
+
+}

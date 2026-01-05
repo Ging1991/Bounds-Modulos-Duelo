@@ -1,0 +1,30 @@
+{
+	"cartaID" : 526,
+	"nombre" : "Abominacion prehistorica",
+	"clase" : "CRIATURA",
+    "nivel" : 6,
+	"ambientacion" : "El fuego infernal existe en todas las dimensiones.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 3150,
+		"defensa" : 2950,
+		"efectos" : [
+			{
+				"clave" : "BRUTAL_MANO"
+			},
+			{
+				"clave" : "CAZADOR"
+			}
+		],
+		"tipos" : ["DINOSAURIO", "DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DINOSAURIO"
+		}
+	]
+
+}

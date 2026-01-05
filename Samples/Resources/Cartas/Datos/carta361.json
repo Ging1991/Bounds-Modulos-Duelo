@@ -1,0 +1,19 @@
+{
+	"cartaID" : 361,
+	"nombre" : "Ciencia macabra",
+	"clase" : "HECHIZO",
+	"nivel" : 1,
+	"efecto" : "Añade un MAGICO deste tu mazo a tu mano",
+	"ambientacion" : "No pueden pesar lo mismo ¿En serio?",
+
+	"datoHechizo" : {
+		"tipo" : "TUTOR",
+		"condicionCarta": {
+			"condicion" : {
+				"tipo" : "criaturaPerfeccion",
+				"perfeccion" : "MAGICO"
+			}
+		}
+	}
+
+}

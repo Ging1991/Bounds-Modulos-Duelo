@@ -1,0 +1,15 @@
+{
+	"cartaID" : 531,
+	"nombre" : "Princesa solitaria",
+	"clase" : "CRIATURA",
+	"nivel" : 1,
+	"ambientacion" : "El poder absoluto corrompe absolutamente",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 0,
+		"defensa" : 300,
+		"tipos" : ["HADA"]
+	}
+
+}

@@ -1,0 +1,16 @@
+{
+	"cartaID" : 301,
+	"nombre" : "Rey en miseria",
+	"clase" : "CRIATURA",
+    "nivel" : 1,
+	"ambientacion" : "El reino estaba acabado ¿La noticia que traen sus súbditos, podría cambiar algo?",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 0,
+		"defensa" : 450,
+        "tipos" : ["GUERRERO", "REPTIL"],
+        "habilidades" : []
+	}
+
+}

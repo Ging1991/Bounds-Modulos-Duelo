@@ -1,0 +1,34 @@
+{
+	"cartaID" : 166,
+	"nombre" : "Cráneo de ira",
+	"clase" : "CRIATURA",
+	"nivel" : 2,
+	"ambientacion" : "Estara dispuesto a todo para cumplir su venganza.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 1900,
+		"defensa" : 1000,
+		"efectos" : [
+			{
+				"clave" : "RECICLAR"
+			},
+			{
+				"clave" : "CARBONIZAR"
+			}
+		],
+		"tipos" : ["ZOMBI", "PYRO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 94
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 165
+		}
+	]
+
+}

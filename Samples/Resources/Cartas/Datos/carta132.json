@@ -1,0 +1,27 @@
+{
+	"cartaID" : 132,
+	"nombre" : "Renovador oscuro",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Ocasionalmente regreso a mi forma original ¿Por cuanto tiempo podre mantenerla esta vez?",
+    "nivel" : 1,
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 0,
+		"defensa" : 0,
+		"efectos" : [
+			{
+				"clave" : "ARRUINAR"
+			}
+		],
+		"tipos" : ["DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 130
+		}
+	]
+
+}

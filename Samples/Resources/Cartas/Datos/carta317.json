@@ -1,0 +1,15 @@
+{
+	"cartaID" : 317,
+	"nombre" : "Elite reptiliana",
+	"clase" : "CRIATURA",
+	"nivel" : 4,
+	"ambientacion" : "En el mundo solo existen dos cosas, las que estan arriba y las que estan abajo.",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 2100,
+		"defensa" : 1700,
+		"tipos" : ["GUERRERO", "REPTIL"]
+	}
+
+}

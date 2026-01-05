@@ -1,0 +1,22 @@
+{
+	"cartaID" : 306,
+	"nombre" : "Transformación tiburón",
+	"clase" : "HECHIZO",
+	"nivel" : 3,
+	"efecto" : "Sacrifica una criatura que controlas: Invoca una Ficha tiburón.",
+	"ambientacion" : "Parece que aqui vamos de nuevo.",
+
+	"datoHechizo" : {
+		"tipo" : "SACRIFICIO_CREAR_FICHA",
+		"parametroID" : 308,
+        "condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clase" : "CRIATURA"
+				}
+			]
+		}
+	}
+
+}

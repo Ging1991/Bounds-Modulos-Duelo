@@ -1,0 +1,15 @@
+{
+	"cartaID" : 133,
+	"nombre" : "Forastero del páramo",
+	"clase" : "CRIATURA",
+    "nivel" : 4,
+	"ambientacion" : "Cuando encuentre a esa maldita princesa, mi venganza contra la familia real estará completa.",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 1900,
+		"defensa" : 1600,
+        "tipos" : ["GUERRERO"]
+	}
+
+}

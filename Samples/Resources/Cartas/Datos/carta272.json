@@ -1,0 +1,39 @@
+{
+	"cartaID" : 272,
+    "nivel" : 7,
+	"nombre" : "Serpiente gris",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Mas alla del bien y el mal existe un poder que ningun mortal obtendrá jamas.",
+    	
+	"datoCriatura" : {
+		"ataque" : 3500,
+		"defensa" : 3000,
+		"perfeccion" : "FUSION",
+		"tipos" : ["DRAGON", "SERPIENTE"],
+		"efectos" : [
+			{
+				"clave" : "BRUTAL"
+			},
+			{
+				"clave" : "CAZADOR"
+			},
+			{
+				"clave" : "EXPLOSION"
+			},
+			{
+				"clave" : "INICIAR"
+			}
+		]
+	},
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 6
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 21
+		}
+	]
+
+}

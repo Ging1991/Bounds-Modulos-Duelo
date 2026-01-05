@@ -1,0 +1,27 @@
+{
+	"cartaID" : 376,
+	"nombre" : "Abadon, modo arkangel",
+	"clase" : "CRIATURA",
+    "nivel" : 6,
+	"ambientacion" : "Esta vez, será a mi manera",
+
+	"datoCriatura" : {
+		"perfeccion" : "VECTOR",
+		"ataque" : 3000,
+		"defensa" : 2500,
+        "tipos" : ["ANGEL", "GUERRERO"],
+        "efectos" : [
+			{
+				"clave" : "ARKANO"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "VECTOR_ATK",
+			"parametroATK" : 4500
+		}
+	]
+
+}

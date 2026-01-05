@@ -1,0 +1,34 @@
+{
+	"cartaID" : 421,
+	"nombre" : "Gemelos del horror",
+	"clase" : "CRIATURA",
+	"ambientacion" : "El fuego infernal existe en todas las dimensiones.",
+    "nivel" : 3,
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 1650,
+		"defensa" : 2150,
+		"efectos" : [
+			{
+				"clave" : "FATAL"
+			},
+			{
+				"clave" : "ATADURAS"
+			}
+		],
+		"tipos" : ["DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DEMONIO"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DEMONIO"
+		}
+	]
+
+}

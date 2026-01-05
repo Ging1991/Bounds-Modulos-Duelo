@@ -1,0 +1,13 @@
+{
+	"cartaID" : 183,
+	"nombre" : "Gravitación aumentada",
+	"clase" : "TRAMPA",
+	"nivel" : 2,
+	"ambientacion" : "Este es solo el primer paso de mi ataque, preparate para lo que se viene.",
+    "efecto" : "Cuando el oponente invoca una criatura BASICA de forma normal: Coloca 3 contadores de debilidad sobre ella.",
+
+    "datoTrampa" : {
+        "tipo" : "NORMAL_X3"
+    }
+
+}

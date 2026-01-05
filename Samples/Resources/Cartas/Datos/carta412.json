@@ -1,0 +1,13 @@
+{
+	"cartaID" : 412,
+	"nombre" : "Renacimiento",
+    "clase" : "HECHIZO",
+    "nivel" : 10,
+    "efecto" : "Selecciona una criatura GEMINIS en tu mazo al azar, luego envia a tu zona de materiales hasta una copia de cada uno de sus materiales en tu mazo y agregala a tu mano.",
+    "ambientacion" : "-",
+
+    "datoHechizo" : {
+        "tipo" : "NUCLEAR_GEMINIS"
+    }
+
+}

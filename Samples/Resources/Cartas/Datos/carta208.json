@@ -1,0 +1,16 @@
+{
+	"cartaID" : 208,
+	"nombre" : "Pacto infernal",
+	"clase" : "HECHIZO",
+	"nivel" : 6,
+	"efecto" : "Paga 500 LP.\nRoba dos cartas.",
+	"ambientacion" : "El mas sorprendido de todos fue el demonio.",
+
+	"datoHechizo" : {
+		"tipo" : "COSTE_LP_ROBAR_CARTAS",
+		"jugador" : "JUGADOR",
+		"cantidad" : 2,
+		"costeLP" : 500
+	}
+
+}

@@ -1,0 +1,13 @@
+{
+	"cartaID" : 448,
+	"nombre" : "Orquidea sangrienta",
+	"clase" : "TRAMPA",
+	"nivel" : 1,
+	"efecto" : "Cuando fueras a perder vida, no pierdes esas vidas.",
+	"ambientacion" : "Los origenes de los vampiros son muy diversos.",
+		
+	"datoTrampa" : {
+		"tipo": "niega_vida"
+	}
+
+}

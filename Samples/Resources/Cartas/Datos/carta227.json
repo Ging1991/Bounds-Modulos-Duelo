@@ -1,0 +1,22 @@
+{
+	"cartaID" : 227,
+	"nombre" : "Insecto vengador",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Ya no habra perdon",
+    "nivel" : 1,
+	
+	"datoCriatura" : {
+		"perfeccion" : "FICHA",
+		"ataque" : 0,
+		"defensa" : 0,
+		"efectos" : [
+			{
+				"clave" : "ENVENENAR_N",
+				"parametroN" : 2
+			}
+		],
+		"tipos" : ["DEMONIO", "INSECTO"],
+		"materiales" : [226]
+	}
+
+}

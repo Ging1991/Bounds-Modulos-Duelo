@@ -1,0 +1,40 @@
+{
+	"cartaID" : 484,
+	"nombre" : "Sushi escarlata I.I.",
+	"clase" : "CRIATURA",
+    "nivel" : 4,
+	"ambientacion" : "-",
+    	
+	"datoCriatura" : {
+		"perfeccion" : "FUSION",
+		"tipos" : ["PEZ", "PYRO", "AVE"],
+		"ataque" : 2150,
+		"defensa" : 1950,
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			},
+			{
+				"clave" : "EXPLOSION"
+			},
+			{
+				"clave" : "FATAL"
+			}
+		]
+	},
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 481
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 483
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 482
+		}
+	]
+
+}

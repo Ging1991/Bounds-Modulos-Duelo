@@ -1,0 +1,35 @@
+{
+	"cartaID" : 537,
+	"nombre" : "Hombre piraña",
+	"ambientacion" : "Lanza una moneda",
+	"clase" : "CRIATURA",
+    "nivel" : 1,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 500,
+		"defensa" : 350,
+		"efectos" : [
+			{
+				"clave" : "SUPERVIVENCIA_N",
+				"parametroN" : 1
+			},
+			{
+				"clave" : "INICIAR"
+			}
+		],
+		"tipos" : ["GUERRERO", "PEZ"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 11
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 43
+		}
+	]
+
+}

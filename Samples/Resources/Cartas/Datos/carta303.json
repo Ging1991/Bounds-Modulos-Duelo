@@ -1,0 +1,37 @@
+{
+	"cartaID" : 303,
+	"nombre" : "Alarkon, el devastador",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Ahora soy admin",
+	"nivel" : 10,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 4000,
+		"defensa" : 4000,
+		"efectos" : [
+			{
+				"clave" : "ARKANO"
+			},
+			{
+				"clave" : "BRUTAL"
+			},
+			{
+				"clave" : "DEVASTACION"
+			}
+		],
+		"tipos" : ["REPTIL"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 301
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 302
+		}
+	]
+
+}

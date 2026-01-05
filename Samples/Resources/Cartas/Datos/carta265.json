@@ -1,0 +1,34 @@
+{
+	"cartaID" : 265,
+	"nombre" : "Serpiente liberada",
+	"clase" : "CRIATURA",
+	"ambientacion" : "En una dimension donde no existe arriba ni abajo, bueno o malo, debil o fuerte, la cordura es completamente inutil.",
+    "nivel" : 5,
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 2800,
+		"defensa" : 2300,
+		"efectos" : [
+			{
+				"clave" : "HEROE"
+			},
+			{
+				"clave" : "REFUERZOS"
+			}
+		],
+		"tipos" : ["DRAGON", "SERPIENTE"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "SERPIENTE"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "SERPIENTE"
+		}
+	]
+
+}

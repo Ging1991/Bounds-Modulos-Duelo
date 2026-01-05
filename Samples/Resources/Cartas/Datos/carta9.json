@@ -1,0 +1,15 @@
+{
+	"cartaID" : 9,
+	"nombre" : "Serpiente oscura",
+	"clase" : "CRIATURA",
+    "nivel" : 3,
+	"ambientacion" : "La libertad de ser quien quieras.",
+		
+	"datoCriatura" : {
+		"ataque" : 1500,
+		"defensa" : 1300,
+        "perfeccion": "BASICO",
+        "tipos" : ["REPTIL", "SERPIENTE"]
+    }
+
+}

@@ -1,0 +1,34 @@
+{
+	"cartaID" : 564,
+	"nombre" : "Soldado dragon",
+	"clase" : "CRIATURA",
+    "nivel" : 4,
+	"ambientacion" : "-",
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 1700,
+		"defensa" : 1200,
+		"efectos" : [
+			{
+				"clave" : "REFUERZOS"
+			},
+			{
+				"clave" : "ACOMPAÑAR"
+			}
+		],
+		"tipos" : ["GUERRERO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "GUERRERO"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DRAGON"
+		}
+	]
+
+}

@@ -1,0 +1,15 @@
+{
+	"cartaID" : 101,
+	"nombre" : "Soldado Grill",
+	"clase" : "CRIATURA",
+	"nivel" : 3,
+	"ambientacion" : "Peleamos por la libertad.",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"tipos" : ["GUERRERO"],
+		"ataque" : 1200,
+		"defensa" : 1300
+	}
+
+}

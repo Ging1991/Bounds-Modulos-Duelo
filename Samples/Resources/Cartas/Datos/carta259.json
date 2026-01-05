@@ -1,0 +1,16 @@
+{
+	"cartaID" : 259,
+	"nombre" : "Cadenas de andromeda",
+	"clase" : "EQUIPO",
+	"nivel" : 3,
+	"defensa" : 1000,
+	"ambientacion" : "Las cadenas nunca seran seran el simbolo de la libertad, pero no hay forma en que pueda hacerselos entender",
+    
+	"efectos" : [
+		{
+			"clave" : "VINCULO_ESTADISTICA_DEF",
+			"parametroDEF" : 1000
+		}
+	]
+
+}

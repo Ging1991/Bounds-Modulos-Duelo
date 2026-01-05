@@ -1,0 +1,27 @@
+{
+	"cartaID" : 512,
+	"nombre" : "Horror de las Mitades",
+	"clase" : "CRIATURA",
+    "nivel" : 6,
+	"ambientacion" : "-",
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 2650,
+		"defensa" : 1650,
+		"efectos" : [
+			{
+				"clave" : "ATADURAS"
+			}
+		],
+		"tipos" : ["DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DEMONIO"
+		}
+	]
+
+}

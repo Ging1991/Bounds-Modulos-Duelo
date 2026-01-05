@@ -1,0 +1,34 @@
+{
+	"cartaID" : 390,
+	"nombre" : "Tanquena de Atenas",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Realmente nunca pense que algun dia haria algo por alguien mas",
+    "nivel" : 5,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 3000,
+		"defensa" : 1500,
+		"efectos" : [
+			{
+				"clave" : "CAZADOR"
+			},
+			{
+				"clave" : "HEROE"
+			}
+		],
+		"tipos" : ["GUERRERO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 388
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 389
+		}
+	]
+
+}

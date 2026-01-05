@@ -1,0 +1,13 @@
+{
+	"cartaID" : 311,
+	"nombre" : "Refuerzos verdes",
+	"clase" : "HECHIZO",
+	"nivel" : 5,
+	"efecto" : "Robas una carta por cada CRIATURA que controlas.",
+	"ambientacion" : "El crimen prolifera sin un gobierno fuerte, pero no nos quedaremos con los brazos cruzados.",
+
+	"datoHechizo" : {
+		"tipo" : "ROBAR_CARTAS_CRIATURA"
+	}
+
+}

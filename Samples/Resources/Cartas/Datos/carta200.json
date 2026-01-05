@@ -1,0 +1,27 @@
+{
+	"cartaID" : 200,
+	"nombre" : "Hidra del fin",
+	"clase" : "CRIATURA",
+	"ambientacion" : "La primer creación del nuevo mundo es un recordatorio de lo que puede pasar si el creador vuelve a decepcionarse.",
+	"nivel" : 8,
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"tipos" : ["SERPIENTE", "ANGEL"],
+		"ataque" : 5000,
+		"defensa" : 0,
+		"efectos" : [
+			{
+				"clave" : "HEROE"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 199
+		}
+	]
+
+}

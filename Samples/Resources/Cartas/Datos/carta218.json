@@ -1,0 +1,13 @@
+{
+	"cartaID" : 218,
+	"nombre" : "Campaña de odio",
+    "clase" : "VACIO",
+    "nivel" : 10,
+    "efecto" : "Cuando un jugador invoca un DEMONIO BASICO, su adversario descarta una carta.",
+    "ambientacion" : "No fue dificil",
+
+    "datoVacio" : {
+        "tipo" : "ODIO"
+    }
+
+}

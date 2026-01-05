@@ -1,0 +1,34 @@
+{
+	"cartaID" : 437,
+	"nombre" : "Raiz de esporas",
+	"clase" : "CRIATURA",
+	"ambientacion" : "El regidor del nuevo orden mundial esta aqui",
+    "nivel" : 4,
+	
+	"datoCriatura" : {
+		"perfeccion" : "FUSION",
+		"ataque" : 1750,
+        "defensa" : 1350,
+        "tipos" : ["PLANTA", "INSECTO"],
+		"efectos" : [
+			{
+				"clave" : "ENVENENAR_N",
+				"parametroN" : 8
+			},
+			{
+				"clave" : "ATADURAS"
+			}
+		]
+	},
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 46
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 53
+		}
+	]
+
+}

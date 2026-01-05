@@ -1,0 +1,56 @@
+{
+	"cartaID" : 415,
+	"nombre" : "Dragon de la 5ta dimension",
+	"clase" : "CRIATURA",
+	"nivel" : 8,
+	"ambientacion" : "Antes de explotar, el traductor multiversal alcanzo a decirnos lo que descaradamente estaban balbuceando esas cabezas: 'Venimos en son de paz'",
+
+	"datoCriatura" : {
+		"perfeccion" : "VECTOR",
+		"ataque" : 5000,
+		"defensa" : 3000,
+		"tipos" : ["DRAGON", "SERPIENTE"],
+		"efectos" : [
+			{
+				"clave" : "CAZADOR"
+			},
+			{
+				"clave" : "FATAL"
+			},
+			{
+				"clave" : "INICIAR"
+			},
+			{
+				"clave" : "EXPLOSION"
+			},
+			{
+				"clave" : "BRUTAL"
+			}
+		]
+	},
+	
+	"materiales" : [
+		{
+			"tipo" : "VECTOR_ATK",
+			"parametroATK" : 1000
+		},
+		{
+			"tipo" : "VECTOR_ATK",
+			"parametroATK" : 1000
+		},
+		{
+			"tipo" : "VECTOR_ATK",
+			"parametroATK" : 1000
+		},
+		{
+			"tipo" : "VECTOR_ATK",
+			"parametroATK" : 1000
+		},
+		{
+			"tipo" : "VECTOR_ATK",
+			"parametroATK" : 1000
+		}
+	]
+
+
+}

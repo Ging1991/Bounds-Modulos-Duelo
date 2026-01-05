@@ -1,0 +1,14 @@
+{
+	"cartaID" : 242,
+	"nombre" : "El ojo biónico despertado",
+	"clase" : "HECHIZO",
+	"nivel" : 6,
+	"efecto" : "El oponente muele 8 cartas.",
+	"ambientacion" : "Algun dia, observar ya no será suficiente",
+
+	"datoHechizo" : {
+		"tipo" : "MOLER",
+		"cantidad" : 8
+	}
+
+}

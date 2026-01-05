@@ -1,0 +1,27 @@
+{
+	"cartaID" : 300,
+	"nombre" : "Vudú ancestral",
+	"clase" : "CRIATURA",
+	"nivel" : 6,
+	"ambientacion" : "La habilidad de poder conocerlo todo, con el pequeño inconveniente de no poder hacer nada al respecto.",
+
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 0,
+		"defensa" : 3000,
+		"efectos" : [
+			{
+				"clave" : "QUEMADURA_MAGICA"
+			}
+		],
+        "tipos" : ["ZOMBI", "HECHICERO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 299
+		}
+	]
+
+}

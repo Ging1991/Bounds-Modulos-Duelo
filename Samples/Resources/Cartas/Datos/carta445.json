@@ -1,0 +1,15 @@
+{
+	"cartaID" : 445,
+	"nombre" : "Puerta al infierno",
+	"clase" : "CRIATURA",
+	"nivel" : 5,
+	"ambientacion" : "Siempre me tocan las peores misiones.",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 0,
+		"defensa" : 3200,
+		"tipos" : ["DEMONIO", "ROCA"]
+	}
+
+}

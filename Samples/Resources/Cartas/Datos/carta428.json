@@ -1,0 +1,30 @@
+{
+	"cartaID" : 428,
+	"nombre" : "Medusa guerrera",
+	"clase" : "CRIATURA",
+    "nivel" : 8,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "REFLEJO",
+		"ataque" : 3500,
+		"defensa" : 2000,
+        "tipos" : ["GUERRERO", "DEMONIO"],
+		"efectos" : [
+			{
+				"clave" : "CAZADOR"
+			}
+		]
+	},
+	"materiales" : [
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "AURA"
+		},
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "AURA"
+		}
+	]
+
+}

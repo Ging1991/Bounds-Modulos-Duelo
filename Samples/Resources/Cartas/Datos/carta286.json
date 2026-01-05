@@ -1,0 +1,25 @@
+{
+	"cartaID" : 286,
+	"nombre" : "Resurrección Ciber Tech",
+	"clase" : "HECHIZO",
+	"nivel" : 10,
+	"efecto" : "Descarta un DEMONIO BASICO: Inflige daño a tu oponente igual al ataque de la carta descartada.",
+	"ambientacion" : "Ya nunca será el mismo, pero seguirá siendo igual de peligroso.",
+
+	"datoHechizo" : {
+		"tipo" : "DESCARTE_DEMONIO",
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "criaturaPerfeccion",
+					"perfeccion" : "BASICO"
+				},
+				{
+					"tipo" : "tipoCriatura",
+					"tipoCriatura" : "DEMONIO"
+				}
+			]
+		}
+	}
+
+}

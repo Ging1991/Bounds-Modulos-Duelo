@@ -1,0 +1,15 @@
+{
+	"cartaID" : 231,
+	"nombre" : "Brote de Ent",
+	"clase" : "CRIATURA",
+	"nivel" : 1,
+	"ambientacion" : "Hoy debemos cuidar de no pisarlo, mañana tedremos que cuidarnos de que no nos pise.",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 0,
+		"defensa" : 0,
+		"tipos" : ["PLANTA"]
+	}
+
+}

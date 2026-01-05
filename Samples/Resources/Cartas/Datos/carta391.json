@@ -1,0 +1,31 @@
+{
+	"cartaID" : 391,
+	"nombre" : "Deidad dragón",
+	"clase" : "CRIATURA",
+	"ambientacion" : "No todos los dioses son temibles y despreciables.",
+    "nivel" : 1,
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 0,
+		"defensa" : 0,
+		"efectos" : [
+			{
+				"clave" : "BENDICION_T",
+				"parametroTipo" : "DRAGON"
+			},
+			{
+				"clave" : "ACOMPAÑAR"
+			}
+		],
+		"tipos" : ["DRAGON", "ANGEL"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DRAGON"
+		}
+	]
+
+}

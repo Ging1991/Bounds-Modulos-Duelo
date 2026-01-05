@@ -1,0 +1,37 @@
+{
+	"cartaID" : 418,
+	"nombre" : "Ser perfecto",
+	"clase" : "CRIATURA",
+    "nivel" : 10,
+	"ambientacion" : "Cuando ya no se puede subir mas alto, es hora de comenzar a bajar.",
+
+	"datoCriatura" : {
+		"perfeccion" : "SAGRADO",
+		"ataque" : 6400,
+		"defensa" : 3200,
+		"tipos" : ["DIVINIDAD", "DEMONIO"],
+		"efectos" : [
+			{
+				"clave" : "MASIVO"
+			},
+			{
+				"clave" : "HEROE"
+			}
+		]
+	},
+	"materiales" : [
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "EQUIPO"
+		},
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "EQUIPO"
+		},
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "EQUIPO"
+		}
+	]
+
+}

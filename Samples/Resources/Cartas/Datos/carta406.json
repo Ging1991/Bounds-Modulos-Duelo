@@ -1,0 +1,35 @@
+{
+	"cartaID" : 406,
+	"nombre" : "Vigilante antiguo",
+	"clase" : "CRIATURA",
+    "nivel" : 6,
+	"ambientacion" : "¿Como se llama cuando los dioses tienen sus propios dioses?",
+
+	"datoCriatura" : {
+		"perfeccion" : "ROMPECABEZAS",
+		"ataque" : 4000,
+		"defensa" : 1500,
+        "tipos" : ["PEZ", "DINOSAURIO"],
+		"efectos" : [
+			{
+				"clave" : "ADQUIRIR_T",
+				"parametroTipo" : "DINOSAURIO"
+			},
+			{
+				"clave" : "BRUTAL"
+			}
+		]
+
+	},
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 404
+		},
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "AURA"
+		}
+	]
+
+}

@@ -1,0 +1,15 @@
+{
+	"cartaID" : 45,
+	"nombre" : "Escorpión volador",
+	"clase" : "CRIATURA",
+	"nivel" : 1,
+	"ambientacion" : "La evolución es demasiado creativa con algunos.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 100,
+		"defensa" : 100,
+		"tipos" : ["INSECTO"]
+	}
+
+}

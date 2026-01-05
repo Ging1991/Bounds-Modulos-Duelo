@@ -1,0 +1,15 @@
+{
+	"cartaID" : 18,
+	"nombre" : "Bestia mágica",
+	"clase" : "CRIATURA",
+    "nivel" : 3,
+	"ambientacion" : "El guardian de las puertas al reino magico",
+	
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 1850,
+		"defensa" : 1700,
+		"tipos" : ["BESTIA", "ANGEL"]
+	}
+
+}

@@ -1,0 +1,30 @@
+{
+	"cartaID" : 366,
+	"nombre" : "El rostro del mal",
+	"clase" : "CRIATURA",
+	"nivel" : 4,
+	"ambientacion" : "Era mejor cuando no podíamos verlo",
+
+	"datoCriatura" : {
+		"perfeccion" : "VECTOR",
+		"ataque" : 1400,
+		"defensa" : 1400,
+		"tipos" : ["DEMONIO", "HECHICERO"],
+		"efectos" : [
+			{
+				"clave" : "FATAL"
+			},
+			{
+				"clave" : "REFUERZOS"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "VECTOR_ATK",
+			"parametroATK" : 1900
+		}
+	]
+
+}

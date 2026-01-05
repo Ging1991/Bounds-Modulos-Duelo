@@ -1,0 +1,13 @@
+{
+	"cartaID" : 266,
+	"nombre" : "Apocalipsis dragon",
+	"clase" : "HECHIZO",
+	"nivel" : 8,
+	"efecto" : "Invoca especialmente a todos los dragones en tu cementerio.",
+	"ambientacion" : "Para ellos es el principio, para nosotros, el fin...",
+
+	"datoHechizo" : {
+		"tipo" : "DRAGONES"
+	}
+
+}

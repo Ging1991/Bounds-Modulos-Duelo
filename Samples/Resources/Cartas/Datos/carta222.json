@@ -1,0 +1,27 @@
+{
+	"cartaID" : 222,
+	"nombre" : "Hada traviesa",
+	"clase" : "CRIATURA",
+	"ambientacion" : "¿Quien sera mi siguiente victima?",
+	"nivel" : 2,
+
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 1200,
+		"defensa" : 100,
+		"efectos" : [
+			{
+				"clave" : "HEROE"
+			}
+		],
+		"tipos" : ["HADA", "PLANTA"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 221
+		}
+	]
+
+}

@@ -1,0 +1,15 @@
+{
+	"cartaID" : 32,
+	"nombre" : "Devorador de lava",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Nunca esta satisfecho, pero ¿Pero quien lo estaría frente a semenjante manjar?",
+    "nivel" : 6,
+	
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 3000,
+		"defensa" : 2200,
+		"tipos" : ["PYRO"]
+	}
+
+}

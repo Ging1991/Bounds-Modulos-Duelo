@@ -1,0 +1,27 @@
+{
+	"cartaID" : 511,
+	"nombre" : "Parasito del vacio",
+	"ambientacion" : "incluso el perro guardian del infierno tiene un amo",
+	"clase" : "CRIATURA",
+    "nivel" : 1,
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 50,
+		"defensa" : 0,
+		"tipos" : ["INSECTO", "HADA"],
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 501
+		}
+	]
+
+}

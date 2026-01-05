@@ -1,0 +1,13 @@
+{
+	"cartaID" : 367,
+	"nombre" : "Justicia divina",
+    "clase" : "HECHIZO",
+    "nivel" : 1,
+    "efecto" : "Si controlas alguna criatura y el oponente no, inflige 1000 de daño al oponente",
+    "ambientacion" : "Para cada dios la justicia es diferente, para este, no hay peor pecado que la cobardía",
+
+    "datoHechizo" : {
+        "tipo" : "METEORO"
+    }
+
+}

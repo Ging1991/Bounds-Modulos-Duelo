@@ -1,0 +1,33 @@
+{
+	"cartaID" : 321,
+	"nombre" : "Restos carbonizados",
+	"clase" : "CRIATURA",
+    "nivel" : 2,
+	"ambientacion" : "A veces es mas facil soltar que seguir aferrandote a algo",
+
+	"datoCriatura" : {
+		"perfeccion" : "FUSION",
+		"ataque" : 1000,
+		"defensa" : 1000,
+        "tipos" : ["PYRO", "ZOMBI"],
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			},
+			{
+				"clave" : "EXPLOSION"
+			}
+		]
+	},
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 27
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 14
+		}
+	]
+
+}

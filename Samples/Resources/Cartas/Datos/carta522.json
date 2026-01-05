@@ -1,0 +1,31 @@
+{
+	"cartaID" : 522,
+	"nombre" : "Guardián sin rostro",
+	"ambientacion" : "Lanza una moneda",
+	"clase" : "CRIATURA",
+    "nivel" : 1,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 0,
+		"defensa" : 0,
+		"efectos" : [
+			{
+				"clave" : "COMANDAR_NOVATOS"
+			}
+		],
+		"tipos" : ["GUERRERO", "DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 22
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 43
+		}
+	]
+
+}

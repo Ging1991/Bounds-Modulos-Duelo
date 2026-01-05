@@ -1,0 +1,31 @@
+{
+	"cartaID" : 424,
+	"nombre" : "Hada del renacimiento",
+	"clase" : "CRIATURA",
+	"ambientacion" : "-",
+	"nivel" : 6,
+
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 300,
+		"defensa" : 600,
+		"efectos" : [
+			{
+				"clave" : "HEROE"
+			},
+			{
+				"clave" : "INICIAR"
+			}
+		],
+	
+		"tipos" : ["HADA", "PLANTA"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 423
+		}
+	]
+
+}

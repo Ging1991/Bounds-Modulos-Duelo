@@ -1,0 +1,34 @@
+{
+	"cartaID" : 493,
+	"nombre" : "Alien bestia",
+	"clase" : "CRIATURA",
+    "nivel" : 3,
+	"ambientacion" : "-",
+    	
+	"datoCriatura" : {
+		"perfeccion" : "FUSION",
+		"tipos" : ["BESTIA"],
+		"ataque" : 1800,
+		"defensa" : 0,
+		"efectos" : [
+			{
+				"clave" : "RECORTAR",
+				"parametroPerfeccion" : "FUSION"
+			},
+			{
+				"clave" : "ALIEN_493"
+			}
+		]
+	},
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 486
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 487
+		}
+	]
+
+}

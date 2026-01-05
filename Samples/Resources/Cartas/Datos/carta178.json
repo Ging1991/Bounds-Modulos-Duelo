@@ -1,0 +1,27 @@
+{
+	"cartaID" : 178,
+	"nombre" : "Ser de lava",
+	"clase" : "CRIATURA",
+	"nivel" : 2,
+	"ambientacion" : "La vida siempre encuentra el camino",
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 300,
+		"defensa" : 1800,
+		"efectos" : [
+			{
+				"clave" : "CARBONIZAR"
+			}
+		],
+		"tipos" : ["PYRO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 167
+		}
+	]
+
+}

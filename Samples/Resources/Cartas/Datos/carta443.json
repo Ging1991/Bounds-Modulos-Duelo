@@ -1,0 +1,27 @@
+{
+	"cartaID" : 443,
+	"nombre" : "Espada poseida",
+	"clase" : "CRIATURA",
+	"nivel" : 3,
+	"ambientacion" : "Maldición ¿Porque siempre me pasa esto a mi? Ahora tengo que buscar otro dueño.",
+
+	"datoCriatura" : {
+		"perfeccion" : "SAGRADO",
+		"ataque" : 2000,
+		"defensa" : 1000,
+		"tipos" : ["DEMONIO", "GUERRERO"],
+		"efectos" : [
+			{
+				"clave" : "REFUERZOS"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "EQUIPO"
+		}
+	]
+
+}

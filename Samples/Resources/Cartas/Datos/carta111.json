@@ -1,0 +1,34 @@
+{
+	"cartaID" : 111,
+	"nombre" : "Hormiga gigante",
+	"clase" : "CRIATURA",
+    "nivel" : 5,
+	"ambientacion" : "En este bosque los insectos pueden pisarte.",
+
+	"datoCriatura" : {
+		"perfeccion" : "ROMPECABEZAS",
+		"ataque" : 1800,
+		"defensa" : 2400,
+        "tipos" : ["INSECTO"],
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			},
+			{
+				"clave" : "FATAL"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "INSECTO"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "INSECTO"
+		}
+	]
+
+}

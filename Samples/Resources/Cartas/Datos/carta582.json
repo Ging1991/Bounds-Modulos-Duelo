@@ -1,0 +1,28 @@
+{
+	"cartaID" : 584,
+	"nombre" : "Aberracion Infertropodo",
+	"clase" : "CRIATURA",
+    "nivel" : 2,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "FANTASMA",
+		"ataque" : 500,
+		"defensa" : 1400,
+        "tipos" : ["INSECTO", "BESTIA"],
+		"efectos" : [
+			{
+				"clave" : "ENVENENAR_N",
+				"parametroN" : 5
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 506
+		}
+	]
+
+}

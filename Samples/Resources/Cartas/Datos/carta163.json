@@ -1,0 +1,15 @@
+{
+	"cartaID" : 163,
+	"nombre" : "Alison, la arquera",
+	"clase" : "CRIATURA",
+	"nivel" : 3,
+	"ambientacion" : "No importa si es por prodigio o por esfuerzo, lo que importa es tener poder.",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 1500,
+		"defensa" : 800,
+		"tipos" : ["GUERRERO"]
+	}
+
+}

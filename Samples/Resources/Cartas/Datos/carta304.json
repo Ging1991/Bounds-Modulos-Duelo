@@ -1,0 +1,13 @@
+{
+	"cartaID" : 304,
+	"nombre" : "Imperio reptiliano",
+	"clase" : "VACIO",
+	"nivel" : 6,
+	"efecto" : "Cuando un REPTIL es destruido, su controlar encuentra un REPTIL.",
+	"ambientacion" : "Con un ejercito infinito, hacer sacrificios nunca fue un problema",
+
+	"datoVacio" : {
+		"tipo" : "IMPERIO_REPTIL"
+	}
+
+}

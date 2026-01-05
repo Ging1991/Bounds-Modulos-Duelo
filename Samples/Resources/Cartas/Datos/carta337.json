@@ -1,0 +1,13 @@
+{
+	"cartaID" : 337,
+	"nombre" : "Tormenta colateral",
+	"clase" : "TRAMPA",
+	"nivel" : 3,
+	"efecto" : "Cuando el oponente ataca: Devuelve todos los hechizos en el campo a la mano de su propietario, los que no entren van al cementerio.",
+	"ambientacion" : "No se si es mas sorpredente que la tormenta sea de fuego o que este viva",
+
+	"datoTrampa": {
+		"tipo": "LEVANTA_HECHIZO"
+	}
+
+}

@@ -1,0 +1,35 @@
+{
+	"cartaID" : 499,
+	"nombre" : "Launix, ninfa de fuego",
+	"clase" : "CRIATURA",
+	"nivel" : 4,
+	"ambientacion" : "-",
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"tipos" : ["HADA", "PYRO"],
+		"ataque" : 1900,
+		"defensa" : 1300,
+		"efectos" : [
+			{
+				"clave" : "TESORO_ID",
+				"parametroID" : 488
+			},
+			{
+				"clave" : "EXPLOSION"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 498
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 462
+		}
+	]
+
+}

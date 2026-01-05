@@ -1,0 +1,20 @@
+{
+	"cartaID" : 247,
+	"nombre" : "Justicia divina",
+	"clase" : "TRAMPA",
+	"nivel" : 1,
+	"ambientacion" : "De ahora en mas, ningun crimen quedara impune",
+	"efecto" : "Cuando una criatura que controlas es destruida: Inflinge 500 puntos de daño al oponente.",
+
+	"datoTrampa" : {
+		"tipo" : "COMBUSTION"
+	},
+
+	"efectos" : [
+		{
+			"clave" : "AUMENTAR_T",
+			"parametroTipo" : "ANGEL"
+		}	
+	]
+
+}

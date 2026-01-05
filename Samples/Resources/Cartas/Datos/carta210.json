@@ -1,0 +1,30 @@
+{
+	"cartaID" : 210,
+	"nombre" : "Cazador oscuro",
+	"clase" : "CRIATURA",
+    "nivel" : 5,
+	"ambientacion" : "En algunos mundos, saber sobrevivir es la maldición.",
+
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"tipos" : ["DEMONIO", "GUERRERO"],
+		"ataque" : 2500,
+		"defensa" : 1500,
+		"efectos" : [
+			{
+				"clave" : "CAZADOR"
+			},
+			{
+				"clave" : "PAGO_SANGRE"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 208
+		}
+	]
+
+}

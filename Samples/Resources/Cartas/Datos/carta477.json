@@ -1,0 +1,27 @@
+{
+	"cartaID" : 477,
+	"nombre" : "Bruja del invierno",
+	"clase" : "CRIATURA",
+    "nivel" : 4,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "VECTOR",
+        "tipos" : ["HECHICERO", "AGUA"],
+		"ataque" : 800,
+		"defensa" : 2150,
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "VECTOR_ATK",
+			"parametroATK" : 1550
+		}
+	]
+
+}

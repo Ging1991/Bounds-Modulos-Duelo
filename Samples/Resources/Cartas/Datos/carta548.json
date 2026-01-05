@@ -1,0 +1,27 @@
+{
+	"cartaID" : 548,
+	"nombre" : "Gigante de escudos gemelos",
+	"clase" : "CRIATURA",
+	"nivel" : 4,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "VECTOR",
+		"tipos" : ["HECHICERO", "GUERRERO"],
+		"ataque" : 1000,
+		"defensa" : 1900,
+		"efectos" : [
+			{
+				"clave" : "MURO"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "VECTOR_DEF",
+			"parametroDEF" : 2100
+		}
+	]
+
+}

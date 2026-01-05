@@ -1,0 +1,12 @@
+{
+	"nombre":"Pesadilla",
+	"codigo":"PESADILLA",
+	"protector":"PESADILLA",
+	"cartas": [
+			"022_A_N_5",
+			"024_A_N_5",
+			"025_A_N_1",
+			"023_A_N_4",
+			"034_A_N_5"
+		]
+}

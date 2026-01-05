@@ -1,0 +1,13 @@
+{
+	"cartaID" : 249,
+	"nombre" : "Contrataque fatal",
+	"clase" : "TRAMPA",
+	"nivel" : 8,
+	"efecto" : "Cuando el oponente declara un ataque: Destruye a la criatura atacante.",
+	"ambientacion" : "Cuando el mas grande heroe del castillo cayó, todo fue desesperación.",
+		
+	"datoTrampa": {
+		"tipo": "FATAL"
+	}
+	
+}

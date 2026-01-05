@@ -1,0 +1,34 @@
+{
+	"cartaID" : 170,
+	"nombre" : "Devorador fenix",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Se ha devorado un volcan y aun no ha cesado su hambre.",
+    "nivel" : 8,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 4200,
+		"defensa" : 3400,
+		"efectos" : [
+			{
+				"clave" : "DESTRUIR"
+			},
+			{
+				"clave" : "EXPLOSION"
+			}
+		],
+		"tipos" : ["DEMONIO", "PYRO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 32
+		},
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "AURA"
+		}
+	]
+
+}

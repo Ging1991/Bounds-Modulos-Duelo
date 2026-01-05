@@ -1,0 +1,27 @@
+{
+	"cartaID" : 596,
+	"nombre" : "Reliquea acuatica",
+	"clase" : "CRIATURA",
+	"nivel" : 1,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "ROMPECABEZAS",
+		"ataque" : 700,
+		"defensa" : 550,
+		"tipos" : ["ROCA"],
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 581
+		}
+	]
+
+}

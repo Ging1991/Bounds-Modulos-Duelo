@@ -1,0 +1,34 @@
+{
+	"cartaID" : 570,
+	"nombre" : "Hidra alternativa",
+	"clase" : "CRIATURA",
+	"nivel" : 4,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "ROMPECABEZAS",
+		"ataque" : 2350,
+		"defensa" : 2150,
+		"tipos" : ["PEZ", "SERPIENTE"],
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			},
+			{
+				"clave" : "BRUTAL"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 8
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 9
+		}
+	]
+
+}

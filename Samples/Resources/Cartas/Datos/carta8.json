@@ -1,0 +1,15 @@
+{
+	"cartaID" : 8,
+	"nombre" : "Tiburón negro",
+	"clase" : "CRIATURA",
+    "nivel" : 3,
+	"ambientacion" : "La libertad de devorar a quien quieras",
+		
+	"datoCriatura" : {
+		"ataque" : 1500,
+		"defensa" : 1300,
+        "perfeccion": "BASICO",
+        "tipos" : ["PEZ"]
+	}
+
+}

@@ -1,0 +1,13 @@
+{
+	"cartaID" : 407,
+	"nombre" : "Expedición calavera",
+	"clase" : "HECHIZO",
+	"nivel" : 10,
+	"efecto" : "Muestra la carta de encima de tu mazo, si es una criatura invocala de modo especial, sino enviala al cementerio. Repite este proceso hasta que invoques una criatura o hayas enviado 10 cartas al cementerio.",
+	"ambientacion" : "No se ve seguro, pero nada en la ciencia lo es.",
+
+	"datoHechizo" : {
+		"tipo" : "EXPEDICION"
+	}
+
+}

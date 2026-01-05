@@ -1,0 +1,22 @@
+{
+	"cartaID" : 514,
+	"nombre" : "El juego del ilusionista",
+	"clase" : "HECHIZO",
+	"nivel" : 6,
+	"efecto" : "Ganas 2000 LP",
+	"ambientacion" : "Es la unica forma.",
+
+	"datoHechizo" : {
+		"tipo" : "MODIFICAR_VIDA",
+		"cantidad" : 2000,
+		"jugador" : "JUGADOR"
+	},
+
+	"efectos" : [
+		{
+			"clave" : "AUMENTAR_T",
+			"parametroTipo" : "HECHICERO"
+		}
+	]
+
+}

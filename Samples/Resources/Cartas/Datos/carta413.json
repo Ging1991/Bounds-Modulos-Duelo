@@ -1,0 +1,13 @@
+{
+	"cartaID" : 413,
+	"nombre" : "Fusion nuclear",
+    "clase" : "HECHIZO",
+    "nivel" : 10,
+    "efecto" : "Selecciona una criatura FUSION en tu mazo al azar, luego envía a tu zona de materiales hasta una copia de cada uno de sus materiales en tu mazo, y agrégala a tu mano.",
+    "ambientacion" : "Un poder tan grande como para salvar o destruir un mundo.",
+
+    "datoHechizo" : {
+        "tipo" : "NUCLEAR_FUSION"
+    }
+
+}

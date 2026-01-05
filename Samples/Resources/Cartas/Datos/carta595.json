@@ -1,0 +1,27 @@
+{
+	"cartaID" : 595,
+	"nombre" : "Reliquea ignea",
+	"clase" : "CRIATURA",
+	"nivel" : 1,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "ROMPECABEZAS",
+		"ataque" : 800,
+		"defensa" : 450,
+		"tipos" : ["ROCA"],
+		"efectos" : [
+			{
+				"clave" : "EXPLOSION"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 581
+		}
+	]
+
+}

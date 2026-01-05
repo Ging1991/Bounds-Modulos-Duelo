@@ -1,0 +1,14 @@
+{
+	"cartaID" : 518,
+	"nombre" : "Busqueda del amo",
+    "clase" : "HECHIZO",
+    "nivel" : 1,
+    "efecto" : "Mira las 4 primeras cartas de tu mazo, coloca una en tu mano y la otra en el descarte",
+    "ambientacion" : "Aqui no se salva nadie",
+
+    "datoHechizo" : {
+        "tipo" : "ADIVINA_N",
+        "nPrimeras" : 4
+    }
+
+}

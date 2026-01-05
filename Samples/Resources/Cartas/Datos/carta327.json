@@ -1,0 +1,27 @@
+{
+	"cartaID" : 327,
+	"nombre" : "Alma de fuego IV",
+	"clase" : "CRIATURA",
+    "nivel" : 4,
+	"ambientacion" : "Una vez mas.",
+
+	"datoCriatura" : {
+		"perfeccion" : "VECTOR",
+        "tipos" : ["PYRO"],
+		"ataque" : 1000,
+		"defensa" : 700,
+		"efectos" : [
+			{
+				"clave" : "EXPLOSION"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "VECTOR_ATK",
+			"parametroATK" : 1700
+		}
+	]
+
+}

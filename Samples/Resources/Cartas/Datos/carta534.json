@@ -1,0 +1,15 @@
+{
+	"cartaID" : 534,
+	"nombre" : "Centauro cazador",
+	"clase" : "CRIATURA",
+	"nivel" : 4,
+	"ambientacion" : "El poder absoluto corrompe absolutamente",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 1800,
+		"defensa" : 1400,
+		"tipos" : ["GUERRERO", "BESTIA"]
+	}
+
+}

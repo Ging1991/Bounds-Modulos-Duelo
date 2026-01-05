@@ -1,0 +1,27 @@
+{
+	"cartaID" : 92,
+	"nombre" : "Hada del bosque",
+	"clase" : "CRIATURA",
+    "nivel" : 1,
+	"ambientacion" : "Tal vez no pueda pelear, pero ayudaré como pueda.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"tipos" : ["HADA"],
+		"ataque" : 0,
+		"defensa" : 0,
+		"efectos" : [
+			{
+				"clave" : "HEROE"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 91
+		}
+	]
+
+}

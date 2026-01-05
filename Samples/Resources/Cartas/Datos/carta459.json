@@ -1,0 +1,37 @@
+{
+	"cartaID" : 459,
+	"nombre" : "Horror infernal",
+	"clase" : "CRIATURA",
+    "nivel" : 9,
+	"ambientacion" : "Otro bocado, es decir, cliente ha acudido a nosotros ¿En que podemos ayudarte mi pequeño amigo?",
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 3850,
+		"defensa" : 3200,
+		"efectos" : [
+			{
+				"clave" : "ATADURAS"
+			},
+			{
+				"clave" : "EXPLOSION"
+			},
+			{
+				"clave" : "CARBONIZAR"
+			}
+		],
+		"tipos" : ["DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DEMONIO"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DEMONIO"
+		}
+	]
+
+}

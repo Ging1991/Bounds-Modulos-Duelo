@@ -1,0 +1,34 @@
+{
+	"cartaID" : 295,
+	"nombre" : "Dandro, caballero del mañana",
+	"clase" : "CRIATURA",
+	"ambientacion" : "-",
+    "nivel" : 3,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 2000,
+		"defensa" : 1000,
+		"efectos" : [
+			{
+				"clave" : "REFUERZOS"
+			},
+			{
+				"clave" : "CARGA_VALIENTE"
+			}
+		],
+		"tipos" : ["CABALLERO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 285
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 292
+		}
+	]
+
+}

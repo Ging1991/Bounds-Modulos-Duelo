@@ -1,0 +1,37 @@
+{
+	"cartaID" : 567,
+	"nombre" : "Principel Grill",
+	"clase" : "CRIATURA",
+    "nivel" : 5,
+	"ambientacion" : "-",
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 2550,
+		"defensa" : 2200,
+		"efectos" : [
+			{
+				"clave" : "REFUERZOS"
+			},
+			{
+				"clave" : "ACOMPAÑAR"
+			},
+			{
+				"clave" : "CAZADOR"
+			}
+		],
+		"tipos" : ["GUERRERO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "GUERRERO"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "GUERRERO"
+		}
+	]
+
+}

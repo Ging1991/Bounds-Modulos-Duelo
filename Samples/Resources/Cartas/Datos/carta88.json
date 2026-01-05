@@ -1,0 +1,19 @@
+{
+	"cartaID" : 88,
+	"nivel" : 1,
+	"clase" : "TRAMPA",
+	"ambientacion" : "La voluntad del oceano hoy a mostrado su pulgar hacia abajo.",
+	"nombre" : "Maremoto viviente",
+	"efecto" : "Cuando el oponente declara un ataque: Cancela ese ataque.",
+
+	"datoTrampa" : {
+		"tipo": "CANCELA_ATAQUE"
+	},
+	"efectos" : [
+		{
+			"clave" : "AUMENTAR_T",
+			"parametroTipo" : "PEZ"
+		}
+	]
+
+}

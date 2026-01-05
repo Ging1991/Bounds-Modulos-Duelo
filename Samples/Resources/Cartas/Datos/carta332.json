@@ -1,0 +1,15 @@
+{
+	"cartaID" : 332,
+	"nombre" : "Proto Gólem",
+	"clase" : "CRIATURA",
+    "nivel" : 5,
+	"ambientacion" : "Los ingenieros estaban emocionados porque el prototipo funciono correctamente, ahora es hora de hacerlo en serio.",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 2000,
+		"defensa" : 2500,
+        "tipos" : ["GUERRERO", "ROCA"]
+	}
+	
+}

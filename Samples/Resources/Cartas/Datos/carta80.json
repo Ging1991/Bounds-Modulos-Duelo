@@ -1,0 +1,35 @@
+{
+	"cartaID" : 80,
+	"nombre" : "Lagartija original II",
+	"clase" : "CRIATURA",
+    "nivel" : 2,
+	"ambientacion" : "Mi destino como dios de este nuevo orden mundial es inevitable.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"tipos" : ["REPTIL"],
+		"ataque" : 900,
+		"defensa" : 700,
+		"efectos" : [
+			{
+				"clave" : "ADQUIRIR_T",
+				"parametroTipo" : "REPTIL"
+			},
+			{
+				"clave" : "ACOMPAÑAR"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 78
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 79
+		}
+	]
+
+}

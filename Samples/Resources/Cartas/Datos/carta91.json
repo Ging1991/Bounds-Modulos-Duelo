@@ -1,0 +1,15 @@
+{
+	"cartaID" : 91,
+	"nombre" : "Ayuda del bosque",
+	"clase" : "HECHIZO",
+	"nivel" : 3,
+	"efecto" : "Descarta una carta: Robas 2 cartas.",
+	"ambientacion" : "No siempre vamos a ser neutrales.",
+
+	"datoHechizo" : {
+		"tipo" : "DESCARTE_ROBAR_CARTAS",
+		"jugador" : "JUGADOR",
+		"cantidad" : 2
+	}
+
+}

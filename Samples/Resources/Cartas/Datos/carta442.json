@@ -1,0 +1,31 @@
+{
+	"cartaID" : 442,
+	"nombre" : "Distorsión del odio",
+	"clase" : "CRIATURA",
+	"nivel" : 2,
+	"ambientacion" : "No lo permitiré, si yo no puedo ser feliz, ustedes tampoco lo serán.",
+
+	"datoCriatura" : {
+		"perfeccion" : "ROMPECABEZAS",
+		"ataque" : 350,
+		"defensa" : 100,
+		"tipos" : ["DEMONIO"],
+		"efectos" : [
+			{
+				"clave" : "FATAL"
+			}
+		]
+
+	},
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DEMONIO"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DEMONIO"
+		}
+	]
+
+}

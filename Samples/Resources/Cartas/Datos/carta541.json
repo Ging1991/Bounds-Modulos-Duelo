@@ -1,0 +1,15 @@
+{
+	"cartaID" : 541,
+	"nombre" : "Piraña del diluvio",
+	"clase" : "CRIATURA",
+	"nivel" : 1,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"tipos" : ["PEZ"],
+		"ataque" : 450,
+		"defensa" : 350
+	}
+
+}

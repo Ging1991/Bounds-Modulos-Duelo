@@ -1,0 +1,31 @@
+{
+	"cartaID" : 119,
+	"nombre" : "Arbol ocular ilusorio",
+	"ambientacion" : "Solo espero haber respirado algun alucinogeno...",
+	"clase" : "CRIATURA",
+    "nivel" : 4,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 0,
+		"defensa" : 3000,
+		"efectos" : [
+			{
+				"clave" : "ATADURAS"
+			}
+		],
+		"tipos" : ["PLANTA"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 118
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 106
+		}
+	]
+
+}

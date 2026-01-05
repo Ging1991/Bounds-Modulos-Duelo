@@ -1,0 +1,26 @@
+{
+	"cartaID" : 338,
+	"nombre" : "Regalo inesperado",
+	"clase" : "HECHIZO",
+	"nivel" : 3,
+	"efecto" : "Invoca al azar un pyro perfecto desde tu mazo.",
+	"ambientacion" : "¿Me extrañaron?",
+
+	"datoHechizo" : {
+		"tipo" : "INVOCA_MAZO",
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "tipoCriatura",
+					"tipoCriatura" : "PYRO"
+				},
+				{
+					"tipo" : "esPerfecta",
+					"esPerfecta" : true
+				}
+			]
+		}
+
+	}
+
+}

@@ -1,0 +1,30 @@
+{
+	"cartaID" : 191,
+	"nombre" : "Golpe divino",
+    "clase" : "HECHIZO",
+    "nivel" : 5,
+    "efecto" : "Destruye la criatura objetivo que controla un oponente de nivel 5 o mayor.",
+    "ambientacion" : "La justicia no tiene piedad",
+
+	"datoHechizo" : {
+		"tipo" : "DESTRUIR_OBJETIVO",
+		"fuentes" : ["CAMPO"],
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clase" : "CRIATURA"
+				},
+				{
+					"tipo" : "jugador",
+					"controlador" : "ADVERSARIO"
+				},
+				{
+					"tipo" : "nivel",
+					"minimo" : 5
+				}
+			]
+		}
+	}
+
+}

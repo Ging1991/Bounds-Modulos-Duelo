@@ -1,0 +1,35 @@
+{
+	"cartaID" : 533,
+	"nombre" : "Damisela de las rosas",
+	"ambientacion" : "Lanza una moneda",
+	"clase" : "CRIATURA",
+    "nivel" : 1,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 0,
+		"defensa" : 1000,
+		"efectos" : [
+			{
+				"clave" : "SUPERVIVENCIA_N",
+				"parametroN" : 1
+			},
+			{
+				"clave" : "INICIAR"
+			}
+		],
+		"tipos" : ["HADA", "PLANTA"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 531
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 532
+		}
+	]
+
+}

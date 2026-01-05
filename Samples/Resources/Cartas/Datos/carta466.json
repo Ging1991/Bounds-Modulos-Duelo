@@ -1,0 +1,38 @@
+{
+	"cartaID" : 466,
+	"nombre" : "Uroboros infernal",
+	"clase" : "CRIATURA",
+	"nivel" : 1,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "FUSION",
+		"tipos" : ["DRAGON", "DEMONIO", "PYRO"],
+		"ataque" : 0,
+		"defensa" : 0,
+		"efectos" : [
+			{
+				"clave" : "EXPLOSION"
+			},
+			{
+				"clave" : "INICIAR"
+			},
+			{
+				"clave" : "ACOMPAÑAR"
+			}
+		]
+
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 466
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 466
+		}
+	]
+
+}

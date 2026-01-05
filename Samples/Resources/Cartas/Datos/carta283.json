@@ -1,0 +1,15 @@
+{
+	"cartaID" : 283,
+	"nombre" : "Sefin, el tutor",
+	"clase" : "CRIATURA",
+	"nivel" : 2,
+	"ambientacion" : "No hay riqueza mas grande que el conocimiento.",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 1000,
+		"defensa" : 1000,
+		"tipos" : ["GUERRERO"]
+	}
+
+}

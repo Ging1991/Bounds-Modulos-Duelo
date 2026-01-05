@@ -1,0 +1,12 @@
+{
+	"cartaID" : 363,
+	"nombre" : "Regreso rojo",
+	"clase" : "TRAMPA",
+	"ambientacion" : "Espero que no haya pasado nada raro durante mi ausencia",
+	"efecto" : "Cuando termina el turno del oponente, sin tiene augun EVOLUCION perfecto en tu cementerio, cada jugador invoca tantos monstruos EVOLUCION perfectos de su cementerio como pueda.",
+    "nivel" : 2,
+    
+    "datoTrampa": {
+        "tipo": "invoca_evolucion"
+    }
+}

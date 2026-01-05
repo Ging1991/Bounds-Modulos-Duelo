@@ -1,0 +1,30 @@
+{
+	"cartaID" : 124,
+	"nombre" : "Ama de los muertos",
+	"clase" : "HECHIZO",
+	"nivel" : 4,
+	"efecto" : "Toma el control de la criatura objetivo de nivel 5 o mas que controla el oponente.",
+	"ambientacion" : "Hora de despertar",
+
+	"datoHechizo" : {
+		"tipo" : "CONTROLAR_OBJETIVO",
+		"fuentes" : ["CAMPO"],
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clase" : "CRIATURA"
+				},
+				{
+					"tipo" : "nivel",
+					"minimo" : 5
+				},
+				{
+					"tipo" : "jugador",
+					"controlador" : "ADVERSARIO"
+				}
+			]
+		}
+	}
+
+}

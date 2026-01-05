@@ -1,0 +1,34 @@
+{
+	"cartaID" : 76,
+	"nombre" : "Filo guerrero",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Otro experimento exitoso",
+    "nivel" : 6,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 3500,
+		"defensa" : 2500,
+		"efectos" : [
+			{
+				"clave" : "CAZADOR"
+			},
+			{
+				"clave" : "BRUTAL"
+			}
+		],
+		"tipos" : ["GUERRERO", "TRUENO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 37
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 43
+		}
+	]
+
+}

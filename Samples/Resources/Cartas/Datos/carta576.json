@@ -1,0 +1,15 @@
+{
+	"cartaID" : 576,
+	"nombre" : "Prisma del otro lado",
+	"clase" : "EQUIPO",
+	"nivel" : 1,
+	"defensa" : 3000,
+	"ambientacion" : "Espero que no se hayan olvidado de mi.",
+
+	"efectos" : [
+		{
+			"clave" : "VICTORIA_VACIO"
+		}
+	]
+
+}

@@ -1,0 +1,8 @@
+{
+    "nombre" : "Trueno sagrado",
+    "codigo" : "TRUENO",
+    "formato" : "ESTANDAR",
+    "cartas" : [81,81,81,238,238,238,76,72,72,72,59,59,59,37,37,37,234,234,234,151,151,151,84,84,84,83,83,83,49,49,49,48,48,48,43,43,43,88,88,88],
+    "principalVacio" : -1,
+    "principalAvatar" : -1
+}

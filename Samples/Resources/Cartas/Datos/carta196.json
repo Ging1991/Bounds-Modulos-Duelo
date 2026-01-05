@@ -1,0 +1,30 @@
+{
+	"cartaID" : 196,
+	"nombre" : "Tenma, el sello del espacio",
+	"clase" : "CRIATURA",
+	"ambientacion" : "No esta en ningun bando, pero por si solo puede destruir a ambos lados.",
+	"nivel" : 6,
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 3250,
+		"defensa" : 2200,
+		"efectos" : [
+			{
+				"clave" : "RECUPERAR"
+			},
+			{
+				"clave" : "REFUERZOS"
+			}
+		],
+		"tipos" : ["GUERRERO", "ANGEL"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 186
+		}
+	]
+
+}

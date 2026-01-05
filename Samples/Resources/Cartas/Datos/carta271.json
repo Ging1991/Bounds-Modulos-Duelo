@@ -1,0 +1,31 @@
+{
+	"cartaID" : 271,
+	"nombre" : "Serpiente trueno divina",
+	"clase" : "CRIATURA",
+	"nivel" : 1,
+	"ambientacion" : "Aun desconocemos el alcance de su poder, pero no podemos dejar que crezca mas.",
+
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 200,
+		"defensa" : 100,
+		"efectos" : [
+			{
+				"clave" : "ALIAS",
+				"parametroID" : 48
+			},
+			{
+				"clave" : "RECICLAR"
+			}
+		],
+        "tipos" : ["SERPIENTE", "TRUENO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 274
+		}
+	]
+
+}

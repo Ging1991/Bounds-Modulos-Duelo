@@ -1,0 +1,79 @@
+{
+		"lista" : [
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "SET_CARTA_IMG",
+			"indice" : 1,
+			"cartaID" : 4,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "SET_CARTA_IMG",
+			"indice" : 2,
+			"cartaID" : 86,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "SET_CARTA_IMG",
+			"indice" : 3,
+			"cartaID" : 118,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_CREAR",
+			"nombre" : "VERKAN",
+			"imagen" : "VERKAN",
+			"alto" : 600,
+			"ancho" : 400,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_POSICIONAR",
+			"posX" : -325,
+			"posY" : 0,
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_APARECER",
+			"nombre" : "VERKAN"
+		},
+		{
+			"tipo" : "PERSONAJE_ACERCAR",
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_MINIATURA",
+			"imagen" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Las auras son cartas de borde verde claro. Para jugarlas solo arrástralas hacia una criatura en el campo, entra vinculada a esa criatura."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Si la criatura vinculada al aura es destruida, el aura también lo es. Al igual que los hechizos, un aura no puede atacar o ser atacada, solo le da un bono o habilidad a su criatura vinculada."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Prueba tus conocimientos en el siguiente duelo de práctica."
+		},
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "DUELO",
+			"dueloNombre1" : "Jugador",
+			"dueloAvatar1" : "LAUNIX",
+			"dueloLP1" : 2000,
+			"dueloMazo1" : "TUTORIAL_AURAS_1",
+			"dueloNombre2" : "Verkan",
+			"dueloAvatar2" : "VERKAN",
+			"dueloLP2" : 700,
+			"dueloMazo2" : "TUTORIAL_AURAS_2"
+		}
+	]
+
+}

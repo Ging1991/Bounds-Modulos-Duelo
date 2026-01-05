@@ -1,0 +1,13 @@
+{
+	"cartaID" : 226,
+	"nombre" : "Parasitos vengadores",
+	"ambientacion" : "Si no pudimos salvarte, al menos ¡Te vengaremos!",
+	"clase" : "TRAMPA",
+	"efecto" : "Cuando una de tus criaturas es destruida: Crea hasta 2 fichas de Insecto vengador.",
+	"nivel" : 3,
+
+	"datoTrampa" : {
+		"tipo": "FICHA_INSECTO"
+	}
+
+}

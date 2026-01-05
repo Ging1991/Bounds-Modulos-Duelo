@@ -1,0 +1,19 @@
+{
+	"cartaID" : 244,
+	"nombre" : "Magia prohibida",
+	"clase" : "HECHIZO",
+	"nivel" : 8,
+	"efecto" : "Busca una carta de HECHIZO en tu mazo y agregala a tu mano",
+	"ambientacion" : "Ya rompí todas las leyes del hombre ¿Qué les hizo pensar que no iba a romper las de la naturaleza?",
+
+	"datoHechizo" : {
+		"tipo" : "TUTOR",
+		"condicionCarta": {
+			"condicion" : {
+				"tipo" : "clase",
+				"clase" : "HECHIZO"
+			}
+		}
+	}
+
+}

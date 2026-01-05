@@ -1,0 +1,13 @@
+{
+	"cartaID" : 71,
+	"nombre" : "Desaparicion de dragon",
+	"ambientacion" : "Cuando la serpiente blanca desapareció, la era de la oscuridad comenzó",
+	"clase" : "TRAMPA",
+	"efecto" : "Cuando una criatura que controlas es destruida: Invoca especialmente a esa criatura desde el cementerio.",
+	"nivel" : 1,
+	
+	"datoTrampa" : {
+		"tipo": "REVIVIR"
+	}
+
+}

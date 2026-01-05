@@ -1,0 +1,38 @@
+{
+	"cartaID" : 575,
+    "nivel" : 9,
+	"nombre" : "Corcel de la guerra",
+	"clase" : "CRIATURA",
+	"ambientacion" : "La peor combinación.",
+		
+	"datoCriatura" : {
+		"ataque" : 3800,
+		"defensa" : 3500,
+		"perfeccion" : "FUSION",
+		"tipos" : ["BESTIA", "DEMONIO"],
+		"efectos" : [
+			{
+				"clave" : "MASIVO"
+			},
+			{
+				"clave" : "ARKANO"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 573
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 573
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 573
+		}
+	]
+
+}

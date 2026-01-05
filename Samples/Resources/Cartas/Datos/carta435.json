@@ -1,0 +1,19 @@
+{
+	"cartaID" : 435,
+	"nombre" : "Seguro de vida",
+	"clase" : "AURA",
+	"nivel" : 6,
+	"ambientacion" : "El arma definitiva que usan los angenles contra los demonios",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_TIPO",
+			"parametroTipo" : "DEMONIO"
+		},
+		{
+			"clave" : "VINCULO_INVOCACION",
+			"parametroZona" : "DESCARTE"
+		}
+
+	]
+}

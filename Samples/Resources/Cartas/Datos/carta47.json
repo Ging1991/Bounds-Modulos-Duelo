@@ -1,0 +1,35 @@
+{
+	"cartaID" : 47,
+	"nombre" : "Alacrán de esporas",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Veneno, veneno y mas veneno...",
+    "nivel" : 2,
+	
+	"datoCriatura" : {
+		"perfeccion" : "FUSION",
+		"ataque" : 1000,
+		"defensa" : 2500,
+		"tipos" : ["INSECTO"],
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			},
+			{
+				"clave" : "ENVENENAR_N",
+				"parametroN" : 5
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 45
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 46
+		}
+	]
+
+}

@@ -1,0 +1,21 @@
+{
+	"cartaID" : 383,
+	"nombre" : "Sirviente de Hercules",
+	"clase" : "EQUIPO",
+	"nivel" : 5,
+	"defensa" : 3000,
+	"ambientacion" : "Solo cuesta una vida, la tuya.",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_ESTADISTICA_ATK_DEF",
+			"parametroATK" : 1000,
+			"parametroDEF" : 1000
+		},
+		{
+			"clave" : "REVITALIZAR_T",
+			"parametroTipo" : "GUERRERO"
+		}	
+	]
+
+}

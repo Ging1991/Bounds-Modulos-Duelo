@@ -1,0 +1,13 @@
+{
+	"cartaID" : 480,
+	"nombre" : "Ayuda macabra",
+	"clase" : "TRAMPA",
+	"nivel" : 3,
+	"efecto" : "Cuando ganas vida, inflinge daño al oponente igual a la cantidad de vida ganada.",
+	"ambientacion" : "Por supuesto que te ayudaré, por un precio.",
+		
+	"datoTrampa" : {
+		"tipo": "VIDA_DAÑO"
+	}
+
+}

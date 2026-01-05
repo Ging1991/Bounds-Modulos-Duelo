@@ -1,0 +1,34 @@
+{
+	"cartaID" : 90,
+	"nombre" : "Tenma de la luz",
+	"clase" : "CRIATURA",
+	"ambientacion" : "El legítimo heredero",
+    "nivel" : 6,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 3200,
+		"defensa" : 2500,
+		"efectos" : [
+			{
+				"clave" : "REFUERZOS"
+			},
+			{
+				"clave" : "HEROE"
+			}
+		],
+		"tipos" : ["GUERRERO", "ANGEL"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 33
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 77
+		}
+	]
+
+}

@@ -1,0 +1,27 @@
+{
+	"cartaID" : 282,
+	"nombre" : "Brazo derecho ciber tech",
+	"ambientacion" : "Aun esparcido por el universo, su nivel de amenaza no ha disminuido.",
+	"clase" : "CRIATURA",
+	"nivel" : 1,
+
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 1000,
+		"defensa" : 1000,
+		"efectos" : [
+			{
+				"clave" : "RECICLAR"
+			}
+		],
+        "tipos" : ["MAQUINA", "DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 281
+		}
+	]
+
+}

@@ -1,0 +1,19 @@
+{
+	"cartaID" : 251,
+	"nombre" : "Protección explosiva",
+	"clase" : "AURA",
+	"nivel" : 1,
+	"ambientacion" : "No fueron creados para proteger, fueron creados para vengar.",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_HABILIDAD",
+			"parametroHabilidad" : "VENGANZA"
+		},
+		{
+			"clave" : "VINCULO_RESTRICCION_NIVEL_MAXIMO",
+			"parametroNMaximo" : 3
+		}
+	]		
+
+}

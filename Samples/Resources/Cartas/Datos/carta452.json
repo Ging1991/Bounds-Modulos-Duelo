@@ -1,0 +1,34 @@
+{
+	"cartaID" : 452,
+	"nombre" : "Mensajero infernal",
+	"clase" : "CRIATURA",
+	"nivel" : 1,
+	"ambientacion" : "Tienes correo.",
+
+	"datoCriatura" : {
+		"perfeccion" : "ROMPECABEZAS",
+		"ataque" : 150,
+		"defensa" : 250,
+		"tipos" : ["DEMONIO"],
+		"efectos" : [
+			{
+				"clave" : "REVITALIZAR"
+			},
+			{
+				"clave" : "EXPLOSION"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "TRAMPA"
+		},
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "TRAMPA"
+		}
+	]
+
+}

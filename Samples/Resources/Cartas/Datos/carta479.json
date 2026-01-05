@@ -1,0 +1,31 @@
+{
+	"cartaID" : 479,
+	"nombre" : "Florena  la fuga",
+	"clase" : "CRIATURA",
+	"ambientacion" : "-",
+	"nivel" : 4,
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"tipos" : ["HADA", "PEZ"],
+		"ataque" : 2100,
+		"defensa" : 1700,
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "HADA"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "PEZ"
+		}
+	]
+
+}

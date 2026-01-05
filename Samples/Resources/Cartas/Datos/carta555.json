@@ -1,0 +1,32 @@
+{
+	"cartaID" : 555,
+	"nombre" : "Infortunio",
+	"ambientacion" : "-",
+	"clase" : "CRIATURA",
+    "nivel" : 5,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 2800,
+		"defensa" : 2250,
+		"efectos" : [
+			{
+				"clave" : "BOMBARDEAR",
+				"parametroID" : 551
+			}
+		],
+		"tipos" : ["GUERRERO", "PYRO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 551
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 554
+		}
+	]
+
+}

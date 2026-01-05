@@ -1,0 +1,27 @@
+{
+	"cartaID" : 360,
+	"nombre" : "Espectro extraño",
+	"ambientacion" : "Donde no existe arriba ni abajo, derecha ni izquierda, todo lo que sobra soy yo",
+	"clase" : "CRIATURA",
+	"nivel" : 3,
+	
+	"datoCriatura" : {
+		"tipos" : ["DEMONIO"],
+		"perfeccion" : "MAGICO",
+		"ataque" : 0,
+		"defensa" : 3000,
+		"efectos" : [
+			{
+				"clave" : "RECICLAR"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 260
+		}
+	]
+
+}

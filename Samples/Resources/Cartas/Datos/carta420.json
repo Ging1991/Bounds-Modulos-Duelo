@@ -1,0 +1,14 @@
+{
+	"cartaID" : 420,
+	"nombre" : "Reino sagrado",
+	"clase" : "VACIO",
+	"nivel" : 10,
+	"efecto" : "Cuando un DEMONIO es destruido, su controlador roba una carta.",
+	"ambientacion" : "El fin del mundo no esta en este mundo",
+
+	"datoVacio" : {
+		"tipo" : "EJERCITO",
+		"parametro" : "DEMONIO"
+	}
+
+}

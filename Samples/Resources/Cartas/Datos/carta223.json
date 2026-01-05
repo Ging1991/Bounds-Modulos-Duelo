@@ -1,0 +1,13 @@
+{
+	"cartaID" : 223,
+	"nombre" : "Zona de insectos venenosos",
+	"clase" : "VACIO",
+	"nivel" : 6,
+	"efecto" : "Cuando un insecto basico es invocado de forma normal: Coloca un contador de veneno en cada criatura sobre el campo que no sea insecto.",
+	"ambientacion" : "Sigan atacando, en algun momento tiene que dormir.",
+
+	"datoVacio" : {
+		"tipo" : "VENENO"
+	}
+
+}

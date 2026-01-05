@@ -1,0 +1,33 @@
+{
+	"cartaID" : 116,
+	"nombre" : "Refuerzos innecesarios",
+	"clase" : "HECHIZO",
+	"nivel" : 3,
+	"efecto" : "Devuelve a tu mano la carta de CRIATURA guerrero o EQUIPO en tu cementerio.",
+	"ambientacion" : "Hasta cuando tendremos que esperar...",
+
+	"datoHechizo" : {
+		"tipo" : "RECUPERAR_OBJETIVO",
+		"fuentes" : ["DESCARTE"],
+		"condicionCarta": {
+			"condicionesO" : [
+				{
+					"tipo" : "tipoCriatura",
+					"tipoCriatura" : "GUERRERO"
+				},
+				{
+					"tipo" : "clase",
+					"clase" : "EQUIPO"
+				}
+			]
+		}
+	},
+
+	"efectos" : [
+		{
+			"clave" : "REFORZAR_T",
+			"parametroTipo" : "GUERRERO"
+		}
+	]
+
+}

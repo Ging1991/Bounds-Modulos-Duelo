@@ -1,0 +1,13 @@
+{
+	"cartaID" : 358,
+	"nombre" : "Big bang",
+	"clase" : "HECHIZO",
+	"nivel" : 9,
+	"efecto" : "Destruye todo",
+	"ambientacion" : "El fin y el comienzo son dos caras de la misma moneda",
+
+	"datoHechizo" : {
+		"tipo" : "DESTRUIR_TODO"
+	}
+
+}

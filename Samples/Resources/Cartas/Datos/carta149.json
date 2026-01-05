@@ -1,0 +1,31 @@
+{
+	"cartaID" : 149,
+	"nombre" : "Cría de piraña",
+	"clase" : "CRIATURA",
+    "nivel" : 1,
+	"ambientacion" : "Tan peligrosa como una adulta.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "FANTASMA",
+		"tipos" : ["PEZ"],
+		"ataque" : 100,
+		"defensa" : 100,
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			},
+			{
+				"clave" : "ALIAS",
+				"parametroID" : 11
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 146
+		}
+	]
+
+}

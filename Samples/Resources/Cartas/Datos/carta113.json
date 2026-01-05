@@ -1,0 +1,14 @@
+{
+	"cartaID" : 113,
+	"nombre" : "Sobrecarga",
+	"ambientacion" : "Supera tus límites",
+	"clase" : "TRAMPA",
+	"efecto" : "Cuando el oponente roba una carta, tu robas 2 cartas.",
+	"nivel" : 3,
+		
+	"datoTrampa" : {
+		"tipo": "ROBO_X_ROBO_N",
+		"cantidad" : 2
+	}
+
+}

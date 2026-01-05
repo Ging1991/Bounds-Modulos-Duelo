@@ -1,0 +1,37 @@
+{
+	"cartaID" : 410,
+	"nombre" : "Necro soberano infernal",
+	"clase" : "CRIATURA",
+	"ambientacion" : "La maldad y el poder son inseparables en todos los universos",
+    "nivel" : 15,
+	
+	"datoCriatura" : {
+		"perfeccion" : "FUSION",
+		"ataque" : 10000,
+		"defensa" : 7500,
+		"efectos" : [
+			{
+				"clave" : "CAZADOR"
+			},
+			{
+				"clave" : "ARKANO"
+			},
+			{
+				"clave" : "BRUTAL"
+			}
+		],
+		"tipos" : ["DINOSAURIO", "DIVINIDAD"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 409
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 406
+		}
+	]
+
+}

@@ -1,0 +1,13 @@
+{
+	"cartaID" : 257,
+	"nombre" : "Heroe tragico",
+	"clase" : "TRAMPA",
+	"ambientacion" : "Ninguna victoria es absoluta",
+	"efecto" : "Cuando un criatura que controlas es destruida: Destruye todas las criaturas con nivel igual o menor que esa criatura.",
+	"nivel" : 6,
+		
+	"datoTrampa": {
+		"tipo": "VENGANZA_NIVEL"
+	}
+
+}

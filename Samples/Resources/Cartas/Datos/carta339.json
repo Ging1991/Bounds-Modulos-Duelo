@@ -1,0 +1,20 @@
+{
+	"cartaID" : 339,
+	"nombre" : "Solo insectos",
+	"clase" : "HECHIZO",
+	"nivel" : 1,
+	"efecto" : "Destruye una carta de nivel 1 en el campo (Puedes mirar las cartas boca abajo de tu oponente).",
+	"ambientacion" : "Para el solo somos insectos.",
+
+	"datoHechizo" : {
+		"tipo" : "DESTRUIR_OBJETIVO",
+		"fuentes" : ["CAMPO"],
+		"condicionCarta": {
+			"condicion" : {
+				"tipo" : "nivel",
+				"nivel" : 1
+			}
+		}
+	}
+
+}

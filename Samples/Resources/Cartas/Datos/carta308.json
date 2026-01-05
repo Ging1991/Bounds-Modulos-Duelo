@@ -1,0 +1,31 @@
+{
+	"cartaID" : 308,
+	"nombre" : "Ficha tiburón",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Queria evitar esto.",
+    "nivel" : 3,
+	
+	"datoCriatura" : {
+		"perfeccion" : "FICHA",
+		"ataque" : 1500,
+		"defensa" : 1300,
+		"efectos" : [
+			{
+				"clave" : "CAZADOR"
+			},
+			{
+				"clave" : "BRUTAL"
+			}
+		],
+		"tipos" : ["DEMONIO", "PEZ"],
+		"materiales" : [306]
+	},
+
+	"efectos" : [
+		{
+			"clave" : "ALIAS",
+			"parametroID" : 8
+		}
+	]
+
+}

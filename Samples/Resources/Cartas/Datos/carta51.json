@@ -1,0 +1,18 @@
+{
+	"cartaID" : 51,
+	"nombre" : "Caja de moustros LV1",
+	"clase" : "EQUIPO",
+	"nivel" : 2,
+	"ambientacion" : "Las sorpresas no siempre son buenas",
+
+	"efectos" : [
+		{
+			"clave" : "UNIDOS_N1"
+		},
+		{
+			"clave" : "VINCULO_TIPO",
+			"parametroTipo" : "DEMONIO"
+		}
+	]
+
+}

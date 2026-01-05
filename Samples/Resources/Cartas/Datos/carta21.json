@@ -1,0 +1,15 @@
+{
+	"cartaID" : 21,
+	"nombre" : "Serpiente blanca",
+	"clase" : "CRIATURA",
+	"nivel" : 5,
+	"ambientacion" : "Incluso el lado bueno de la humanidad es una serpiente.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 2600,
+		"defensa" : 2200,
+		"tipos" : ["DRAGON", "SERPIENTE"]
+	}
+
+}

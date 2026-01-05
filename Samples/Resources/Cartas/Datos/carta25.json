@@ -1,0 +1,34 @@
+{
+	"cartaID" : 25,
+	"nombre" : "Caballero espectral",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Es desesperante ver como algunos todavía se aferran al ego",
+    "nivel" : 1,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 0,
+		"defensa" : 0,
+		"tipos" : ["GUERRERO", "DEMONIO"],
+		"efectos" : [
+			{
+				"clave" : "REFUERZOS"
+			},
+			{
+				"clave" : "ACOMPAÑAR"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 22
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 24
+		}
+	]
+
+}

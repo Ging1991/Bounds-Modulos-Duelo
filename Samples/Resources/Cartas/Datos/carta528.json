@@ -1,0 +1,15 @@
+{
+	"cartaID" : 528,
+	"nombre" : "Armas espirituales",
+	"clase" : "HECHIZO",
+	"nivel" : 8,
+	"efecto" : "Cada jugador roba 5 cartas.",
+	"ambientacion" : "Una vez que comienzas a mirar, ya no puedes parar.",
+
+	"datoHechizo" : {
+		"tipo" : "ROBAR_CARTAS",
+		"cantidad" : 5,
+		"jugador" : "AMBOS"
+	}
+
+}

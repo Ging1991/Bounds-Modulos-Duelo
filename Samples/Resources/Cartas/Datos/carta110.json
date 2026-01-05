@@ -1,0 +1,35 @@
+{
+	"cartaID" : 110,
+	"nombre" : "Comandante Grill",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Hasta terminar esta guerra, mi voluntad será absoluta",
+    "nivel" : 6,
+	
+	"datoCriatura" : {
+		"perfeccion" : "FUSION",
+		"ataque" : 3000,
+		"defensa" : 2500,
+		"efectos" : [
+			{
+				"clave" : "SABIDURIA_T",
+				"parametroTipo" : "GUERRERO"
+			},
+			{
+				"clave" : "REFUERZOS"
+			}
+		],
+		"tipos" : ["GUERRERO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 104
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 105
+		}
+	]
+
+}

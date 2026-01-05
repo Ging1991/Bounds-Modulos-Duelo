@@ -1,0 +1,34 @@
+{
+	"cartaID" : 55,
+	"nombre" : "Raices malditas",
+	"ambientacion" : "¿La raiz de todos los males?",
+	"clase" : "CRIATURA",
+    "nivel" : 3,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 500,
+		"defensa" : 2000,
+		"efectos" : [
+			{
+				"clave" : "ATADURAS"
+			},
+			{
+				"clave" : "MURO"
+			}
+		],
+		"tipos" : ["PLANTA"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 53
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 54
+		}
+	]
+
+}

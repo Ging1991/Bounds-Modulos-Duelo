@@ -1,0 +1,28 @@
+{
+	"cartaID" : 394,
+	"nombre" : "Huevo de dragón",
+	"clase" : "CRIATURA",
+	"nivel" : 1,
+	"ambientacion" : "Es tan peligroso como delicioso.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 0,
+		"defensa" : 100,
+		"efectos" : [
+			{
+				"clave" : "CREAR_FICHA_ID",
+				"parametroID" : 393
+			}
+		],
+        "tipos" : ["DRAGON"]
+	},
+	
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 392
+		}
+	]
+
+}

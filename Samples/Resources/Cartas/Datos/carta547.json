@@ -1,0 +1,13 @@
+{
+	"cartaID" : 547,
+	"nombre" : "Reino perpendicular",
+	"clase" : "VACIO",
+	"nivel" : 7,
+	"efecto" : "Cuando un jugador invoca un VECTOR, le inflije 500 DAÑO  a su oponente.",
+	"ambientacion" : "-",
+
+	"datoVacio" : {
+		"tipo" : "PERPENDICULAR"
+	}
+
+}

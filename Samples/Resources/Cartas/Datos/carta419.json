@@ -1,0 +1,37 @@
+{
+	"cartaID" : 419,
+	"nombre" : "Legión de almas",
+	"clase" : "CRIATURA",
+    "nivel" : 10,
+	"ambientacion" : "Todos son uno, uno son todos",
+
+	"datoCriatura" : {
+		"perfeccion" : "SAGRADO",
+		"ataque" : 6400,
+		"defensa" : 3200,
+		"tipos" : ["DIVINIDAD", "DEMONIO"],
+		"efectos" : [
+			{
+				"clave" : "MASIVO"
+			},
+			{
+				"clave" : "HEROE"
+			}
+		]
+	},
+	"materiales" : [
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "AURA"
+		},
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "AURA"
+		},
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "AURA"
+		}
+	]
+
+}

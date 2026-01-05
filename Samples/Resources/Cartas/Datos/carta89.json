@@ -1,0 +1,21 @@
+{
+	"cartaID" : 89,
+	"nombre" : "Armadura de acero",
+	"clase" : "EQUIPO",
+	"nivel" : 3,
+	"defensa" : 1000,
+	"ambientacion" : "Ninguna lanza Grill podra atravesarla",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_ESTADISTICA_ATK_DEF",
+			"parametroATK" : 500,
+			"parametroDEF" : 500
+		},
+		{
+			"clave" : "SUPERVIVENCIA_N",
+			"parametroN" : 2
+		}	
+	]
+
+}

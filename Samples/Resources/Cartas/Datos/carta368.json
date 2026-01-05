@@ -1,0 +1,33 @@
+{
+	"cartaID" : 368,
+	"nombre" : "Liriana, angel de paz",
+	"clase" : "CRIATURA",
+    "nivel" : 3,
+	"ambientacion" : "Tambien podria ser de la guerra",
+
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 2000,
+		"defensa" : 1000,
+        "tipos" : ["GUERRERO", "ANGEL"],
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			},
+			{
+				"clave" : "HEROE"
+			}
+		]
+	},
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "ANGEL"
+		},
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "GUERRERO"
+		}
+	]
+
+}

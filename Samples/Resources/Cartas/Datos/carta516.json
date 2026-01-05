@@ -1,0 +1,27 @@
+{
+	"cartaID" : 516,
+	"nombre" : "Ilusionista Conejo",
+	"ambientacion" : "incluso el perro guardian del infierno tiene un amo",
+	"clase" : "CRIATURA",
+    "nivel" : 6,
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 1350,
+		"defensa" : 600,
+		"tipos" : ["HECHICERO", "HADA"],
+		"efectos" : [
+			{
+				"clave" : "CENIZAS"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 514
+		}
+	]
+
+}

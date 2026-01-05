@@ -1,0 +1,31 @@
+{
+	"cartaID" : 220,
+	"nombre" : "Serpiente ancentral II",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Una vez cada 100 años depierta para alimentarse, y nosotros querido amigo, somos la comida.",
+    "nivel" : 10,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 0,
+		"defensa" : 10000,
+		"efectos" : [
+			{
+				"clave" : "DESTRUIR"
+			}
+		],
+		"tipos" : ["SERPIENTE"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 228
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 229
+		}
+	]
+
+}

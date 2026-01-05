@@ -1,0 +1,30 @@
+{
+	"cartaID" : 58,
+	"nombre" : "Mirra, protectora del bosque",
+	"ambientacion" : "Mirra ama la paz, pero se vienen tiempos dificiles",
+	"clase" : "CRIATURA",
+    "nivel" : 4,
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 0,
+		"defensa" : 3000,
+		"efectos" : [
+			{
+				"clave" : "MURO"
+			},
+			{
+				"clave" : "HEROE"
+			}
+		],
+		"tipos" : ["HADA", "PLANTA"]
+	},
+	
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 57
+		}
+	]
+
+}

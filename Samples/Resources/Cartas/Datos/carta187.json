@@ -1,0 +1,14 @@
+{
+	"cartaID" : 187,
+	"nombre" : "Guerra santa",
+	"clase" : "HECHIZO",
+	"nivel" : 6,
+	"efecto" : "Coloca 4 contadores de debilidad en cada criatura del oponente.",
+	"ambientacion" : "Al final habra un solo ganador, los buitres.",
+
+    "datoHechizo" : {
+        "tipo" : "CONTADOR_CARTAS_DEBILIDAD",
+		"jugador" : "ADVERSARIO"
+    }
+
+}

@@ -1,0 +1,34 @@
+{
+	"cartaID" : 84,
+	"nombre" : "Huevo del trueno",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Lo protege con demasiada determinacion...¿Sabe algo que nosotros no?",
+    "nivel" : 1,
+	
+	"datoCriatura" : {
+		"perfeccion" : "FUSION",
+		"ataque" : 0,
+		"defensa" : 800,
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			},
+			{
+				"clave" : "RECICLAR"
+			}
+		],
+		"tipos" : ["SERPIENTE", "TRUENO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 48
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 83
+		}
+	]
+
+}

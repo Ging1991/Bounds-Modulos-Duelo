@@ -1,0 +1,13 @@
+{
+	"cartaID" : 353,
+	"nombre" : "Retrato maldito",
+	"clase" : "HECHIZO",
+	"nivel" : 10,
+	"ambientacion" : "La injusticia algun dia llegara a su fin, pero no hoy.",
+	"efecto" : "Selecciona una criatura MAGICA en tu mazo al azar, luego envía a tu zona de materiales hasta una copia de sus materiales en tu mazo, y agrégala a tu mano.",
+
+    "datoHechizo" : {
+        "tipo" : "NUCLEAR_MAGICO"
+    }
+
+}

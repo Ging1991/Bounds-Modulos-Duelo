@@ -1,0 +1,29 @@
+{
+	"cartaID" : 423,
+	"nombre" : "Semilla del renacimiento",
+	"clase" : "HECHIZO",
+	"nivel" : 1,
+	"efecto" : "Trae un HECHIZO de tu descarte a tu mano.",
+	"ambientacion" : "No es la forma mas practica de viajar, pero es barato y seguro.",
+
+	"datoHechizo" : {
+		"tipo" : "RECUPERAR_OBJETIVO",
+		"fuentes" : ["DESCARTE"],
+		"condicionCarta": {
+			"condicion" : [
+				{
+					"tipo" : "clase",
+					"clase" : "HECHIZO"
+				}
+			]
+		}
+	},
+
+	"efectos" : [
+		{
+			"clave" : "REVITALIZAR_T",
+			"parametroTipo" : "PLANTA"
+		}
+	]
+
+}

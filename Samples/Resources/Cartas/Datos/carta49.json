@@ -1,0 +1,34 @@
+{
+	"cartaID" : 49,
+	"nombre" : "Serpiente trueno, modo guerrero",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Todos crecen de forma diferente",
+    "nivel" : 1,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 300,
+		"defensa" : 200,
+		"tipos" : ["GUERRERO", "TRUENO"],
+		"efectos" : [
+			{
+				"clave" : "REFUERZOS"
+			},
+			{
+				"clave" : "ACOMPAÑAR"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 43
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 48
+		}
+	]
+
+}

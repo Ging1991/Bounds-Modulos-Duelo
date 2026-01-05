@@ -1,0 +1,31 @@
+{
+	"cartaID" : 65,
+	"nombre" : "Oficial demonio especial",
+	"clase" : "CRIATURA",
+    "nivel" : 4,
+	"ambientacion" : "Sube tu posición sin importar cuanta sangre haya que derramar.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 1900,
+		"defensa" : 1800,
+		"efectos" : [
+			{
+				"clave" : "ALIAS",
+				"parametroID" : 34
+			},
+			{
+				"clave" : "ATADURAS"
+			}
+		],
+		"tipos" : ["DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 52
+		}
+	]
+
+}

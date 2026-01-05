@@ -1,0 +1,15 @@
+{
+	"cartaID" : 486,
+	"nombre" : "Platillo alien",
+	"clase" : "CRIATURA",
+	"nivel" : 2,
+	"ambientacion" : "",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"tipos" : ["MAQUINA"],
+		"ataque" : 300,
+		"defensa" : 1800
+	}
+
+}

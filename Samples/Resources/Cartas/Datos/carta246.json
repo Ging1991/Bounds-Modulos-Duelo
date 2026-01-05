@@ -1,0 +1,15 @@
+{
+	"cartaID" : 246,
+	"nombre" : "Tácticas de asesinato",
+	"clase" : "AURA",
+	"nivel" : 1,
+	"ambientacion" : "Esto ya no es un juego, desde ahora ire en serio contra ustedes.",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_ESTADISTICA_ATK",
+			"parametroATK" : 1000
+		}
+	]
+		
+}

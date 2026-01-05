@@ -1,0 +1,19 @@
+{
+	"cartaID" : 258,
+	"nombre" : "Fortaleza del herrero",
+	"clase" : "HECHIZO",
+	"nivel" : 6,
+	"efecto" : "Busca un EQUIPO en tu mazo y agregalo a tu mano.",
+	"ambientacion" : "Ni que su taller se incendiara fue suficiente para detenerlo.",
+
+	"datoHechizo" : {
+		"tipo" : "TUTOR",
+		"condicionCarta": {
+			"condicion" : {
+				"tipo" : "clase",
+				"clase" : "EQUIPO"
+			}
+		}
+	}
+
+}

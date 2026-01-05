@@ -1,0 +1,37 @@
+{
+	"cartaID" : 75,
+	"nombre" : "Abadón, el destructor",
+	"clase" : "CRIATURA",
+	"ambientacion" : "La encarnación del mal debera decidir que hacer con la humanidad",
+    "nivel" : 7,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 3500,
+		"defensa" : 3300,
+		"efectos" : [
+			{
+				"clave" : "CAZADOR"
+			},
+			{
+				"clave" : "REFUERZOS"
+			},
+			{
+				"clave" : "ARKANO"
+			}
+		],
+		"tipos" : ["GUERRERO", "DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 70
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 5
+		}
+	]
+
+}

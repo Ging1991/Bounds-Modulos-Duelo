@@ -1,0 +1,34 @@
+{
+	"cartaID" : 10,
+    "nivel" : 5,
+	"nombre" : "Hidra oscura",
+	"clase" : "CRIATURA",
+	"ambientacion" : "La peor combinación.",
+		
+	"datoCriatura" : {
+		"ataque" : 2800,
+		"defensa" : 2000,
+		"perfeccion" : "FUSION",
+		"tipos" : ["PEZ", "SERPIENTE"],
+		"efectos" : [
+			{
+				"clave" : "CAZADOR"
+			},
+			{
+				"clave" : "BRUTAL"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 8
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 9
+		}
+	]
+
+}

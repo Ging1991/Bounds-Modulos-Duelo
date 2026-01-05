@@ -1,0 +1,19 @@
+{
+	"cartaID" : 313,
+	"nombre" : "Escudo de bajo nivel",
+	"clase" : "EQUIPO",
+	"nivel" : 1,
+	"defensa" : 1000,
+	"ambientacion" : "Nunca ganaremos la guerra escondiendonos, pero somos muy débiles para pelear.",
+
+	"efectos" : [
+		{
+			"clave" : "UNIDOS_N1"
+		},
+		{
+			"clave" : "VINCULO_ESTADISTICA_DEF",
+			"parametroDEF" : 1000
+		}
+	]
+
+}

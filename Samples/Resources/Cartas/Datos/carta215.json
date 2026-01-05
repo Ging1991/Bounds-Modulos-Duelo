@@ -1,0 +1,30 @@
+{
+	"cartaID" : 215,
+	"nombre" : "Apocalipsis univision",
+	"clase" : "CRIATURA",
+	"ambientacion" : "No estoy en ninguna parte y estoy en todos lados",
+	"nivel" : 8,
+
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 2000,
+		"defensa" : 5000,
+		"efectos" : [
+			{
+				"clave" : "MURO"
+			},
+			{
+				"clave" : "FATAL"
+			}
+		],
+		"tipos" : ["DEMONIO", "ZOMBI"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 213
+		}
+	]
+
+}

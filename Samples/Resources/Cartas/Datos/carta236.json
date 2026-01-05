@@ -1,0 +1,13 @@
+{
+	"cartaID" : 236,
+	"nombre" : "Maldición de la serpiente",
+	"clase" : "HECHIZO",
+	"nivel" : 2,
+	"efecto" : "Envenena a todas las criaturas del oponente.",
+	"ambientacion" : "Tendras poder, pero primero tienes que demostrar que eres digno de él",
+
+	"datoHechizo" : {
+		"tipo" : "ENVENENAR"
+	}
+
+}

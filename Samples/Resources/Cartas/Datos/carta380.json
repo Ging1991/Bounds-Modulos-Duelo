@@ -1,0 +1,30 @@
+{
+	"cartaID" : 380,
+	"nombre" : "Lamia ascendida",
+	"clase" : "CRIATURA",
+	"nivel" : 10,
+	"ambientacion" : "Infinito placer, o infinito dolor, ella decide.",
+
+	"datoCriatura" : {
+		"perfeccion" : "VECTOR",
+		"ataque" : 5300,
+		"defensa" : 4900,
+		"tipos" : ["DEMONIO", "ANGEL"],
+		"efectos" : [
+			{
+				"clave" : "FATAL"
+			},
+			{
+				"clave" : "ATADURAS"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "VECTOR_ATK",
+			"parametroATK" : 4200
+		}
+	]
+
+}

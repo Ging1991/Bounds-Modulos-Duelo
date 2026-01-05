@@ -1,0 +1,30 @@
+{
+	"cartaID" : 209,
+	"nombre" : "Muro de los lamentos",
+	"clase" : "CRIATURA",
+	"nivel" : 4,
+	"ambientacion" : "Los que intentan cruzar se convierten en parte de la barrera que impide pasar.",
+
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"tipos" : ["DEMONIO", "ROCA"],
+		"ataque" : 0,
+		"defensa" : 3000,
+		"efectos" : [
+			{
+				"clave" : "MURO"
+			},
+			{
+				"clave" : "PAGO_SANGRE"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 208
+		}
+	]
+
+}

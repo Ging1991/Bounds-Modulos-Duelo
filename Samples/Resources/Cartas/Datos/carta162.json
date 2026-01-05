@@ -1,0 +1,13 @@
+{
+	"cartaID" : 162,
+	"nombre" : "Segunda invocación",
+	"clase" : "HECHIZO",
+	"nivel" : 1,
+	"efecto" : "Ganas 1 invocación normal extra este turno.",
+	"ambientacion" : "Para los prodigios nunca es suficiente.",
+
+	"datoHechizo" : {
+		"tipo" : "SEGUNDA_INVOCACION"
+	}
+
+}

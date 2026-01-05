@@ -1,0 +1,21 @@
+{
+	"cartaID" : 392,
+	"nombre" : "Dragones gemelos",
+	"clase" : "HECHIZO",
+	"nivel" : 6,
+	"efecto" : "Sacrifica una criatura: Invoca especialmente al azar 2 dragones desde tu mazo que tengan el mismo nivel pero distinto nombre.",
+	"ambientacion" : "Yo soy tu y tu eres yo ¿Verdad?",
+
+	"datoHechizo" : {
+		"tipo" : "SACRIFICIO_DRAGONES_GEMELOS",
+        "condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clase" : "CRIATURA"
+				}
+			]
+		}
+	}
+
+}

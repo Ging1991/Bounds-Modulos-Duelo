@@ -1,0 +1,20 @@
+{
+	"cartaID" : 143,
+	"nombre" : "Ataque inesperado",
+    "clase" : "AURA",
+	"nivel" : 3,
+    "ambientacion" : "Hora de cenar",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_HABILIDAD",
+			"parametroHabilidad" : "ROBAR"
+		},
+		{
+			"clave" : "VINCULO_ESTADISTICA_ATK_DEF",
+			"parametroATK" : 500,
+			"parametroDEF" : 500
+		}
+	]
+    
+}

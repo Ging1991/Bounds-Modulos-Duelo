@@ -1,0 +1,20 @@
+{
+	"cartaID" : 318,
+	"nombre" : "El pez grande",
+	"clase" : "TRAMPA",
+	"nivel" : 3,
+	"efecto" : "Cuando el oponente invoca una criatura de forma normal, con 3000 DEF o menos, destruye esa criatura y el oponente roba una carta.",
+	"ambientacion" : "El ciclo de la vida.",
+
+	"datoTrampa": {
+		"tipo": "TRAMPA_PEZ"
+	},
+
+	"efectos" : [
+		{
+			"clave" : "AUMENTAR_T",
+			"parametroTipo" : "PEZ"
+		}
+	]
+
+}

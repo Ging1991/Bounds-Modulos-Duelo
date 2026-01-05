@@ -1,0 +1,21 @@
+{
+	"cartaID" : 347,
+	"nombre" : "Alquimia del futuro",
+	"clase" : "HECHIZO",
+	"nivel" : 4,
+	"efecto" : "Descarta un MAGICO: Encuentra en tu mazo hasta una copia de cada uno de sus materiales.",
+	"ambientacion" : "Tal vez no pude salvar el futuro, pero lo vengaré.",
+
+	"datoHechizo" : {
+		"tipo" : "DESCARTE_BUSCA_MATERIALES_ID",
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "criaturaPerfeccion",
+					"perfeccion" : "MAGICO"
+				}
+			]
+		}
+	}
+
+}

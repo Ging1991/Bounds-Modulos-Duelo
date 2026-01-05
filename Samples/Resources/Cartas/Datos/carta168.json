@@ -1,0 +1,21 @@
+{
+	"cartaID" : 168,
+	"nombre" : "Infraevolución",
+	"clase" : "HECHIZO",
+	"nivel" : 3,
+	"efecto" : "Descarta una EVOLUCION: Encuentra hasta una copia de cada de sus materiales en tu mazo.",
+	"ambientacion" : "¿Qué esta haciendo, esta loco? O acaso... ¿Se puede avanzar hacia atras?",
+
+	"datoHechizo" : {
+		"tipo" : "DESCARTE_BUSCA_MATERIALES_ID",
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "criaturaPerfeccion",
+					"perfeccion" : "EVOLUCION"
+				}
+			]
+		}
+	}
+
+}

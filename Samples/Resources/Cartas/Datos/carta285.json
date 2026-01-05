@@ -1,0 +1,15 @@
+{
+	"cartaID" : 285,
+	"nombre" : "Dandro, el mercenario",
+	"clase" : "CRIATURA",
+	"nivel" : 2,
+	"ambientacion" : "No necesita una razón para vivir, solo vive porque aun no ha encontrado una razón para morir.",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 1000,
+		"defensa" : 1000,
+		"tipos" : ["GUERRERO"]
+	}
+
+}

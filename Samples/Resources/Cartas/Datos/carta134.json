@@ -1,0 +1,13 @@
+{
+	"cartaID" : 134,
+	"nombre" : "Sobrecarga de invocación",
+	"clase" : "TRAMPA",
+	"efecto" : "Cuando el oponente invoca una criatura de forma normal, si tiene 5 cartas en su campo, destruye todas esas cartas.",
+	"ambientacion" : "Los combates aqui no son tan faciles como en tu mundo.",
+	"nivel" : 4,
+		
+	"datoTrampa" : {
+		"tipo": "SOBRECARGA_INVOCACION"
+	}
+	
+}

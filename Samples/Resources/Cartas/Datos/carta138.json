@@ -1,0 +1,13 @@
+{
+	"cartaID" : 138,
+	"nombre" : "Rugido espeluznante",
+	"clase" : "TRAMPA",
+	"efecto" : "Cuando una criatura del oponente ataca: coloca 4 contadores de debilidad sobre esa criatura.",
+	"ambientacion" : "No sé tú, pero yo no quisiera encontrármelo en un callejón oscuro.",
+	"nivel" : 2,
+
+	"datoTrampa" : {
+		"tipo": "RUGIDO"
+	}
+
+}

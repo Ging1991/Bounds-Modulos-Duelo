@@ -1,0 +1,16 @@
+{
+	"cartaID" : 521,
+	"nombre" : "Satisfaccion",
+	"clase" : "HECHIZO",
+	"nivel" : 5,
+	"efecto" : "Ganas 1000 LP",
+	"ambientacion" : "Me preguto quién será la cena esta noche.",
+
+	"datoHechizo" : {
+		"tipo" : "MODIFICAR_VIDA",
+		"jugador" : "JUGADOR",
+		"cantidad" : 1500
+	}
+
+
+}

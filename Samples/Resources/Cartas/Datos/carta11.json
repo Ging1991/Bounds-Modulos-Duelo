@@ -1,0 +1,15 @@
+{
+	"cartaID" : 11,
+	"nombre" : "Pez piraña",
+	"clase" : "CRIATURA",
+    "nivel" : 1,
+	"ambientacion" : "Parece inofensiva cuando viene sola, pero nunca viene sola.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 500,
+		"defensa" : 100,
+		"tipos" : ["PEZ"]
+	}
+
+}

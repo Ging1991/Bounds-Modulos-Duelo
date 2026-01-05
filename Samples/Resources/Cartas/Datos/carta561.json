@@ -1,0 +1,15 @@
+{
+	"cartaID" : 561,
+	"nombre" : "Paratemporal vigilante",
+	"clase" : "CRIATURA",
+	"nivel" : 1,
+	"ambientacion" : "-",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"tipos" : ["MAQUINA"],
+		"ataque" : 0,
+		"defensa" : 550
+	}
+
+}

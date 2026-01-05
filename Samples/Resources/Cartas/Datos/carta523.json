@@ -1,0 +1,26 @@
+{
+	"cartaID" : 523,
+	"nombre" : "Dioses inmateriales",
+	"clase" : "HECHIZO",
+	"nivel" : 3,
+	"efecto" : "Destruye la criatura objetivo que controla un oponente.",
+	"ambientacion" : "Te dije que no habría segunda oportunidad.",
+
+	"datoHechizo" : {
+		"tipo" : "DESTRUIR_OBJETIVO",
+		"fuentes" : ["CAMPO"],
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clase" : "CRIATURA"
+				},
+				{
+					"tipo" : "jugador",
+					"controlador" : "ADVERSARIO"
+				}
+			]
+		}
+	}
+
+}

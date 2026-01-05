@@ -1,0 +1,12 @@
+{
+	"nombre":"Sirena",
+	"codigo":"SIRENA",
+	"protector":"SIRENA",
+	"cartas": [
+			"011_A_N_5",
+			"012_A_N_5",
+			"013_A_N_1",
+			"234_A_N_4",
+			"088_A_N_5"
+		]
+}

@@ -1,0 +1,34 @@
+{
+	"cartaID" : 296,
+	"nombre" : "Ahuyentar",
+	"clase" : "HECHIZO",
+	"nivel" : 6,
+	"efecto" : "Envía una criatura que controla el oponente al fondo del mazo.",
+	"ambientacion" : "La espada del caballero, no lo asustó, pero las miles de flechas que respondieron a su llamado si.",
+
+	"datoHechizo" : {
+		"tipo" : "RECICLAR_OBJETIVO",
+		"fuentes" : ["CAMPO"],
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clase" : "CRIATURA"
+				},
+				{
+					"tipo" : "jugador",
+					"controlador" : "ADVERSARIO"
+				}
+			]
+		}
+	},
+		
+	"efectos" : [
+		{
+			"clave" : "AUMENTAR_T",
+			"parametroTipo" : "CABALLERO"
+		}	
+	]
+
+
+}

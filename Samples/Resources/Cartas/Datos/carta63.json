@@ -1,0 +1,20 @@
+{
+	"cartaID" : 63,
+	"nombre" : "Combustión humana",
+	"clase" : "TRAMPA",
+	"nivel" : 2,
+	"ambientacion" : "¿Final o comienzo?",
+	"efecto" : "Cuando una criatura que controlas es destruida: Inflinge 500 puntos de daño al oponente.",
+
+	"datoTrampa" : {
+		"tipo" : "COMBUSTION"
+	},
+
+	"efectos" : [
+		{
+			"clave" : "ARDER_T",
+			"parametroTipo" : "PYRO"
+		}	
+	]
+
+}

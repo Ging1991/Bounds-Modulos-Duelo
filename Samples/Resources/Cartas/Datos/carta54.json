@@ -1,0 +1,19 @@
+{
+	"cartaID" : 54,
+	"nombre" : "Raices enredaderas",
+	"clase" : "AURA",
+	"nivel" : 3,
+	"ambientacion" : "Cuidado donde pisas, no querras perder el pie.",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_HABILIDAD",
+			"parametroHabilidad" : "ATADURAS"
+		},
+		{
+			"clave" : "VINCULO_ESTADISTICA_DEF",
+			"parametroDEF" : 500
+		}
+	]
+
+}

@@ -1,0 +1,15 @@
+{
+	"cartaID" : 398,
+	"nombre" : "Surcamares",
+	"clase" : "EQUIPO",
+	"nivel" : 8,
+	"defensa" : 4000,
+	"ambientacion" : "Listo para la batalla.",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_DESPERTAR"
+		}	
+	]
+
+}

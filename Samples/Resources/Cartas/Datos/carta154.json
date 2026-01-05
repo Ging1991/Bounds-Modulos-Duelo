@@ -1,0 +1,31 @@
+{
+	"cartaID" : 154,
+	"nombre" : "Tortuga protectora",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Para esta tortuga no existen bandos.",
+    "nivel" : 4,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"tipos" : ["REPTIL"],
+		"ataque" : 0,
+		"defensa" : 3500,
+		"efectos" : [
+			{
+				"clave" : "MURO"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 85
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 86
+		}
+	]
+
+}

@@ -1,0 +1,35 @@
+{
+	"cartaID" : 489,
+	"nombre" : "Florena, ninfa del mar",
+	"clase" : "CRIATURA",
+	"nivel" : 4,
+	"ambientacion" : "-",
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"tipos" : ["HADA", "PEZ"],
+		"ataque" : 1300,
+		"defensa" : 1900,
+		"efectos" : [
+			{
+				"clave" : "TESORO_ID",
+				"parametroID" : 498
+			},
+			{
+				"clave" : "INICIAR"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 472
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 488
+		}
+	]
+
+}

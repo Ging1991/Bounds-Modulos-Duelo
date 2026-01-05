@@ -1,0 +1,13 @@
+{
+	"cartaID" : 176,
+	"nombre" : "Espejo escarlata",
+	"ambientacion" : "Desde aqui puedes herir a cualquier persona en el mundo humano ¿Alguien en mente?",
+	"efecto" : "Cuando el oponente gane vida: Inflige daño al oponente igual al doble de la vida ganada.",
+	"clase" : "TRAMPA",
+	"nivel" : 1,
+
+	"datoTrampa" : {
+		"tipo" : "REACCION_NEGATIVA"
+	}
+
+}

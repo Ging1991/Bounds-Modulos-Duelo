@@ -1,0 +1,13 @@
+{
+	"cartaID" : 552,
+	"nombre" : "Tormenta solar",
+	"clase" : "HECHIZO",
+	"nivel" : 12,
+	"efecto" : "Destruye todas las otras cartas sobre el campo.",
+	"ambientacion" : "El creador finalmente despertó y lo primero que hizo fue arrepentirse de lo que había hecho.",
+
+	"datoHechizo" : {
+		"tipo" : "DESTRUIR_TODO"
+	}
+
+}

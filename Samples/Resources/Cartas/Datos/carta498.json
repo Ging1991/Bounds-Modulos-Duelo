@@ -1,0 +1,21 @@
+{
+	"cartaID" : 498,
+	"nombre" : "Lanza volcánica",
+	"clase" : "EQUIPO",
+	"nivel" : 4,
+	"defensa" : 7000,
+	"ambientacion" : "Un arma antigua, olvidada por el tiempo.",
+		
+	"efectos" : [
+		{
+			"clave" : "VINCULO_ESTADISTICA_ATK_DEF",
+			"parametroATK" : 500,
+			"parametroDEF" : 500
+		},
+		{
+			"clave" : "AUMENTAR_T",
+			"parametroTipo" : "HADA"
+		}	
+	]
+
+}

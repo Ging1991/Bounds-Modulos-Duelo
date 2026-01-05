@@ -1,0 +1,27 @@
+{
+	"cartaID" : 177,
+	"nombre" : "Adivino embotellado",
+	"clase" : "CRIATURA",
+    "nivel" : 1,
+	"ambientacion" : "Tan poderoso y tan frágil.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 0,
+		"defensa" : 0,
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			}
+		],
+		"tipos" : ["DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DEMONIO"
+		}
+	]
+
+}

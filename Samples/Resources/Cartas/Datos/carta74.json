@@ -1,0 +1,13 @@
+{
+	"cartaID" : 74,
+	"nombre" : "Cambio de pesadilla",
+	"ambientacion" : "¿Mejora? Yo no lo creo",
+	"clase" : "TRAMPA",
+	"efecto" : "Cuando el oponente invoca una criatura de fusion, destruye esa criatura",
+	"nivel" : 1,
+
+	"datoTrampa" : {
+		"tipo": "ANTI_FUSION"
+	}
+
+}

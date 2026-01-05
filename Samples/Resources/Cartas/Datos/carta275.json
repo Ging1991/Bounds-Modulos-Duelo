@@ -1,0 +1,32 @@
+{
+	"cartaID" : 275,
+	"nombre" : "Rey trueno",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Un nuevo tirano ha emergido desde las profundidades del abismo, solo esperemos que no busque competir con los anteriores.",
+	"nivel" : 5,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 2500,
+		"defensa" : 2000,
+		"habilidades" : ["especial_trueno"],
+		"efectos" : [
+			{
+				"clave" : "SUPREMACIA_TRUENO"
+			}
+		],
+		"tipos" : ["GUERRERO", "TRUENO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 268
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 273
+		}
+	]
+
+}

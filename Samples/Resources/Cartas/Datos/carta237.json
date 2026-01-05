@@ -1,0 +1,31 @@
+{
+	"cartaID" : 237,
+	"nombre" : "Gargola de acero",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Finalmente ha encontrado su proposito, proteger su hogar.",
+    "nivel" : 9,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 4500,
+		"defensa" : 6000,
+		"efectos" : [
+			{
+				"clave" : "MASIVO"
+			}
+		],
+		"tipos" : ["BESTIA", "MAQUINA"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 89
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 35
+		}
+	]
+
+}

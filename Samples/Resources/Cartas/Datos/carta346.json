@@ -1,0 +1,18 @@
+{
+	"cartaID" : 346,
+	"nombre" : "El peso del mundo",
+	"clase" : "TRAMPA",
+    "nivel" : 1,
+	"ambientacion" : "Algun dia tiene que cansarse",
+	"efecto" : "Cuando el oponente invoca de forma normal una criatura con 4000 ATK o más, coloca sobre esa criatura 8 contadores de debilidad.",
+    
+    "datoTrampa": {
+        "tipo": "invoca_contadores_4000"
+    },
+
+	"efectos" : [
+		{
+			"clave" : "ANTIMETA"
+		}
+	]
+}

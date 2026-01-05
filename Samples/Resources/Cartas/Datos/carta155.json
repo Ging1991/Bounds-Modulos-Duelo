@@ -1,0 +1,27 @@
+{
+	"cartaID" : 155,
+	"nombre" : "Amo del trueno",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Esta vez no sera tan facil derrotarlo",
+    "nivel" : 5,
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 2550,
+		"defensa" : 2400,
+		"efectos" : [
+			{
+				"clave" : "BRUTAL"
+			}
+		],
+        "tipos" : ["DRAGON", "TRUENO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 59
+		}
+	]
+
+}

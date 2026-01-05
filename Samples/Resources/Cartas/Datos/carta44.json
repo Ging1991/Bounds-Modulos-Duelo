@@ -1,0 +1,27 @@
+{
+	"cartaID" : 44,
+	"nombre" : "Brazo de un ser misterioso",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Afortunadamente faltan siglos hasta que pase completamente",
+    "nivel" : 5,
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 0,
+		"defensa" : 4000,
+		"tipos" : ["DEMONIO"],
+		"efectos" : [
+			{
+				"clave" : "ATADURAS"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 31
+		}
+	]
+
+}

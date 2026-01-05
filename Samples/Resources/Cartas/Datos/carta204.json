@@ -1,0 +1,13 @@
+{
+	"cartaID" : 204,
+	"nombre" : "Destruyendo la ilusion",
+	"ambientacion" : "",
+	"clase" : "TRAMPA",
+    "efecto" : "Cuando el oponente invoca de modo normal una criatura IMPERFECTA: Destruye esa criatura.",
+    "nivel" : 1,
+    
+    "datoTrampa" : {
+        "tipo": "ILUSION"
+    }
+
+}

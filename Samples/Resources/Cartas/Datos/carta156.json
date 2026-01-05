@@ -1,0 +1,34 @@
+{
+	"cartaID" : 156,
+	"nombre" : "Tortuga controladora",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Ya falta poco para su regreso",
+    "nivel" : 3,
+	
+	"datoCriatura" : {
+		"perfeccion" : "FUSION",
+		"ataque" : 500,
+		"defensa" : 2400,
+		"efectos" : [
+			{
+				"clave" : "INICIAR"
+			},
+			{
+				"clave" : "MURO"
+			}
+		],
+		"tipos" : ["REPTIL"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 78
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 85
+		}
+	]
+
+}

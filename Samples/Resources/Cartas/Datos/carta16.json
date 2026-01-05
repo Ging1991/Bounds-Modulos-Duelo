@@ -1,0 +1,32 @@
+{
+	"cartaID" : 16,
+	"nombre" : "Alma de fuego II",
+	"clase" : "CRIATURA",
+	"nivel" : 2,
+	"ambientacion" : "Cada vez que me destruyen vuelvo mas fuerte.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 1000,
+		"defensa" : 800,
+		"tipos" : ["PYRO"],
+		"efectos" : [
+			{
+				"clave" : "EXPLOSION"
+			}
+		]
+
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 14
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 15
+		}
+	]
+
+}

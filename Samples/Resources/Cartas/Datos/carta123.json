@@ -1,0 +1,34 @@
+{
+	"cartaID" : 123,
+	"nombre" : "Elenin Baltasar",
+	"clase" : "CRIATURA",
+    "nivel" : 3,
+	"ambientacion" : "Aceptamos todo tipo de pagos, oro, plata, sangre...",
+
+	"datoCriatura" : {
+		"perfeccion" : "ROMPECABEZAS",
+		"ataque" : 2350,
+		"defensa" : 950,
+        "tipos" : ["ZOMBI"],
+		"efectos" : [
+			{
+				"clave" : "ADQUIRIR_T",
+				"parametroTipo" : "ZOMBI"
+			},
+			{
+				"clave" : "FATAL"
+			}
+		]
+	},
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 121
+		},
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "HECHIZO"
+		}
+	]
+
+}

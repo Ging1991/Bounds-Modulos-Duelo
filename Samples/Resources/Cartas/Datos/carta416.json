@@ -1,0 +1,37 @@
+{
+	"cartaID" : 416,
+	"nombre" : "Encarnación de maná",
+	"clase" : "CRIATURA",
+	"nivel" : 9,
+	"ambientacion" : "La existencia es una tragedia, pero debe ser.",
+
+	"datoCriatura" : {
+		"perfeccion" : "SAGRADO",
+		"ataque" : 6400,
+		"defensa" : 3200,
+		"tipos" : ["DIVINIDAD", "DEMONIO"],
+		"efectos" : [
+			{
+				"clave" : "MASIVO"
+			},
+			{
+				"clave" : "HEROE"
+			}
+		]
+	},
+	"materiales" : [
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "HECHIZO"
+		},
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "HECHIZO"
+		},
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "HECHIZO"
+		}
+	]
+
+}

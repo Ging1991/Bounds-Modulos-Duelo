@@ -1,0 +1,13 @@
+{
+	"cartaID" : 457,
+	"nombre" : "Ondas Yin",
+	"clase" : "HECHIZO",
+	"nivel" : 4,
+	"efecto" : "Inflige 300 puntos de daño al oponente por cada carta Ondas que controles.",
+	"ambientacion" : "Hay maldad en lo bueno.",
+
+	"datoHechizo" : {
+		"tipo" : "ONDAS_DAÑO"
+	}
+
+}

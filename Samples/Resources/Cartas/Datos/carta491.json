@@ -1,0 +1,35 @@
+{
+	"cartaID" : 491,
+	"nombre" : "Alien tentaculos",
+	"clase" : "CRIATURA",
+    "nivel" : 1,
+	"ambientacion" : "-",
+    	
+	"datoCriatura" : {
+		"perfeccion" : "FUSION",
+		"tipos" : ["PEZ"],
+		"ataque" : 800,
+		"defensa" : 0,
+		"efectos" : [
+			{
+				"clave" : "RECORTAR",
+				"parametroPerfeccion" : "FUSION"
+			},
+			{
+				"clave" : "ALIEN_491"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 486
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 487
+		}
+	]
+
+}

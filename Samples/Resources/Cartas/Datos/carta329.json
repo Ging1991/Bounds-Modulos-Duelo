@@ -1,0 +1,23 @@
+{
+	"cartaID" : 329,
+	"nombre" : "Ecos de destrucción",
+	"clase" : "HECHIZO",
+	"nivel" : 6,
+	"efecto" : "Inflige 500 puntos de daño al oponente.",
+	"ambientacion" : "¡Una y otra y otra y otra vez!",
+
+	"datoHechizo" : {
+		"tipo" : "MODIFICAR_VIDA",
+		"cantidad" : -500,
+		"etiqueta" : "EXPLOSION",
+		"jugador" : "ADVERSARIO"
+	},
+
+	"efectos" : [
+		{
+			"clave" : "RECICLAR"
+		}
+	]
+
+
+}

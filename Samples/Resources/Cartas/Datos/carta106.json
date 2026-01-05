@@ -1,0 +1,15 @@
+{
+	"cartaID" : 106,
+	"nombre" : "Árbol ocular",
+	"clase" : "CRIATURA",
+    "nivel" : 3,
+	"ambientacion" : "Cuando sentí la presencia me di vuelta, pero no había nadie ahí.",
+
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 0,
+		"defensa" : 2500,
+        "tipos" : ["PLANTA"]
+	}
+
+}

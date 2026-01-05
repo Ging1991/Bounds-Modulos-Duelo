@@ -1,0 +1,14 @@
+{
+	"cartaID" : 558,
+	"nombre" : "Espiritu del poder",
+	"clase" : "AURA",
+	"nivel" : 5,
+	"ambientacion" : "La leyenda que cobra vida cada 1000 años",
+
+	"efectos" : [
+		{
+			"clave" : "INICIAR"
+		}
+	]
+
+}

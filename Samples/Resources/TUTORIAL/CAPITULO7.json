@@ -1,0 +1,82 @@
+{
+	"lista" : [
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "SET_CARTA_IMG",
+			"indice" : 1,
+			"cartaID" : 3,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "SET_CARTA_IMG",
+			"indice" : 2,
+			"cartaID" : 4,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "SET_CARTA_IMG",
+			"indice" : 3,
+			"cartaID" : 5,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_CREAR",
+			"nombre" : "VERKAN",
+			"imagen" : "VERKAN",
+			"alto" : 600,
+			"ancho" : 400,
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_POSICIONAR",
+			"posX" : -325,
+			"posY" : 0,
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "PERSONAJE_APARECER",
+			"nombre" : "VERKAN"
+		},
+		{
+			"tipo" : "PERSONAJE_ACERCAR",
+			"nombre" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_MINIATURA",
+			"imagen" : "VERKAN",
+			"inmediato" : true
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Las evoluciones son criaturas de borde rojo y su funcionamiento es el mismo que las fusiones. La diferencia principal es que estas no son combinaciones de criaturas."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Las evoluciones son combinaciones de una criatura con un equipo o aura y representan a una criatura mejorada."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Al igual que las fusiones, debes tener sus materiales en campo y presionar el boton central de invocación, luego lo elijes de la lista y seleccionas en que lugar del campo quieres colocarlo."
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Prueba tus conocimientos en el siguiente duelo de práctica."
+		},
+		{
+			"tipo" : "ESPECIAL",
+			"tipoBounds" : "DUELO",
+			"dueloNombre1" : "Jugador",
+			"dueloAvatar1" : "LAUNIX",
+			"dueloLP1" : 2000,
+			"dueloMazo1" : "TUTORIAL_EVOLUCIONES_1",
+			"dueloNombre2" : "Verkan",
+			"dueloAvatar2" : "VERKAN",
+			"dueloLP2" : 1200,
+			"dueloMazo2" : "TUTORIAL_EVOLUCIONES_2"
+		}
+	]
+}

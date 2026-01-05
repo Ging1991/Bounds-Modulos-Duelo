@@ -1,0 +1,13 @@
+{
+	"cartaID" : 60,
+	"nombre" : "Evolucion perfecta",
+	"ambientacion" : "Avancen para ser cada vez mas peligrosos",
+	"efecto" : "Cuando una criatura que controlas fuera a ser destruida, niega esa destruccion",
+	"clase" : "TRAMPA",
+    "nivel" : 1,
+
+    "datoTrampa": {
+        "tipo": "perfecta"
+    }
+
+}

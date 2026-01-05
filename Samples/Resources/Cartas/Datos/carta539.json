@@ -1,0 +1,19 @@
+{
+	"cartaID" : 539,
+	"nombre" : "Explosiones gemelas",
+	"clase" : "TRAMPA",
+	"nivel" : 2,
+	"ambientacion" : "¿Final o comienzo?",
+	"efecto" : "Cuando activas EXPLOSION, inflige 500 DAÑO.",
+
+	"datoTrampa" : {
+		"tipo" : "EXPLOSION2"
+	},
+
+	"efectos" : [
+		{
+			"clave" : "RECICLAR"
+		}	
+	]
+
+}

@@ -1,0 +1,27 @@
+{
+	"cartaID" : 513,
+	"nombre" : "Horror nocturno",
+	"clase" : "CRIATURA",
+    "nivel" : 3,
+	"ambientacion" : "El fuego infernal existe en todas las dimensiones.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "GEMINIS",
+		"ataque" : 1350,
+		"defensa" : 650,
+		"efectos" : [
+			{
+				"clave" : "ATADURAS"
+			}
+		],
+		"tipos" : ["DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "TIPO",
+			"parametroTipo" : "DEMONIO"
+		}
+	]
+
+}

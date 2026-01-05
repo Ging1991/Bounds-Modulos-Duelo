@@ -1,0 +1,23 @@
+{
+	"cartaID" : 221,
+	"nombre" : "Pureza de insecto",
+	"clase" : "HECHIZO",
+	"nivel" : 4,
+	"efecto" : "Sacrifica una criatura: Robas 3 cartas",
+	"ambientacion" : "Hay muchas clases de belleza.",
+
+	"datoHechizo" : {
+		"tipo" : "SACRIFICIO_ROBAR_CARTAS",
+		"jugador" : "JUGADOR",
+		"cantidad" : 3,
+        "condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clase" : "CRIATURA"
+				}
+			]
+		}
+	}
+
+}

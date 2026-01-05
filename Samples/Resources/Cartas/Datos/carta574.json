@@ -1,0 +1,34 @@
+{
+	"cartaID" : 574,
+    "nivel" : 3,
+	"nombre" : "Jinete de la muerte",
+	"clase" : "CRIATURA",
+	"ambientacion" : "-",
+		
+	"datoCriatura" : {
+		"ataque" : 2950,
+		"defensa" : 0,
+		"perfeccion" : "FUSION",
+		"tipos" : ["ZOMBI", "DEMONIO"],
+		"efectos" : [
+			{
+				"clave" : "FATAL"
+			},
+			{
+				"clave" : "ATADURAS"
+			}
+		]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 572
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 573
+		}
+	]
+
+}

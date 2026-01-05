@@ -1,0 +1,35 @@
+{
+	"cartaID" : 109,
+	"nombre" : "Escuadra Grill",
+	"clase" : "CRIATURA",
+    "nivel" : 5,
+	"ambientacion" : "Ellos son mis hermanos en mas de un sentido",
+    
+	"datoCriatura" : {
+		"perfeccion" : "FUSION",
+		"ataque" : 1900,
+		"defensa" : 2100,
+		"efectos" : [
+			{
+				"clave" : "REFUERZOS"
+			},
+			{
+				"clave" : "SUPERVIVENCIA_GRILL"
+			}
+		],
+
+		"tipos" : ["GUERRERO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 101
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 105
+		}
+	]
+
+}

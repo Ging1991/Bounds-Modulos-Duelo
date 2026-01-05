@@ -1,0 +1,15 @@
+{
+	"cartaID" : 37,
+	"nombre" : "Destajador de la tormenta",
+	"clase" : "CRIATURA",
+    "nivel" : 4,
+	"ambientacion" : "Los estruendos de la tormenta milenaria se materializan en formas muy peligrosas.",
+	
+	"datoCriatura" : {
+		"perfeccion" : "BASICO",
+		"ataque" : 2400,
+		"defensa" : 2000,
+		"tipos" : ["DEMONIO", "TRUENO"]
+	}
+
+}

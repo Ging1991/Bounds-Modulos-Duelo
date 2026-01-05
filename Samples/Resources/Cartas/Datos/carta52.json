@@ -1,0 +1,30 @@
+{
+	"cartaID" : 52,
+	"nombre" : "Invocación demoníaca",
+	"clase" : "HECHIZO",
+	"nivel" : 3,
+	"efecto" : "Invoca especialmente el DEMONIO objetivo en tu cementerio.",
+	"ambientacion" : "Para llegar a la cima tomaremos cualquier riesgo.",
+
+	"datoHechizo" : {
+		"tipo" : "INVOCAR_OBJETIVO",
+		"fuentes" : ["DESCARTE"],
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clase" : "CRIATURA"
+				},
+				{
+					"tipo" : "tipoCriatura",
+					"tipoCriatura" : "DEMONIO"
+				},
+				{
+					"tipo" : "jugador",
+					"controlador" : "CONTROLADOR"
+				}
+			]
+		}
+	}
+
+}

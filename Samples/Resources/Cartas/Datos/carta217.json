@@ -1,0 +1,27 @@
+{
+	"cartaID" : 217,
+	"nombre" : "Abominación alquímica",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Contra todo el mundo, sobrevivire",
+	"nivel" : 1,
+
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 1650,
+		"defensa" : 1350,
+		"efectos" : [
+			{
+				"clave" : "ABRACADABRA"
+			}
+		],
+		"tipos" : ["DEMONIO", "ZOMBI"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 216
+		}
+	]
+
+}

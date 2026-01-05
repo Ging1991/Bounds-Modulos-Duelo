@@ -1,0 +1,35 @@
+{
+	"cartaID" : 293,
+	"nombre" : "Sefin, caballero del mañana",
+	"clase" : "CRIATURA",
+	"ambientacion" : "Si no aprenden por la palabra, aprenderán por la espada.",
+    "nivel" : 3,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 2000,
+		"defensa" : 1000,
+		"efectos" : [
+			{
+				"clave" : "REFUERZOS"
+			},
+			{
+				"clave" : "SABIDURIA_T",
+				"parametroTipo" : "CABALLERO"
+			}
+		],
+		"tipos" : ["CABALLERO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 283
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 292
+		}
+	]
+
+}

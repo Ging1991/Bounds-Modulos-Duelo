@@ -1,0 +1,26 @@
+{
+	"cartaID" : 315,
+	"nombre" : "Castigo real",
+	"clase" : "HECHIZO",
+	"nivel" : 2,
+	"efecto" : "Destruye la TRAMPA o HECHIZO objetivo que controla un oponente (puedes mirar sus cartas boca abajo).",
+	"ambientacion" : "No te preocupes, te creo. Esta fue la última vez que llegas tarde a una reunión.",
+
+	"datoHechizo" : {
+		"tipo" : "DESTRUIR_OBJETIVO",
+		"fuentes" : ["CAMPO"],
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clases" : ["HECHIZO", "TRAMPA"]
+				},
+				{
+					"tipo" : "jugador",
+					"controlador" : "ADVERSARIO"
+				}
+			]
+		}
+	}
+
+}

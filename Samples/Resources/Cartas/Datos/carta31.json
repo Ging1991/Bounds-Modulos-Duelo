@@ -1,0 +1,26 @@
+{
+	"cartaID" : 31,
+	"nombre" : "Brazo del gigante",
+	"clase" : "HECHIZO",
+	"nivel" : 1,
+	"efecto" : "La criatura objetivo que controla el oponente es devuelta a la mano de su propietario.",
+	"ambientacion" : "En otros mundos, somos simples juguetes.",
+
+	"datoHechizo" : {
+		"tipo" : "OBJETIVO_LEVANTAR",
+		"fuentes" : ["CAMPO"],
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clase" : "CRIATURA"
+				},
+				{
+					"tipo" : "jugador",
+					"controlador" : "ADVERSARIO"
+				}
+			]
+		}
+	}
+
+}

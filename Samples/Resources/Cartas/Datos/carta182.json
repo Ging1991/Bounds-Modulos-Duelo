@@ -1,0 +1,30 @@
+{
+	"cartaID" : 182,
+	"nombre" : "Arlequin magico",
+	"clase" : "CRIATURA",
+	"ambientacion" : "No le gusta el combate, sin embargo se delita con la sangre de los caidos.",
+	"nivel" : 2,
+	
+	"datoCriatura" : {
+		"perfeccion" : "MAGICO",
+		"ataque" : 0,
+		"defensa" : 500,
+		"efectos" : [
+			{
+				"clave" : "CARBONIZAR"
+			},
+			{
+				"clave" : "RECICLAR"
+			}
+		],
+		"tipos" : ["HECHICERO", "DEMONIO"]
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 181
+		}
+	]
+
+}

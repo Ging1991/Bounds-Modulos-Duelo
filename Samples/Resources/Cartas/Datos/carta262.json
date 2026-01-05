@@ -1,0 +1,13 @@
+{
+	"cartaID" : 262,
+	"nombre" : "Esquive aereo",
+	"clase" : "TRAMPA",
+	"ambientacion" : "Solo se acerca para hacerlo enojar, espero que esa diversion no le salga demasiado caro.",
+	"efecto" : "Cuando el oponente declara un ataque: Niega el ataque y robas una carta.",
+	"nivel" : 8,
+
+	"datoTrampa": {
+		"tipo": "ESQUIVAR"
+	}
+
+}

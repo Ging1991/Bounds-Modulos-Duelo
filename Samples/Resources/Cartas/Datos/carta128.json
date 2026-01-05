@@ -1,0 +1,33 @@
+{
+	"cartaID" : 128,
+	"nombre" : "Designador macabro",
+	"clase" : "CRIATURA",
+	"ambientacion" : "El juez del mundo del caos ama su trabajo",
+    "nivel" : 1,
+	
+	"datoCriatura" : {
+		"perfeccion" : "EVOLUCION",
+		"ataque" : 2850,
+		"defensa" : 0,
+		"tipos" : ["DEMONIO", "ZOMBI"],
+		
+		"efectos" : [
+			{
+				"clave" : "ARRUINAR"
+			}
+		]
+
+	},
+
+	"materiales" : [
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 121
+		},
+		{
+			"tipo" : "CARTA_ID",
+			"parametroID" : 126
+		}
+	]
+
+}

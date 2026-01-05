@@ -1,0 +1,21 @@
+{
+	"cartaID" : 158,
+	"nombre" : "Ira de poseidón",
+	"clase" : "HECHIZO",
+	"nivel" : 1,
+	"efecto" : "Destruye todos los HECHIZOS sobre el campo.",
+	"ambientacion" : "Ingresar a terreno sagrado sin permiso tiene sus consecuencias",
+
+	"datoHechizo" : {
+		"tipo" : "DESTRUIR_CARTAS",
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clase" : "HECHIZO"
+				}
+			]
+		}
+	}
+
+}

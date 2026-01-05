@@ -1,0 +1,13 @@
+{
+	"cartaID" : 214,
+	"nombre" : "Agujero infernal",
+	"ambientacion" : "Si esta vivo entonces puedo matarlo.",
+	"clase" : "TRAMPA",
+	"efecto" : "Cuando el oponente invoca una criatura de forma normal: Destruye esa criatura.",
+	"nivel" : 6,
+
+	"datoTrampa" : {
+		"tipo": "DESTRUYE_INVOCACION_NORMAL"
+	}
+
+}

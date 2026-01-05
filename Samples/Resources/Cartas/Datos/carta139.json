@@ -1,0 +1,26 @@
+{
+	"cartaID" : 139,
+	"nombre" : "Magia arkana destructiva",
+	"clase" : "HECHIZO",
+	"nivel" : 4,
+	"efecto" : "Destruye la carta HECHIZO, EQUIPO o AURA objetivo que controla un oponente.",
+	"ambientacion" : "Para crear primero hay que destruir.",
+
+	"datoHechizo" : {
+		"tipo" : "DESTRUIR_OBJETIVO",
+		"fuentes" : ["CAMPO"],
+		"condicionCarta": {
+			"condicionesY" : [
+				{
+					"tipo" : "clase",
+					"clases" : ["HECHIZO", "EQUIPO", "AURA"]
+				},
+				{
+					"tipo" : "jugador",
+					"controlador" : "ADVERSARIO"
+				}
+			]
+		}
+	}
+
+}

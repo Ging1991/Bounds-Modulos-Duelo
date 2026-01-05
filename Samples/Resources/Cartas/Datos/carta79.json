@@ -1,0 +1,21 @@
+{
+	"cartaID" : 79,
+	"nombre" : "Alas de reptil",
+	"clase" : "EQUIPO",
+	"nivel" : 3,
+	"defensa" : 1000,
+	"ambientacion" : "Que tenga sangre fría no significa que no pueda soñar con volar.",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_ESTADISTICA_ATK_DEF",
+			"parametroATK" : 500,
+			"parametroDEF" : 500
+		},
+		{
+			"clave" : "AUMENTAR_T",
+			"parametroTipo" : "REPTIL"
+		}
+	]
+
+}

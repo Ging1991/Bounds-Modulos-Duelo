@@ -1,0 +1,37 @@
+{
+	"cartaID" : 430,
+	"nombre" : "Quimera de ensueño",
+	"clase" : "CRIATURA",
+    "nivel" : 10,
+	"ambientacion" : "Cuando te adentras en su territorio ya no podras distinguir lo que es real de lo que no lo es.",
+
+	"datoCriatura" : {
+		"perfeccion" : "SAGRADO",
+		"ataque" : 6400,
+		"defensa" : 3200,
+		"tipos" : ["DIVINIDAD", "DEMONIO"],
+		"efectos" : [
+			{
+				"clave" : "MASIVO"
+			},
+			{
+				"clave" : "HEROE"
+			}
+		]
+	},
+	"materiales" : [
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "CRIATURA"
+		},
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "CRIATURA"
+		},
+		{
+			"tipo" : "CLASE",
+			"parametroClase" : "CRIATURA"
+		}
+	]
+
+}

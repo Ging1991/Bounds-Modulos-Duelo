@@ -1,0 +1,20 @@
+{
+	"cartaID" : 254,
+	"nombre" : "Encadenado",
+	"clase" : "AURA",
+	"nivel" : 4,
+	"ambientacion" : "Es la última vez que intento razonar con los humanos.",
+
+	"efectos" : [
+		{
+			"clave" : "VINCULO_HABILIDAD",
+			"parametroHabilidad" : "ENCADENADO"
+		},
+		{
+			"clave" : "VINCULO_ESTADISTICA_ATK_DEF",
+			"parametroATK" : -1000,
+			"parametroDEF" : -1000
+		}
+	]
+
+}
