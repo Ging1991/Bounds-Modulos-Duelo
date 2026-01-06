@@ -2,7 +2,6 @@
 using UnityEngine;
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Utiles;
-using Bounds.Duelo.Pila;
 using Bounds.Duelo.Pila.Efectos;
 using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Global;
@@ -31,7 +30,8 @@ namespace Bounds.Duelo.Emblemas {
 			if (fisica.listador.SiguienteCarta(jugador, ListadorDeZonas.Zona.MAZO) == null)
 				DerrotaDescarte(jugador);
 
-			if (!fisica.RobarCarta(jugador))
+			GameObject carta = fisica.RobarCarta(jugador);
+			if (carta == null)
 				return;
 
 			List<GameObject> cartasLadron = fisica.TraerCartasEnCampo(jugador);
@@ -43,6 +43,7 @@ namespace Bounds.Duelo.Emblemas {
 			int adversario = JugadorDuelo.Adversario(jugador);
 			ActivarTrampas(adversario);
 			ActivarVacios(jugador);
+			ActivarEfectos(jugador, carta);
 		}
 
 
@@ -53,6 +54,21 @@ namespace Bounds.Duelo.Emblemas {
 				CartaInfo infoVacio = vacio.GetComponent<CartaInfo>();
 				if (infoVacio.original.datoVacio.tipo == "NIDO") {
 					EmblemaEfectos.Activar(new EfectoSobreJugador(vacio, adversario, new SubModificarLP(-300), "VENENO"));
+				}
+			}
+
+		}
+
+
+		private static void ActivarEfectos(int jugador, GameObject cartaRobada) {
+			int adversario = JugadorDuelo.Adversario(jugador);
+			CartaInfo infoRobada = cartaRobada.GetComponent<CartaInfo>();
+
+			foreach (GameObject carta in new SubCartasControladas(jugador).Generar()) {
+				if (carta.GetComponent<CartaEfecto>().TieneClave("ROBO_PALADINFINITO") && infoRobada.original.nivel == 8) {
+					//EmblemaDescartarCarta.Descartar(cartaRobada);
+					EmblemaEfectos.Activar(new EfectoSobreJugador(carta, adversario, new SubModificarLP(-500), "VENENO"));
+					EmblemaEfectos.Activar(new EfectoSobreJugador(carta, jugador, new SubRobar(1), "NUBE"));
 				}
 			}
 

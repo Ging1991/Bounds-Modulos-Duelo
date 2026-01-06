@@ -28,7 +28,7 @@ namespace Bounds.Duelo.Carta {
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			Fisica fisica = conocimiento.traerFisica();
 			fisica.BloquearCartasEnCampo(false);
-			lienzo.blocksRaycasts = false; // 🔑 la carta deja de interceptar raycasts
+			lienzo.blocksRaycasts = false;
 		}
 
 
@@ -43,7 +43,7 @@ namespace Bounds.Duelo.Carta {
 
 
 		public void OnEndDrag(PointerEventData eventData) {
-			lienzo.blocksRaycasts = true; // vuelve a bloquear raycasts
+			lienzo.blocksRaycasts = true;
 			if (CuadroFinalizarDuelo.ExistenCuadros())
 				return;
 

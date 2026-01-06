@@ -51,6 +51,7 @@ namespace Bounds.Modulos.Duelo.Fisicas {
 			OrganizarMano(jugador, listador.GenerarLista(jugador, ListadorDeZonas.Zona.MANO));
 			CartaInfo info = carta.GetComponent<CartaInfo>();
 			info.controlador = jugador;
+			ColocarBocaArriba(carta, jugador == 1);
 		}
 
 
@@ -99,19 +100,20 @@ namespace Bounds.Modulos.Duelo.Fisicas {
 		}
 
 
-		public bool RobarCarta(int jugador) {
-			bool haRobado = false;
+		public GameObject RobarCarta(int jugador) {
 			int cantidad = listador.GenerarLista(jugador, ListadorDeZonas.Zona.MANO).Count;
 			GameObject carta = listador.SiguienteCarta(jugador, ListadorDeZonas.Zona.MAZO);
 
 			if (cantidad < 5 && carta != null) {
 				EnviarHaciaMano(carta, jugador);
 				ColocarBocaArriba(carta, jugador == 1);
-				haRobado = true;
+			}
+			else {
+				carta = null;
 			}
 
 			ActualizarTextoMazo(jugador);
-			return haRobado;
+			return carta;
 		}
 
 

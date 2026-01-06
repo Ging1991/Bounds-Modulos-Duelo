@@ -8,8 +8,8 @@ using Bounds.Duelo.Pila;
 using Bounds.Duelo.Pila.Efectos;
 using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Duelo.Emblemas.Trampas;
-using Bounds.Cartas;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Duelo.Efectos;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -28,7 +28,7 @@ namespace Bounds.Duelo.Emblemas {
 			movimiento.Girar();
 
 			ActivarEfectosDeVacio(jugador, carta);
-			ActivarHabilidades(carta);
+			ActivarHabilidades(jugador, carta);
 			ActivarEfectosDeActivacion(carta);
 			ActivarTrampas(carta);
 			conocimiento.traerDuelo().HabilitarInvocacionPerfecta();
@@ -36,39 +36,21 @@ namespace Bounds.Duelo.Emblemas {
 		}
 
 
-		private static void ActivarHabilidades(GameObject carta) {
+		private static void ActivarHabilidades(int jugador, GameObject carta) {
 
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			Fisica fisica = conocimiento.traerFisica();
 			CartaInfo info = carta.GetComponent<CartaInfo>();
 			int adversario = JugadorDuelo.Adversario(info.controlador);
 
-
-			// ****************************   Habilidades propias de la carta  ****************************************
-
-			/*
-						if (info.habilidades.Contains("especial_zombi2")) {
-							List<GameObject> zombis = new List<GameObject>(fisica.TraerCartasEnCampo(info.controlador));
-							zombis.AddRange(fisica.TraerCartasEnCampo(adversario));
-							Condicion condicionZombi = new Condicion(tipoCarta:"CRIATURA", tipoCriatura:new List<string>{"zombi"});
-							zombis = condicionZombi.CumpleLista(zombis);
-							info.colocarContador("poder", zombis.Count*2);
-						}
-
-						if (info.habilidades.Contains("especial_carta")) {
-							List<GameObject> cartasX = new List<GameObject>(fisica.TraerCartasEnCampo(1));
-							cartasX.AddRange(fisica.TraerCartasEnCampo(2));
-							info.colocarContador("poder", cartasX.Count);
-						}
-
-						if (info.habilidades.Contains("especial_angel")) {
-							List<GameObject> angeles = new List<GameObject>(fisica.TraerCartasEnMateriales(1));
-							angeles.AddRange(fisica.TraerCartasEnMateriales(2));
-							Condicion condicionAngel = new Condicion(tipoCarta:"CRIATURA", tipoCriatura:new List<string>{"angel"});
-							angeles = condicionAngel.CumpleLista(angeles);
-							Debug.Log("angeles en campo: " + angeles.Count);
-							info.colocarContador("poder", angeles.Count);
-						}*/
+			foreach (var otraCarta in new SubCartasControladas(jugador).Generar()) {
+				if (otraCarta == carta) {
+					continue;
+				}
+				if (otraCarta.GetComponent<CartaEfecto>().TieneClave("RECLUTADOR_PALADINFINITO") && info.original.nivel == 8) {
+					EmblemaEfectos.Activar(new EfectoBarajarFicha(otraCarta, jugador, info.cartaID, 5));
+				}
+			}
 
 		}
 
@@ -115,6 +97,13 @@ namespace Bounds.Duelo.Emblemas {
 				if (infoTrampa.original.datoTrampa.tipo == "ANTI_FUSION" && infoCriatura.original.datoCriatura.perfeccion == "FUSION") {
 					EmblemaTrampa.ActivarTrampa(trampa);
 					EmblemaEfectos.Activar(new EfectoSobreCarta(trampa, new SubDestruir(), criatura));
+					break;
+				}
+
+				if (infoTrampa.original.datoTrampa.tipo == "DESPERTAR_PALADINFINITO" && infoCriatura.original.nivel == 8) {
+					EmblemaTrampa.ActivarTrampa(trampa);
+					EmblemaEfectos.Activar(new EfectoBusqueda(trampa, adversario, 1, new List<Zonas> { Zonas.MAZO }, new CondicionNivel(8)));
+					EmblemaEfectos.Activar(new EfectoBarajarFicha(trampa, adversario, 593, 1));
 					break;
 				}
 

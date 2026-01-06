@@ -6,6 +6,7 @@ using Bounds.Duelo.Paneles;
 using Bounds.Duelo.Utiles;
 using Bounds.Duelo.Pila;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Duelo.Condiciones;
 
 namespace Bounds.Duelo.Efectos {
 
@@ -14,10 +15,10 @@ namespace Bounds.Duelo.Efectos {
 		private readonly int jugador;
 		private readonly int cantidad;
 		private readonly List<Zonas> fuentes;
-		private readonly Condicion condicion;
+		private readonly CondicionCarta condicion;
 
 		public EfectoBusqueda(GameObject fuente, int jugador, int cantidad = 1,
-				List<Zonas> fuentes = null, Condicion condicion = null) : base(fuente) {
+				List<Zonas> fuentes = null, CondicionCarta condicion = null) : base(fuente) {
 			this.jugador = jugador;
 			this.cantidad = cantidad;
 			this.fuentes = fuentes;
@@ -28,20 +29,10 @@ namespace Bounds.Duelo.Efectos {
 		public override void Resolver() {
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			Fisica fisica = conocimiento.traerFisica();
-			Instanciador instanciador = GameObject.Find("Instanciador").GetComponent<Instanciador>();
 			List<GameObject> opciones = ObtenerOpciones();
 
 			if (opciones.Count > 0) {
-				if (jugador == 2) {
-					fisica.EnviarHaciaMano(opciones[0], 2);
-				}
-				else {
-					PanelSeleccion panel = instanciador.CrearPanelSeleccionarCarta().GetComponent<PanelSeleccion>();
-					//panel.Iniciar(
-					//new SeleccionRecuperar(
-					//		jugador, opciones:opciones), "Selecciona una carta para agregar a tu mano.");
-					panel.AgregarOpciones(opciones);
-				}
+				fisica.EnviarHaciaMano(opciones[0], jugador);
 			}
 		}
 
