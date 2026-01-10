@@ -100,7 +100,7 @@ namespace Bounds.Duelo.Emblemas {
 					break;
 				}
 
-				if (infoTrampa.original.datoTrampa.tipo == "DESPERTAR_PALADINFINITO" && infoCriatura.original.nivel == 8) {
+				if (infoTrampa.original.datoTrampa.tipo == "DESPERTAR_PALADINFINITO") {
 					EmblemaTrampa.ActivarTrampa(trampa);
 					EmblemaEfectos.Activar(new EfectoBusqueda(trampa, adversario, 1, new List<Zonas> { Zonas.MAZO }, new CondicionNivel(8)));
 					EmblemaEfectos.Activar(new EfectoBarajarFicha(trampa, adversario, 593, 1));

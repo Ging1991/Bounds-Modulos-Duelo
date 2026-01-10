@@ -277,9 +277,33 @@ namespace Bounds.Duelo.Emblemas {
 			PilaEfectos pila = GameObject.Find("Pila").GetComponent<PilaEfectos>();
 			CartaInfo info = carta.GetComponent<CartaInfo>();
 			CartaTipo cartaTipo = carta.GetComponent<CartaTipo>();
+			int jugador = info.controlador;
+			int adversario = Adversario(jugador);
 
-			// ****************************   Habilidades de otras cartas  ****************************************
 			bool activado = false;
+
+			foreach (var cartaEnCementerio in new SubCartasEnCementerio(jugador).Generar()) {
+				if (cartaEnCementerio.GetComponent<CartaEfecto>().TieneClave("REFUERZOS_MAS_ALLA")) {
+					EmblemaEfectos.Activar(
+						new EfectoSobreCartas(
+							cartaEnCementerio,
+							new SubColocarContador("poder", 1),
+							new SubCartasControladas(jugador).Generar()
+						)
+					);
+				}
+				if (cartaEnCementerio.GetComponent<CartaEfecto>().TieneClave("EXPLOSION_MAS_ALLA")) {
+					EmblemaEfectos.Activar(
+						new EfectoSobreJugador(
+							cartaEnCementerio,
+							adversario,
+							new SubModificarLP(-500),
+							"EXPLOSION"
+						)
+					);
+				}
+			}
+
 			List<GameObject> cartasEnCampo1 = fisica.TraerCartasEnCampo(1);
 			foreach (GameObject cartaEnCampo in cartasEnCampo1) {
 
