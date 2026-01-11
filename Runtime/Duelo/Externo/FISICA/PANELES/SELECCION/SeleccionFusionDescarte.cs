@@ -17,7 +17,7 @@ namespace Bounds.Duelo.Paneles.Seleccion {
 		public void Seleccionar(GameObject carta) {
 			GameObject campo = BuscadorCampo.getInstancia().buscarCampoLibre(jugador);
 
-			if (campo != null && !campo.GetComponent<Campo>().EstaOcupado()) {
+			if (campo != null && campo.GetComponent<CampoLugar>().carta == null) {
 				CartaInfo info = carta.GetComponent<CartaInfo>();
 				Fisica fisica = Fisica.Instancia;
 				List<GameObject> materiales = new();

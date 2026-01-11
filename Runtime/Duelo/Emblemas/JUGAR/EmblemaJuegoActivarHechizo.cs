@@ -64,8 +64,8 @@ namespace Bounds.Duelo.Emblemas {
 			if (info.original.clase != "HECHIZO")
 				return false;
 
-			Campo campo = lugar.GetComponent<Campo>();
-			if (campo.EstaOcupado())
+			CampoLugar campo = lugar.GetComponent<CampoLugar>();
+			if (campo.carta != null)
 				return false;
 
 			if (campo.jugador != jugador)

@@ -21,9 +21,9 @@ namespace Bounds.Duelo.Emblemas {
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			EmblemaTurnos turnos = conocimiento.traerControlTurnos();
 			JugadorDuelo jugadorDuelo = JugadorDuelo.GetInstancia(jugador);
-			Campo campo = lugar.GetComponent<Campo>();
+			CampoLugar campo = lugar.GetComponent<CampoLugar>();
 
-			if (campo.EstaOcupado())
+			if (campo.carta != null)
 				return false;
 
 			if (carta == null)

@@ -26,8 +26,8 @@ namespace Bounds.Duelo.Emblema {
 
 
 		private static void JugarAuraDirecto(int jugador, GameObject aura, GameObject lugar) {
-			Campo campoCriatura = lugar.GetComponent<Campo>();
-			if (!campoCriatura.EstaOcupado())
+			CampoLugar campoCriatura = lugar.GetComponent<CampoLugar>();
+			if (campoCriatura.carta != null)
 				return;
 			BuscadorCampo buscador = BuscadorCampo.getInstancia();
 			GameObject campoLibre = buscador.buscarCampoLibre(jugador);

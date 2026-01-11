@@ -25,8 +25,8 @@ namespace Bounds.Duelo {
 
 			GameObject libre = null;
 			foreach (GameObject campo in fisica.TraerCampos(jugador)) {
-				Campo componente = campo.GetComponent<Campo>();
-				if (!componente.EstaOcupado())
+				CampoLugar componente = campo.GetComponent<CampoLugar>();
+				if (componente.carta == null)
 					libre = campo;
 			}
 			return libre;
@@ -39,8 +39,8 @@ namespace Bounds.Duelo {
 
 			List<GameObject> libres = new List<GameObject>();
 			foreach (GameObject campo in fisica.TraerCampos(jugador)) {
-				Campo componente = campo.GetComponent<Campo>();
-				if (!componente.EstaOcupado()) {
+				CampoLugar componente = campo.GetComponent<CampoLugar>();
+				if (componente.carta == null) {
 					libres.Add(campo);
 					if (libres.Count >= cantidad)
 						break;

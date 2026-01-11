@@ -21,7 +21,7 @@ using Bounds.Modulos.Duelo.Fisicas;
 
 namespace Bounds.Duelo {
 
-	public class ControlDuelo : SingletonMonoBehaviour<ControlDuelo> {
+	public class ControlDuelo : SingletonMonoBehaviour<ControlDuelo>, ICampoLugarControlador {
 
 		private ProveedorImagenPersonaje proveedorMiniatura;
 		public GestorDeSonidos gestorDeSonidos;
@@ -33,6 +33,11 @@ namespace Bounds.Duelo {
 		public IFinalizarDuelo finalizarDuelo;
 
 		void Start() {
+
+			foreach (var campo in FindObjectsByType<CampoLugar>(FindObjectsSortMode.None)) {
+				campo.controlador = this;
+			}
+
 			visorDuelo.Inicializar();
 
 			CPUReloj cpuReloj = GameObject.Find("CPU").GetComponent<CPUReloj>();
@@ -143,6 +148,16 @@ namespace Bounds.Duelo {
 				boton.GetComponent<Boton>().SetColorRelleno(Color.gray);
 		}
 
+		public void LugarPresionado(GameObject objeto) {
+			Entrada entrada = Entrada.GetInstancia();
+			entrada.PresionarCampo(objeto);
+		}
+
+		public void LugarSoltado(GameObject objeto) {
+			if (CartaArrastrar.carta != null) {
+				EmblemaJugarCarta.Jugar(CartaArrastrar.carta, objeto);
+			}
+		}
 
 		private class ProveedorImagenPersonaje : LectorPorDemandaImagen, IGetImagen {
 

@@ -21,8 +21,8 @@ namespace Bounds.Duelo.Emblemas.Jugar {
 			Fisica fisica = Fisica.Instancia;
 			EmblemaTurnos turnos = EmblemaTurnos.GetInstancia();
 
-			Campo campo = lugar.GetComponent<Campo>();
-			if (campo.EstaOcupado())
+			CampoLugar campo = lugar.GetComponent<CampoLugar>();
+			if (campo.carta != null)
 				return false;
 
 			if (campo.jugador != jugador)

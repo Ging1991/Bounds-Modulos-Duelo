@@ -24,7 +24,7 @@ namespace Bounds.Duelo.Emblemas {
 
 
 		public static bool EstaOcupado(GameObject lugar) {
-			return lugar.GetComponent<Campo>().EstaOcupado();
+			return lugar.GetComponent<CampoLugar>().carta != null;
 		}
 
 

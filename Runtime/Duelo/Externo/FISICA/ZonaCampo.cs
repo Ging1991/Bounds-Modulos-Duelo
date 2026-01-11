@@ -16,7 +16,7 @@ namespace Bounds.Modulos.Duelo.Fisicas {
 			GameObject[] objetos = GameObject.FindGameObjectsWithTag("campo");
 
 			for (int i = 0; i < objetos.Length; i++) {
-				if (objetos[i].GetComponent<Campo>().jugador == jugador)
+				if (objetos[i].GetComponent<CampoLugar>().jugador == jugador)
 					campos.Add(objetos[i]);
 			}
 		}
@@ -26,14 +26,14 @@ namespace Bounds.Modulos.Duelo.Fisicas {
 			if (!ContieneCampo(lugar))
 				return false;
 
-			Campo componente = lugar.GetComponent<Campo>();
-			if (componente.EstaOcupado())
+			CampoLugar componente = lugar.GetComponent<CampoLugar>();
+			if (componente.carta != null)
 				return false;
 
 			Agregar(carta);
-			componente.Ocupar(carta);
+			componente.carta = carta;
 			CartaMovimiento movimiento = carta.GetComponent<CartaMovimiento>();
-			Vector3 destino = lugar.transform.localPosition + lugar.transform.parent.localPosition;
+			Vector3 destino = lugar.transform.localPosition + lugar.transform.parent.localPosition;// + new Vector3(45, -15, 0);
 			movimiento.Desplazar(destino);
 			return true;
 		}
@@ -46,9 +46,9 @@ namespace Bounds.Modulos.Duelo.Fisicas {
 
 		public bool QuitarDeCampo(GameObject carta) {
 			foreach (GameObject campo in campos) {
-				Campo componente = campo.GetComponent<Campo>();
+				CampoLugar componente = campo.GetComponent<CampoLugar>();
 				if (componente.carta == carta)
-					componente.Desocupar();
+					componente.carta = null;
 			}
 
 			return true;

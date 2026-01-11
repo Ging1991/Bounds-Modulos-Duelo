@@ -24,8 +24,8 @@ namespace Bounds.Duelo.Emblemas.Jugar {
 			GameObject criatura = Seleccionador.Instancia.cartaParaVincular;
 			Fisica fisica = conocimiento.traerFisica();
 
-			Campo campo = lugar.GetComponent<Campo>();
-			if (campo.EstaOcupado())
+			CampoLugar campo = lugar.GetComponent<CampoLugar>();
+			if (campo.carta != null)
 				return;
 
 			if (!fisica.TraerCampos(jugador).Contains(lugar))
