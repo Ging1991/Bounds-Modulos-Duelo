@@ -1280,7 +1280,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4728124852074771367, guid: 71667a9064cd8494aab15041539b5293, type: 3}
       propertyPath: m_Name
-      value: Carta5 (1)
+      value: Carta5
       objectReference: {fileID: 0}
     - target: {fileID: 8968833927502023005, guid: 71667a9064cd8494aab15041539b5293, type: 3}
       propertyPath: m_Pivot.x
@@ -4519,7 +4519,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4728124852074771367, guid: 71667a9064cd8494aab15041539b5293, type: 3}
       propertyPath: m_Name
-      value: Carta1 (1)
+      value: Carta1
       objectReference: {fileID: 0}
     - target: {fileID: 8968833927502023005, guid: 71667a9064cd8494aab15041539b5293, type: 3}
       propertyPath: m_Pivot.x
@@ -5406,7 +5406,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4728124852074771367, guid: 71667a9064cd8494aab15041539b5293, type: 3}
       propertyPath: m_Name
-      value: Carta2 (1)
+      value: Carta2
       objectReference: {fileID: 0}
     - target: {fileID: 8968833927502023005, guid: 71667a9064cd8494aab15041539b5293, type: 3}
       propertyPath: m_Pivot.x
@@ -5845,7 +5845,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4728124852074771367, guid: 71667a9064cd8494aab15041539b5293, type: 3}
       propertyPath: m_Name
-      value: Carta3 (1)
+      value: Carta3
       objectReference: {fileID: 0}
     - target: {fileID: 8968833927502023005, guid: 71667a9064cd8494aab15041539b5293, type: 3}
       propertyPath: m_Pivot.x
@@ -6088,7 +6088,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4728124852074771367, guid: 71667a9064cd8494aab15041539b5293, type: 3}
       propertyPath: m_Name
-      value: Carta4 (1)
+      value: Carta4
       objectReference: {fileID: 0}
     - target: {fileID: 8968833927502023005, guid: 71667a9064cd8494aab15041539b5293, type: 3}
       propertyPath: m_Pivot.x
@@ -9248,7 +9248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &6809333467704982434
 MonoBehaviour:
   m_ObjectHideFlags: 0

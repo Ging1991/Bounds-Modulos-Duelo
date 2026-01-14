@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using Bounds.Duelo.Carta;
+using Ging1991.Core.Interfaces;
+using UnityEngine.UI;
 
 namespace Bounds.Modulos.Duelo.Fisicas {
 
@@ -34,7 +36,9 @@ namespace Bounds.Modulos.Duelo.Fisicas {
 			componente.carta = carta;
 			CartaMovimiento movimiento = carta.GetComponent<CartaMovimiento>();
 			Vector3 destino = lugar.transform.localPosition + lugar.transform.parent.localPosition;// + new Vector3(45, -15, 0);
-			movimiento.Desplazar(destino);
+			Ajustador ajustador = new();
+			ajustador.carta = carta;
+			movimiento.Desplazar(destino, ajustador);
 			return true;
 		}
 
@@ -52,6 +56,17 @@ namespace Bounds.Modulos.Duelo.Fisicas {
 			}
 
 			return true;
+		}
+
+		private class Ajustador : IEjecutable {
+			public GameObject carta;
+
+			public void Ejecutar() {
+				carta.GetComponent<RectTransform>().anchoredPosition += Vector2.zero;
+				Canvas.ForceUpdateCanvases();
+				LayoutRebuilder.ForceRebuildLayoutImmediate(carta.GetComponent<RectTransform>());
+			}
+
 		}
 
 
