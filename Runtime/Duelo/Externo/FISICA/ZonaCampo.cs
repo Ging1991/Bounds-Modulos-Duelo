@@ -65,6 +65,9 @@ namespace Bounds.Modulos.Duelo.Fisicas {
 				carta.GetComponent<RectTransform>().anchoredPosition += Vector2.zero;
 				Canvas.ForceUpdateCanvases();
 				LayoutRebuilder.ForceRebuildLayoutImmediate(carta.GetComponent<RectTransform>());
+				Vector3 vector3 = carta.transform.position;
+				vector3.z = 0;
+				carta.transform.position = vector3;
 			}
 
 		}
