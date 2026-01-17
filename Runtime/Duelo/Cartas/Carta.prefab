@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70bc11d077bc9674185a89252782ccf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  claseContador: {fileID: 1384243915890750925, guid: db8d6ee218c185643a165dbf804c1d13, type: 3}
+  claseContador: {fileID: 2239987375144190869, guid: 3fc20856b12163742821d24decf5cc1c, type: 3}
 --- !u!114 &1990696527805694790
 MonoBehaviour:
   m_ObjectHideFlags: 0

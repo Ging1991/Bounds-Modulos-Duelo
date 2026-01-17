@@ -34,10 +34,10 @@ namespace Bounds.Duelo.Carta {
 			contadores = new Dictionary<string, int>();
 
 			CartaContador scr = GetComponent<CartaContador>();
-			scr.setContador("veneno", 0);
-			scr.setContador("poder", 0);
-			scr.setContador("debilidad", 0);
-			scr.setContador("supevivencia", 0);
+			scr.SetContador("veneno", 0);
+			scr.SetContador("poder", 0);
+			scr.SetContador("debilidad", 0);
+			scr.SetContador("supevivencia", 0);
 
 			criaturaEquipada = null;
 
@@ -56,7 +56,7 @@ namespace Bounds.Duelo.Carta {
 
 		public void ColocarContador(string tipo, int cantidad) {
 			CartaContador cartaContador = GetComponent<CartaContador>();
-			cartaContador.setContador(tipo, TraerContadores(tipo) + cantidad);
+			cartaContador.SetContador(tipo, TraerContadores(tipo) + cantidad);
 
 			if (!new List<string>(contadores.Keys).Contains(tipo))
 				contadores.Add(tipo, 0);
@@ -71,7 +71,7 @@ namespace Bounds.Duelo.Carta {
 
 		public void RemoverContador(string tipo, int cantidad) {
 			CartaContador scr = GetComponent<CartaContador>();
-			scr.setContador(tipo, TraerContadores(tipo) - cantidad);
+			scr.SetContador(tipo, TraerContadores(tipo) - cantidad);
 
 			if (!new List<string>(contadores.Keys).Contains(tipo))
 				contadores.Add(tipo, 0);

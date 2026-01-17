@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using carta;
+using Bounds.Modulos.Duelo.Visuales;
 using UnityEngine;
 
 namespace Bounds.Duelo.Carta {
@@ -9,14 +9,14 @@ namespace Bounds.Duelo.Carta {
 		public GameObject claseContador;
 		Dictionary<string, GameObject> contadores = new Dictionary<string, GameObject>();
 
-		public void setContador(string tipo, int cantidad) {
+		public void SetContador(string tipo, int cantidad) {
 
 			if (!contadores.ContainsKey(tipo)) {
 
 				GameObject instancia = Instantiate(claseContador);
 				instancia.transform.SetParent(transform);
 
-				instancia.transform.localPosition = new Vector3(60, 80 - contadores.Keys.Count * 30, 0);
+				instancia.transform.localPosition = new Vector3(60, 80 - contadores.Keys.Count * 50, 0);
 				instancia.transform.localScale = new Vector3(1, 1, 1);
 
 				Quaternion rotacion = Quaternion.Euler(0, 0, 0);
@@ -26,7 +26,7 @@ namespace Bounds.Duelo.Carta {
 
 				instancia.transform.localRotation = rotacion;
 
-				instancia.GetComponent<Contador>().setTipoContador(tipo);
+				instancia.GetComponent<ContadorBounds>().SetTipo(tipo);
 				contadores.Add(tipo, instancia);
 			}
 
@@ -37,7 +37,7 @@ namespace Bounds.Duelo.Carta {
 
 			}
 			else {
-				contador.GetComponent<Contador>().setNumero(cantidad);
+				contador.GetComponent<ContadorBounds>().SetCantidad(cantidad);
 			}
 		}
 

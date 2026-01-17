@@ -403,12 +403,10 @@ namespace Bounds.Duelo.Emblemas {
 
 			if (dato.tipo == "ENVENENAR") {
 				CondicionClase condicionClase = new CondicionClase("CRIATURA");
-				EfectoBD efecto = new EfectoBD();
-				efecto.clave = "ENVENENADO";
 				EmblemaEfectos.Activar(
 					new EfectoSobreCartas(
 						hechizo,
-						new SubColocarHabilidad(efecto),
+						new SubColocarContador("veneno", 1),
 						condicionClase.CumpleLista(new SubCartasControladas(adversario).Generar())
 					)
 				);
