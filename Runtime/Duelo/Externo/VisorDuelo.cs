@@ -20,6 +20,7 @@ namespace Bounds.Infraestructura.Visores {
 		public TraductorVisor traductorPerfecciones;
 		private ITintero tintero;
 		public VisorGeneral visorGeneral;
+		public VisorContador visorContador;
 
 
 		public void Inicializar() {
@@ -76,85 +77,13 @@ namespace Bounds.Infraestructura.Visores {
 				materiales += visorGeneral.GenerarMateriales(info.original.materiales);
 
 			visorGeneral.SetDescripcion(encabezado, materiales, visorGeneral.GenerarEfectos(efectos), info.original.efecto);
+
+			// contadores
+			visorContador.SetContador("supervivencia", info.TraerContadores("supervivencia"));
+			visorContador.SetContador("veneno", info.TraerContadores("veneno"));
+			visorContador.SetContador("poder", info.TraerContadores("poder"));
+			visorContador.SetContador("debilidad", info.TraerContadores("debilidad"));
 		}
-
-
-		public void MostrarDescripcionExtendida() {
-			/*
-						if (cartaActual == null)
-							return;
-
-						CartaInfo info = cartaActual.GetComponent<CartaInfo>();
-						VisorDescripcion manager = GetComponent<VisorDescripcion>();
-						LectorHabilidades lector = LectorHabilidades.GetInstancia();
-						manager.EliminarDescripciones();
-
-						int diferencia = 100;
-						int inicial = 220;
-						int posX = 130;
-						int pos = 0;
-						GameObject lienzo = GameObject.Find("Lienzo_efectos");
-
-						EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
-						Fisica fisica = conocimiento.traerFisica();
-						bool enCampo = false;
-						enCampo = enCampo || fisica.TraerCartasEnCampo(1).Contains(info.gameObject);
-						enCampo = enCampo || fisica.TraerCartasEnCampo(2).Contains(info.gameObject);
-						List<string> habilidades = new List<string>();
-
-						if (enCampo)
-							habilidades = info.habilidades;
-						else
-							habilidades = info.original.datoCriatura.habilidades;
-
-						// Descripcion de habilidades
-						if (info.original.clase == "CRIATURA" && habilidades != null)
-
-							foreach (string habilidad in habilidades) {
-								if (!habilidad.StartsWith("especial")) {
-									GameObject x = manager.CrearDescripcion(lector.GetDescripcion(habilidad), new Vector3(posX, diferencia*pos +inicial, 0), lienzo.transform);
-									pos--;
-									x.GetComponentInChildren<Image>().color = Color.cyan;
-								}
-							}
-
-						// Ambientacion
-						if (info.original.ambientacion != null) {
-							GameObject x = manager.CrearDescripcion(info.original.ambientacion, new Vector3(posX, diferencia*pos +inicial, 0), lienzo.transform);
-							pos--;
-							x.GetComponentInChildren<Image>().color = Color.green;
-						}
-
-						// Contadores de supervivevcia
-						if (info.traerContadores("supervivencia") > 0) {
-							GameObject x = manager.CrearDescripcion("Contadores de supervivencia: " + info.traerContadores("supervivencia"), new Vector3(posX, diferencia*pos +inicial, 0), lienzo.transform);
-							pos--;
-							x.GetComponentInChildren<Image>().color = Color.yellow;
-						}
-
-						// Contadores de supervivevcia
-						if (info.traerContadores("veneno") > 0) {
-							GameObject x = manager.CrearDescripcion("Contadores de veneno: " + info.traerContadores("veneno"), new Vector3(posX, diferencia*pos +inicial, 0), lienzo.transform);
-							pos--;
-							x.GetComponentInChildren<Image>().color = Color.yellow;
-						}
-
-						// Contadores de poder
-						if (info.traerContadores("poder") > 0) {
-							GameObject x = manager.CrearDescripcion("Contadores de poder: " + info.traerContadores("poder"), new Vector3(posX, diferencia*pos +inicial, 0), lienzo.transform);
-							pos--;
-							x.GetComponentInChildren<Image>().color = Color.yellow;
-						}
-
-						// Contadores de poder
-						if (info.traerContadores("debilidad") > 0) {
-							GameObject x = manager.CrearDescripcion("Contadores de debilidad: " + info.traerContadores("debilidad"), new Vector3(posX, diferencia*pos +inicial, 0), lienzo.transform);
-							pos--;
-							x.GetComponentInChildren<Image>().color = Color.yellow;
-						}*/
-
-		}
-
 
 	}
 
