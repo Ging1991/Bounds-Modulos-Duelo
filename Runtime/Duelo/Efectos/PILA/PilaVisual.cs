@@ -14,18 +14,18 @@ namespace Bounds.Duelo.Pila {
 		public IlustradorDeCartas ilustradorDeCartas;
 
 
-		public void SetEfectos(List<int> cartasID) {
+		public void SetEfectos(List<PilaEfectos.CartaPila> cartasID) {
 			DesactivarEfectos();
 			VisualizarEfectos(cartasID);
 		}
 
 
-		private void VisualizarEfectos(List<int> cartasID) {
+		private void VisualizarEfectos(List<PilaEfectos.CartaPila> cartasID) {
 
 			int posicion = 0;
-			foreach (int cartaID in cartasID) {
+			foreach (var carta in cartasID) {
 				efectos[posicion].SetActive(true);
-				efectos[posicion].GetComponent<CartaFrente>().Mostrar(cartaID);
+				efectos[posicion].GetComponent<CartaFrente>().Mostrar(carta.cartaID, carta.imagen);
 				posicion++;
 				if (posicion >= 5)
 					break;

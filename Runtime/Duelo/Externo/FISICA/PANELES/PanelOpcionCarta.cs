@@ -14,7 +14,7 @@ namespace Bounds.Duelo.Paneles {
 			this.carta = carta;
 			this.accion = accion;
 			CartaInfo info = carta.GetComponent<CartaInfo>();
-			GetComponentInChildren<CartaFrente>().Mostrar(info.cartaID);
+			GetComponentInChildren<CartaFrente>().Mostrar(info.cartaID, info.imagen);
 		}
 
 

@@ -44,17 +44,17 @@ namespace Bounds.Duelo.CPU.Acciones {
 			Entrada entrada = Entrada.GetInstancia();
 			Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();
 			EmblemaSeleccionMaterial material = EmblemaSeleccionMaterial.GetInstancia();
-			foreach (GameObject carta in new List<GameObject>(fisica.TraerCartasEnMano(2))) {
-				material.Seleccionar(carta);
-				if (material.EstaCompleto())
-					break;
-			}
 			foreach (GameObject carta in new List<GameObject>(fisica.TraerCartasEnCampo(1))) {
 				material.Seleccionar(carta);
 				if (material.EstaCompleto())
 					break;
 			}
 			foreach (GameObject carta in new List<GameObject>(fisica.TraerCartasEnCampo(2))) {
+				material.Seleccionar(carta);
+				if (material.EstaCompleto())
+					break;
+			}
+			foreach (GameObject carta in new List<GameObject>(fisica.TraerCartasEnMano(2))) {
 				material.Seleccionar(carta);
 				if (material.EstaCompleto())
 					break;

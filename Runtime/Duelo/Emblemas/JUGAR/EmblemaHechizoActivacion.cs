@@ -292,14 +292,6 @@ namespace Bounds.Duelo.Emblemas {
 				EmblemaEfectos.Activar(new EfectoSobreJugador(hechizo, adversario, new SubMoler(dato.cantidad)));
 			}
 
-			if (dato.tipo == "GANAR_LP_DEMONIO") {
-				CondicionTipoCriatura condicionDemonio = new CondicionTipoCriatura("demonio");
-				List<GameObject> demonios = condicionDemonio.CumpleLista(cartasEnCampoJugador);
-				EmblemaEfectos.Activar(
-					new EfectoSobreJugador(hechizo, jugador, new SubModificarLP(demonios.Count * 500))
-				);
-			}
-
 			if (dato.tipo == "TUTOR") {
 				CondicionCarta condicion = CondicionMapper.GenerarCondicion(dato.condicionCarta);
 				if (dato.nPrimeras > 0) {

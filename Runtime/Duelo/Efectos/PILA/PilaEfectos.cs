@@ -45,12 +45,21 @@ namespace Bounds.Duelo.Pila {
 			pilaVisual.SetActive(false);
 			if (!EstaVacia()) {
 				pilaVisual.SetActive(true);
-				List<int> efectosID = new List<int>();
+				List<PilaEfectos.CartaPila> efectosID = new List<PilaEfectos.CartaPila>();
 				foreach (IEfecto efecto in efectos) {
-					efectosID.Add(efecto.GetFuente().GetComponent<CartaInfo>().cartaID);
+					CartaPila cartaPila = new CartaPila();
+					cartaPila.cartaID = efecto.GetFuente().GetComponent<CartaInfo>().cartaID;
+					cartaPila.imagen = efecto.GetFuente().GetComponent<CartaInfo>().imagen;
+					efectosID.Add(cartaPila);
 				}
 				pilaVisual.GetComponentInChildren<PilaVisual>().SetEfectos(efectosID);
 			}
+		}
+
+
+		public class CartaPila {
+			public int cartaID;
+			public string imagen;
 		}
 
 
