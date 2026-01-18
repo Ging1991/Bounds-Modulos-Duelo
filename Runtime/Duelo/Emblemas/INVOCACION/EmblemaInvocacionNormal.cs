@@ -35,7 +35,6 @@ namespace Bounds.Duelo.Emblemas {
 			if (campo.jugador != jugador)
 				return false;
 
-
 			if (jugador != turnos.jugadorActivo)
 				return false;
 
@@ -43,6 +42,9 @@ namespace Bounds.Duelo.Emblemas {
 				return false;
 
 			if (jugadorDuelo.invocaciones_normales == 0)
+				return false;
+
+			if (jugadorDuelo.invocacionesRestringidas.Contains(carta.GetComponent<CartaInfo>().cartaID))
 				return false;
 
 			return true;
@@ -292,6 +294,15 @@ namespace Bounds.Duelo.Emblemas {
 						)
 					);
 				}
+				if (cartaEnCementerio.GetComponent<CartaEfecto>().TieneClave("ATADURAS_DEL_MAS_ALLA")) {
+					EmblemaEfectos.Activar(
+						new EfectoSobreCartas(
+							cartaEnCementerio,
+							new SubColocarContador("debilidad", 1),
+							new SubCartasControladas(adversario).Generar()
+						)
+					);
+				}
 				if (cartaEnCementerio.GetComponent<CartaEfecto>().TieneClave("EXPLOSION_MAS_ALLA")) {
 					EmblemaEfectos.Activar(
 						new EfectoSobreJugador(
@@ -299,6 +310,16 @@ namespace Bounds.Duelo.Emblemas {
 							adversario,
 							new SubModificarLP(-500),
 							"EXPLOSION"
+						)
+					);
+				}
+				if (cartaEnCementerio.GetComponent<CartaEfecto>().TieneClave("AUMENTAR_EL_MAS_ALLA")) {
+					EmblemaEfectos.Activar(
+						new EfectoSobreJugador(
+							cartaEnCementerio,
+							jugador,
+							new SubRobar(1),
+							"ROBAR"
 						)
 					);
 				}

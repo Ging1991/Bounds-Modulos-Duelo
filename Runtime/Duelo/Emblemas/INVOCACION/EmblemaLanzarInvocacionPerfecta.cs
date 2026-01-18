@@ -8,6 +8,7 @@ using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Duelo.Condiciones;
 using Ging1991.Core;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Duelo.Utiles;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -15,11 +16,16 @@ namespace Bounds.Duelo.Emblemas {
 
 
 		public static void Invocar(int jugador, GameObject criatura, List<GameObject> materiales) {
+			CartaInfo info = criatura.GetComponent<CartaInfo>();
+
+			if (criatura.GetComponent<CartaEfecto>().TieneClave("INVOCACION_UNICA") &&
+					JugadorDuelo.GetInstancia(jugador).invocacionesRestringidas.Contains(info.cartaID)) {
+				return;
+			}
 
 			Fisica fisica = Fisica.Instancia;
 			EmblemaEnviarMaterial.EnviarMateriales(materiales);
 
-			CartaInfo info = criatura.GetComponent<CartaInfo>();
 			BuscadorCampo buscador = BuscadorCampo.getInstancia();
 			GameObject lugar = buscador.buscarCampoLibre(jugador);
 

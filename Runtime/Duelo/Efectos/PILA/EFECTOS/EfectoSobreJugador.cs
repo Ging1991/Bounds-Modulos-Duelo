@@ -1,6 +1,5 @@
 ﻿using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Visuales;
-using Ging1991.Animaciones;
 using UnityEngine;
 
 namespace Bounds.Duelo.Pila.Efectos {

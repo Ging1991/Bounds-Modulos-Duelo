@@ -14,6 +14,7 @@ namespace Bounds.Duelo.Fila.Fases.Subfases {
 		void IFase.Resolver() {
 			JugadorDuelo jugadorDuelo = JugadorDuelo.GetInstancia(jugador);
 			jugadorDuelo.invocaciones_normales = 1;
+			jugadorDuelo.invocacionesRestringidas.Clear();
 			EmblemaTurnos.GetInstancia().CambiarFase();
 		}
 

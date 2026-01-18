@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Bounds.Duelo.Utiles {
 
 	public class JugadorDuelo {
-		
+
 		public enum Jugador {
 			AMBOS,
 			CONTROLADOR,
@@ -14,6 +14,7 @@ namespace Bounds.Duelo.Utiles {
 		private static List<JugadorDuelo> jugadores = new List<JugadorDuelo>();
 		private int jugador = -1;
 		public int invocaciones_normales = 0;
+		public List<int> invocacionesRestringidas = new List<int>();
 
 
 		private JugadorDuelo(int jugador) {
@@ -22,12 +23,12 @@ namespace Bounds.Duelo.Utiles {
 
 
 		public static JugadorDuelo GetInstancia(int jugador) {
-			
+
 			if (jugador < 1 || jugador > 2)
 				throw new ArgumentException("Argumento inválido para jugador: " + jugador);
-			
+
 			JugadorDuelo ret = null;
-			foreach(JugadorDuelo j in jugadores)
+			foreach (JugadorDuelo j in jugadores)
 				if (j.jugador == jugador)
 					ret = j;
 			if (ret == null) {

@@ -44,6 +44,12 @@ namespace Bounds.Duelo.Carta {
 			}
 			else {
 				CartaInfo cartaInfo = GetComponent<CartaInfo>();
+
+				if (GetComponent<CartaEfecto>().TieneClave("INVOCACION_UNICA") &&
+					JugadorDuelo.GetInstancia(cartaInfo.controlador).invocacionesRestringidas.Contains(cartaInfo.cartaID)) {
+					return false;
+				}
+
 				Fisica fisica = EmblemaConocimiento.getInstancia().traerFisica();
 				return ListaCompletaParaInvocar(
 					fisica.TraerCartasEnCampo(cartaInfo.controlador),

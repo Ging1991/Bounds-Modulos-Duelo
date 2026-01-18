@@ -27,6 +27,11 @@ namespace Bounds.Duelo.Emblemas {
 			componente.ColocarBocaArriba();
 			movimiento.Girar();
 
+			// restricciones
+			if (carta.GetComponent<CartaEfecto>().TieneClave("INVOCACION_UNICA")) {
+				JugadorDuelo.GetInstancia(jugador).invocacionesRestringidas.Add(carta.GetComponent<CartaInfo>().cartaID);
+			}
+
 			ActivarEfectosDeVacio(jugador, carta);
 			ActivarHabilidades(jugador, carta);
 			ActivarEfectosDeActivacion(carta);
