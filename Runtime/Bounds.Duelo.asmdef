@@ -4,6 +4,8 @@
     "references": [
         "Bounds.Cartas",
         "Bounds.Visor",
+        "Bounds.Cofres",
+        "Bounds.Mazos",
         "Bounds.Modulos.Duelo.Fisicas",
         "Ging1991.Core",
         "Ging1991.Antiguo",
