@@ -14,15 +14,15 @@ namespace Bounds.Duelo.Emblemas {
 			Fisica fisica = conocimiento.traerFisica();
 			CartaInfo info = carta.GetComponent<CartaInfo>();
 
-			if (!fisica.TraerCartasEnMazo(jugador).Contains(carta))
-				return;
+			//if (!fisica.TraerCartasEnMazo(jugador).Contains(carta))
+			//return;
 
 			if (fisica.TraerCartasEnMano(jugador).Count > 4)
 				return;
 
 			//carta.GetComponentInChildren<EfectoVisual>().Animar("REVITALIZAR");
-			fisica.EnviarHaciaMano(carta, info.propietario);
 			info.restablecer();
+			fisica.EnviarHaciaMano(carta, jugador);
 
 			carta.GetComponent<CartaMovimiento>().Enderezar();
 

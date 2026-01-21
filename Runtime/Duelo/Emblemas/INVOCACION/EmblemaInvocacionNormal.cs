@@ -124,7 +124,7 @@ namespace Bounds.Duelo.Emblemas {
 				}
 
 				if (infoVacio.original.datoVacio.tipo == "TRUENO" && cartaTipo.ContieneTipo("TRUENO")) {
-					CondicionTipoCriatura condicionTrueno = new("trueno");
+					CondicionTipoCriatura condicionTrueno = new("TRUENO");
 					EmblemaEfectos.Activar(
 						new EfectoSobreCartas(
 							vacio,
@@ -137,7 +137,7 @@ namespace Bounds.Duelo.Emblemas {
 				}
 
 				if (infoVacio.original.datoVacio.tipo == "VENENO" && cartaTipo.ContieneTipo("INSECTO") && info.original.datoCriatura.perfeccion == "BASICO") {
-					CondicionTipoCriatura condicionInsecto = new("insecto");
+					CondicionTipoCriatura condicionInsecto = new("INSECTO");
 
 					EmblemaEfectos.Activar(
 						new EfectoSobreCartas(

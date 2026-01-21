@@ -262,18 +262,6 @@ namespace Bounds.Duelo.Emblemas {
 				}
 			}
 
-			List<GameObject> cartasEnCampoContrario = new List<GameObject>(fisica.TraerCartasEnCampo(adversario));
-			foreach (GameObject trampa in cartasEnCampoContrario) {
-				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-				CartaGeneral cartaT = trampa.GetComponent<CartaGeneral>();
-				if (infoTrampa.original.clase == "TRAMPA"
-						&& infoTrampa.original.datoTrampa.tipo == "destruye_hechizo"
-						&& !cartaT.bocaArriba) {
-					cartaT.ColocarBocaArriba();
-					//EmblemaDestruccion.Destruir(hechizo, 0);
-					return;
-				}
-			}
 
 		}
 

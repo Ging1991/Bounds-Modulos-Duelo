@@ -1,5 +1,4 @@
 ﻿using Bounds.Duelo.Carta;
-using Bounds.Duelo.Condiciones;
 using Bounds.Duelo.Efectos;
 using Bounds.Duelo.Pila;
 using Bounds.Duelo.Pila.Efectos;
@@ -34,13 +33,23 @@ namespace Bounds.Duelo.Emblemas {
 				}
 			}
 
+
 			foreach (var trampa in EmblemaPadre.TraerTrampasBocaAbajo(adversario)) {
 				CartaGeneral trampaGeneral = trampa.GetComponent<CartaGeneral>();
-				if (trampa.GetComponent<CartaInfo>().original.datoTrampa.tipo == "CANCELAR_EFECTO") {
+				CartaInfo trampaInfo = trampa.GetComponent<CartaInfo>();
+
+				if (trampaInfo.original.datoTrampa.tipo == "CANCELAR_EFECTO") {
 					trampaGeneral.ColocarBocaArriba();
 					Activar(new EfectoCancelarEfecto(trampa, efecto));
 					break;
 				}
+
+				if (trampaInfo.original.datoTrampa.tipo == "CANCELAR_HECHIZO" && efecto.GetFuente().GetComponent<CartaInfo>().original.clase == "HECHIZO") {
+					trampaGeneral.ColocarBocaArriba();
+					Activar(new EfectoCancelarEfecto(trampa, efecto));
+					break;
+				}
+
 			}
 
 		}
