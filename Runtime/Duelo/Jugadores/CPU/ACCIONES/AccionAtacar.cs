@@ -4,6 +4,7 @@ using Bounds.Duelo.Condiciones;
 using Bounds.Duelo.CPU.Condiciones;
 using Bounds.Duelo.Emblemas;
 using Bounds.Duelo.Utiles;
+using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Duelo.Fisicas;
 using UnityEngine;
 

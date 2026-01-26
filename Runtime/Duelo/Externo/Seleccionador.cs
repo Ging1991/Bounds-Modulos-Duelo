@@ -1,4 +1,5 @@
 using Bounds.Duelo.Carta;
+using Bounds.Fisicas.Carta;
 using Ging1991;
 using Ging1991.Core;
 using UnityEngine;

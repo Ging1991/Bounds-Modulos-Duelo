@@ -9,6 +9,7 @@ using Bounds.Duelo.Condiciones;
 using Ging1991.Core;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Duelo.Utiles;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Emblemas {
 

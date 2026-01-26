@@ -1,4 +1,5 @@
 ﻿using Bounds.Duelo.Carta;
+using Bounds.Fisicas.Carta;
 using UnityEngine;
 
 namespace Bounds.Duelo.Emblemas.Trampas {

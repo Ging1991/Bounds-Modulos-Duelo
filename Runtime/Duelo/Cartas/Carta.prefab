@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa5eb97ac9a2ef848bc35576880616c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fondoSeleccion: {fileID: 0}
+  efectoSeleccionOBJ: {fileID: 6541794806781389900, guid: c2f03c2a5205a0f41a43677ff0714db1, type: 3}
   simboloAtaque: {fileID: 0}
   simboloMuro: {fileID: 0}
 --- !u!61 &3296788074234481884

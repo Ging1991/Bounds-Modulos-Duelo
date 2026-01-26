@@ -1,6 +1,7 @@
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Pila.Efectos;
 using Bounds.Duelo.Pila.Subefectos;
+using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Visuales;
 using UnityEngine;

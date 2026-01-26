@@ -2,6 +2,7 @@
 using UnityEngine;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Visuales;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Emblema {
 

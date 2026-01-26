@@ -9,6 +9,7 @@ using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Emblemas.Trampas;
 using Bounds.Duelo.Condiciones;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Emblemas {
 

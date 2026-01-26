@@ -3,6 +3,8 @@ using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblemas;
 using System.Collections.Generic;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Carta;
+using Bounds.Fisicas.Campos;
 
 namespace Bounds.Duelo.Paneles.Seleccion {
 

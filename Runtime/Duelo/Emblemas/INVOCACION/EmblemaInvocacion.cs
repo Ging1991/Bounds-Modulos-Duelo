@@ -10,6 +10,7 @@ using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Duelo.Emblemas.Trampas;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Duelo.Efectos;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Emblemas {
 

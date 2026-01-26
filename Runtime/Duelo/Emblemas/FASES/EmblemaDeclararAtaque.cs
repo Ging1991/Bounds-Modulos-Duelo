@@ -9,6 +9,7 @@ using Bounds.Duelo.Pila;
 using Bounds.Duelo.Pila.Efectos;
 using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Duelo.Utiles;
+using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Duelo.Fisicas;
 using Ging1991.Core;
 using UnityEngine;

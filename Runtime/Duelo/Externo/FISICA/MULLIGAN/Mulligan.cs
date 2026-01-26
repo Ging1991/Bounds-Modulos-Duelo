@@ -4,6 +4,7 @@ using Bounds.Duelo.Emblemas;
 using Bounds.Duelo.Emblemas.Jugar;
 using Bounds.Duelo.Fila;
 using Bounds.Duelo.Fila.Fases;
+using Bounds.Fisicas.Carta;
 using Bounds.Global.Mazos;
 using Bounds.Modulos.Cartas;
 using Bounds.Modulos.Cartas.Ilustradores;

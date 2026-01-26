@@ -1,4 +1,6 @@
 using Bounds.Duelo.Carta;
+using Bounds.Duelo.Utiles;
+using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Cartas;
 using Bounds.Modulos.Cartas.Ilustradores;
 using Bounds.Modulos.Cartas.Persistencia;
@@ -23,7 +25,8 @@ public class CreacionDeCartas : MonoBehaviour {
 		carta.transform.localScale = ESCALA_CARTA;
 
 		CartaGeneral general = carta.GetComponent<CartaGeneral>();
-		general.Iniciar(cartaID, imagen, rareza, datosDeCartas, ilustradorDeCartas, new TinteroBounds());
+
+		general.Iniciar(cartaID, imagen, rareza, datosDeCartas, ilustradorDeCartas, new TinteroBounds(), Entrada.GetInstancia());
 
 		CartaBD datoCarta = DatosDeCartas.Instancia.lector.LeerDatos(cartaID);
 		CartaInfo info = carta.GetComponent<CartaInfo>();

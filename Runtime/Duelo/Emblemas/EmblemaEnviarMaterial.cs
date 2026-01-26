@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblema;
+using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Duelo.Fisicas;
 using UnityEngine;
 

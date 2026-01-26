@@ -5,6 +5,7 @@ using Bounds.Duelo.Paneles;
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Paneles.Seleccion;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Pila.Efectos {
 

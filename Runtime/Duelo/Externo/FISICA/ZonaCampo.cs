@@ -3,6 +3,7 @@ using UnityEngine;
 using Bounds.Duelo.Carta;
 using Ging1991.Core.Interfaces;
 using UnityEngine.UI;
+using Bounds.Fisicas.Campos;
 
 namespace Bounds.Modulos.Duelo.Fisicas {
 

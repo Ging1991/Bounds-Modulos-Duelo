@@ -18,6 +18,8 @@ using Bounds.Duelo.Pila;
 using Bounds.Duelo.Paneles;
 using Bounds.Modulos.Cartas.Tinteros;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Campos;
+using Bounds.Modulos.Persistencia;
 
 namespace Bounds.Duelo {
 
@@ -38,7 +40,9 @@ namespace Bounds.Duelo {
 				campo.controlador = this;
 			}
 
-			visorDuelo.Inicializar();
+			LectorCartaTexto lectorCartaTexto = new LectorCartaTexto(new DireccionRecursos("Cartas", "Nombres").Generar());
+
+			visorDuelo.Inicializar(lectorCartaTexto);
 
 			CPUReloj cpuReloj = GameObject.Find("CPU").GetComponent<CPUReloj>();
 			cpuReloj.Inicializacion();

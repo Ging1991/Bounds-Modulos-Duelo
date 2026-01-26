@@ -4,6 +4,7 @@ using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Pila;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Efectos {
 

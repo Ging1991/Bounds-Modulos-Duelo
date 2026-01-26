@@ -3,6 +3,7 @@ using Bounds.Duelo.Efectos;
 using Bounds.Duelo.Pila;
 using Bounds.Duelo.Pila.Efectos;
 using Bounds.Duelo.Pila.Subefectos;
+using Bounds.Fisicas.Carta;
 using UnityEngine;
 
 namespace Bounds.Duelo.Emblemas {

@@ -5,6 +5,7 @@ using Bounds.Duelo.Pila;
 using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Efectos {
 

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Bounds.Duelo.Carta;
 using Bounds.Modulos.Cartas;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Paneles {
 

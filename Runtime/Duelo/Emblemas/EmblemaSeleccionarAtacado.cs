@@ -1,6 +1,7 @@
 ﻿using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblemas;
 using Bounds.Duelo.Emblemas.Fases;
+using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Duelo.Fisicas;
 using UnityEngine;
 

@@ -9,6 +9,7 @@ using Bounds.Modulos.Cartas.Persistencia;
 using Bounds.Modulos.Cartas.Ilustradores;
 using Bounds.Modulos.Cartas.Tinteros;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Carta;
 
 public class PanelZona : MonoBehaviour {
 

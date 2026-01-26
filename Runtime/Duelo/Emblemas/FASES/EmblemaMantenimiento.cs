@@ -4,6 +4,7 @@ using Bounds.Duelo.Condiciones;
 using Bounds.Duelo.Efectos;
 using Bounds.Duelo.Pila.Efectos;
 using Bounds.Duelo.Pila.Subefectos;
+using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Duelo.Fisicas;
 using UnityEngine;
 

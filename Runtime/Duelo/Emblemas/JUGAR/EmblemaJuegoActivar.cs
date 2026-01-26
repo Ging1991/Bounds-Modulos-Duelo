@@ -7,6 +7,8 @@ using Ging1991.Core;
 using Bounds.Cartas;
 using Bounds.Modulos.Cartas;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Carta;
+using Bounds.Fisicas.Campos;
 
 namespace Bounds.Duelo.Emblemas.Jugar {
 

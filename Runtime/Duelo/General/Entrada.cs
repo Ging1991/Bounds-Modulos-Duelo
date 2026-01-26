@@ -8,10 +8,12 @@ using Bounds.Duelo.Emblemas.Jugar;
 using System.Collections.Generic;
 using Bounds.Modulos.Cartas;
 using Bounds.Modulos.Visor;
+using Bounds.Fisicas.Carta;
+using Bounds.Modulos.Duelo.Fisicas;
 
 namespace Bounds.Duelo.Utiles {
 
-	public class Entrada {
+	public class Entrada : ICartaObservador {
 
 		private static Entrada instancia;
 		public bool panelPerfectoVisible = false;

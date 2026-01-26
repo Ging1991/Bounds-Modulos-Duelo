@@ -11,6 +11,7 @@ using Bounds.Duelo.Emblemas.Trampas;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Visuales;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Emblemas {
 

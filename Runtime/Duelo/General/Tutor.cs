@@ -3,6 +3,7 @@ using UnityEngine;
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Emblemas;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Utiles {
 

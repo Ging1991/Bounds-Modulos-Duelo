@@ -10,6 +10,7 @@ using Bounds.Visuales;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Global;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Emblemas {
 

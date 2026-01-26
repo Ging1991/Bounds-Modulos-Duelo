@@ -2,6 +2,7 @@
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblemas;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Emblema {
 

@@ -1,17 +1,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using Bounds.Duelo.Carta;
+using Bounds.Fisicas.Carta;
 using UnityEngine;
 
 namespace Bounds.Duelo.Condiciones {
 
 	public class CondicionTipoCriatura : CondicionCadena {
-		
+
 
 		public CondicionTipoCriatura(string tipo = null, List<string> tipos = null) :
-				base(valor:tipo, valores:tipos) {
+				base(valor: tipo, valores: tipos) {
 
-			precondiciones.Add(new CondicionClase(clase:"CRIATURA"));
+			precondiciones.Add(new CondicionClase(clase: "CRIATURA"));
 		}
 
 

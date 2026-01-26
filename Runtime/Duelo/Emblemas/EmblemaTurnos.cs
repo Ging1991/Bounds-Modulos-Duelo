@@ -11,6 +11,7 @@ using Bounds.Duelo.Emblemas.Jugar;
 using Ging1991.Core;
 using Ging1991.Interfaces;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Emblemas {
 

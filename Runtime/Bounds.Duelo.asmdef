@@ -4,6 +4,7 @@
     "references": [
         "Bounds.Cartas",
         "Bounds.Visor",
+        "Bounds.Persistencia",
         "Bounds.Cofres",
         "Bounds.Mazos",
         "Bounds.Modulos.Duelo.Fisicas",

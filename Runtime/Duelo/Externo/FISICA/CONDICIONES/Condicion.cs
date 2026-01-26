@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Bounds.Duelo.Carta;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo {
 
-	public class Condicion  {
+	public class Condicion {
 
 		private int controlador;
 		private string tipoCarta;
@@ -13,7 +14,7 @@ namespace Bounds.Duelo {
 		private List<string> tipoCriatura;
 		private string perfeccion;
 		private bool estaEnderezadoRequerido;
-			
+
 
 		public Condicion(int controlador = -1, string tipoCarta = "", string perfeccion = "",
 				List<string> tipoCriatura = null, string textoParcial = "", bool estaEnderezadoRequerido = false) {
@@ -49,7 +50,7 @@ namespace Bounds.Duelo {
 							(tipoCarta == "" || info.original.clase == tipoCarta);
 
 			if (info.original.clase == "CRIATURA") {
-			
+
 				// Condicion: perfeccion
 				cumpleCondiciones = cumpleCondiciones &&
 								(perfeccion == "" || info.original.datoCriatura.perfeccion == perfeccion);

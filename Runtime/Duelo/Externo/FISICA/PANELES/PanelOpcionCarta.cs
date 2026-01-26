@@ -2,6 +2,7 @@
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Paneles.Seleccion;
 using Bounds.Modulos.Cartas;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Paneles {
 

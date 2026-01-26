@@ -3,6 +3,7 @@ using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblema;
 using Ging1991.Animaciones;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Emblemas {
 

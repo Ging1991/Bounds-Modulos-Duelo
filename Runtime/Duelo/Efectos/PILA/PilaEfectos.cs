@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Bounds.Duelo.Carta;
+using Bounds.Fisicas.Carta;
 using UnityEngine;
 
 namespace Bounds.Duelo.Pila {

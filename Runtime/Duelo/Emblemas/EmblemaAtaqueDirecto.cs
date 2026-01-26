@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblemas;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Emblema {
 
@@ -9,32 +10,32 @@ namespace Bounds.Duelo.Emblema {
 		private static EmblemaAtaqueDirecto instancia;
 		private int jugadorAtacado = 0;
 		private GameObject auxiliar;
-		private EmblemaAtaqueDirecto() {}
-		
+		private EmblemaAtaqueDirecto() { }
 
-		public static EmblemaAtaqueDirecto GetInstancia(){
+
+		public static EmblemaAtaqueDirecto GetInstancia() {
 			if (instancia == null)
 				instancia = new EmblemaAtaqueDirecto();
 			return instancia;
 		}
-		
+
 
 		public bool Atacar(GameObject carta, int jugadorAtacado) {
 			this.jugadorAtacado = jugadorAtacado;
-/*
-			EmblemaSeleccionarAtacante atacante = EmblemaSeleccionarAtacante.GetInstancia();
-			if (atacante.cartaSeleccionada == null)
-				return false;
+			/*
+						EmblemaSeleccionarAtacante atacante = EmblemaSeleccionarAtacante.GetInstancia();
+						if (atacante.cartaSeleccionada == null)
+							return false;
 
-			CartaMovimiento movimiento = atacante.cartaSeleccionada.GetComponent<CartaMovimiento>();
-			movimiento.girar();
-			CartaFX fx = atacante.cartaSeleccionada.GetComponent<CartaFX>();
-			fx.PotencialAtacante(false);
+						CartaMovimiento movimiento = atacante.cartaSeleccionada.GetComponent<CartaMovimiento>();
+						movimiento.girar();
+						CartaFX fx = atacante.cartaSeleccionada.GetComponent<CartaFX>();
+						fx.PotencialAtacante(false);
 
-			auxiliar = atacante.cartaSeleccionada;
-			atacante.Deseleccionar();
+						auxiliar = atacante.cartaSeleccionada;
+						atacante.Deseleccionar();
 
-			ResolverAtaque();*/
+						ResolverAtaque();*/
 			return true;
 		}
 

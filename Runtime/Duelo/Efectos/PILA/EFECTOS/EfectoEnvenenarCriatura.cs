@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Bounds.Duelo.Carta;
 using Ging1991.Animaciones;
 using Bounds.Duelo.Pila;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Efectos {
 
@@ -29,13 +30,13 @@ namespace Bounds.Duelo.Efectos {
 		}
 
 
-        public void Resolver() {
+		public void Resolver() {
 			CartaInfo info = objetivo.GetComponent<CartaInfo>();
 			//info.colocarHabilidad("envenenado");
 			//objetivo.GetComponentInChildren<EfectoVisual>().Animar("VENENO");
-        }
+		}
 
 
-    }
+	}
 
 }

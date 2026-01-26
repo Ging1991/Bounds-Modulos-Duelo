@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Duelo.Condiciones;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Utiles {
 

@@ -4,6 +4,7 @@ using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblema;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Duelo.Emblemas.Fases {
 

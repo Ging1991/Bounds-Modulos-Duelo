@@ -2,6 +2,7 @@
 using UnityEngine;
 using Bounds.Duelo.Carta;
 using Ging1991.Core;
+using Bounds.Fisicas.Carta;
 
 namespace Bounds.Modulos.Duelo.Fisicas {
 

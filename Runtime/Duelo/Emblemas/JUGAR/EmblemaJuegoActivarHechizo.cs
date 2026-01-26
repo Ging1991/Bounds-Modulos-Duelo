@@ -13,6 +13,8 @@ using Bounds.Duelo.Paneles.Seleccion;
 using Ging1991.Core;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Fisicas.Carta;
+using Bounds.Fisicas.Campos;
 
 namespace Bounds.Duelo.Emblemas {
 
