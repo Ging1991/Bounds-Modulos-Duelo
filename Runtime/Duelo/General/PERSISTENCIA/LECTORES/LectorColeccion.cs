@@ -19,6 +19,7 @@ namespace Bounds.Persistencia.Lectores {
 			public List<string> infrecuentes;
 			public List<string> raras;
 			public List<string> miticas;
+			public List<string> secretas;
 		}
 
 	}
