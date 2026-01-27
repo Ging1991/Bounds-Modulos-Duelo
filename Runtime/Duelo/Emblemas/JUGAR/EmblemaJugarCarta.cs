@@ -76,7 +76,7 @@ namespace Bounds.Duelo.Emblema {
 			panel.Iniciar(
 				opcionesQueCumplen,
 				new SeleccionarCriaturaVinculada(jugador, infoAura.gameObject, camposLibres[0], camposLibres[1]),
-				texto: "Selecciona una carta para vincular. Sera invocada al campo."
+				texto: "Selecciona una criatura para la invocación vinculada."
 			);
 		}
 

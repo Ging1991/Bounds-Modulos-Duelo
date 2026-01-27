@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Bounds.Duelo.Carta;
 using Bounds.Duelo.Paneles;
 using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Pila.Efectos;

@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Bounds.Duelo.Carta;
 using Bounds.Duelo.Utiles;
 using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Efectos;
@@ -86,9 +85,10 @@ namespace Bounds.Duelo.Emblemas {
 				cartaInfo.RemoverContador("supervivencia", 1);
 			}
 			else {
-				EmblemaDescarte.EnviarDesdeCampo(carta);
-				if (cartaInfo.original.clase == "AURA" || cartaInfo.original.clase == "EQUIPO")
+				if (cartaInfo.original.clase == "AURA" || cartaInfo.original.clase == "EQUIPO") {
 					EmblemaDesequipar.Desequipar(carta);
+				}
+				EmblemaDescarte.EnviarDesdeCampo(carta);
 			}
 
 			ActivarEfectosPropios(carta);

@@ -3,6 +3,7 @@ using Bounds.Duelo.Carta;
 using System;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Bounds.Modulos.Cartas.Persistencia.Datos;
 
 namespace Bounds.Duelo.Emblema {
 
@@ -33,8 +34,12 @@ namespace Bounds.Duelo.Emblema {
 
 			info.criaturaEquipada = null;
 			try {
-				//infoCriatura.removerBonoAtaque(carta, info.original.datoEquipo.bono_ataque);
-				//infoCriatura.removerBonoDefensa(carta, info.original.datoEquipo.bono_defensa);
+				CartaEfecto cartaEfecto = carta.GetComponent<CartaEfecto>();
+				if (cartaEfecto.TieneClave("VINCULO_ESTADISTICA_ATK_DEF")) {
+					EfectoBD efecto = carta.GetComponent<CartaEfecto>().GetEfecto("VINCULO_ESTADISTICA_ATK_DEF");
+					infoCriatura.removerBonoAtaque(carta, efecto.parametroATK);
+					infoCriatura.removerBonoDefensa(carta, efecto.parametroDEF);
+				}
 			}
 			catch (Exception e) {
 				Debug.Log(e.StackTrace);
