@@ -20,6 +20,7 @@ using Bounds.Modulos.Cartas.Tinteros;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Campos;
 using Bounds.Modulos.Persistencia;
+using Bounds.Modulos.Duelo;
 
 namespace Bounds.Duelo {
 
@@ -34,13 +35,19 @@ namespace Bounds.Duelo {
 		public PanelCartas panelCartas;
 		public IFinalizarDuelo finalizarDuelo;
 
+		public ParametrosControlDuelo parametrosControl;
+
 		void Start() {
+
+			parametrosControl.Inicializar();
+			ParametrosEscena parametrosEscena = parametrosControl.parametros;
+
+			LectorCartaTexto lectorCartaTexto = new LectorCartaTexto(parametrosEscena.GetDireccion("DIRECCION_NOMBRES"));
 
 			foreach (var campo in FindObjectsByType<CampoLugar>(FindObjectsSortMode.None)) {
 				campo.controlador = this;
 			}
 
-			LectorCartaTexto lectorCartaTexto = new LectorCartaTexto(new DireccionRecursos("Cartas", "Nombres").Generar());
 
 			visorDuelo.Inicializar(lectorCartaTexto);
 

@@ -1802,6 +1802,7 @@ GameObject:
   - component: {fileID: 1902117138}
   - component: {fileID: 1902117139}
   - component: {fileID: 1902117140}
+  - component: {fileID: 1902117141}
   m_Layer: 0
   m_Name: Control
   m_TagString: Untagged
@@ -1842,6 +1843,7 @@ MonoBehaviour:
   visorDuelo: {fileID: 876470340}
   pilaVisual: {fileID: 1195635769}
   panelCartas: {fileID: 963689930299967260}
+  parametrosControl: {fileID: 1902117141}
 --- !u!114 &1902117133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1918,6 +1920,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 734d0af1bc4bd834e8fb2dd0a78cce11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1902117141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902117130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c90cb76aa9f4dc7408de8f231f53bc17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parametros: {fileID: 11400000, guid: fd37356195e5ec540a413b836f0ddbd0, type: 2}
 --- !u!1 &1922705830
 GameObject:
   m_ObjectHideFlags: 0
