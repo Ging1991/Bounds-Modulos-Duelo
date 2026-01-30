@@ -8,7 +8,7 @@ using Bounds.Modulos.Visor;
 using Bounds.Modulos.Visor.Persistencia;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Fisicas.Carta;
-using Bounds.Modulos.Persistencia;
+using Bounds.Persistencia.Lectores;
 
 namespace Bounds.Infraestructura.Visores {
 

@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using Bounds.Modulos.Cartas.Ilustradores;
 using System.Collections;
-using Bounds.Global;
 using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Utiles;
 using Bounds.Modulos.Cartas.Persistencia;
 using Ging1991.Core.Interfaces;
+using Bounds.Persistencia;
 
 namespace Bounds.Duelo {
 
@@ -29,7 +29,9 @@ namespace Bounds.Duelo {
 
 		IEnumerator MostrarCuadroRecompensas(bool haGanado) {
 			this.haGanado = haGanado;
-			Configuracion configuracion = new Configuracion();
+			ControlDuelo controlDuelo = GameObject.FindAnyObjectByType<ControlDuelo>();
+			Configuracion configuracion = controlDuelo.configuracion;
+
 			yield return new WaitForSeconds(1);
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			Instanciador instanciador = conocimiento.traerInstanciador();

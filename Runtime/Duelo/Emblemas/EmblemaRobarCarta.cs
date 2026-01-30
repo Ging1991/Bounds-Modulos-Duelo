@@ -1,15 +1,14 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Bounds.Duelo.Carta;
 using Bounds.Duelo.Utiles;
 using Bounds.Duelo.Pila.Efectos;
 using Bounds.Duelo.Pila.Subefectos;
-using Bounds.Global;
 using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Emblemas.Trampas;
 using Bounds.Duelo.Condiciones;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Bounds.Persistencia;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -107,7 +106,8 @@ namespace Bounds.Duelo.Emblemas {
 			TerminarJuego terminar = GameObject.Find("TerminarJuego").GetComponent<TerminarJuego>();
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			Fisica fisica = conocimiento.traerFisica();
-			Configuracion configuracion = new Configuracion();
+			ControlDuelo controlDuelo = GameObject.FindAnyObjectByType<ControlDuelo>();
+			Configuracion configuracion = controlDuelo.configuracion;
 
 			bool haGanado = false;
 			foreach (GameObject carta in fisica.TraerCartasEnCampo(jugador)) {

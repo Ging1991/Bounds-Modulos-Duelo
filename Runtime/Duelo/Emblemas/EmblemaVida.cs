@@ -52,16 +52,16 @@ namespace Bounds.Duelo.Emblemas {
 			bloque.GetComponentInChildren<GestorVisual>().Animar(visual);
 
 			TerminarJuego terminar = GameObject.Find("TerminarJuego").GetComponent<TerminarJuego>();
-			Configuracion configuracion = new Configuracion();
+			//Configuracion configuracion = new Configuracion();
 
 			if (bloque.vida < 1) {
 				if (jugador == 1) {
-					configuracion.GanarOro(100);
+					//configuracion.GanarOro(100);
 					terminar.Terminar(false);
 
 				}
 				else {
-					configuracion.GanarOro(bloque.vida / 10);
+					//configuracion.GanarOro(bloque.vida / 10);
 					terminar.Terminar(true);
 				}
 			}
