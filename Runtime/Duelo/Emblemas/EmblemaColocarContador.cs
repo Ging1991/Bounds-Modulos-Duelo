@@ -14,7 +14,7 @@ namespace Bounds.Duelo.Emblemas {
 			CartaInfo cartaInfo = carta.GetComponent<CartaInfo>();
 			cartaInfo.ColocarContador(tipo, cantidad);
 			if (tipo == "debilidad") {
-				carta.GetComponentInChildren<GestorVisual>().Animar("SANGRE");
+				carta.GetComponentInChildren<GestorVisual>().Animar("SANGRE", "FxSerpiente");
 			}
 
 			if (cartaInfo.TraerContadores("veneno") >= cartaInfo.original.nivel) {

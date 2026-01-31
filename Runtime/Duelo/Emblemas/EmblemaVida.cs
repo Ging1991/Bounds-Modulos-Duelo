@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Condiciones;
 using Bounds.Duelo.Pila.Subefectos;
@@ -8,14 +7,13 @@ using Bounds.Duelo.Pila.Efectos;
 using Bounds.Duelo.Emblemas.Trampas;
 using Bounds.Visuales;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
-using Bounds.Global;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Bounds.Persistencia;
 
 namespace Bounds.Duelo.Emblemas {
 
 	public class EmblemaVida : EmblemaPadre {
-
 
 		public static void DisminuirVida(int jugador, int cantidad, string visual = "GOLPE") {
 
@@ -49,19 +47,19 @@ namespace Bounds.Duelo.Emblemas {
 
 			BloqueJugador bloque = BloqueJugador.getInstancia("BloqueJugador" + jugador);
 			bloque.SetVida(bloque.vida - cantidad);
-			bloque.GetComponentInChildren<GestorVisual>().Animar(visual);
+			bloque.GetComponentInChildren<GestorVisual>().Animar(visual, "FxExplosion");
 
 			TerminarJuego terminar = GameObject.Find("TerminarJuego").GetComponent<TerminarJuego>();
-			//Configuracion configuracion = new Configuracion();
+			Configuracion configuracion = GameObject.FindAnyObjectByType<ControlDuelo>().configuracion;
 
 			if (bloque.vida < 1) {
 				if (jugador == 1) {
-					//configuracion.GanarOro(100);
+					configuracion.GanarOro(100);
 					terminar.Terminar(false);
 
 				}
 				else {
-					//configuracion.GanarOro(bloque.vida / 10);
+					configuracion.GanarOro(bloque.vida / 10);
 					terminar.Terminar(true);
 				}
 			}
@@ -71,7 +69,7 @@ namespace Bounds.Duelo.Emblemas {
 		public static void AumentarVida(int jugador, int cantidad, string visual = "REVITALIZAR") {
 			BloqueJugador bloque = BloqueJugador.getInstancia("BloqueJugador" + jugador);
 			bloque.SetVida(bloque.vida + cantidad);
-			bloque.GetComponentInChildren<GestorVisual>().Animar(visual);
+			bloque.GetComponentInChildren<GestorVisual>().Animar(visual, "FxRevitalizar");
 
 			foreach (var carta in new SubCartasControladas(jugador).Generar()) {
 				if (carta.GetComponent<CartaEfecto>().TieneClave("MISION_LP")) {

@@ -1,3 +1,4 @@
+using Bounds.Duelo;
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Utiles;
 using Bounds.Fisicas.Carta;
@@ -6,6 +7,7 @@ using Bounds.Modulos.Cartas.Ilustradores;
 using Bounds.Modulos.Cartas.Persistencia;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Cartas.Tinteros;
+using Bounds.Visuales;
 using UnityEngine;
 
 public class CreacionDeCartas : MonoBehaviour {
@@ -43,6 +45,7 @@ public class CreacionDeCartas : MonoBehaviour {
 			carta.GetComponentInChildren<CartaFisica>().SetReverso(protector);
 		}
 		//carta.GetComponentInChildren<CartaFisica>().ColocarBocaAbajo(true);
+		carta.GetComponentInChildren<GestorVisual>().gestorDeSonidos = ControlDuelo.Instancia.gestorDeSonidos;
 		return carta;
 	}
 

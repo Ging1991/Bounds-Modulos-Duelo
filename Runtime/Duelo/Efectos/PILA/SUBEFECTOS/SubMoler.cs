@@ -15,7 +15,7 @@ namespace Bounds.Duelo.Pila.Subefectos {
 		public void AplicarEfecto(int jugador, List<string> etiquetas) {
 			Fisica fisica = Fisica.Instancia;
 			BloqueJugador bloque = BloqueJugador.getInstancia("BloqueJugador" + jugador);
-			bloque.GetComponentInChildren<GestorVisual>().Animar("VENENO");
+			bloque.GetComponentInChildren<GestorVisual>().Animar("VENENO", "FxVeneno");
 
 			for (int i = 0; i < cantidad; i++)
 				fisica.MolerCarta(jugador);

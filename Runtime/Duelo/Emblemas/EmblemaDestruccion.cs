@@ -42,8 +42,8 @@ namespace Bounds.Duelo.Emblemas {
 			foreach (GameObject protector in new SubCartasEnCementerio(carta.GetComponent<CartaInfo>().controlador).Generar()) {
 				if (protector.GetComponent<CartaEfecto>().TieneClave("PROTECTOR")) {
 					EmblemaEnviarMaterial.EnviarMateriales(new List<GameObject>() { protector });
-					protector.GetComponentInChildren<GestorVisual>().Animar("NUBE");
-					carta.GetComponentInChildren<GestorVisual>().Animar("NUBE");
+					protector.GetComponentInChildren<GestorVisual>().Animar("NUBE", "FxRevitalizar");
+					carta.GetComponentInChildren<GestorVisual>().Animar("NUBE", "FxRevitalizar");
 					return true;
 				}
 			}
@@ -114,7 +114,7 @@ namespace Bounds.Duelo.Emblemas {
 			if (SalvadoPorProteccion(carta))
 				return false;
 
-			carta.GetComponentInChildren<GestorVisual>().Animar("GOLPE");
+			carta.GetComponentInChildren<GestorVisual>().Animar("GOLPE", "FxExplosion");
 			DisminuirVida(carta);
 
 			if (cartaInfo.TraerContadores("supervivencia") > 0) {
@@ -146,7 +146,7 @@ namespace Bounds.Duelo.Emblemas {
 			if (SalvadoPorProteccion(carta))
 				return false;
 
-			carta.GetComponentInChildren<GestorVisual>().Animar("GOLPE");
+			carta.GetComponentInChildren<GestorVisual>().Animar("GOLPE", "FxExplosion");
 			DisminuirVida(carta);
 
 			if (cartaInfo.TraerContadores("supervivencia") > 0) {
@@ -170,7 +170,7 @@ namespace Bounds.Duelo.Emblemas {
 			if (!fisica.TraerCartasEnCampo(cartaInfo.controlador).Contains(carta))
 				return false;
 
-			carta.GetComponentInChildren<GestorVisual>().Animar("GOLPE");
+			carta.GetComponentInChildren<GestorVisual>().Animar("GOLPE", "FxExplosion");
 			DisminuirVida(carta);
 
 			if (cartaInfo.TraerContadores("supervivencia") > 0) {
