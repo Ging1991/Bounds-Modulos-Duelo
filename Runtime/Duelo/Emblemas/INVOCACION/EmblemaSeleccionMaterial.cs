@@ -123,7 +123,6 @@ namespace Bounds.Duelo.Emblemas {
 				cartaSeleccionadas = new List<GameObject>();
 				cartaSeleccionadasID = new List<int>();
 			}
-
 			return true;
 		}
 
@@ -133,11 +132,6 @@ namespace Bounds.Duelo.Emblemas {
 			EmblemaSeleccionInvocacionPerfecta perfecta = EmblemaSeleccionInvocacionPerfecta.GetInstancia();
 			if (perfecta.cartaSeleccionada == null)
 				return false;
-
-			CartaInfo info = perfecta.cartaSeleccionada.GetComponent<CartaInfo>();
-			//if (info.original.datoCriatura.perfeccion == "REFLEJO")
-			//	return perfecta.materiales_reflejo.Count == cartaSeleccionadas.Count;
-
 			return perfecta.materialesOBJ.Count == cartaSeleccionadas.Count;
 		}
 

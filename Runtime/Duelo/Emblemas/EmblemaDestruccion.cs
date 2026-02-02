@@ -79,6 +79,7 @@ namespace Bounds.Duelo.Emblemas {
 			if (SalvadoPorProteccion(carta))
 				return false;
 
+			carta.GetComponentInChildren<GestorVisual>().Animar("GOLPE", "FxExplosion");
 			DisminuirVida(carta);
 
 			if (cartaInfo.TraerContadores("supervivencia") > 0) {

@@ -1,4 +1,3 @@
-using Bounds.Duelo.Carta;
 using Bounds.Duelo.Pila.Efectos;
 using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Fisicas.Carta;
@@ -15,6 +14,9 @@ namespace Bounds.Duelo.Emblemas {
 			cartaInfo.ColocarContador(tipo, cantidad);
 			if (tipo == "debilidad") {
 				carta.GetComponentInChildren<GestorVisual>().Animar("SANGRE", "FxSerpiente");
+			}
+			if (tipo == "poder") {
+				carta.GetComponentInChildren<GestorVisual>().Animar("NUBE", "FxEspadas");
 			}
 
 			if (cartaInfo.TraerContadores("veneno") >= cartaInfo.original.nivel) {

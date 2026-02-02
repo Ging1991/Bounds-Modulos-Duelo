@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Bounds.Duelo.CPU.Condiciones;
 using Bounds.Duelo.Emblemas;
-using Bounds.Duelo.Utiles;
+using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Duelo.Fisicas;
 using Ging1991.Core;
 using UnityEngine;
@@ -29,40 +29,47 @@ namespace Bounds.Duelo.CPU.Acciones {
 			MetodoPivot(opciones, cantidadActual, codigo);
 		}
 
+
 		private void MetodoPivot(List<GameObject> opciones, int cantidadActual, string codigo) {
 			if (opciones.Count > 0) {
 				EmblemaSeleccionInvocacionPerfecta perfecta = EmblemaSeleccionInvocacionPerfecta.GetInstancia();
 				perfecta.Seleccionar(jugador, opciones[0]);
-				SeleccionarMateriales();
+				Debug.Log(perfecta.cartaSeleccionada.name);
+				SeleccionarMateriales(opciones[0]);
 				if (EstadisticasSingleton.Instancia.GetValor(codigo) == cantidadActual)
 					posponer = true;
 			}
 		}
 
 
-		private bool SeleccionarMateriales() {
-			Entrada entrada = Entrada.GetInstancia();
+		private bool SeleccionarMateriales(GameObject criatura) {
 			Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();
 			EmblemaSeleccionMaterial material = EmblemaSeleccionMaterial.GetInstancia();
-			foreach (GameObject carta in new List<GameObject>(fisica.TraerCartasEnCampo(1))) {
-				material.Seleccionar(carta);
-				if (material.EstaCompleto())
-					break;
+
+			string invocacion = criatura.GetComponent<CartaInfo>().original.datoCriatura.perfeccion;
+
+			if (invocacion == "ROMPECABEZAS") {
+				foreach (GameObject carta in new List<GameObject>(fisica.TraerCartasEnMano(2))) {
+					material.Seleccionar(carta);
+					if (material.EstaCompleto())
+						break;
+				}
+				return true;
 			}
+
+			if (invocacion == "REFLEJO") {
+				foreach (GameObject carta in new List<GameObject>(fisica.TraerCartasEnCampo(1))) {
+					material.Seleccionar(carta);
+					if (material.EstaCompleto())
+						break;
+				}
+				return true;
+			}
+
 			foreach (GameObject carta in new List<GameObject>(fisica.TraerCartasEnCampo(2))) {
 				material.Seleccionar(carta);
 				if (material.EstaCompleto())
 					break;
-			}
-			foreach (GameObject carta in new List<GameObject>(fisica.TraerCartasEnMano(2))) {
-				material.Seleccionar(carta);
-				if (material.EstaCompleto())
-					break;
-			}
-			BuscadorCampo buscador = BuscadorCampo.getInstancia();
-			GameObject campo = buscador.buscarCampoLibre(2);
-			if (campo != null) {
-				entrada.PresionarCampo(campo);
 				return true;
 			}
 			return false;
