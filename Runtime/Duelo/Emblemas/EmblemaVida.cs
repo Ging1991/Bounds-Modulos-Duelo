@@ -50,16 +50,16 @@ namespace Bounds.Duelo.Emblemas {
 			bloque.GetComponentInChildren<GestorVisual>().Animar(visual, "FxExplosion");
 
 			TerminarJuego terminar = GameObject.Find("TerminarJuego").GetComponent<TerminarJuego>();
-			Configuracion configuracion = GameObject.FindAnyObjectByType<ControlDuelo>().configuracion;
+			Billetera billetera = GameObject.FindAnyObjectByType<ControlDuelo>().billetera;
 
 			if (bloque.vida < 1) {
 				if (jugador == 1) {
-					configuracion.GanarOro(100);
+					billetera.GanarOro(100);
 					terminar.Terminar(false);
 
 				}
 				else {
-					configuracion.GanarOro(bloque.vida / 10);
+					billetera.GanarOro(bloque.vida / 10);
 					terminar.Terminar(true);
 				}
 			}

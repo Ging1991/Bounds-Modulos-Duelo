@@ -107,7 +107,7 @@ namespace Bounds.Duelo.Emblemas {
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			Fisica fisica = conocimiento.traerFisica();
 			ControlDuelo controlDuelo = GameObject.FindAnyObjectByType<ControlDuelo>();
-			Configuracion configuracion = controlDuelo.configuracion;
+			Billetera billetera = GameObject.FindAnyObjectByType<ControlDuelo>().billetera;
 
 			bool haGanado = false;
 			foreach (GameObject carta in fisica.TraerCartasEnCampo(jugador)) {
@@ -117,23 +117,23 @@ namespace Bounds.Duelo.Emblemas {
 			if (!haGanado) {
 				if (jugador == 1) {
 					terminar.Terminar(false);
-					configuracion.GanarOro(100);
+					billetera.GanarOro(100);
 				}
 				else {
 					BloqueJugador bloque = BloqueJugador.getInstancia("BloqueJugador" + 1);
-					configuracion.GanarOro(bloque.vida / 10);
+					billetera.GanarOro(bloque.vida / 10);
 					terminar.Terminar(true);
 				}
 			}
 			else {
 				if (jugador == 1) {
 					BloqueJugador bloque = BloqueJugador.getInstancia("BloqueJugador" + 1);
-					configuracion.GanarOro(bloque.vida / 10);
+					billetera.GanarOro(bloque.vida / 10);
 					terminar.Terminar(true);
 				}
 				else {
 					terminar.Terminar(false);
-					configuracion.GanarOro(100);
+					billetera.GanarOro(100);
 				}
 			}
 

@@ -30,7 +30,7 @@ namespace Bounds.Duelo {
 		IEnumerator MostrarCuadroRecompensas(bool haGanado) {
 			this.haGanado = haGanado;
 			ControlDuelo controlDuelo = GameObject.FindAnyObjectByType<ControlDuelo>();
-			Configuracion configuracion = controlDuelo.configuracion;
+			Billetera billetera = GameObject.FindAnyObjectByType<ControlDuelo>().billetera;
 
 			yield return new WaitForSeconds(1);
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
@@ -41,12 +41,12 @@ namespace Bounds.Duelo {
 				BloqueJugador bloque1 = BloqueJugador.getInstancia("BloqueJugador" + 1);
 				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar("Resultado: VICTORIA", $"Recompensa ${bloque1.vida / 10}");
 				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(this, true, DatosDeCartas.Instancia, ilustradorDeCartas);
-				configuracion.GanarOro(bloque1.vida / 10);
+				billetera.GanarOro(bloque1.vida / 10);
 			}
 			else {
 				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar("Resultado: DERROTA", "Recompensa $100");
 				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(this, false, DatosDeCartas.Instancia, ilustradorDeCartas);
-				configuracion.GanarOro(100);
+				billetera.GanarOro(100);
 			}
 		}
 

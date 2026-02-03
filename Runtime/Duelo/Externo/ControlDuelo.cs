@@ -40,6 +40,7 @@ namespace Bounds.Duelo {
 		public ParametrosControlDuelo parametrosControl;
 		public LectorCartaTexto lectorCartaTexto;
 		public Configuracion configuracion;
+		public Billetera billetera;
 
 		void Start() {
 
@@ -48,6 +49,7 @@ namespace Bounds.Duelo {
 
 			lectorCartaTexto = new LectorCartaTexto(parametrosEscena.direcciones["DIRECCION_NOMBRES"]);
 			configuracion = new(parametrosEscena.direcciones["CONFIGURACION"]);
+			billetera = new(parametrosEscena.direcciones["BILLETERA"]);
 
 			foreach (var campo in FindObjectsByType<CampoLugar>(FindObjectsSortMode.None)) {
 				campo.controlador = this;
