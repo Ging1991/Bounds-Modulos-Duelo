@@ -2050,6 +2050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IlustradorDeCartas
       objectReference: {fileID: 0}
+    - target: {fileID: 5848583370995007121, guid: c2d9e363c1d338848bbe60e99a5ae7b3, type: 3}
+      propertyPath: direccionDinamica
+      value: IMAGENES/Cartas/Imagenes
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

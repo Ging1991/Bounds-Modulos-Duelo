@@ -70,7 +70,6 @@ namespace Bounds.Duelo.CPU.Acciones {
 				material.Seleccionar(carta);
 				if (material.EstaCompleto())
 					break;
-				return true;
 			}
 			return false;
 		}
