@@ -23,6 +23,7 @@ using Bounds.Modulos.Duelo;
 using Bounds.Persistencia.Lectores;
 using Bounds.Persistencia.Parametros;
 using Bounds.Persistencia;
+using Bounds.Modulos.Persistencia;
 
 namespace Bounds.Duelo {
 
@@ -41,6 +42,7 @@ namespace Bounds.Duelo {
 		public LectorCartaTexto lectorCartaTexto;
 		public Configuracion configuracion;
 		public Billetera billetera;
+		public MusicaDeFondo musicaDeFondo;
 
 		void Start() {
 
@@ -50,6 +52,7 @@ namespace Bounds.Duelo {
 			lectorCartaTexto = new LectorCartaTexto(parametrosEscena.direcciones["DIRECCION_NOMBRES"]);
 			configuracion = new(parametrosEscena.direcciones["CONFIGURACION"]);
 			billetera = new(parametrosEscena.direcciones["BILLETERA"]);
+			musicaDeFondo.Inicializar(parametrosEscena.direcciones["MUSICA_DE_FONDO"]);
 
 			foreach (var campo in FindObjectsByType<CampoLugar>(FindObjectsSortMode.None)) {
 				campo.controlador = this;
