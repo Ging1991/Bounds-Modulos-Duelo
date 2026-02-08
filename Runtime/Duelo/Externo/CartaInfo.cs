@@ -157,7 +157,7 @@ namespace Bounds.Fisicas.Carta {
 		}
 
 
-		private void RecalcularEstadisticas() {
+		public void RecalcularEstadisticas() {
 			CartaFrente cartaFrente = GetComponentInChildren<CartaFrente>();
 			cartaFrente.SetEstadisticas();
 			if (original.clase == "CRIATURA")

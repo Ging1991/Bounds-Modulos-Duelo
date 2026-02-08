@@ -241,6 +241,16 @@ namespace Bounds.Duelo.Emblemas {
 				}
 			}
 
+			if (dato.tipo == "CONVERTIR_BASICO") {
+				EmblemaEfectos.Activar(
+					new EfectoSobreCartas(
+						hechizo,
+						new SubConvertir(),
+						new SubCartasControladas(0, new CondicionClase("EQUIPO")).Generar()
+					)
+				);
+			}
+
 			if (dato.tipo == "LLEGADA") {
 				EmblemaEfectos.Activar(
 					new EfectoSobreJugador(
