@@ -9,9 +9,11 @@ using Ging1991.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Bounds.Duelo.Paneles {
+namespace Bounds.Duelo.Paneles
+{
 
-	public class PanelCartas : MonoBehaviour, ISeleccionarCarta {
+	public class PanelCartas : MonoBehaviour, ISeleccionarCarta
+	{
 
 		public List<GameObject> cartas, opciones, cartasSeleccionadas;
 		public int pagina, paginaMax, paginaMin;
@@ -21,7 +23,8 @@ namespace Bounds.Duelo.Paneles {
 		public GameObject tituloOBJ;
 
 
-		public void Iniciar(List<GameObject> cartas, ISeleccionarCarta accion, int cantidad = 1, string texto = "Panel de visualización") {
+		public void Iniciar(List<GameObject> cartas, ISeleccionarCarta accion, int cantidad = 1, string texto = "Panel de visualización")
+		{
 			gameObject.SetActive(true);
 			Bloqueador.BloquearGrupo("GLOBAL", true);
 
@@ -42,14 +45,17 @@ namespace Bounds.Duelo.Paneles {
 		}
 
 
-		public void AutoSeleccionar() {
-			if (cartas.Count == 1) {
+		public void AutoSeleccionar()
+		{
+			if (cartas.Count == 1)
+			{
 				Seleccionar(cartas[0]);
 			}
 		}
 
 
-		public void BotonCerrar() {
+		public void BotonCerrar()
+		{
 			Bloqueador.BloquearGrupo("GLOBAL", false);
 			gameObject.SetActive(false);
 			EmblemaSeleccionInvocacionPerfecta.GetInstancia().Deseleccionar();
@@ -58,8 +64,10 @@ namespace Bounds.Duelo.Paneles {
 		}
 
 
-		public void RetirarPanel() {
-			if (!permanecer) {
+		public void RetirarPanel()
+		{
+			if (!permanecer)
+			{
 				Bloqueador.BloquearGrupo("GLOBAL", false);
 				gameObject.SetActive(false);
 				permanecer = false;
@@ -67,7 +75,8 @@ namespace Bounds.Duelo.Paneles {
 		}
 
 
-		public void BotonSiguiente() {
+		public void BotonSiguiente()
+		{
 			pagina++;
 			if (pagina > paginaMax)
 				pagina = paginaMin;
@@ -75,7 +84,8 @@ namespace Bounds.Duelo.Paneles {
 		}
 
 
-		public void BotonAnterior() {
+		public void BotonAnterior()
+		{
 			pagina--;
 			if (pagina < paginaMin)
 				pagina = paginaMax;
@@ -83,14 +93,16 @@ namespace Bounds.Duelo.Paneles {
 		}
 
 
-		public void Mostrar() {
+		public void Mostrar()
+		{
 
 			foreach (GameObject opcion in opciones)
 				opcion.SetActive(false);
 
 			int desplazamiento = (pagina - 1) * 5;
 
-			for (int i = 0; i < 5; i++) {
+			for (int i = 0; i < 5; i++)
+			{
 
 				int posicion = i + desplazamiento;
 				if (posicion >= cartas.Count)
@@ -107,19 +119,24 @@ namespace Bounds.Duelo.Paneles {
 		}
 
 
-		public void InicializarVisuales(DatosDeCartas datosDeCartas, IlustradorDeCartas ilustradorDeCartas, ITintero tintero) {
+		public void InicializarVisuales(DatosDeCartas datosDeCartas, IlustradorDeCartas ilustradorDeCartas, ITintero tintero)
+		{
 			foreach (GameObject opcion in opciones)
 				opcion.GetComponentInChildren<CartaFrente>().Inicializar(datosDeCartas, ilustradorDeCartas, tintero);
 		}
 
 
-		public void Seleccionar(GameObject carta) {
-			if (cartasSeleccionadas.Contains(carta)) {
+		public void Seleccionar(GameObject carta)
+		{
+			if (cartasSeleccionadas.Contains(carta))
+			{
 				cartasSeleccionadas.Remove(carta);
 			}
-			else {
+			else
+			{
 				cartasSeleccionadas.Add(carta);
-				if (cartasSeleccionadas.Count == cantidad) {
+				if (cartasSeleccionadas.Count == cantidad)
+				{
 					accion.Seleccionar(carta);
 					RetirarPanel();
 				}
