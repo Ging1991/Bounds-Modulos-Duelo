@@ -9,6 +9,14 @@ namespace Bounds.Duelo.Emblemas {
 
 		private static readonly float DIVISOR = 255f;
 
+		public static void ConvertirID(GameObject carta, int cartaID) {
+			CartaBD datos = ControlDuelo.Instancia.datosDeCartas.lector.LeerDatos(cartaID);
+			CartaInfo info = carta.GetComponent<CartaInfo>();
+			info.cargar(datos);
+			carta.GetComponentInChildren<CartaFrente>().Mostrar(cartaID);
+			info.cartaID = cartaID;
+		}
+
 		public static void Convertir(GameObject carta) {
 
 			CartaInfo info = carta.GetComponent<CartaInfo>();

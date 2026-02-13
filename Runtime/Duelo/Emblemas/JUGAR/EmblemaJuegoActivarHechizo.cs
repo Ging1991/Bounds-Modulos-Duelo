@@ -85,11 +85,16 @@ namespace Bounds.Duelo.Emblemas {
 			HechizoBD dato = hechizo.GetComponent<CartaInfo>().original.datoHechizo;
 			Fisica fisica = Fisica.Instancia;
 			CondicionCarta condicion = CondicionMapper.GenerarCondicion(dato.condicionCarta, jugador);
+
 			List<GameObject> opciones = new();
 
 			if (dato.fuentes.Contains("CAMPO")) {
 				opciones.AddRange(fisica.TraerCartasEnCampo(1));
 				opciones.AddRange(fisica.TraerCartasEnCampo(2));
+			}
+			if (dato.fuentes.Contains("MAZO")) {
+				opciones.AddRange(fisica.TraerCartasEnMazo(1));
+				opciones.AddRange(fisica.TraerCartasEnMazo(2));
 			}
 			if (dato.fuentes.Contains("DESCARTE")) {
 				opciones.AddRange(fisica.TraerCartasEnCementerio(1));

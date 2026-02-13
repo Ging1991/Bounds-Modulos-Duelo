@@ -74,7 +74,7 @@ namespace Bounds.Duelo.Emblemas {
 			ActivarTrampas(carta);
 			ActivarVacios(jugador, carta);
 
-			// TRAMPAS ANTI META
+			// TRAMPAS ANTI META f
 			int adversario = Adversario(jugador);
 			GameObject lugarTrampa = BuscadorCampo.getInstancia().buscarCampoLibre(adversario);
 			if (lugarTrampa != null) {
@@ -218,10 +218,11 @@ namespace Bounds.Duelo.Emblemas {
 
 				}
 				if (infoTrampa.original.datoTrampa.tipo == "anti_fusion" && infoTrampa.original.clase == "FUSION") {
-					//EmblemaDestruccion.Destruir(criatura, 0);
+					//EmblemaDestruccion.Destruir(criatura, 0); 
 					generalTrampa.ColocarBocaArriba();
 					break;
 				}
+
 				if (infoTrampa.original.datoTrampa.tipo == "CONTRATAQUE_FENIX") {
 					EmblemaTrampa.ActivarTrampa(trampa);
 					EfectoBase efectoBase = new EfectoSobreJugador(trampa, controlador, new SubModificarLP(-500));
@@ -243,6 +244,12 @@ namespace Bounds.Duelo.Emblemas {
 				if (infoTrampa.original.datoTrampa.tipo == "DESTRUYE_INVOCACION_NORMAL") {
 					EmblemaTrampa.ActivarTrampa(trampa);
 					EmblemaEfectos.Activar(new EfectoSobreCarta(trampa, new SubDestruir(), criatura));
+					break;
+				}
+
+				if (infoTrampa.original.datoTrampa.tipo == "SINROSTRO") {
+					EmblemaTrampa.ActivarTrampa(trampa);
+					EmblemaEfectos.Activar(new EfectoSobreCarta(trampa, new SubConvertirID(22), criatura));
 					break;
 				}
 

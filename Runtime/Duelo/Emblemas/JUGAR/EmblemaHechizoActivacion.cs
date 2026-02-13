@@ -171,6 +171,10 @@ namespace Bounds.Duelo.Emblemas {
 				EmblemaEfectos.Activar(new EfectoSobreCarta(hechizo, new SubDestruir(), objetivo));
 			}
 
+			if (dato.tipo == "PARADOJA_OBJETIVO") {
+				EmblemaEfectos.Activar(new EfectoSobreCarta(hechizo, new SubParadoja(controlador, "EVOLUCION"), objetivo));
+			}
+
 			if (dato.tipo == "OBJETIVO_LEVANTAR") {
 				EmblemaEfectos.Activar(new EfectoSobreCarta(hechizo, new SubLevantar(), objetivo));
 			}

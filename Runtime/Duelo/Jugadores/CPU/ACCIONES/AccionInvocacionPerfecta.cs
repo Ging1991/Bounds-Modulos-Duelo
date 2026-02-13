@@ -34,7 +34,6 @@ namespace Bounds.Duelo.CPU.Acciones {
 			if (opciones.Count > 0) {
 				EmblemaSeleccionInvocacionPerfecta perfecta = EmblemaSeleccionInvocacionPerfecta.GetInstancia();
 				perfecta.Seleccionar(jugador, opciones[0]);
-				Debug.Log(perfecta.cartaSeleccionada.name);
 				SeleccionarMateriales(opciones[0]);
 				if (EstadisticasSingleton.Instancia.GetValor(codigo) == cantidadActual)
 					posponer = true;
