@@ -299,7 +299,7 @@ namespace Bounds.Duelo.Emblemas {
 						new EfectoSobreCartas(
 							cartaEnCementerio,
 							new SubColocarContador("poder", 1),
-							new SubCartasControladas(jugador).Generar()
+							new SubCartasControladas(jugador, new CondicionClase("CRIATURA")).Generar()
 						)
 					);
 				}
@@ -308,7 +308,7 @@ namespace Bounds.Duelo.Emblemas {
 						new EfectoSobreCartas(
 							cartaEnCementerio,
 							new SubColocarContador("debilidad", 1),
-							new SubCartasControladas(adversario).Generar()
+							new SubCartasControladas(adversario, new CondicionClase("CRIATURA")).Generar()
 						)
 					);
 				}

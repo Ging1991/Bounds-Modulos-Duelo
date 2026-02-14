@@ -138,9 +138,9 @@ namespace Bounds.Duelo.Emblemas {
 			}
 
 			if (cartaEfecto.TieneClave("EXPLOSION")) {
-				EfectoBase efectoBase = new EfectoSobreJugador(carta, Adversario(info.controlador), new SubModificarLP(-500));
-				efectoBase.AgregarEtiqueta("EXPLOSION");
-				EmblemaEfectos.Activar(efectoBase);
+				EmblemaEfectos.Activar(
+					new EfectoSobreJugador(carta, Adversario(info.controlador), new SubModificarLP(-400), "EXPLOSION")
+				);
 			}
 
 			if (cartaEfecto.TieneClave("DRENAR_T") && tiposDeCriatura.Contains(cartaEfecto.GetEfecto("DRENAR_T").parametroTipo)) {
