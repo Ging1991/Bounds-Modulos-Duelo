@@ -208,9 +208,9 @@ namespace Bounds.Duelo.Emblemas {
 					}
 				}
 
-				if (infoVacio.original.datoVacio.tipo == "IMPERIO_REPTIL" && cartaTipo.ContieneTipo("reptil")) {
+				if (infoVacio.original.datoVacio.tipo == "IMPERIO_REPTIL" && cartaTipo.ContieneTipo("REPTIL")) {
 					List<GameObject> repiles = new List<GameObject>(fisica.TraerCartasEnMazo(info.controlador));
-					Condicion condicionReptil = new Condicion(tipoCarta: "CRIATURA", tipoCriatura: new List<string> { "reptil" });
+					Condicion condicionReptil = new Condicion(tipoCarta: "CRIATURA", tipoCriatura: new List<string> { "REPTIL" });
 					repiles = condicionReptil.CumpleLista(repiles);
 					if (repiles.Count > 0) {
 						fisica.EnviarHaciaMano(repiles[0], info.controlador);
