@@ -8,7 +8,7 @@ using Bounds.Modulos.Visor;
 using Bounds.Modulos.Visor.Persistencia;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Fisicas.Carta;
-using Bounds.Persistencia.Lectores;
+using Bounds.Modulos.Persistencia;
 
 namespace Bounds.Infraestructura.Visores {
 
@@ -23,10 +23,10 @@ namespace Bounds.Infraestructura.Visores {
 		private ITintero tintero;
 		public VisorGeneral visorGeneral;
 		public VisorContador visorContador;
-		protected LectorCartaTexto lectorCartaTexto;
+		protected ISelectorXXX<int, string> selectorNombres;
 
 
-		public void Inicializar(LectorCartaTexto lectorCartaTexto) {
+		public void Inicializar(ISelectorXXX<int, string> selectorNombres) {
 			datosDeCartas.Inicializar();
 			datosDeEfectos.Inicializar();
 			ilustradorDeCartas.Inicializar();
@@ -34,10 +34,10 @@ namespace Bounds.Infraestructura.Visores {
 			traductorPerfecciones.Inicializar();
 			traductorTipos.Inicializar();
 			tintero = new TinteroBounds();
-			this.lectorCartaTexto = lectorCartaTexto;
+			this.selectorNombres = selectorNombres;
 			visorGeneral.Inicializar(
 				datosDeCartas, datosDeEfectos, ilustradorDeCartas, tintero, traductorClases,
-				traductorTipos, traductorPerfecciones, lectorCartaTexto
+				traductorTipos, traductorPerfecciones, selectorNombres
 			);
 		}
 
@@ -55,7 +55,9 @@ namespace Bounds.Infraestructura.Visores {
 			// NOMBRE
 			string nombre = info.original.nombre;
 			try {
-				nombre = lectorCartaTexto.GetNombre(info.cartaID);
+				string piv = selectorNombres.GetElemento(info.cartaID);
+				if (piv != null)
+					nombre = piv;
 			}
 			catch (System.Exception) {
 				Debug.LogWarning($"No se encontró el nombre {info.cartaID}");

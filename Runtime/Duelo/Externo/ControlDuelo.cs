@@ -39,7 +39,7 @@ namespace Bounds.Duelo {
 		public IFinalizarDuelo finalizarDuelo;
 
 		public ParametrosControlDuelo parametrosControl;
-		public LectorCartaTexto lectorCartaTexto;
+		public ISelectorXXX<int, string> selectorNombres;
 		public Configuracion configuracion;
 		public Billetera billetera;
 		public MusicaDeFondo musicaDeFondo;
@@ -49,7 +49,7 @@ namespace Bounds.Duelo {
 			parametrosControl.Inicializar();
 			ParametrosEscena parametrosEscena = parametrosControl.parametros;
 
-			lectorCartaTexto = new LectorCartaTexto(parametrosEscena.direcciones["DIRECCION_NOMBRES"]);
+			selectorNombres = new TraductorCartaID(parametrosEscena.direcciones["CARTA_NOMBRES"]);
 			configuracion = new(parametrosEscena.direcciones["CONFIGURACION"]);
 			billetera = new(parametrosEscena.direcciones["BILLETERA"]);
 			musicaDeFondo.Inicializar(parametrosEscena.direcciones["MUSICA_DE_FONDO"]);
@@ -58,7 +58,7 @@ namespace Bounds.Duelo {
 				campo.controlador = this;
 			}
 
-			visorDuelo.Inicializar(lectorCartaTexto);
+			visorDuelo.Inicializar(selectorNombres);
 
 			CPUReloj cpuReloj = GameObject.Find("CPU").GetComponent<CPUReloj>();
 			cpuReloj.Inicializacion();
