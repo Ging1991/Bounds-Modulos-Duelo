@@ -9,6 +9,7 @@ using Bounds.Modulos.Visor.Persistencia;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Persistencia;
+using Ging1991.Core.Interfaces;
 
 namespace Bounds.Infraestructura.Visores {
 
@@ -17,26 +18,27 @@ namespace Bounds.Infraestructura.Visores {
 		public IlustradorDeCartas ilustradorDeCartas;
 		public DatosDeCartas datosDeCartas;
 		public DatosDeEfectos datosDeEfectos;
-		public TraductorVisor traductorClases;
 		public TraductorVisor traductorTipos;
 		public TraductorVisor traductorPerfecciones;
 		private ITintero tintero;
 		public VisorGeneral visorGeneral;
 		public VisorContador visorContador;
-		protected ISelectorXXX<int, string> selectorNombres;
+		protected ISelector<int, string> selectorNombres;
+		protected ISelector<string, string> selectorClases;
 
 
-		public void Inicializar(ISelectorXXX<int, string> selectorNombres) {
+		public void Inicializar(ISelector<int, string> selectorNombres, ISelector<string, string> selectorClases) {
 			datosDeCartas.Inicializar();
 			datosDeEfectos.Inicializar();
 			ilustradorDeCartas.Inicializar();
-			traductorClases.Inicializar();
 			traductorPerfecciones.Inicializar();
 			traductorTipos.Inicializar();
 			tintero = new TinteroBounds();
 			this.selectorNombres = selectorNombres;
+			this.selectorClases = selectorClases;
+
 			visorGeneral.Inicializar(
-				datosDeCartas, datosDeEfectos, ilustradorDeCartas, tintero, traductorClases,
+				datosDeCartas, datosDeEfectos, ilustradorDeCartas, tintero, selectorClases,
 				traductorTipos, traductorPerfecciones, selectorNombres
 			);
 		}

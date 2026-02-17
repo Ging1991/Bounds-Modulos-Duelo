@@ -24,6 +24,7 @@ using Bounds.Persistencia.Lectores;
 using Bounds.Persistencia.Parametros;
 using Bounds.Persistencia;
 using Bounds.Modulos.Persistencia;
+using Ging1991.Core.Interfaces;
 
 namespace Bounds.Duelo {
 
@@ -39,7 +40,8 @@ namespace Bounds.Duelo {
 		public IFinalizarDuelo finalizarDuelo;
 
 		public ParametrosControlDuelo parametrosControl;
-		public ISelectorXXX<int, string> selectorNombres;
+		public ISelector<int, string> selectorNombres;
+		public ISelector<string, string> selectorClases;
 		public Configuracion configuracion;
 		public Billetera billetera;
 		public MusicaDeFondo musicaDeFondo;
@@ -50,6 +52,7 @@ namespace Bounds.Duelo {
 			ParametrosEscena parametrosEscena = parametrosControl.parametros;
 
 			selectorNombres = new TraductorCartaID(parametrosEscena.direcciones["CARTA_NOMBRES"]);
+			selectorClases = new TraductorTexto(parametrosEscena.direcciones["CARTA_CLASES"]);
 			configuracion = new(parametrosEscena.direcciones["CONFIGURACION"]);
 			billetera = new(parametrosEscena.direcciones["BILLETERA"]);
 			musicaDeFondo.Inicializar(parametrosEscena.direcciones["MUSICA_DE_FONDO"]);
@@ -58,7 +61,7 @@ namespace Bounds.Duelo {
 				campo.controlador = this;
 			}
 
-			visorDuelo.Inicializar(selectorNombres);
+			visorDuelo.Inicializar(selectorNombres, selectorClases);
 
 			CPUReloj cpuReloj = GameObject.Find("CPU").GetComponent<CPUReloj>();
 			cpuReloj.Inicializacion();
