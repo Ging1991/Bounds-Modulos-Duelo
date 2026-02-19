@@ -20,7 +20,6 @@ using Bounds.Modulos.Cartas.Tinteros;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Campos;
 using Bounds.Modulos.Duelo;
-using Bounds.Persistencia.Lectores;
 using Bounds.Persistencia.Parametros;
 using Bounds.Persistencia;
 using Bounds.Modulos.Persistencia;
@@ -33,7 +32,7 @@ namespace Bounds.Duelo {
 		private ProveedorImagenPersonaje proveedorMiniatura;
 		public GestorDeSonidos gestorDeSonidos;
 		public DatosDeCartas datosDeCartas;
-		public IlustradorDeCartas ilustradorDeCartas;
+		public ISelector<string, Sprite> ilustradorDeCartas;
 		public VisorDuelo visorDuelo;
 		public PilaVisual pilaVisual;
 		public PanelCartas panelCartas;
@@ -42,6 +41,9 @@ namespace Bounds.Duelo {
 		public ParametrosControlDuelo parametrosControl;
 		public ISelector<int, string> selectorNombres;
 		public ISelector<string, string> selectorClases;
+		public ISelector<string, string> selectorTipos;
+		public ISelector<string, string> selectorInvocaciones;
+
 		public Configuracion configuracion;
 		public Billetera billetera;
 		public MusicaDeFondo musicaDeFondo;
@@ -53,15 +55,22 @@ namespace Bounds.Duelo {
 
 			selectorNombres = new TraductorCartaID(parametrosEscena.direcciones["CARTA_NOMBRES"]);
 			selectorClases = new TraductorTexto(parametrosEscena.direcciones["CARTA_CLASES"]);
+			selectorTipos = new TraductorTexto(parametrosEscena.direcciones["CARTA_TIPOS"]);
+			selectorInvocaciones = new TraductorTexto(parametrosEscena.direcciones["CARTA_INVOCACIONES"]);
 			configuracion = new(parametrosEscena.direcciones["CONFIGURACION"]);
 			billetera = new(parametrosEscena.direcciones["BILLETERA"]);
 			musicaDeFondo.Inicializar(parametrosEscena.direcciones["MUSICA_DE_FONDO"]);
+			ilustradorDeCartas = new IlustradorDeCartas(
+				parametrosControl.parametros.direcciones["CARTAS_RECURSO"],
+				parametrosControl.parametros.direcciones["CARTAS_DINAMICA"]
+			);
+
 
 			foreach (var campo in FindObjectsByType<CampoLugar>(FindObjectsSortMode.None)) {
 				campo.controlador = this;
 			}
 
-			visorDuelo.Inicializar(selectorNombres, selectorClases);
+			visorDuelo.Inicializar(selectorNombres, selectorClases, selectorTipos, selectorInvocaciones, ilustradorDeCartas);
 
 			CPUReloj cpuReloj = GameObject.Find("CPU").GetComponent<CPUReloj>();
 			cpuReloj.Inicializacion();

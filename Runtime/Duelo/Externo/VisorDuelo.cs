@@ -8,38 +8,38 @@ using Bounds.Modulos.Visor;
 using Bounds.Modulos.Visor.Persistencia;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Fisicas.Carta;
-using Bounds.Modulos.Persistencia;
 using Ging1991.Core.Interfaces;
+using Bounds.Duelo;
 
 namespace Bounds.Infraestructura.Visores {
 
 	public class VisorDuelo : MonoBehaviour {
 
-		public IlustradorDeCartas ilustradorDeCartas;
 		public DatosDeCartas datosDeCartas;
 		public DatosDeEfectos datosDeEfectos;
-		public TraductorVisor traductorTipos;
-		public TraductorVisor traductorPerfecciones;
 		private ITintero tintero;
 		public VisorGeneral visorGeneral;
 		public VisorContador visorContador;
 		protected ISelector<int, string> selectorNombres;
 		protected ISelector<string, string> selectorClases;
+		protected ISelector<string, string> selectorTipos;
+		protected ISelector<string, string> selectorInvocaciones;
 
 
-		public void Inicializar(ISelector<int, string> selectorNombres, ISelector<string, string> selectorClases) {
+		public void Inicializar(ISelector<int, string> selectorNombres, ISelector<string, string> selectorClases,
+				ISelector<string, string> selectorTipos, ISelector<string, string> selectorInvocaciones, ISelector<string, Sprite> ilustrador) {
+
 			datosDeCartas.Inicializar();
 			datosDeEfectos.Inicializar();
-			ilustradorDeCartas.Inicializar();
-			traductorPerfecciones.Inicializar();
-			traductorTipos.Inicializar();
 			tintero = new TinteroBounds();
 			this.selectorNombres = selectorNombres;
 			this.selectorClases = selectorClases;
+			this.selectorTipos = selectorTipos;
+			this.selectorInvocaciones = selectorInvocaciones;
 
 			visorGeneral.Inicializar(
-				datosDeCartas, datosDeEfectos, ilustradorDeCartas, tintero, selectorClases,
-				traductorTipos, traductorPerfecciones, selectorNombres
+				datosDeCartas, datosDeEfectos, ilustrador, tintero, selectorClases,
+				selectorTipos, selectorInvocaciones, selectorNombres
 			);
 		}
 

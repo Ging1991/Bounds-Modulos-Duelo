@@ -14,7 +14,7 @@ public class CreacionDeCartas : MonoBehaviour {
 
 	public GameObject objCarta;
 	private static Vector3 ESCALA_CARTA = new Vector3(0.95f, 0.95f, 1f);
-	public IlustradorDeCartas ilustradorDeCartas;
+
 	public DatosDeCartas datosDeCartas;
 
 
@@ -28,7 +28,7 @@ public class CreacionDeCartas : MonoBehaviour {
 
 		CartaGeneral general = carta.GetComponent<CartaGeneral>();
 
-		general.Iniciar(cartaID, imagen, rareza, datosDeCartas, ilustradorDeCartas, new TinteroBounds(), Entrada.GetInstancia());
+		general.Iniciar(cartaID, imagen, rareza, datosDeCartas, ControlDuelo.Instancia.ilustradorDeCartas, new TinteroBounds(), Entrada.GetInstancia());
 
 		CartaBD datoCarta = DatosDeCartas.Instancia.lector.LeerDatos(cartaID);
 		CartaInfo info = carta.GetComponent<CartaInfo>();

@@ -11,8 +11,6 @@ namespace Bounds.Duelo.Pila {
 
 		public List<GameObject> efectos;
 		public DatosDeCartas datosDeCartas;
-		public IlustradorDeCartas ilustradorDeCartas;
-
 
 		public void SetEfectos(List<PilaEfectos.CartaPila> cartasID) {
 			DesactivarEfectos();
@@ -43,7 +41,7 @@ namespace Bounds.Duelo.Pila {
 			ITintero tintero = new TinteroBounds();
 
 			foreach (GameObject efecto in efectos)
-				efecto.GetComponent<CartaFrente>().Inicializar(datosDeCartas, ilustradorDeCartas, tintero);
+				efecto.GetComponent<CartaFrente>().Inicializar(datosDeCartas, ControlDuelo.Instancia.ilustradorDeCartas, tintero);
 		}
 
 

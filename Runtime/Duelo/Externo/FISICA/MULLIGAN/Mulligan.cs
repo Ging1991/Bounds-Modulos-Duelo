@@ -19,7 +19,6 @@ namespace Bounds.Duelo {
 
 		public GameObject ventanaMulligan;
 		public DatosDeCartas datosDeCartas;
-		public IlustradorDeCartas ilustradorDeCartas;
 
 		public void Iniciar() {
 			Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();
@@ -37,7 +36,7 @@ namespace Bounds.Duelo {
 			CartaFrente cartaFrente = transform.GetChild(posicion).GetComponent<CartaFrente>();
 			cartaFrente.gameObject.SetActive(true);
 			CartaInfo info = carta.GetComponent<CartaInfo>();
-			cartaFrente.Inicializar(datosDeCartas, ilustradorDeCartas, new TinteroBounds());
+			cartaFrente.Inicializar(datosDeCartas, ControlDuelo.Instancia.ilustradorDeCartas, new TinteroBounds());
 			cartaFrente.Mostrar(info.cartaID, info.imagen, info.rareza);
 		}
 
