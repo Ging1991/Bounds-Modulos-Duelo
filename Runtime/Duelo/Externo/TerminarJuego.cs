@@ -11,7 +11,7 @@ namespace Bounds.Duelo {
 
 	public class TerminarJuego : MonoBehaviour, IEjecutable {
 
-		public IlustradorDeCartas ilustradorDeCartas;
+		public ISelector<string, Sprite> ilustradorDeCartas;
 		public bool haGanado;
 
 		public void Ejecutar() {
@@ -30,7 +30,8 @@ namespace Bounds.Duelo {
 		IEnumerator MostrarCuadroRecompensas(bool haGanado) {
 			this.haGanado = haGanado;
 			ControlDuelo controlDuelo = GameObject.FindAnyObjectByType<ControlDuelo>();
-			Billetera billetera = GameObject.FindAnyObjectByType<ControlDuelo>().billetera;
+			Billetera billetera = controlDuelo.billetera;
+			ilustradorDeCartas = controlDuelo.ilustradorDeCartas;
 
 			yield return new WaitForSeconds(1);
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();

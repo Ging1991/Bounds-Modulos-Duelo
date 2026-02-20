@@ -16,7 +16,7 @@ public class ZonaJugador : MonoBehaviour {
 		Instanciador instanciador = GameObject.Find("Instanciador").GetComponent<Instanciador>();
 		GameObject panel = instanciador.CrearPanelVisualizacionV2();
 		PanelZona scr = panel.GetComponent<PanelZona>();
-		scr.Inicializar(datosDeCartas, ilustradorDeCartas, new TinteroBounds());
+		scr.Inicializar();
 		Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();
 		scr.iniciar(jugador, fisica.TraerCartasEnCementerio(jugador), "Visualizar cartas en el descarte");
 	}

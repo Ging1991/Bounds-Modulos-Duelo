@@ -122,10 +122,12 @@ namespace Bounds.Duelo.Emblemas {
 
 			if (jugadorActivo == 2) {
 				CPUReloj cpuReloj = GameObject.Find("CPU").GetComponent<CPUReloj>();
-				cpuReloj.ComenzarTurno();
-				instanciador.CrearTextoCreciente("¡Turno del oponente!");
-				GestorDeSonidos gestor = FindAnyObjectByType<GestorDeSonidos>();
-				gestor.ReproducirSonido("FxAdquisicion");
+				if (cpuReloj != null) {
+					cpuReloj.ComenzarTurno();
+					instanciador.CrearTextoCreciente("¡Turno del oponente!");
+					GestorDeSonidos gestor = FindAnyObjectByType<GestorDeSonidos>();
+					gestor.ReproducirSonido("FxAdquisicion");
+				}
 			}
 			else {
 				instanciador.CrearTextoCreciente("¡Es tu turno!");

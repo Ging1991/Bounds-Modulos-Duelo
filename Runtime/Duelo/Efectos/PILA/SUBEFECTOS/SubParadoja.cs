@@ -5,16 +5,16 @@ namespace Bounds.Duelo.Pila.Subefectos {
 
 	public class SubParadoja : ISubSobreCarta {
 
-		private string invocacion;
-		private int jugador;
+		private readonly int jugador;
+		private readonly int material;
 
-		public SubParadoja(int jugador, string invocacion) {
+		public SubParadoja(int jugador, int material) {
 			this.jugador = jugador;
-			this.invocacion = invocacion;
+			this.material = material;
 		}
 
 		public void AplicarEfecto(GameObject carta) {
-			EmblemaParadoja.Aplicar(jugador, carta, invocacion);
+			EmblemaParadoja.Aplicar(jugador, carta, material);
 		}
 
 

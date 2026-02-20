@@ -6,14 +6,14 @@ namespace Bounds.Duelo.Emblemas {
 
 	public class EmblemaParadoja : EmblemaPadre {
 
-		public static void Aplicar(int jugador, GameObject carta, string invocacion) {
+		public static void Aplicar(int jugador, GameObject carta, int material) {
 			EmblemaTutor.Agregar(jugador, carta);
 			CartaInfo info = carta.GetComponent<CartaInfo>();
 			info.propietario = jugador;
 			info.controlador = jugador;
 			MaterialBD materialBD = new() {
 				tipo = "CARTA_ID",
-				parametroID = 456
+				parametroID = material
 			};
 			info.original.materiales = new() { materialBD };
 		}

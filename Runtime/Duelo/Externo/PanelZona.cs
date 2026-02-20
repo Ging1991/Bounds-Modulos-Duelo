@@ -10,6 +10,8 @@ using Bounds.Modulos.Cartas.Ilustradores;
 using Bounds.Modulos.Cartas.Tinteros;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Bounds.Duelo;
+using Bounds.Duelo.Pila.Subefectos;
 
 public class PanelZona : MonoBehaviour {
 
@@ -18,6 +20,18 @@ public class PanelZona : MonoBehaviour {
 	public int jugador;
 	public GameObject cartaSeleccionada;
 	public bool estaMostrandoMateriales;
+
+	public void Inicializar() {
+		ITintero tintero = new TinteroBounds();
+
+		foreach (var carta in opciones) {
+			carta.GetComponentInChildren<CartaFrente>().Inicializar(
+				ControlDuelo.Instancia.datosDeCartas,
+				ControlDuelo.Instancia.ilustradorDeCartas,
+				tintero
+			);
+		}
+	}
 
 	public void iniciar(int jugador, List<GameObject> cartas, string texto = "Panel de visualización") {
 
@@ -70,7 +84,7 @@ public class PanelZona : MonoBehaviour {
 
 	public void botonMateriales() {
 		estaMostrandoMateriales = true;
-		//iniciar(jugador, ZonaMateriales.GetInstancia(jugador).cartas, "Visualizar cartas en materiales");
+		iniciar(jugador, FindAnyObjectByType<Fisica>().TraerCartasEnMateriales(jugador), "Visualizar cartas en materiales");
 	}
 
 
@@ -98,14 +112,6 @@ public class PanelZona : MonoBehaviour {
 			scr.Iniciar(carta);
 			scr.padre = this;
 		}
-
-	}
-
-
-	public void Inicializar(DatosDeCartas datosDeCartas, IlustradorDeCartas ilustradorDeCartas, ITintero tintero) {
-
-		foreach (GameObject opcion in opciones)
-			opcion.GetComponentInChildren<CartaFrente>().Inicializar(datosDeCartas, ilustradorDeCartas, tintero);
 
 	}
 

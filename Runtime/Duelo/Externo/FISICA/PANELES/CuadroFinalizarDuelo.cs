@@ -8,11 +8,9 @@ using Ging1991.Core.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Bounds.Duelo.Utiles
-{
+namespace Bounds.Duelo.Utiles {
 
-	public class CuadroFinalizarDuelo : MonoBehaviour, IEjecutable
-	{
+	public class CuadroFinalizarDuelo : MonoBehaviour, IEjecutable {
 
 		public IEjecutable accion;
 		public GameObject boton;
@@ -23,14 +21,12 @@ namespace Bounds.Duelo.Utiles
 		private string rareza = "N";
 
 
-		public void Iniciar(IEjecutable accion, bool gano, DatosDeCartas datos, IlustradorDeCartas ilustrador)
-		{
+		public void Iniciar(IEjecutable accion, bool gano, DatosDeCartas datos, ISelector<string, Sprite> ilustrador) {
 			Bloqueador.BloquearGrupo("GLOBAL", true);
 			gameObject.name = "CuadroFinalizar";
 			this.accion = accion;
 
-			if (!gano)
-			{
+			if (!gano) {
 				Ejecutar();
 				recompensaOBJ.gameObject.SetActive(false);
 				return;
@@ -54,15 +50,13 @@ namespace Bounds.Duelo.Utiles
 		}
 
 
-		public void Iniciar(string titulo, string texto)
-		{
+		public void Iniciar(string titulo, string texto) {
 			tituloOBJ.GetComponentInChildren<Text>().text = titulo;
 			descripcionOBJ.GetComponentInChildren<Text>().text = texto;
 		}
 
 
-		public void Aceptar()
-		{
+		public void Aceptar() {
 			Cofre cofre = new Cofre();
 			LineaReceta linea = new LineaReceta($"{cartaID}_A_{rareza}_1");
 			cofre.AgregarCarta(linea);
@@ -74,14 +68,12 @@ namespace Bounds.Duelo.Utiles
 		}
 
 
-		public static bool ExistenCuadros()
-		{
+		public static bool ExistenCuadros() {
 			return GameObject.Find("CuadroFinalizar") != null;
 		}
 
 
-		public void Ejecutar()
-		{
+		public void Ejecutar() {
 			boton.SetActive(true);
 		}
 
