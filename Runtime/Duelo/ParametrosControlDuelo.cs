@@ -15,6 +15,9 @@ namespace Bounds.Modulos.Duelo {
 			parametros.direcciones["BILLETERA"] = new DireccionDinamica("CONFIGURACION", "BILLETERA.json").Generar();
 			parametros.direcciones["CARTAS_RECURSO"] = "Cartas/Imagenes";
 			parametros.direcciones["CARTAS_DINAMICA"] = "IMAGENES/Cartas/Imagenes";
+			parametros.direcciones["COFRE_RECURSOS"] = new DireccionRecursos("MAZOS", "COFRE").Generar();
+			parametros.direcciones["COFRE"] = new DireccionDinamica("CONFIGURACION", "COFRE.json").Generar();
+
 
 		}
 

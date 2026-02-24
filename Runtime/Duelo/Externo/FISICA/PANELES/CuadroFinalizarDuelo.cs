@@ -57,8 +57,8 @@ namespace Bounds.Duelo.Utiles {
 
 
 		public void Aceptar() {
-			Cofre cofre = new Cofre();
-			LineaReceta linea = new LineaReceta($"{cartaID}_A_{rareza}_1");
+			Cofre cofre = ControlDuelo.Instancia.cofre;
+			CartaCofreBD linea = new($"{cartaID}_A_{rareza}_1");
 			cofre.AgregarCarta(linea);
 			cofre.Guardar();
 

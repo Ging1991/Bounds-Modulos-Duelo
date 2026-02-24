@@ -24,6 +24,7 @@ using Bounds.Persistencia.Parametros;
 using Bounds.Persistencia;
 using Bounds.Modulos.Persistencia;
 using Ging1991.Core.Interfaces;
+using Bounds.Cofres;
 
 namespace Bounds.Duelo {
 
@@ -37,6 +38,7 @@ namespace Bounds.Duelo {
 		public PilaVisual pilaVisual;
 		public PanelCartas panelCartas;
 		public IFinalizarDuelo finalizarDuelo;
+		public Cofre cofre;
 
 		public ParametrosControlDuelo parametrosControl;
 		public ISelector<int, string> selectorNombres;
@@ -59,6 +61,7 @@ namespace Bounds.Duelo {
 			selectorInvocaciones = new TraductorTexto(parametrosEscena.direcciones["CARTA_INVOCACIONES"]);
 			configuracion = new(parametrosEscena.direcciones["CONFIGURACION"]);
 			billetera = new(parametrosEscena.direcciones["BILLETERA"]);
+			cofre = new(parametrosEscena.direcciones["COFRE"], parametrosEscena.direcciones["COFRE_RECURSOS"]);
 			musicaDeFondo.Inicializar(parametrosEscena.direcciones["MUSICA_DE_FONDO"]);
 			ilustradorDeCartas = new IlustradorDeCartas(
 				parametrosControl.parametros.direcciones["CARTAS_RECURSO"],
