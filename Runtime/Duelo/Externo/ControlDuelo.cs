@@ -102,7 +102,7 @@ namespace Bounds.Duelo {
 			EmblemaIniciarDuelo.SetNombre(1, parametros.jugadorNombre1);
 			EmblemaIniciarDuelo.SetNombre(2, parametros.jugadorNombre2);
 
-			proveedorMiniatura = new ProveedorImagenPersonaje(new DireccionRecursos("MINIATURAS"));
+			proveedorMiniatura = new ProveedorImagenPersonaje(new DireccionRecursos("PERSONAJES/MINIATURAS"));
 			EmblemaIniciarDuelo.SetAvatar(1, proveedorMiniatura.GetImagen(parametros.jugadorMiniatura1));
 			EmblemaIniciarDuelo.SetAvatar(2, proveedorMiniatura.GetImagen(parametros.jugadorMiniatura2));
 

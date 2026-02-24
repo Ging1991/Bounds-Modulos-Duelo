@@ -30,7 +30,7 @@ public class CreacionDeCartas : MonoBehaviour {
 
 		general.Iniciar(cartaID, imagen, rareza, datosDeCartas, ControlDuelo.Instancia.ilustradorDeCartas, new TinteroBounds(), Entrada.GetInstancia());
 
-		CartaBD datoCarta = DatosDeCartas.Instancia.lector.LeerDatos(cartaID);
+		CartaBD datoCarta = DatosDeCartas.Instancia.lector.LeerDatos(cartaID).Clonar();
 		CartaInfo info = carta.GetComponent<CartaInfo>();
 
 		info.cargar(datoCarta);
