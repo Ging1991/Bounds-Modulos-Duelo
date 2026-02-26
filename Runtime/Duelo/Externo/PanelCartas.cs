@@ -2,7 +2,6 @@
 using Bounds.Duelo.Emblemas;
 using Bounds.Duelo.Paneles.Seleccion;
 using Bounds.Modulos.Cartas;
-using Bounds.Modulos.Cartas.Ilustradores;
 using Bounds.Modulos.Cartas.Persistencia;
 using Bounds.Modulos.Cartas.Tinteros;
 using Ging1991.Core;

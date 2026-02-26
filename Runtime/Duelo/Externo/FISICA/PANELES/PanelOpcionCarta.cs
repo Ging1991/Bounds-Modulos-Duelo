@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Bounds.Duelo.Carta;
 using Bounds.Duelo.Paneles.Seleccion;
 using Bounds.Modulos.Cartas;
 using Bounds.Fisicas.Carta;
@@ -15,7 +14,7 @@ namespace Bounds.Duelo.Paneles {
 			this.carta = carta;
 			this.accion = accion;
 			CartaInfo info = carta.GetComponent<CartaInfo>();
-			GetComponentInChildren<CartaFrente>().Mostrar(info.cartaID, info.imagen);
+			GetComponentInChildren<CartaFrente>().Mostrar(info.cartaID, info.imagen, info.rareza);
 		}
 
 

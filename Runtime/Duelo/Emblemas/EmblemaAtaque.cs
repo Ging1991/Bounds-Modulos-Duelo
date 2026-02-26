@@ -79,7 +79,7 @@ namespace Bounds.Duelo.Emblemas {
 							)
 						);
 					}
-					if (infoAtacante.GetComponent<CartaEfecto>().TieneClave("BRUTAL")) {
+					if (infoAtacante.GetComponent<CartaEfecto>().TieneClave("BRUTAL") && infoAtacada.original.clase == "CRIATURA") {
 						EmblemaEfectos.Activar(
 							new EfectoSobreJugador(infoAtacante.gameObject, jugadorAtacado, new SubModificarLP(-500), "CRITICO")
 						);
