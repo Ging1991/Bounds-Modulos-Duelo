@@ -33,7 +33,7 @@ namespace Bounds.Duelo {
 		private ProveedorImagenPersonaje proveedorMiniatura;
 		public GestorDeSonidos gestorDeSonidos;
 		public DatosDeCartas datosDeCartas;
-		public ISelector<string, Sprite> ilustradorDeCartas;
+		public IProveedor<string, Sprite> ilustradorDeCartas;
 		public VisorDuelo visorDuelo;
 		public PilaVisual pilaVisual;
 		public PanelCartas panelCartas;
@@ -41,10 +41,11 @@ namespace Bounds.Duelo {
 		public Cofre cofre;
 
 		public ParametrosControlDuelo parametrosControl;
-		public ISelector<int, string> selectorNombres;
-		public ISelector<string, string> selectorClases;
-		public ISelector<string, string> selectorTipos;
-		public ISelector<string, string> selectorInvocaciones;
+		public IProveedor<int, string> selectorNombres;
+		public IProveedor<string, string> selectorClases;
+		public IProveedor<string, string> selectorTipos;
+		public IProveedor<string, string> selectorInvocaciones;
+		public IProveedor<string, string> selectorSistema;
 
 		public Configuracion configuracion;
 		public Billetera billetera;
@@ -58,6 +59,7 @@ namespace Bounds.Duelo {
 			selectorNombres = new TraductorCartaID(parametrosEscena.direcciones["CARTA_NOMBRES"]);
 			selectorClases = new TraductorTexto(parametrosEscena.direcciones["CARTA_CLASES"]);
 			selectorTipos = new TraductorTexto(parametrosEscena.direcciones["CARTA_TIPOS"]);
+			selectorSistema = new TraductorTexto(parametrosEscena.direcciones["SISTEMA"]);
 			selectorInvocaciones = new TraductorTexto(parametrosEscena.direcciones["CARTA_INVOCACIONES"]);
 			configuracion = new(parametrosEscena.direcciones["CONFIGURACION"]);
 			billetera = new(parametrosEscena.direcciones["BILLETERA"]);
@@ -73,7 +75,7 @@ namespace Bounds.Duelo {
 				campo.controlador = this;
 			}
 
-			visorDuelo.Inicializar(selectorNombres, selectorClases, selectorTipos, selectorInvocaciones, ilustradorDeCartas);
+			visorDuelo.Inicializar(selectorNombres, selectorSistema, selectorClases, selectorTipos, selectorInvocaciones, ilustradorDeCartas);
 
 			CPUReloj cpuReloj = GameObject.Find("CPU").GetComponent<CPUReloj>();
 			cpuReloj.Inicializacion();
@@ -106,8 +108,8 @@ namespace Bounds.Duelo {
 			EmblemaIniciarDuelo.SetNombre(2, parametros.jugadorNombre2);
 
 			proveedorMiniatura = new ProveedorImagenPersonaje(new DireccionRecursos("PERSONAJES/MINIATURAS"));
-			EmblemaIniciarDuelo.SetAvatar(1, proveedorMiniatura.GetImagen(parametros.jugadorMiniatura1));
-			EmblemaIniciarDuelo.SetAvatar(2, proveedorMiniatura.GetImagen(parametros.jugadorMiniatura2));
+			EmblemaIniciarDuelo.SetAvatar(1, proveedorMiniatura.GetElemento(parametros.jugadorMiniatura1));
+			EmblemaIniciarDuelo.SetAvatar(2, proveedorMiniatura.GetElemento(parametros.jugadorMiniatura2));
 
 			EmblemaTurnos.GetInstancia().jugadorActivo = 1;
 			EmblemaTurnos.GetInstancia().SetFase(EmblemaTurnos.Fase.FASE_MANTENIMIENTO);
@@ -194,11 +196,11 @@ namespace Bounds.Duelo {
 			}
 		}
 
-		private class ProveedorImagenPersonaje : LectorPorDemandaImagen, IGetImagen {
+		private class ProveedorImagenPersonaje : LectorPorDemandaImagen, IProveedor<string, Sprite> {
 
 			public ProveedorImagenPersonaje(Direccion direccionCarpeta) : base(direccionCarpeta, TipoLector.RECURSOS) { }
 
-			public Sprite GetImagen(string nombre) {
+			public Sprite GetElemento(string nombre) {
 				return Leer(nombre);
 			}
 

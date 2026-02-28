@@ -107,7 +107,7 @@ namespace Bounds.Duelo.Paneles {
 		}
 
 
-		public void InicializarVisuales(DatosDeCartas datosDeCartas, ISelector<string, Sprite> ilustradorDeCartas, ITintero tintero) {
+		public void InicializarVisuales(DatosDeCartas datosDeCartas, IProveedor<string, Sprite> ilustradorDeCartas, ITintero tintero) {
 			foreach (GameObject opcion in opciones)
 				opcion.GetComponentInChildren<CartaFrente>().Inicializar(datosDeCartas, ilustradorDeCartas, tintero);
 		}

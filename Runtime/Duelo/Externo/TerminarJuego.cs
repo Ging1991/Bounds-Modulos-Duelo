@@ -11,7 +11,7 @@ namespace Bounds.Duelo {
 
 	public class TerminarJuego : MonoBehaviour, IEjecutable {
 
-		public ISelector<string, Sprite> ilustradorDeCartas;
+		public IProveedor<string, Sprite> ilustradorDeCartas;
 		public bool haGanado;
 
 		public void Ejecutar() {

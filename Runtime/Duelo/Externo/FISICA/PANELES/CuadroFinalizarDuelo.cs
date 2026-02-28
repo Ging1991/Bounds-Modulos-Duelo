@@ -21,7 +21,7 @@ namespace Bounds.Duelo.Utiles {
 		private string rareza = "N";
 
 
-		public void Iniciar(IEjecutable accion, bool gano, DatosDeCartas datos, ISelector<string, Sprite> ilustrador) {
+		public void Iniciar(IEjecutable accion, bool gano, DatosDeCartas datos, IProveedor<string, Sprite> ilustrador) {
 			Bloqueador.BloquearGrupo("GLOBAL", true);
 			gameObject.name = "CuadroFinalizar";
 			this.accion = accion;

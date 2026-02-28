@@ -21,7 +21,7 @@ namespace Bounds.Duelo.Paneles {
 		private bool fueCobrada;
 
 		public void Inicializar(int cartaID, string rareza, Color tinta, Color fondo, IEjecutable accion, int probabilidad,
-				DatosDeCartas datos, ISelector<string, Sprite> ilustrador, ITintero tintero) {
+				DatosDeCartas datos, IProveedor<string, Sprite> ilustrador, ITintero tintero) {
 			fueCobrada = false;
 
 			GetComponentInChildren<CartaFrente>().Inicializar(datos, ilustrador, tintero);

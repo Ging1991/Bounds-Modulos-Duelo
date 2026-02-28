@@ -2,16 +2,14 @@
 using UnityEngine.UI;
 using infraestructura;
 using Ging1991.Core.Movimiento;
+using Ging1991.Core.Interfaces;
 
-namespace Bounds.Duelo.Utiles
-{
+namespace Bounds.Duelo.Utiles {
 
-	public class AniTexto : MonoBehaviour, ILlegar
-	{
+	public class AniTexto : MonoBehaviour, IEjecutable {
 
 
-		public void Iniciar(int cantidad)
-		{
+		public void Iniciar(int cantidad) {
 
 			// El texto se mueve levemente
 			Movimiento movimiento = gameObject.GetComponent<Movimiento>();
@@ -27,8 +25,7 @@ namespace Bounds.Duelo.Utiles
 		}
 
 
-		public void Llegar()
-		{
+		public void Ejecutar() {
 			Destroy(gameObject, 2);
 		}
 

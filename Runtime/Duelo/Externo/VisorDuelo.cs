@@ -20,14 +20,15 @@ namespace Bounds.Infraestructura.Visores {
 		private ITintero tintero;
 		public VisorGeneral visorGeneral;
 		public VisorContador visorContador;
-		protected ISelector<int, string> selectorNombres;
-		protected ISelector<string, string> selectorClases;
-		protected ISelector<string, string> selectorTipos;
-		protected ISelector<string, string> selectorInvocaciones;
+		protected IProveedor<int, string> selectorNombres;
+		protected IProveedor<string, string> selectorClases;
+		protected IProveedor<string, string> selectorTipos;
+		protected IProveedor<string, string> selectorInvocaciones;
+		protected IProveedor<string, string> selectorSistema;
 
 
-		public void Inicializar(ISelector<int, string> selectorNombres, ISelector<string, string> selectorClases,
-				ISelector<string, string> selectorTipos, ISelector<string, string> selectorInvocaciones, ISelector<string, Sprite> ilustrador) {
+		public void Inicializar(IProveedor<int, string> selectorNombres, IProveedor<string, string> selectorSistema, IProveedor<string, string> selectorClases,
+				IProveedor<string, string> selectorTipos, IProveedor<string, string> selectorInvocaciones, IProveedor<string, Sprite> ilustrador) {
 
 			datosDeCartas.Inicializar();
 			datosDeEfectos.Inicializar();
@@ -36,9 +37,10 @@ namespace Bounds.Infraestructura.Visores {
 			this.selectorClases = selectorClases;
 			this.selectorTipos = selectorTipos;
 			this.selectorInvocaciones = selectorInvocaciones;
+			this.selectorSistema = selectorSistema;
 
 			visorGeneral.Inicializar(
-				datosDeCartas, datosDeEfectos, ilustrador, tintero, selectorClases,
+				datosDeCartas, datosDeEfectos, ilustrador, tintero, selectorSistema, selectorClases,
 				selectorTipos, selectorInvocaciones, selectorNombres
 			);
 		}
