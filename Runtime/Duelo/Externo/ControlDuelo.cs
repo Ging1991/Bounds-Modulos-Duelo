@@ -51,6 +51,10 @@ namespace Bounds.Duelo {
 		public Billetera billetera;
 		public MusicaDeFondo musicaDeFondo;
 
+		public void TocarMusica(string clave) {
+			musicaDeFondo.Inicializar(parametrosControl.parametros.direcciones[clave]);
+		}
+
 		void Start() {
 
 			parametrosControl.Inicializar();
@@ -64,7 +68,7 @@ namespace Bounds.Duelo {
 			configuracion = new(parametrosEscena.direcciones["CONFIGURACION"]);
 			billetera = new(parametrosEscena.direcciones["BILLETERA"]);
 			cofre = new(parametrosEscena.direcciones["COFRE"], parametrosEscena.direcciones["COFRE_RECURSOS"]);
-			musicaDeFondo.Inicializar(parametrosEscena.direcciones["MUSICA_DE_FONDO"]);
+			TocarMusica("MUSICA_DE_FONDO");
 			ilustradorDeCartas = new IlustradorDeCartas(
 				parametrosControl.parametros.direcciones["CARTAS_RECURSO"],
 				parametrosControl.parametros.direcciones["CARTAS_DINAMICA"]

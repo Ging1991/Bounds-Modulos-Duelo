@@ -23,6 +23,11 @@ namespace Bounds.Duelo {
 			GameObject cpu = GameObject.Find("CPU");
 			if (cpu != null)
 				Destroy(cpu);
+
+			if (ganar)
+				ControlDuelo.Instancia.TocarMusica("MUSICA_VICTORIA");
+			else
+				ControlDuelo.Instancia.TocarMusica("MUSICA_DERROTA");
 			StartCoroutine(MostrarCuadroRecompensas(ganar));
 		}
 
