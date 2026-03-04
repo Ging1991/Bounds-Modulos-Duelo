@@ -68,7 +68,7 @@ namespace Bounds.Duelo {
 			configuracion = new(parametrosEscena.direcciones["CONFIGURACION"]);
 			billetera = new(parametrosEscena.direcciones["BILLETERA"]);
 			cofre = new(parametrosEscena.direcciones["COFRE"], parametrosEscena.direcciones["COFRE_RECURSOS"]);
-			TocarMusica("MUSICA_DE_FONDO");
+			TocarMusica("MUSICA_TIENDA");
 			ilustradorDeCartas = new IlustradorDeCartas(
 				parametrosControl.parametros.direcciones["CARTAS_RECURSO"],
 				parametrosControl.parametros.direcciones["CARTAS_DINAMICA"]
