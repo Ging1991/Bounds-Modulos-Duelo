@@ -399,7 +399,7 @@ namespace Bounds.Duelo.Emblemas {
 					info.controlador,
 					info.cartaID,
 					$"J{info.controlador}_FICHA{info.cartaID}",
-					Vector3.zero, campo, "N", "A"
+					Vector3.zero, campo, "N", info.imagen
 				);
 				fisica.EnviarHaciaMano(ficha, info.controlador);
 			}

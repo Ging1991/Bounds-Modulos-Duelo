@@ -12,7 +12,7 @@ namespace Bounds.Modulos.Duelo {
 			parametros.direcciones["CARTA_CLASES"] = new DireccionRecursos("Cartas", "Clases").Generar();
 			parametros.direcciones["CARTA_TIPOS"] = new DireccionRecursos("Cartas", "Tipos").Generar();
 			parametros.direcciones["CARTA_INVOCACIONES"] = new DireccionRecursos("Cartas", "Invocaciones").Generar();
-			parametros.direcciones["MUSICA_DE_FONDO"] = new DireccionRecursos("Musica", "TIENDA").Generar();
+			parametros.direcciones["MUSICA_TIENDA"] = new DireccionRecursos("Musica", "TIENDA").Generar();
 			parametros.direcciones["MUSICA_DERROTA"] = new DireccionRecursos("Musica", "DERROTA").Generar();
 			parametros.direcciones["MUSICA_VICTORIA"] = new DireccionRecursos("Musica", "VICTORIA").Generar();
 

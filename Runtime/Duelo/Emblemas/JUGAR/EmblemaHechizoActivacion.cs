@@ -461,11 +461,16 @@ namespace Bounds.Duelo.Emblemas {
 			}
 
 			if (dato.tipo == "EXPLOSION_FINAL") {
-				CondicionTipoCriatura condicionPyro = new("pyro");
-				List<GameObject> pyros = condicionPyro.CumpleLista(fisica.TraerCartasEnCampo(jugador));
-				EmblemaEfectos.Activar(new EfectoSobreJugador(hechizo, adversario, new SubModificarLP(-500 * pyros.Count)));
-				foreach (GameObject pyro in pyros) {
-					EmblemaEnviarAlCementerio.DesdeElCampo(pyro);
+				List<GameObject> criaturasControladas = new SubCartasControladas(jugador, new CondicionClase("CRIATURA")).Generar();
+				EmblemaEfectos.Activar(
+					new EfectoSobreJugador(
+						hechizo,
+						adversario,
+						new SubModificarLP(-500 * criaturasControladas.Count)
+					)
+				);
+				foreach (GameObject criaturaControlada in criaturasControladas) {
+					EmblemaEnviarAlCementerio.DesdeElCampo(criaturaControlada);
 				}
 			}
 
