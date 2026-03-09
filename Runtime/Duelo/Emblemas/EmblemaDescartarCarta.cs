@@ -12,7 +12,7 @@ namespace Bounds.Duelo.Emblema {
 			Fisica fisica = conocimiento.traerFisica();
 			CartaInfo info = carta.GetComponent<CartaInfo>();
 			fisica.EnviarHaciaDescarte(carta, info.propietario);
-			carta.GetComponentInChildren<GestorVisual>().Animar("VENENO", "FxSerpiente");
+			//carta.GetComponentInChildren<GestorVisual>().Animar("VENENO", "FxSerpiente");
 		}
 
 	}

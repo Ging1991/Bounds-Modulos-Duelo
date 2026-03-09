@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Bounds.Visuales;
+using UnityEngine;
 
 namespace Bounds.Duelo.Emblema {
 
@@ -26,6 +27,11 @@ namespace Bounds.Duelo.Emblema {
 		public static void SetNombre(int jugador, string nombre) {
 			BloqueJugador bloque = BloqueJugador.getInstancia("BloqueJugador" + jugador);
 			bloque.SetNombre(nombre);
+		}
+
+		public static void SetSonidos(int jugador) {
+			BloqueJugador bloque = BloqueJugador.getInstancia("BloqueJugador" + jugador);
+			bloque.GetComponentInChildren<GestorEfectosVisuales>().Inicializar(ControlDuelo.Instancia.gestorDeSonidos);
 		}
 
 

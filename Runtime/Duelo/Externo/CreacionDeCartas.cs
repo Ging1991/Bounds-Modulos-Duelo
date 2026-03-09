@@ -26,6 +26,8 @@ public class CreacionDeCartas : MonoBehaviour {
 		carta.transform.localPosition = posicion;
 		carta.transform.localScale = ESCALA_CARTA;
 
+		carta.GetComponentInChildren<GestorEfectosVisuales>().Inicializar(ControlDuelo.Instancia.gestorDeSonidos);
+
 		CartaGeneral general = carta.GetComponent<CartaGeneral>();
 
 		general.Iniciar(cartaID, imagen, rareza, datosDeCartas, ControlDuelo.Instancia.ilustradorDeCartas, new TinteroBounds(), Entrada.GetInstancia());
@@ -45,7 +47,7 @@ public class CreacionDeCartas : MonoBehaviour {
 			carta.GetComponentInChildren<CartaFisica>().SetReverso(protector);
 		}
 		//carta.GetComponentInChildren<CartaFisica>().ColocarBocaAbajo(true);
-		carta.GetComponentInChildren<GestorVisual>().gestorDeSonidos = ControlDuelo.Instancia.gestorDeSonidos;
+		//carta.GetComponentInChildren<GestorVisual>().gestorDeSonidos = ControlDuelo.Instancia.gestorDeSonidos;
 		return carta;
 	}
 

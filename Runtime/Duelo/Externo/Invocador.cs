@@ -27,7 +27,7 @@ public class Invocador : MonoBehaviour, ISeleccionarCarta {
 			return;
 
 		if (!CrearPanelInvocacion()) {
-			ControlDuelo.Instancia.GetComponent<GestorDeSonidos>().ReproducirSonido("FxRebote");
+			//ControlDuelo.Instancia.GetComponent<GestorDeSonidos>().ReproducirSonido("FxRebote");
 		}
 
 	}

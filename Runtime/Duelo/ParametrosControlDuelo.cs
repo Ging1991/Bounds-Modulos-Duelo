@@ -15,6 +15,7 @@ namespace Bounds.Modulos.Duelo {
 			parametros.direcciones["MUSICA_TIENDA"] = new DireccionRecursos("Musica", "TIENDA").Generar();
 			parametros.direcciones["MUSICA_DERROTA"] = new DireccionRecursos("Musica", "DERROTA").Generar();
 			parametros.direcciones["MUSICA_VICTORIA"] = new DireccionRecursos("Musica", "VICTORIA").Generar();
+			parametros.direcciones["SONIDOS"] = "Sonidos";
 
 			parametros.direcciones["CONFIGURACION"] = new DireccionDinamica("CONFIGURACION", "CONFIGURACION.json").Generar();
 			parametros.direcciones["BILLETERA"] = new DireccionDinamica("CONFIGURACION", "BILLETERA.json").Generar();

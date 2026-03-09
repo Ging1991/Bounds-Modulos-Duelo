@@ -15,6 +15,7 @@ using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
 using Bounds.Fisicas.Campos;
+using Ging1991.Musica;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -151,7 +152,7 @@ namespace Bounds.Duelo.Emblemas {
 
 			}
 			else {
-				//EfectosDeSonido.Tocar("FxRebote");
+				ControlDuelo.Instancia.GetComponent<GestorDeSonidos>().ReproducirSonido("FxRebote");
 				Seleccionador.Instancia.SeleccionarParaJugar();
 			}
 		}
@@ -179,7 +180,7 @@ namespace Bounds.Duelo.Emblemas {
 
 			}
 			else {
-				//EfectosDeSonido.Tocar("FxRebote");
+				ControlDuelo.Instancia.GetComponent<GestorDeSonidos>().ReproducirSonido("FxRebote");
 				Seleccionador.Instancia.SeleccionarParaJugar();
 			}
 		}
@@ -195,7 +196,7 @@ namespace Bounds.Duelo.Emblemas {
 
 			}
 			else {
-				//EfectosDeSonido.Tocar("FxRebote");
+				ControlDuelo.Instancia.GetComponent<GestorDeSonidos>().ReproducirSonido("FxRebote");
 				Seleccionador.Instancia.SeleccionarParaJugar();
 			}
 		}

@@ -12,6 +12,7 @@ using Ging1991.Core;
 using Ging1991.Interfaces;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Ging1991.Musica;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -125,8 +126,7 @@ namespace Bounds.Duelo.Emblemas {
 				if (cpuReloj != null) {
 					cpuReloj.ComenzarTurno();
 					instanciador.CrearTextoCreciente("¡Turno del oponente!");
-					GestorDeSonidos gestor = FindAnyObjectByType<GestorDeSonidos>();
-					gestor.ReproducirSonido("FxAdquisicion");
+					ControlDuelo.Instancia.GetComponent<GestorDeSonidos>().ReproducirSonido("FxAdquisicion");
 				}
 			}
 			else {

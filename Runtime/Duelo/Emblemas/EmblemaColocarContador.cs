@@ -12,13 +12,13 @@ namespace Bounds.Duelo.Emblemas {
 		public static void Colocar(GameObject carta, string tipo, int cantidad) {
 			CartaInfo cartaInfo = carta.GetComponent<CartaInfo>();
 			cartaInfo.ColocarContador(tipo, cantidad);
-			if (tipo == "debilidad") {
-				carta.GetComponentInChildren<GestorVisual>().Animar("SANGRE", "FxSerpiente");
-			}
-			if (tipo == "poder") {
-				carta.GetComponentInChildren<GestorVisual>().Animar("NUBE", "FxEspadas");
-			}
-
+			/*			if (tipo == "debilidad") {
+							carta.GetComponentInChildren<GestorVisual>().Animar("SANGRE", "FxSerpiente");
+						}
+						if (tipo == "poder") {
+							carta.GetComponentInChildren<GestorVisual>().Animar("NUBE", "FxEspadas");
+						}
+			*/
 			if (cartaInfo.TraerContadores("veneno") >= cartaInfo.original.nivel) {
 				EmblemaEfectos.Activar(new EfectoSobreCarta(carta, new SubDestruir(), carta));
 				return;

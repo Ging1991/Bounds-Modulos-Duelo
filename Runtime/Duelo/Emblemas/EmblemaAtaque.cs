@@ -11,6 +11,7 @@ using Bounds.Duelo.Emblemas.Fases;
 using Ging1991.Core;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Ging1991.Musica;
 
 namespace Bounds.Duelo.Emblemas {
 

@@ -20,15 +20,15 @@ namespace Bounds.Duelo.Pila.Efectos {
 		public override void Resolver() {
 			subefecto.AplicarEfecto(jugador, etiquetas);
 			if (etiquetas.Contains("EXPLOSION"))
-				fuente.GetComponentInChildren<GestorVisual>().Animar("EXPLOSION", "FxExplosion");
+				fuente.GetComponentInChildren<GestorEfectosVisuales>().Animar("EXPLOSION");
 			if (etiquetas.Contains("CRITICO"))
-				fuente.GetComponentInChildren<GestorVisual>().Animar("CRITICO", "FxExplosion");
+				fuente.GetComponentInChildren<GestorEfectosVisuales>().Animar("CRITICO");
 			if (etiquetas.Contains("ROBAR"))
-				fuente.GetComponentInChildren<GestorVisual>().Animar("NUBE", "FxAdquisicion");
+				fuente.GetComponentInChildren<GestorEfectosVisuales>().Animar("NUBE");
 			if (etiquetas.Contains("REVITALIZAR"))
-				fuente.GetComponentInChildren<GestorVisual>().Animar("REVITALIZAR", "FxAdquisicion");
+				fuente.GetComponentInChildren<GestorEfectosVisuales>().Animar("REVITALIZAR");
 			if (etiquetas.Contains("VENENO"))
-				fuente.GetComponentInChildren<GestorVisual>().Animar("VENENO", "FxSerpiente");
+				fuente.GetComponentInChildren<GestorEfectosVisuales>().Animar("VENENO");
 		}
 
 

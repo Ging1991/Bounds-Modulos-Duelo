@@ -8,9 +8,9 @@ using Bounds.Duelo.Pila.Efectos;
 using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Duelo.Emblemas.Trampas;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
-using Bounds.Visuales;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Bounds.Visuales;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -42,8 +42,8 @@ namespace Bounds.Duelo.Emblemas {
 			foreach (GameObject protector in new SubCartasEnCementerio(carta.GetComponent<CartaInfo>().controlador).Generar()) {
 				if (protector.GetComponent<CartaEfecto>().TieneClave("PROTECTOR")) {
 					EmblemaEnviarMaterial.EnviarMateriales(new List<GameObject>() { protector });
-					protector.GetComponentInChildren<GestorVisual>().Animar("NUBE", "FxRevitalizar");
-					carta.GetComponentInChildren<GestorVisual>().Animar("NUBE", "FxRevitalizar");
+					//protector.GetComponentInChildren<GestorVisual>().Animar("NUBE", "FxRevitalizar");
+					//carta.GetComponentInChildren<GestorVisual>().Animar("NUBE", "FxRevitalizar");
 					return true;
 				}
 			}
@@ -79,7 +79,7 @@ namespace Bounds.Duelo.Emblemas {
 			if (SalvadoPorProteccion(carta))
 				return false;
 
-			carta.GetComponentInChildren<GestorVisual>().Animar("GOLPE", "FxExplosion");
+			carta.GetComponentInChildren<GestorEfectosVisuales>().Animar("GOLPE");
 			DisminuirVida(carta);
 
 			if (cartaInfo.TraerContadores("supervivencia") > 0) {
@@ -115,7 +115,7 @@ namespace Bounds.Duelo.Emblemas {
 			if (SalvadoPorProteccion(carta))
 				return false;
 
-			carta.GetComponentInChildren<GestorVisual>().Animar("GOLPE", "FxExplosion");
+			carta.GetComponentInChildren<GestorEfectosVisuales>().Animar("GOLPE");
 			DisminuirVida(carta);
 
 			if (cartaInfo.TraerContadores("supervivencia") > 0) {
@@ -147,7 +147,7 @@ namespace Bounds.Duelo.Emblemas {
 			if (SalvadoPorProteccion(carta))
 				return false;
 
-			carta.GetComponentInChildren<GestorVisual>().Animar("GOLPE", "FxExplosion");
+			carta.GetComponentInChildren<GestorEfectosVisuales>().Animar("GOLPE");
 			DisminuirVida(carta);
 
 			if (cartaInfo.TraerContadores("supervivencia") > 0) {
@@ -171,7 +171,7 @@ namespace Bounds.Duelo.Emblemas {
 			if (!fisica.TraerCartasEnCampo(cartaInfo.controlador).Contains(carta))
 				return false;
 
-			carta.GetComponentInChildren<GestorVisual>().Animar("GOLPE", "FxExplosion");
+			carta.GetComponentInChildren<GestorEfectosVisuales>().Animar("GOLPE");
 			DisminuirVida(carta);
 
 			if (cartaInfo.TraerContadores("supervivencia") > 0) {

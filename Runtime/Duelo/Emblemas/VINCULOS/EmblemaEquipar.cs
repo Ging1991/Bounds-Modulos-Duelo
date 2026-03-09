@@ -58,7 +58,7 @@ namespace Bounds.Duelo.Emblema {
 			// actualizo el visor
 			//Visor visor = GameObject.Find("Visor").GetComponent<Visor>();
 			//visor.Mostrar(carta);
-			ControlDuelo.Instancia.gestorDeSonidos.ReproducirSonido("FxEspadas");
+			//ControlDuelo.Instancia.gestorDeSonidos.ReproducirSonido("FxEspadas");
 			return true;
 		}
 

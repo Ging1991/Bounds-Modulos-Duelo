@@ -6,7 +6,6 @@ using Bounds.Duelo.Utiles;
 using Bounds.Duelo.Emblemas;
 using Bounds.Duelo.CPU;
 using Ging1991.Persistencia.Lectores.Demandas;
-using Ging1991.Dialogos;
 using Ging1991.Persistencia.Direcciones;
 using Ging1991.Persistencia.Lectores;
 using Ging1991.Core;
@@ -25,6 +24,8 @@ using Bounds.Persistencia;
 using Bounds.Modulos.Persistencia;
 using Ging1991.Core.Interfaces;
 using Bounds.Cofres;
+using Bounds.Musica;
+using Ging1991.Musica;
 
 namespace Bounds.Duelo {
 
@@ -66,6 +67,8 @@ namespace Bounds.Duelo {
 			selectorSistema = new TraductorTexto(parametrosEscena.direcciones["SISTEMA"]);
 			selectorInvocaciones = new TraductorTexto(parametrosEscena.direcciones["CARTA_INVOCACIONES"]);
 			configuracion = new(parametrosEscena.direcciones["CONFIGURACION"]);
+			gestorDeSonidos.Inicializar(new DireccionRecursos(parametrosEscena.direcciones["SONIDOS"]));
+
 			billetera = new(parametrosEscena.direcciones["BILLETERA"]);
 			cofre = new(parametrosEscena.direcciones["COFRE"], parametrosEscena.direcciones["COFRE_RECURSOS"]);
 			TocarMusica("MUSICA_TIENDA");
@@ -106,6 +109,8 @@ namespace Bounds.Duelo {
 
 			EmblemaRobo.RobarCartas(2, 4);
 
+			EmblemaIniciarDuelo.SetSonidos(1);
+			EmblemaIniciarDuelo.SetSonidos(2);
 			EmblemaIniciarDuelo.SetLP(1, parametros.jugadorLP1);
 			EmblemaIniciarDuelo.SetLP(2, parametros.jugadorLP2);
 			EmblemaIniciarDuelo.SetNombre(1, parametros.jugadorNombre1);

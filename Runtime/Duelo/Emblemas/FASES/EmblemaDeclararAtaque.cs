@@ -57,7 +57,7 @@ namespace Bounds.Duelo.Emblemas.Fases {
 
 			foreach (var aura in new SubCartasControladas(infoAtacado.controlador, new CondicionClase("AURA")).Generar()) {
 				if (aura.GetComponent<CartaEfecto>().TieneClave("VINCULO_SOMBRA")) {
-					GameObject.FindAnyObjectByType<GestorDeSonidos>().ReproducirSonido("FxRebote");
+					//GameObject.FindAnyObjectByType<GestorDeSonidos>().ReproducirSonido("FxRebote");
 					EmblemaEfectos.Activar(new EfectoSobreCarta(aura, new SubBarajar(), aura));
 					Seleccionador.Instancia.combateCancelado = true;
 					break;

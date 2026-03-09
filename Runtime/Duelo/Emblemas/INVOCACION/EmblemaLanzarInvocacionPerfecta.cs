@@ -29,7 +29,7 @@ namespace Bounds.Duelo.Emblemas {
 			BuscadorCampo buscador = BuscadorCampo.getInstancia();
 			GameObject lugar = buscador.buscarCampoLibre(jugador);
 
-			ControlDuelo.Instancia.gestorDeSonidos.ReproducirSonido("FxLanzar");
+			//ControlDuelo.Instancia.gestorDeSonidos.ReproducirSonido("FxLanzar");
 
 			EmblemaInvocacion.Invocar(jugador, criatura, lugar);
 			EmblemaSeleccionInvocacionPerfecta.GetInstancia().Deseleccionar();

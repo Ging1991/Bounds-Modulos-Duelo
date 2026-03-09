@@ -3,6 +3,7 @@ using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Utiles;
 using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Duelo.Fisicas;
+using Ging1991.Musica;
 using UnityEngine;
 
 namespace Bounds.Duelo.Emblemas.Jugar {
@@ -80,7 +81,7 @@ namespace Bounds.Duelo.Emblemas.Jugar {
 				Seleccionador.Instancia.SeleccionarParaJugar(carta);
 			}
 			else {
-				//EfectosDeSonido.Tocar("FxRebote");
+				ControlDuelo.Instancia.GetComponent<GestorDeSonidos>().ReproducirSonido("FxRebote");
 			}
 		}
 

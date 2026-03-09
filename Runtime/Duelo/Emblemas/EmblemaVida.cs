@@ -47,7 +47,7 @@ namespace Bounds.Duelo.Emblemas {
 
 			BloqueJugador bloque = BloqueJugador.getInstancia("BloqueJugador" + jugador);
 			bloque.SetVida(bloque.vida - cantidad);
-			bloque.GetComponentInChildren<GestorVisual>().Animar(visual, "FxExplosion");
+			bloque.GetComponentInChildren<GestorEfectosVisuales>().Animar(visual);
 
 			TerminarJuego terminar = GameObject.Find("TerminarJuego").GetComponent<TerminarJuego>();
 			Billetera billetera = GameObject.FindAnyObjectByType<ControlDuelo>().billetera;
@@ -69,7 +69,7 @@ namespace Bounds.Duelo.Emblemas {
 		public static void AumentarVida(int jugador, int cantidad, string visual = "REVITALIZAR") {
 			BloqueJugador bloque = BloqueJugador.getInstancia("BloqueJugador" + jugador);
 			bloque.SetVida(bloque.vida + cantidad);
-			bloque.GetComponentInChildren<GestorVisual>().Animar(visual, "FxRevitalizar");
+			bloque.GetComponentInChildren<GestorEfectosVisuales>().Animar(visual);
 
 			foreach (var carta in new SubCartasControladas(jugador).Generar()) {
 				if (carta.GetComponent<CartaEfecto>().TieneClave("MISION_LP")) {

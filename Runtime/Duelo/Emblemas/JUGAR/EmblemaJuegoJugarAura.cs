@@ -11,6 +11,7 @@ using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
 using Ging1991.Core;
+using Ging1991.Musica;
 using UnityEngine;
 
 namespace Bounds.Duelo.Emblemas.Jugar {
