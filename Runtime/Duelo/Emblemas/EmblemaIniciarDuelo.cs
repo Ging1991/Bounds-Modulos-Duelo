@@ -8,7 +8,7 @@ namespace Bounds.Duelo.Emblema {
 
 		public static void IniciarMulligan() {
 			Mulligan mulligan = GameObject.FindAnyObjectByType<Mulligan>();
-			mulligan.Iniciar();
+			mulligan.Iniciar(ControlDuelo.Instancia.proveedorCartas);
 		}
 
 

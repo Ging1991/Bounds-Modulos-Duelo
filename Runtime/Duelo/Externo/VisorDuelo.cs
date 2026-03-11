@@ -2,21 +2,18 @@
 using Bounds.Duelo.Carta;
 using System.Collections.Generic;
 using Bounds.Modulos.Cartas.Tinteros;
-using Bounds.Modulos.Cartas.Ilustradores;
-using Bounds.Modulos.Cartas.Persistencia;
 using Bounds.Modulos.Visor;
-using Bounds.Modulos.Visor.Persistencia;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Fisicas.Carta;
 using Ging1991.Core.Interfaces;
-using Bounds.Duelo;
+using Bounds.Modulos.Visor.Persistencia;
 
 namespace Bounds.Infraestructura.Visores {
 
 	public class VisorDuelo : MonoBehaviour {
 
-		public DatosDeCartas datosDeCartas;
-		public DatosDeEfectos datosDeEfectos;
+		public IProveedor<int, CartaBD> proveedorCartas;
+		public IProveedor<string, EfectoTraduccion> selectorHabilidades;
 		private ITintero tintero;
 		public VisorGeneral visorGeneral;
 		public VisorContador visorContador;
@@ -27,20 +24,26 @@ namespace Bounds.Infraestructura.Visores {
 		protected IProveedor<string, string> selectorSistema;
 
 
-		public void Inicializar(IProveedor<int, string> selectorNombres, IProveedor<string, string> selectorSistema, IProveedor<string, string> selectorClases,
-				IProveedor<string, string> selectorTipos, IProveedor<string, string> selectorInvocaciones, IProveedor<string, Sprite> ilustrador) {
+		public void Inicializar(
+				IProveedor<string, EfectoTraduccion> selectorHabilidades,
+				IProveedor<int, CartaBD> proveedorCartas,
+				IProveedor<int, string> selectorNombres,
+				IProveedor<string, string> selectorSistema,
+				IProveedor<string, string> selectorClases,
+				IProveedor<string, string> selectorTipos,
+				IProveedor<string, string> selectorInvocaciones,
+				IProveedor<string, Sprite> ilustrador) {
 
-			datosDeCartas.Inicializar();
-			datosDeEfectos.Inicializar();
 			tintero = new TinteroBounds();
 			this.selectorNombres = selectorNombres;
 			this.selectorClases = selectorClases;
 			this.selectorTipos = selectorTipos;
 			this.selectorInvocaciones = selectorInvocaciones;
 			this.selectorSistema = selectorSistema;
+			this.selectorHabilidades = selectorHabilidades;
 
 			visorGeneral.Inicializar(
-				datosDeCartas, datosDeEfectos, ilustrador, tintero, selectorSistema, selectorClases,
+				proveedorCartas, selectorHabilidades, ilustrador, tintero, selectorSistema, selectorClases,
 				selectorTipos, selectorInvocaciones, selectorNombres
 			);
 		}

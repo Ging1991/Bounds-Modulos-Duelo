@@ -1,14 +1,14 @@
 ﻿using Bounds.Duelo.Utiles;
 using Bounds.Modulos.Cartas.Ilustradores;
-using Bounds.Modulos.Cartas.Persistencia;
-using Bounds.Modulos.Cartas.Tinteros;
+using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
+using Ging1991.Core.Interfaces;
 using UnityEngine;
 
 public class ZonaJugador : MonoBehaviour {
 
 	public int jugador;
-	public DatosDeCartas datosDeCartas;
+	public IProveedor<int, CartaBD> proveedorCartas;
 	public IlustradorDeCartas ilustradorDeCartas;
 
 

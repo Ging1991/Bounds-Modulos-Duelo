@@ -46,12 +46,12 @@ namespace Bounds.Duelo {
 			if (haGanado) {
 				BloqueJugador bloque1 = BloqueJugador.getInstancia("BloqueJugador" + 1);
 				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar("Resultado: VICTORIA", $"Recompensa ${bloque1.vida / 10}");
-				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(this, true, DatosDeCartas.Instancia, ilustradorDeCartas);
+				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(this, true, ControlDuelo.Instancia.proveedorCartas, ilustradorDeCartas);
 				billetera.GanarOro(bloque1.vida / 10);
 			}
 			else {
 				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar("Resultado: DERROTA", "Recompensa $100");
-				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(this, false, DatosDeCartas.Instancia, ilustradorDeCartas);
+				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(this, false, ControlDuelo.Instancia.proveedorCartas, ilustradorDeCartas);
 				billetera.GanarOro(100);
 			}
 		}

@@ -9,8 +9,10 @@ using Bounds.Global.Mazos;
 using Bounds.Modulos.Cartas;
 using Bounds.Modulos.Cartas.Ilustradores;
 using Bounds.Modulos.Cartas.Persistencia;
+using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Cartas.Tinteros;
 using Bounds.Modulos.Duelo.Fisicas;
+using Ging1991.Core.Interfaces;
 using UnityEngine;
 
 namespace Bounds.Duelo {
@@ -18,11 +20,12 @@ namespace Bounds.Duelo {
 	public class Mulligan : MonoBehaviour {
 
 		public GameObject ventanaMulligan;
-		public DatosDeCartas datosDeCartas;
+		public IProveedor<int, CartaBD> proveedorCartas;
 
-		public void Iniciar() {
+		public void Iniciar(IProveedor<int, CartaBD> proveedorCartas) {
 			Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();
 			List<GameObject> cartas = fisica.TraerCartasEnMazo(1);
+			this.proveedorCartas = proveedorCartas;
 
 			AgregarCarta(cartas[0], 0);
 			AgregarCarta(cartas[1], 1);
@@ -36,7 +39,7 @@ namespace Bounds.Duelo {
 			CartaFrente cartaFrente = transform.GetChild(posicion).GetComponent<CartaFrente>();
 			cartaFrente.gameObject.SetActive(true);
 			CartaInfo info = carta.GetComponent<CartaInfo>();
-			cartaFrente.Inicializar(datosDeCartas, ControlDuelo.Instancia.ilustradorDeCartas, new TinteroBounds());
+			cartaFrente.Inicializar(proveedorCartas, ControlDuelo.Instancia.ilustradorDeCartas, new TinteroBounds());
 			cartaFrente.Mostrar(info.cartaID, info.imagen, info.rareza);
 		}
 

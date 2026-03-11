@@ -2,7 +2,9 @@ using System.Collections.Generic;
 using Bounds.Modulos.Cartas;
 using Bounds.Modulos.Cartas.Ilustradores;
 using Bounds.Modulos.Cartas.Persistencia;
+using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Cartas.Tinteros;
+using Ging1991.Core.Interfaces;
 using UnityEngine;
 
 namespace Bounds.Duelo.Pila {
@@ -10,7 +12,6 @@ namespace Bounds.Duelo.Pila {
 	public class PilaVisual : MonoBehaviour {
 
 		public List<GameObject> efectos;
-		public DatosDeCartas datosDeCartas;
 
 		public void SetEfectos(List<PilaEfectos.CartaPila> cartasID) {
 			DesactivarEfectos();
@@ -41,7 +42,7 @@ namespace Bounds.Duelo.Pila {
 			ITintero tintero = new TinteroBounds();
 
 			foreach (GameObject efecto in efectos)
-				efecto.GetComponent<CartaFrente>().Inicializar(datosDeCartas, ControlDuelo.Instancia.ilustradorDeCartas, tintero);
+				efecto.GetComponent<CartaFrente>().Inicializar(ControlDuelo.Instancia.proveedorCartas, ControlDuelo.Instancia.ilustradorDeCartas, tintero);
 		}
 
 

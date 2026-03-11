@@ -26,7 +26,7 @@ public class PanelZona : MonoBehaviour {
 
 		foreach (var carta in opciones) {
 			carta.GetComponentInChildren<CartaFrente>().Inicializar(
-				ControlDuelo.Instancia.datosDeCartas,
+				ControlDuelo.Instancia.proveedorCartas,
 				ControlDuelo.Instancia.ilustradorDeCartas,
 				tintero
 			);

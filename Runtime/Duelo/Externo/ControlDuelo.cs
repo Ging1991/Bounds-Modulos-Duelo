@@ -26,6 +26,8 @@ using Ging1991.Core.Interfaces;
 using Bounds.Cofres;
 using Bounds.Musica;
 using Ging1991.Musica;
+using Bounds.Modulos.Cartas.Persistencia.Datos;
+using Bounds.Modulos.Visor.Persistencia;
 
 namespace Bounds.Duelo {
 
@@ -33,7 +35,8 @@ namespace Bounds.Duelo {
 
 		private ProveedorImagenPersonaje proveedorMiniatura;
 		public GestorDeSonidos gestorDeSonidos;
-		public DatosDeCartas datosDeCartas;
+		public IProveedor<int, CartaBD> proveedorCartas;
+		public IProveedor<string, EfectoTraduccion> selectorHabilidades;
 		public IProveedor<string, Sprite> ilustradorDeCartas;
 		public VisorDuelo visorDuelo;
 		public PilaVisual pilaVisual;
@@ -60,7 +63,7 @@ namespace Bounds.Duelo {
 
 			parametrosControl.Inicializar();
 			ParametrosEscena parametrosEscena = parametrosControl.parametros;
-
+			proveedorCartas = new LectorCartas(new DireccionRecursos(parametrosControl.parametros.direcciones["CARTAS_DATOS"]));
 			selectorNombres = new TraductorCartaID(parametrosEscena.direcciones["CARTA_NOMBRES"]);
 			selectorClases = new TraductorTexto(parametrosEscena.direcciones["CARTA_CLASES"]);
 			selectorTipos = new TraductorTexto(parametrosEscena.direcciones["CARTA_TIPOS"]);
@@ -68,6 +71,7 @@ namespace Bounds.Duelo {
 			selectorInvocaciones = new TraductorTexto(parametrosEscena.direcciones["CARTA_INVOCACIONES"]);
 			configuracion = new(parametrosEscena.direcciones["CONFIGURACION"]);
 			gestorDeSonidos.Inicializar(new DireccionRecursos(parametrosEscena.direcciones["SONIDOS"]));
+			selectorHabilidades = new LectorHabilidades(parametrosControl.parametros.direcciones["CARTAS_HABILIDADES"]);
 
 			billetera = new(parametrosEscena.direcciones["BILLETERA"]);
 			cofre = new(parametrosEscena.direcciones["COFRE"], parametrosEscena.direcciones["COFRE_RECURSOS"]);
@@ -82,13 +86,22 @@ namespace Bounds.Duelo {
 				campo.controlador = this;
 			}
 
-			visorDuelo.Inicializar(selectorNombres, selectorSistema, selectorClases, selectorTipos, selectorInvocaciones, ilustradorDeCartas);
+			visorDuelo.Inicializar(
+				selectorHabilidades,
+				proveedorCartas,
+				selectorNombres,
+				selectorSistema,
+				selectorClases,
+				selectorTipos,
+				selectorInvocaciones,
+				ilustradorDeCartas
+			);
 
 			CPUReloj cpuReloj = GameObject.Find("CPU").GetComponent<CPUReloj>();
 			cpuReloj.Inicializacion();
 
 			pilaVisual.InicializarVisuales();
-			panelCartas.InicializarVisuales(datosDeCartas, ilustradorDeCartas, new TinteroBounds());
+			panelCartas.InicializarVisuales(proveedorCartas, ilustradorDeCartas, new TinteroBounds());
 
 			Cargador cargador = GameObject.Find("Cargador").GetComponent<Cargador>();
 			Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();

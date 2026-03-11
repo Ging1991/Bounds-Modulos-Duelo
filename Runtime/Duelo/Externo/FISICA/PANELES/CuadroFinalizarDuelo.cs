@@ -2,6 +2,7 @@
 using Bounds.Duelo.Paneles;
 using Bounds.Modulos.Cartas.Ilustradores;
 using Bounds.Modulos.Cartas.Persistencia;
+using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Cartas.Tinteros;
 using Ging1991.Core;
 using Ging1991.Core.Interfaces;
@@ -21,7 +22,7 @@ namespace Bounds.Duelo.Utiles {
 		private string rareza = "N";
 
 
-		public void Iniciar(IEjecutable accion, bool gano, DatosDeCartas datos, IProveedor<string, Sprite> ilustrador) {
+		public void Iniciar(IEjecutable accion, bool gano, IProveedor<int, CartaBD> proveedorCartas, IProveedor<string, Sprite> ilustrador) {
 			Bloqueador.BloquearGrupo("GLOBAL", true);
 			gameObject.name = "CuadroFinalizar";
 			this.accion = accion;
@@ -46,7 +47,7 @@ namespace Bounds.Duelo.Utiles {
 			ITintero tintero = new TinteroBounds();
 			Color tinta = tintero.GetColor($"TINTA_{rareza}");
 			Color fondo = tintero.GetColor($"NIVEL_{rareza}");
-			GetComponentInChildren<RecompensaDuelo>().Inicializar(cartaID, rareza, tinta, fondo, this, probabilidad, datos, ilustrador, tintero);
+			GetComponentInChildren<RecompensaDuelo>().Inicializar(cartaID, rareza, tinta, fondo, this, probabilidad, proveedorCartas, ilustrador, tintero);
 		}
 
 
