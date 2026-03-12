@@ -9,6 +9,9 @@ namespace Bounds.Modulos.Duelo {
 			parametros.direcciones["SISTEMA"] = new DireccionRecursos("IDIOMAS/SISTEMA", "SISTEMA").Generar();
 
 			parametros.direcciones["CARTA_NOMBRES"] = new DireccionRecursos("Cartas", "Nombres").Generar();
+			parametros.direcciones["CARTA_NOMBRES"] = new DireccionRecursos("Cartas", "Nombres").Generar();
+			parametros.direcciones["CARTA_EFECTOS"] = new DireccionRecursos("Cartas", "Efectos").Generar();
+			parametros.direcciones["CARTA_AMBIENTACION"] = new DireccionRecursos("Cartas", "Ambientacion").Generar();
 			parametros.direcciones["CARTA_CLASES"] = new DireccionRecursos("Cartas", "Clases").Generar();
 			parametros.direcciones["CARTA_TIPOS"] = new DireccionRecursos("Cartas", "Tipos").Generar();
 			parametros.direcciones["CARTA_INVOCACIONES"] = new DireccionRecursos("Cartas", "Invocaciones").Generar();

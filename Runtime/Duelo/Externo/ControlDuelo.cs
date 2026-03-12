@@ -46,6 +46,8 @@ namespace Bounds.Duelo {
 
 		public ParametrosControlDuelo parametrosControl;
 		public IProveedor<int, string> selectorNombres;
+		public IProveedor<int, string> selectorEfectos;
+		public IProveedor<int, string> selectorAmbientacion;
 		public IProveedor<string, string> selectorClases;
 		public IProveedor<string, string> selectorTipos;
 		public IProveedor<string, string> selectorInvocaciones;
@@ -65,6 +67,9 @@ namespace Bounds.Duelo {
 			ParametrosEscena parametrosEscena = parametrosControl.parametros;
 			proveedorCartas = new LectorCartas(new DireccionRecursos(parametrosControl.parametros.direcciones["CARTAS_DATOS"]));
 			selectorNombres = new TraductorCartaID(parametrosEscena.direcciones["CARTA_NOMBRES"]);
+			selectorNombres = new TraductorCartaID(parametrosEscena.direcciones["CARTA_NOMBRES"]);
+			selectorEfectos = new TraductorCartaID(parametrosEscena.direcciones["CARTA_EFECTOS"]);
+			selectorAmbientacion = new TraductorCartaID(parametrosEscena.direcciones["CARTA_AMBIENTACION"]);
 			selectorClases = new TraductorTexto(parametrosEscena.direcciones["CARTA_CLASES"]);
 			selectorTipos = new TraductorTexto(parametrosEscena.direcciones["CARTA_TIPOS"]);
 			selectorSistema = new TraductorTexto(parametrosEscena.direcciones["SISTEMA"]);
@@ -90,6 +95,8 @@ namespace Bounds.Duelo {
 				selectorHabilidades,
 				proveedorCartas,
 				selectorNombres,
+				selectorEfectos,
+				selectorAmbientacion,
 				selectorSistema,
 				selectorClases,
 				selectorTipos,

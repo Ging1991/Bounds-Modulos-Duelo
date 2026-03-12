@@ -22,12 +22,15 @@ namespace Bounds.Infraestructura.Visores {
 		protected IProveedor<string, string> selectorTipos;
 		protected IProveedor<string, string> selectorInvocaciones;
 		protected IProveedor<string, string> selectorSistema;
-
+		protected IProveedor<int, string> selectorEfectos;
+		protected IProveedor<int, string> selectorAmbientacion;
 
 		public void Inicializar(
 				IProveedor<string, EfectoTraduccion> selectorHabilidades,
 				IProveedor<int, CartaBD> proveedorCartas,
 				IProveedor<int, string> selectorNombres,
+				IProveedor<int, string> selectorEfectos,
+				IProveedor<int, string> selectorAmbientacion,
 				IProveedor<string, string> selectorSistema,
 				IProveedor<string, string> selectorClases,
 				IProveedor<string, string> selectorTipos,
@@ -41,10 +44,12 @@ namespace Bounds.Infraestructura.Visores {
 			this.selectorInvocaciones = selectorInvocaciones;
 			this.selectorSistema = selectorSistema;
 			this.selectorHabilidades = selectorHabilidades;
+			this.selectorEfectos = selectorEfectos;
+			this.selectorAmbientacion = selectorAmbientacion;
 
 			visorGeneral.Inicializar(
 				proveedorCartas, selectorHabilidades, ilustrador, tintero, selectorSistema, selectorClases,
-				selectorTipos, selectorInvocaciones, selectorNombres
+				selectorTipos, selectorInvocaciones, selectorNombres, selectorAmbientacion, selectorEfectos
 			);
 		}
 
@@ -69,8 +74,7 @@ namespace Bounds.Infraestructura.Visores {
 			catch (System.Exception) {
 				Debug.LogWarning($"No se encontró el nombre {info.cartaID}");
 			}
-			visorGeneral.visorTitulo.SetNombre(nombre, tintaGeneral);
-
+			visorGeneral.visorTitulo.SetNombre(GetNombre(selectorNombres, info.cartaID, info.original.nombre), tintaGeneral);
 
 			visorGeneral.visorTitulo.SetCartaID(info.cartaID, tintaGeneral);
 
@@ -101,17 +105,27 @@ namespace Bounds.Infraestructura.Visores {
 			if (info.original.clase == "CRIATURA") {
 				materiales += visorGeneral.GenerarMateriales(info.original.materiales);
 				if (info.original.datoCriatura.perfeccion == "BASICO") {
-					materiales += $"<i>{info.original.ambientacion}</i>";
+					materiales += $"<i>{GetNombre(selectorAmbientacion, info.cartaID, info.original.ambientacion)}</i>";
 				}
 			}
+			string textoEfecto = GetNombre(selectorEfectos, info.cartaID, info.original.efecto);
+			if (string.IsNullOrWhiteSpace(info.original.efecto))
+				textoEfecto = "";
 
-			visorGeneral.SetDescripcion(encabezado, materiales, visorGeneral.GenerarEfectos(efectos), info.original.efecto);
+			visorGeneral.SetDescripcion(encabezado, materiales, visorGeneral.GenerarEfectos(efectos), textoEfecto);
 
 			// contadores
 			visorContador.SetContador("supervivencia", info.TraerContadores("supervivencia"));
 			visorContador.SetContador("veneno", info.TraerContadores("veneno"));
 			visorContador.SetContador("poder", info.TraerContadores("poder"));
 			visorContador.SetContador("debilidad", info.TraerContadores("debilidad"));
+		}
+
+		public static string GetNombre(IProveedor<int, string> selector, int clave, string defecto) {
+			string pivot = selector.GetElemento(clave);
+			if (pivot != null)
+				return pivot;
+			return defecto;
 		}
 
 	}
