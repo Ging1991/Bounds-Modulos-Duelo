@@ -113,7 +113,7 @@ namespace Bounds.Duelo.Emblemas {
 			foreach (GameObject vacio in new SubCartasControladas(0, new CondicionClase("VACIO")).Generar()) {
 				CartaInfo infoVacio = vacio.GetComponent<CartaInfo>();
 
-				if (infoVacio.original.datoVacio.tipo == "MUNDO_VOLCAN" && cartaTipo.ContieneTipo("PYRO") && info.original.datoCriatura.perfeccion == "BASICO") {
+				if (infoVacio.original.datoVacio.tipo == "MUNDO_VOLCAN") {
 					EmblemaEfectos.Activar(new EfectoSobreJugador(vacio, adversario, new SubModificarLP(-500), "EXPLOSION"));
 				}
 

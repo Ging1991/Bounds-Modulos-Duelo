@@ -80,6 +80,26 @@ namespace Bounds.Duelo.Emblemas {
 							)
 						);
 					}
+					if (infoAtacante.GetComponent<CartaEfecto>().TieneClave("DOBLE_DAÑO")) {
+						EmblemaEfectos.Activar(
+							new EfectoSobreJugador(
+								infoAtacante.gameObject,
+								jugadorAtacado,
+								new SubModificarLP(infoAtacada.original.nivel * (-100)),
+								"CRITICO"
+							)
+						);
+					}
+					if (infoAtacante.GetComponent<CartaEfecto>().TieneClave("IMPACTO_N")) {
+						EmblemaEfectos.Activar(
+							new EfectoSobreJugador(
+								infoAtacante.gameObject,
+								jugadorAtacado,
+								new SubModificarLP(infoAtacante.GetComponent<CartaEfecto>().GetEfecto("IMPACTO_N").parametroN * (-1)),
+								"CRITICO"
+							)
+						);
+					}
 					if (infoAtacante.GetComponent<CartaEfecto>().TieneClave("BRUTAL") && infoAtacada.original.clase == "CRIATURA") {
 						EmblemaEfectos.Activar(
 							new EfectoSobreJugador(infoAtacante.gameObject, jugadorAtacado, new SubModificarLP(-500), "CRITICO")

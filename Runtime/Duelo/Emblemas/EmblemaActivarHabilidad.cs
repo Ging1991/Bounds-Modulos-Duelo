@@ -26,7 +26,8 @@ namespace Bounds.Duelo.Emblemas {
 			"DESTRUIR",
 			"ACTIVADO_DESCARTA_ROBO",
 			"ACTIVADO_DESCARTA_DAÑO",
-			"ACTIVADO_RECUPERA_CRIATURA"
+			"ACTIVADO_RECUPERA_CRIATURA",
+			"ANIQUILACION"
 		};
 
 		private EmblemaActivarHabilidad() { }
@@ -157,6 +158,18 @@ namespace Bounds.Duelo.Emblemas {
 						return;
 					}
 					fisica.panel.GetComponent<PanelCartas>().Iniciar(cartas, seleccionar, 1, "Selecciona una carta para destruir.");
+				}
+			}
+
+			if (cartaInfo.GetComponent<CartaEfecto>().TieneClave("ANIQUILACION")) {
+				List<GameObject> objetivos = new SubCartasControladas(adversario, new CondicionClase("CRIATURA")).Generar();
+				if (objetivos.Count > 0) {
+					SeleccionarAniquilacion seleccionar = new();
+					if (cartaInfo.controlador == 2) {
+						seleccionar.Seleccionar(objetivos[0]);
+						return;
+					}
+					fisica.panel.GetComponent<PanelCartas>().Iniciar(objetivos, seleccionar, 1, "Selecciona una carta para aniquilar.");
 				}
 			}
 

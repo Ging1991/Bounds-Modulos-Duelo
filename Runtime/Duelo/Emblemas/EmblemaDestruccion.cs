@@ -208,14 +208,13 @@ namespace Bounds.Duelo.Emblemas {
 					}
 				}
 
-				if (infoVacio.original.datoVacio.tipo == "IMPERIO_REPTIL" && cartaTipo.ContieneTipo("REPTIL")) {
-					List<GameObject> repiles = new List<GameObject>(fisica.TraerCartasEnMazo(info.controlador));
-					Condicion condicionReptil = new Condicion(tipoCarta: "CRIATURA", tipoCriatura: new List<string> { "REPTIL" });
-					repiles = condicionReptil.CumpleLista(repiles);
-					if (repiles.Count > 0) {
-						fisica.EnviarHaciaMano(repiles[0], info.controlador);
+				if (infoVacio.original.datoVacio.tipo == "IMPERIO_REPTIL" && info.original.clase == "CRIATURA") {
+					CondicionNivel condicionNivel = new(info.original.nivel);
+					List<GameObject> opciones = new SubCartasEnMazo(info.controlador, condicionNivel).Generar();
+					if (opciones.Count > 0) {
+						fisica.EnviarHaciaMano(opciones[0], info.controlador);
 						if (info.controlador == 1) {
-							CartaGeneral componente = repiles[0].GetComponent<CartaGeneral>();
+							CartaGeneral componente = opciones[0].GetComponent<CartaGeneral>();
 							componente.ColocarBocaArriba();
 						}
 					}
