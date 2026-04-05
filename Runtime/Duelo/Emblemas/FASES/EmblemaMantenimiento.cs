@@ -4,6 +4,7 @@ using Bounds.Duelo.Condiciones;
 using Bounds.Duelo.Efectos;
 using Bounds.Duelo.Pila.Efectos;
 using Bounds.Duelo.Pila.Subefectos;
+using Bounds.Duelo.Utiles;
 using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Duelo.Fisicas;
 using UnityEngine;
@@ -16,12 +17,31 @@ namespace Bounds.Duelo.Emblemas.Fases {
 
 			Fisica fisica = Fisica.Instancia;
 			List<GameObject> cartas = new List<GameObject>(fisica.TraerCartasEnCampo(jugador));
+			int adversario = JugadorDuelo.Adversario(jugador);
 
 			foreach (GameObject carta in cartas) {
 				CartaEfecto cartaEfecto = carta.GetComponent<CartaEfecto>();
 
 				if (cartaEfecto.TieneClave("PAGO_SANGRE")) {
 					EmblemaEfectos.Activar(new EfectoSobreCarta(carta, new SubPagoEnSangre(), carta));
+				}
+				if (cartaEfecto.TieneClave("DESGARRAR")) {
+					EmblemaEfectos.Activar(
+						new EfectoSobreListaDeCartas(
+							carta,
+							new SubColocarContador("debilidad", 1),
+							new SubCartasControladas(adversario, new CondicionClase("CRIATURA"))
+						)
+					);
+				}
+				if (cartaEfecto.TieneClave("CRECIMIENTO")) {
+					EmblemaEfectos.Activar(
+						new EfectoSobreListaDeCartas(
+							carta,
+							new SubColocarContador("poder", 1),
+							new SubCartasControladas(jugador, new CondicionClase("CRIATURA"))
+						)
+					);
 				}
 			}
 

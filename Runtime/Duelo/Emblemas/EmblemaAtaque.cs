@@ -115,7 +115,7 @@ namespace Bounds.Duelo.Emblemas {
 							)
 						);
 					}
-					if (infoAtacada.GetComponent<CartaEfecto>().TieneClave("ENVENENAR")) {
+					if (infoAtacada.GetComponent<CartaEfecto>().TieneClave("ENVENENAR_N")) {
 						EmblemaEfectos.Activar(
 							new EfectoSobreCarta(
 								seleccionador.atacado,

@@ -138,21 +138,6 @@ namespace Bounds.Duelo.Emblemas {
 					);
 				}
 
-				if (infoVacio.original.datoVacio.tipo == "VENENO" && cartaTipo.ContieneTipo("INSECTO") && info.original.datoCriatura.perfeccion == "BASICO") {
-					CondicionTipoCriatura condicionInsecto = new("INSECTO");
-
-					EmblemaEfectos.Activar(
-						new EfectoSobreCartas(
-							vacio,
-							new SubColocarContador("veneno", 1),
-							condicionInsecto.NoCumpleLista(
-								condicionCriatura.CumpleLista(new SubCartasControladas(0).Generar())
-							)
-						)
-					);
-
-				}
-
 				if (infoVacio.original.datoVacio.tipo == "ZOMBI" && cartaTipo.ContieneTipo("ZOMBI") && info.original.datoCriatura.perfeccion == "BASICO") {
 					CondicionTipoCriatura condicionZombi = new("ZOMBI");
 

@@ -63,30 +63,13 @@ namespace Bounds.Duelo.Emblemas {
 			CartaInfo info = carta.GetComponent<CartaInfo>();
 			int adversario = Adversario(info.controlador);
 
-			// ****************************   Habilidades propias de la carta  ****************************************
-			/*
-						if (info.habilidades.Contains("especial_zombi2")) {
-							List<GameObject> zombis = new List<GameObject>(fisica.TraerCartasEnCampo(info.controlador));
-							zombis.AddRange(fisica.TraerCartasEnCampo(adversario));
-							Condicion condicionZombi = new Condicion(tipoCarta:"CRIATURA", tipoCriatura:new List<string>{"zombi"});
-							zombis = condicionZombi.CumpleLista(zombis);
-							info.colocarContador("poder", zombis.Count*2);
-						}
-
-						if (info.habilidades.Contains("especial_carta")) {
-							List<GameObject> cartasX = new List<GameObject>(fisica.TraerCartasEnCampo(1));
-							cartasX.AddRange(fisica.TraerCartasEnCampo(2));
-							info.colocarContador("poder", cartasX.Count);
-						}
-
-						if (info.habilidades.Contains("especial_angel")) {
-							List<GameObject> angeles = new List<GameObject>(fisica.TraerCartasEnMateriales(1));
-							angeles.AddRange(fisica.TraerCartasEnMateriales(2));
-							Condicion condicionAngel = new Condicion(tipoCarta:"CRIATURA", tipoCriatura:new List<string>{"angel"});
-							angeles = condicionAngel.CumpleLista(angeles);
-							info.colocarContador("poder", angeles.Count);
-						}*/
-
+			List<GameObject> cartasAdversasario = new SubCartasControladas(adversario).Generar();
+			foreach (var cartaAdversario in cartasAdversasario) {
+				if (cartaAdversario.GetComponent<CartaEfecto>().TieneClave("FURTIVO")) {
+					EmblemaEnviarAlCementerio.DesdeElCampo(cartaAdversario);
+					EmblemaEfectos.Activar(new EfectoSobreCarta(cartaAdversario, new SubDestruir(), carta));
+				}
+			}
 		}
 
 
@@ -98,6 +81,18 @@ namespace Bounds.Duelo.Emblemas {
 				if (infoVacio.original.datoVacio.tipo == "PERFECCION") {
 					EmblemaEfectos.Activar(new EfectoSobreJugador(vacio, adversario, new SubModificarLP(-500), "EXPLOSION"));
 				}
+
+				if (infoVacio.original.datoVacio.tipo == "VENENO") {
+					EmblemaEfectos.Activar(
+						new EfectoSobreCartas(
+							vacio,
+							new SubColocarContador("veneno", 1),
+							new SubCartasControladas(adversario, new CondicionClase("CRIATURA")).Generar()
+						)
+					);
+
+				}
+
 			}
 
 		}

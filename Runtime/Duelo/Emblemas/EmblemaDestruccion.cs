@@ -366,6 +366,10 @@ namespace Bounds.Duelo.Emblemas {
 				EmblemaEfectos.Activar(new EfectoSobreJugador(carta, adversario, new SubModificarLP(-500)));
 			}
 
+			if (cartaEfecto.TieneClave("REENCANACION")) {
+				EmblemaEfectos.Activar(new EfectoSobreCarta(carta, new SubBarajar(), carta));
+			}
+
 			if (cartaEfecto.TieneClave("ALIEN_491")) {
 				EmblemaEfectos.Activar(new EfectoAlienEncuentraMateriales(carta));
 			}
