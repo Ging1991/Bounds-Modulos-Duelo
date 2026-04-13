@@ -9,13 +9,14 @@ using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Duelo.Utiles;
 using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Duelo.Fisicas;
+using Ging1991.Core.Interfaces;
 using Ging1991.Ventanas;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Bounds.Duelo.Emblemas {
 
-	public class EmblemaActivarHabilidad : IPresionarBoton {
+	public class EmblemaActivarHabilidad : IEjecutable {
 
 		private static EmblemaActivarHabilidad instancia;
 		public GameObject carta;
@@ -88,7 +89,7 @@ namespace Bounds.Duelo.Emblemas {
 				return;
 			}
 
-			VentanaControl.CrearVentanaConfirmar("¿Desea activar la habilidad?", this);
+			//VentanaControl.CrearVentanaConfirmar("¿Desea activar la habilidad?", this);
 		}
 
 
@@ -216,14 +217,11 @@ namespace Bounds.Duelo.Emblemas {
 		}
 
 
-		public void PresionarBoton(TipoBoton boton) {
-			if (boton == TipoBoton.ACEPTAR)
-				Resolver();
-			if (boton == TipoBoton.CANCELAR)
-				EmblemaSeleccionarEquipar.GetInstancia().Deseleccionar();
+
+		public void Ejecutar() {
+			Resolver();
+			EmblemaSeleccionarEquipar.GetInstancia().Deseleccionar();
 		}
-
-
 	}
 
 }

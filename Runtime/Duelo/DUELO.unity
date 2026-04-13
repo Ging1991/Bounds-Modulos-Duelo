@@ -949,9 +949,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aff734d3518a7646a2909382763bd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temaRelleno: TEMA_RELLENO
-  esPersonalizado: 0
-  temaBorde: TEMA_BORDE
   rellenoOBJ: {fileID: 1682267752}
 --- !u!114 &996910023
 MonoBehaviour:
@@ -1043,13 +1040,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1567ca7797c29428187e183d4fe8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temaRelleno: RELLENO_BOTON
-  esPersonalizado: 0
-  temaBorde: TEMA_BORDE
   rellenoOBJ: {fileID: 1228715424}
   textoOBJ: {fileID: 902079829}
-  temaTexto: TEMA_TEXTO
-  codigoIdioma: 
 --- !u!114 &1146157087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1601,8 +1593,6 @@ GameObject:
   - component: {fileID: 1902117132}
   - component: {fileID: 1902117133}
   - component: {fileID: 1902117135}
-  - component: {fileID: 1902117136}
-  - component: {fileID: 1902117139}
   - component: {fileID: 1902117140}
   - component: {fileID: 1902117141}
   - component: {fileID: 1902117142}
@@ -1677,30 +1667,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   criatura: {fileID: 0}
   materiales: []
---- !u!114 &1902117136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902117130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ef703a5c3948ce46b0dbf61dac7b595, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1902117139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902117130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb77e6c356adf64e9c577f8d21cb8f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1902117140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2332,6 +2298,10 @@ PrefabInstance:
       propertyPath: ilustradorDeCartas
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7508288089374872751, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
+      propertyPath: m_Name
+      value: nicialanoInicial
+      objectReference: {fileID: 0}
     - target: {fileID: 8159062034044396565, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
       propertyPath: m_Name
       value: Lienzo_efectos
@@ -2433,6 +2403,18 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 471303005}
+    - target: {fileID: 8822148200698769143, guid: 5ec61225e831fbf4b85801a49d5be5f1, type: 3}
+      propertyPath: m_Color.b
+      value: 0.08262808
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822148200698769143, guid: 5ec61225e831fbf4b85801a49d5be5f1, type: 3}
+      propertyPath: m_Color.g
+      value: 0.20754719
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822148200698769143, guid: 5ec61225e831fbf4b85801a49d5be5f1, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8828972177285046613, guid: 5ec61225e831fbf4b85801a49d5be5f1, type: 3}
       propertyPath: m_Name
       value: LienzoFondo
@@ -2446,8 +2428,8 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 471303006}
   - {fileID: 1902117131}
+  - {fileID: 471303006}
   - {fileID: 1922705831}
   - {fileID: 1535109107}
   - {fileID: 246512689}

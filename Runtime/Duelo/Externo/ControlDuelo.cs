@@ -28,10 +28,13 @@ using Bounds.Musica;
 using Ging1991.Musica;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Visor.Persistencia;
+using Ging1991.Interfaces.Entrada;
 
-namespace Bounds.Duelo {
+namespace Bounds.Duelo
+{
 
-	public class ControlDuelo : SingletonMonoBehaviour<ControlDuelo>, ICampoLugarControlador {
+	public class ControlDuelo : SingletonMonoBehaviour<ControlDuelo>, ICampoLugarControlador
+	{
 
 		private ProveedorImagenPersonaje proveedorMiniatura;
 		public GestorDeSonidos gestorDeSonidos;
@@ -57,12 +60,13 @@ namespace Bounds.Duelo {
 		public Billetera billetera;
 		public MusicaDeFondo musicaDeFondo;
 
-		public void TocarMusica(string clave) {
+		public void TocarMusica(string clave)
+		{
 			musicaDeFondo.Inicializar(parametrosControl.parametros.direcciones[clave]);
 		}
 
-		void Start() {
-
+		void Start()
+		{
 			parametrosControl.Inicializar();
 			ParametrosEscena parametrosEscena = parametrosControl.parametros;
 			proveedorCartas = new LectorCartas(new DireccionRecursos(parametrosControl.parametros.direcciones["CARTAS_DATOS"]));
@@ -87,7 +91,8 @@ namespace Bounds.Duelo {
 			);
 
 
-			foreach (var campo in FindObjectsByType<CampoLugar>(FindObjectsSortMode.None)) {
+			foreach (var campo in FindObjectsByType<CampoLugar>(FindObjectsSortMode.None))
+			{
 				campo.controlador = this;
 			}
 
@@ -146,7 +151,8 @@ namespace Bounds.Duelo {
 		}
 
 
-		public void PresionarBotonFase() {
+		public void PresionarBotonFase()
+		{
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			EmblemaTurnos turnos = conocimiento.traerControlTurnos();
 			if (turnos.jugadorActivo != 1)
@@ -161,12 +167,14 @@ namespace Bounds.Duelo {
 		}
 
 
-		public void PresionarBotonSugerencia() {
+		public void PresionarBotonSugerencia()
+		{
 			PresionarBotonFase();
 		}
 
 
-		public void PresionarBotonInvocacion() {
+		public void PresionarBotonInvocacion()
+		{
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			EmblemaTurnos turnos = conocimiento.traerControlTurnos();
 			if (turnos.jugadorActivo != 1)
@@ -176,13 +184,15 @@ namespace Bounds.Duelo {
 		}
 
 
-		public void PresionarBotonAbandonar() {
+		public void PresionarBotonAbandonar()
+		{
 			TerminarJuego componente = GameObject.Find("TerminarJuego").GetComponent<TerminarJuego>();
 			componente.Terminar(false);
 		}
 
 
-		void Update() {
+		void Update()
+		{
 			if (Input.GetKeyDown(KeyCode.Space))
 				PresionarBotonSugerencia();
 			if (Input.GetKeyDown(KeyCode.R))
@@ -190,7 +200,8 @@ namespace Bounds.Duelo {
 		}
 
 
-		public void HabilitarInvocacionPerfecta() {
+		public void HabilitarInvocacionPerfecta()
+		{
 
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			Fisica fisica = conocimiento.traerFisica();
@@ -199,9 +210,11 @@ namespace Bounds.Duelo {
 			cartasFueraDeCampo.AddRange(fisica.TraerCartasEnCementerio(1));
 			cartasFueraDeCampo.AddRange(fisica.TraerCartasEnMano(1));
 			bool tieneInvocaciones = false;
-			foreach (GameObject carta in cartasFueraDeCampo) {
+			foreach (GameObject carta in cartasFueraDeCampo)
+			{
 				CartaPerfeccion cartaPerfeccion = carta.GetComponent<CartaPerfeccion>();
-				if (cartaPerfeccion.PuedeInvocar()) {
+				if (cartaPerfeccion.PuedeInvocar())
+				{
 					tieneInvocaciones = true;
 					break;
 				}
@@ -214,22 +227,27 @@ namespace Bounds.Duelo {
 				boton.GetComponent<Boton>().SetColorRelleno(Color.gray);
 		}
 
-		public void LugarPresionado(GameObject objeto) {
+		public void LugarPresionado(GameObject objeto)
+		{
 			Entrada entrada = Entrada.GetInstancia();
 			entrada.PresionarCampo(objeto);
 		}
 
-		public void LugarSoltado(GameObject objeto) {
-			if (CartaArrastrar.carta != null) {
+		public void LugarSoltado(GameObject objeto)
+		{
+			if (CartaArrastrar.carta != null)
+			{
 				EmblemaJugarCarta.Jugar(CartaArrastrar.carta, objeto);
 			}
 		}
 
-		private class ProveedorImagenPersonaje : LectorPorDemandaImagen, IProveedor<string, Sprite> {
+		private class ProveedorImagenPersonaje : LectorPorDemandaImagen, IProveedor<string, Sprite>
+		{
 
 			public ProveedorImagenPersonaje(Direccion direccionCarpeta) : base(direccionCarpeta, TipoLector.RECURSOS) { }
 
-			public Sprite GetElemento(string nombre) {
+			public Sprite GetElemento(string nombre)
+			{
 				return Leer(nombre);
 			}
 

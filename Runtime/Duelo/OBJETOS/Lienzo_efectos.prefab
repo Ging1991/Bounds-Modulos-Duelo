@@ -245,13 +245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1567ca7797c29428187e183d4fe8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temaRelleno: RELLENO_CARTEL
-  esPersonalizado: 0
-  temaBorde: TEMA_BORDE
   rellenoOBJ: {fileID: 5444678179566961748}
   textoOBJ: {fileID: 5125037563910978981}
-  temaTexto: TEMA_TEXTO
-  codigoIdioma: 
 --- !u!1 &2499960018369806367
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,8 +301,6 @@ MonoBehaviour:
   - {fileID: 5415681347027118617}
   - {fileID: 1401936817848133235}
   - {fileID: 6412946853818575667}
-  datosDeCartas: {fileID: 0}
-  ilustradorDeCartas: {fileID: 0}
 --- !u!1 &3121540899267823843
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,13 +391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1567ca7797c29428187e183d4fe8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temaRelleno: RELLENO_BOTON
-  esPersonalizado: 0
-  temaBorde: TEMA_BORDE
   rellenoOBJ: {fileID: 3382544848661011715}
   textoOBJ: {fileID: 1075097439047432200}
-  temaTexto: TEMA_TEXTO
-  codigoIdioma: 
 --- !u!1 &3382544848661011715
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,9 +830,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aff734d3518a7646a2909382763bd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temaRelleno: TEMA_RELLENO
-  esPersonalizado: 0
-  temaBorde: TEMA_BORDE
   rellenoOBJ: {fileID: 6807475543863805501}
 --- !u!1 &6807475543863805501
 GameObject:
@@ -1015,9 +1000,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aff734d3518a7646a2909382763bd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temaRelleno: TEMA_RELLENO
-  esPersonalizado: 0
-  temaBorde: TEMA_BORDE
   rellenoOBJ: {fileID: 5026782092802432127}
 --- !u!1 &8159062034044396565
 GameObject:
@@ -1181,8 +1163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ventanaMulligan: {fileID: 7508288089374872751}
-  datosDeCartas: {fileID: 0}
-  ilustradorDeCartas: {fileID: 0}
 --- !u!1001 &80970934660503442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2971,10 +2951,6 @@ PrefabInstance:
       value: Conservar mano
       objectReference: {fileID: 0}
     - target: {fileID: 314542040558431663, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
-      propertyPath: textoOBJ
-      value: 
-      objectReference: {fileID: 258937792490353361}
-    - target: {fileID: 314542040558431663, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
       propertyPath: temaBorde
       value: TEMA_BORDE
       objectReference: {fileID: 0}
@@ -2990,9 +2966,17 @@ PrefabInstance:
       propertyPath: temaRelleno
       value: RELLENO_BOTON
       objectReference: {fileID: 0}
+    - target: {fileID: 1236095545169679201, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
+      propertyPath: codigo
+      value: CONSERVAR
+      objectReference: {fileID: 0}
     - target: {fileID: 1258087339724995504, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
       propertyPath: m_Name
       value: BotonQuedarse
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435777550978393412, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
+      propertyPath: m_Text
+      value: Conservar
       objectReference: {fileID: 0}
     - target: {fileID: 2563626133896806687, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
       propertyPath: m_Pivot.x
@@ -3111,11 +3095,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
---- !u!1 &258937792490353361 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7887772105564571716, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
-  m_PrefabInstance: {fileID: 7989685341666081429}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4067724547830975770 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6238160103493400463, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
@@ -3222,10 +3201,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2709448237781884262, guid: d8963b8949585174482e0b70511de7f1, type: 3}
+      propertyPath: m_Text
+      value: Mano inicial
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833453125992983363, guid: d8963b8949585174482e0b70511de7f1, type: 3}
+      propertyPath: codigo
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5412046747969626888, guid: d8963b8949585174482e0b70511de7f1, type: 3}
       propertyPath: textoOBJ
       value: 
-      objectReference: {fileID: 434409772102088593}
+      objectReference: {fileID: 0}
     - target: {fileID: 5412046747969626888, guid: d8963b8949585174482e0b70511de7f1, type: 3}
       propertyPath: temaBorde
       value: TEMA_BORDE
@@ -3237,7 +3224,7 @@ PrefabInstance:
     - target: {fileID: 5412046747969626888, guid: d8963b8949585174482e0b70511de7f1, type: 3}
       propertyPath: rellenoOBJ
       value: 
-      objectReference: {fileID: 4250508483488418174}
+      objectReference: {fileID: 0}
     - target: {fileID: 5412046747969626888, guid: d8963b8949585174482e0b70511de7f1, type: 3}
       propertyPath: temaRelleno
       value: RELLENO_CARTEL
@@ -3251,16 +3238,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8963b8949585174482e0b70511de7f1, type: 3}
---- !u!1 &434409772102088593 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8865658313622735051, guid: d8963b8949585174482e0b70511de7f1, type: 3}
-  m_PrefabInstance: {fileID: 9011263192699158362}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4250508483488418174 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5184389547760170532, guid: d8963b8949585174482e0b70511de7f1, type: 3}
-  m_PrefabInstance: {fileID: 9011263192699158362}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7687454108279301009 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1702680519813651659, guid: d8963b8949585174482e0b70511de7f1, type: 3}
@@ -3279,10 +3256,6 @@ PrefabInstance:
       value: Cambiar cartas
       objectReference: {fileID: 0}
     - target: {fileID: 314542040558431663, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
-      propertyPath: textoOBJ
-      value: 
-      objectReference: {fileID: 1181994877866058621}
-    - target: {fileID: 314542040558431663, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
       propertyPath: temaBorde
       value: TEMA_BORDE
       objectReference: {fileID: 0}
@@ -3298,9 +3271,17 @@ PrefabInstance:
       propertyPath: temaRelleno
       value: RELLENO_BOTON
       objectReference: {fileID: 0}
+    - target: {fileID: 1236095545169679201, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
+      propertyPath: codigo
+      value: CAMBIAR
+      objectReference: {fileID: 0}
     - target: {fileID: 1258087339724995504, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
       propertyPath: m_Name
       value: BotonCambiar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435777550978393412, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
+      propertyPath: m_Text
+      value: Cambiar
       objectReference: {fileID: 0}
     - target: {fileID: 2563626133896806687, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
       propertyPath: m_Pivot.x
@@ -3419,11 +3400,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
---- !u!1 &1181994877866058621 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7887772105564571716, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}
-  m_PrefabInstance: {fileID: 9012183222315969337}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3135580063812820150 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6238160103493400463, guid: 9b75a52dcb1d91e499cb9517e19aad1c, type: 3}

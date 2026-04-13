@@ -13,6 +13,7 @@ using Ging1991.Interfaces;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
 using Ging1991.Musica;
+using Ging1991.Interfaces.Salida;
 
 namespace Bounds.Duelo.Emblemas {
 

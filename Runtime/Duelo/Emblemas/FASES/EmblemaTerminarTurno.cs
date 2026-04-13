@@ -1,6 +1,7 @@
 using Bounds.Duelo.CPU;
 using Bounds.Duelo.Emblema;
 using Ging1991.Interfaces;
+using Ging1991.Interfaces.Entrada;
 using UnityEngine;
 
 namespace Bounds.Duelo.Emblemas.Fases {
