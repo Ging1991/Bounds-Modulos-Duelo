@@ -1528,6 +1528,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2709448237781884262, guid: d8963b8949585174482e0b70511de7f1, type: 3}
+      propertyPath: m_Text
+      value: Final
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833453125992983363, guid: d8963b8949585174482e0b70511de7f1, type: 3}
+      propertyPath: codigo
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5412046747969626888, guid: d8963b8949585174482e0b70511de7f1, type: 3}
       propertyPath: grupo
       value: CARTEL1
@@ -1664,6 +1672,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2709448237781884262, guid: d8963b8949585174482e0b70511de7f1, type: 3}
+      propertyPath: m_Text
+      value: Principal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833453125992983363, guid: d8963b8949585174482e0b70511de7f1, type: 3}
+      propertyPath: codigo
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5412046747969626888, guid: d8963b8949585174482e0b70511de7f1, type: 3}
       propertyPath: grupo
       value: CARTEL1
@@ -1799,6 +1815,14 @@ PrefabInstance:
     - target: {fileID: 1702680519813651659, guid: d8963b8949585174482e0b70511de7f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709448237781884262, guid: d8963b8949585174482e0b70511de7f1, type: 3}
+      propertyPath: m_Text
+      value: Batalla
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833453125992983363, guid: d8963b8949585174482e0b70511de7f1, type: 3}
+      propertyPath: codigo
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5412046747969626888, guid: d8963b8949585174482e0b70511de7f1, type: 3}
       propertyPath: grupo
@@ -1992,7 +2016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1702680519813651659, guid: d8963b8949585174482e0b70511de7f1, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1702680519813651659, guid: d8963b8949585174482e0b70511de7f1, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2028,7 +2052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1702680519813651659, guid: d8963b8949585174482e0b70511de7f1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 1702680519813651659, guid: d8963b8949585174482e0b70511de7f1, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2045,6 +2069,14 @@ PrefabInstance:
     - target: {fileID: 1702680519813651659, guid: d8963b8949585174482e0b70511de7f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709448237781884262, guid: d8963b8949585174482e0b70511de7f1, type: 3}
+      propertyPath: m_Text
+      value: Mantenimiento
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833453125992983363, guid: d8963b8949585174482e0b70511de7f1, type: 3}
+      propertyPath: codigo
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5412046747969626888, guid: d8963b8949585174482e0b70511de7f1, type: 3}
       propertyPath: grupo
