@@ -1,9 +1,9 @@
 ﻿using Bounds.Cofres;
 using Bounds.Duelo.Paneles;
-using Bounds.Modulos.Cartas.Ilustradores;
-using Bounds.Modulos.Cartas.Persistencia;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Cartas.Tinteros;
+using Bounds.Persistencia;
+using Bounds.Persistencia.Datos;
 using Ging1991.Core;
 using Ging1991.Core.Interfaces;
 using UnityEngine;
@@ -18,8 +18,8 @@ namespace Bounds.Duelo.Utiles {
 		public GameObject tituloOBJ;
 		public GameObject descripcionOBJ;
 		public GameObject recompensaOBJ;
-		private int cartaID = 1;
-		private string rareza = "N";
+		private CartaColeccionBD carta;
+		private string rareza;
 
 
 		public void Iniciar(IEjecutable accion, bool gano, IProveedor<int, CartaBD> proveedorCartas, IProveedor<string, Sprite> ilustrador) {
@@ -33,21 +33,36 @@ namespace Bounds.Duelo.Utiles {
 				return;
 			}
 
+			Coleccion coleccion = new Coleccion("PRINCIPIANTE", ControlDuelo.Instancia.carpetaColecciones.Generar("PRINCIPIANTE"));
 			int probabilidad = Azar<int>.GenerarEnteroEntre(1, 100);
-			if (probabilidad <= 50)
-				rareza = "N";
-			else if (probabilidad <= 80)
-				rareza = "PLA";
-			else if (probabilidad <= 95)
-				rareza = "ORO";
-			else
-				rareza = "MIT";
 
-			cartaID = Azar<int>.GenerarEnteroEntre(1, 440);
+			if (probabilidad <= 40) {
+				carta = Azar<CartaColeccionBD>.ValorAleatorio(coleccion.comunes);
+				rareza = "N";
+			}
+			else if (probabilidad <= 75) {
+				carta = Azar<CartaColeccionBD>.ValorAleatorio(coleccion.infrecuentes);
+				rareza = "PLA";
+			}
+			else if (probabilidad <= 90) {
+				carta = Azar<CartaColeccionBD>.ValorAleatorio(coleccion.raras);
+				rareza = "ORO";
+			}
+			else if (probabilidad <= 99) {
+				carta = Azar<CartaColeccionBD>.ValorAleatorio(coleccion.raras);
+				rareza = "MIT";
+			}
+			else {
+				carta = Azar<CartaColeccionBD>.ValorAleatorio(coleccion.secretas);
+				rareza = "SEC";
+			}
+
 			ITintero tintero = new TinteroBounds();
 			Color tinta = tintero.GetColor($"TINTA_{rareza}");
 			Color fondo = tintero.GetColor($"NIVEL_{rareza}");
-			GetComponentInChildren<RecompensaDuelo>().Inicializar(cartaID, rareza, tinta, fondo, this, probabilidad, proveedorCartas, ilustrador, tintero);
+			GetComponentInChildren<RecompensaDuelo>().Inicializar(
+				carta.cartaID, carta.imagen, rareza, tinta, fondo, this, probabilidad, proveedorCartas, ilustrador, tintero
+			);
 		}
 
 
@@ -59,7 +74,7 @@ namespace Bounds.Duelo.Utiles {
 
 		public void Aceptar() {
 			Cofre cofre = ControlDuelo.Instancia.cofre;
-			CartaCofreBD linea = new($"{cartaID}_A_{rareza}_1");
+			CartaCofreBD linea = new($"{carta.cartaID}_{carta.imagen}_{rareza}_1");
 			cofre.AgregarCarta(linea);
 			cofre.Guardar();
 

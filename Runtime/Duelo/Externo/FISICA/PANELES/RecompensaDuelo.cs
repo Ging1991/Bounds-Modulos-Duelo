@@ -1,11 +1,8 @@
 ﻿using System.Collections.Generic;
 using Bounds.Modulos.Cartas;
-using Bounds.Modulos.Cartas.Ilustradores;
-using Bounds.Modulos.Cartas.Persistencia;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Cartas.Tinteros;
 using Ging1991.Core.Interfaces;
-using Ging1991.Relojes;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,17 +15,15 @@ namespace Bounds.Duelo.Paneles {
 		public List<GameObject> objetosConTinta;
 		public List<GameObject> objetosConTintaClara;
 		public Text rarezaProbabilidad;
-		private Color colorTinta;
 		private bool fueCobrada;
 
-		public void Inicializar(int cartaID, string rareza, Color tinta, Color fondo, IEjecutable accion, int probabilidad,
+		public void Inicializar(int cartaID, string imagen, string rareza, Color tinta, Color fondo, IEjecutable accion, int probabilidad,
 				IProveedor<int, CartaBD> proveedorCartas, IProveedor<string, Sprite> ilustrador, ITintero tintero) {
 			fueCobrada = false;
 
 			GetComponentInChildren<CartaFrente>().Inicializar(proveedorCartas, ilustrador, tintero);
-			GetComponentInChildren<CartaFrente>().Mostrar(cartaID, "A", rareza);
+			GetComponentInChildren<CartaFrente>().Mostrar(cartaID, imagen, rareza);
 			this.accion = accion;
-			colorTinta = tinta;
 			foreach (var objeto in objetosConTinta)
 				objeto.GetComponent<Image>().color = tinta;
 			foreach (var objeto in objetosConTintaClara)

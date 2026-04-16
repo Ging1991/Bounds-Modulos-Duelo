@@ -8,7 +8,7 @@ namespace Bounds.Modulos.Duelo {
 		public override void SetParametros() {
 			parametros.direcciones["COLORES"] = new DireccionRecursos("Configuracion", "COLORES").Generar();
 			parametros.direcciones["SISTEMA"] = new DireccionRecursos("Configuracion", "IDIOMA").Generar();
-
+			parametros.direcciones["COLECCIONES"] = "COLECCIONES";
 			parametros.direcciones["CARTA_NOMBRES"] = new DireccionRecursos("Cartas", "Nombres").Generar();
 			parametros.direcciones["CARTA_NOMBRES"] = new DireccionRecursos("Cartas", "Nombres").Generar();
 			parametros.direcciones["CARTA_EFECTOS"] = new DireccionRecursos("Cartas", "Efectos").Generar();

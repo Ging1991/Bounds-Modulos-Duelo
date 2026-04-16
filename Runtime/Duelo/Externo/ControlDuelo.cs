@@ -29,6 +29,7 @@ using Ging1991.Musica;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Visor.Persistencia;
 using Ging1991.Interfaces.Entrada;
+using Ging1991.Persistencia.Proveedores;
 
 namespace Bounds.Duelo {
 
@@ -44,6 +45,7 @@ namespace Bounds.Duelo {
 		public PanelCartas panelCartas;
 		public IFinalizarDuelo finalizarDuelo;
 		public Cofre cofre;
+		public DireccionRecursos carpetaColecciones;
 
 		public ParametrosControlDuelo parametrosControl;
 		public IProveedor<int, string> selectorNombres;
@@ -72,14 +74,14 @@ namespace Bounds.Duelo {
 			selectorNombres = new TraductorCartaID(parametrosEscena.direcciones["CARTA_NOMBRES"]);
 			selectorEfectos = new TraductorCartaID(parametrosEscena.direcciones["CARTA_EFECTOS"]);
 			selectorAmbientacion = new TraductorCartaID(parametrosEscena.direcciones["CARTA_AMBIENTACION"]);
-			selectorClases = new TraductorTexto(parametrosEscena.direcciones["CARTA_CLASES"]);
-			selectorTipos = new TraductorTexto(parametrosEscena.direcciones["CARTA_TIPOS"]);
-			selectorSistema = new TraductorTexto(parametrosEscena.direcciones["SISTEMA"]);
-			selectorInvocaciones = new TraductorTexto(parametrosEscena.direcciones["CARTA_INVOCACIONES"]);
+			selectorClases = new ProveedorTexto(parametrosEscena.direcciones["CARTA_CLASES"], TipoLector.RECURSOS);
+			selectorTipos = new ProveedorTexto(parametrosEscena.direcciones["CARTA_TIPOS"], TipoLector.RECURSOS);
+			selectorSistema = new ProveedorTexto(parametrosEscena.direcciones["SISTEMA"], TipoLector.RECURSOS);
+			selectorInvocaciones = new ProveedorTexto(parametrosEscena.direcciones["CARTA_INVOCACIONES"], TipoLector.RECURSOS);
 			configuracion = new(parametrosEscena.direcciones["CONFIGURACION"]);
 			gestorDeSonidos.Inicializar(new DireccionRecursos(parametrosEscena.direcciones["SONIDOS"]));
 			selectorHabilidades = new LectorHabilidades(parametrosControl.parametros.direcciones["CARTAS_HABILIDADES"]);
-
+			carpetaColecciones = new(parametrosControl.parametros.direcciones["COLECCIONES"]);
 			billetera = new(parametrosEscena.direcciones["BILLETERA"]);
 			cofre = new(parametrosEscena.direcciones["COFRE"], parametrosEscena.direcciones["COFRE_RECURSOS"]);
 			TocarMusica("MUSICA_TIENDA");

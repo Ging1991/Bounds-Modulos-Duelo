@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
-using Bounds.Modulos.Cartas.Ilustradores;
 using System.Collections;
 using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Utiles;
-using Bounds.Modulos.Cartas.Persistencia;
 using Ging1991.Core.Interfaces;
 using Bounds.Persistencia;
 
