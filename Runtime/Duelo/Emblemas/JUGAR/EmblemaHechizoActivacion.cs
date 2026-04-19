@@ -42,6 +42,15 @@ namespace Bounds.Duelo.Emblemas {
 				}
 			}
 
+			if (dato.tipo == "DESCARTE_ENCUENTRA_MAGICOS") {
+				List<GameObject> cartasPosibles = new SubCartasEnMazo(jugador, new CondicionCriaturaPerfeccion("MAGICO")).Generar();
+				if (cartasPosibles.Count > 0) {
+					EmblemaEfectos.Activar(new EfectoSobreCarta(hechizo, new SubEnviarMano(), cartasPosibles[0]));
+				}
+				if (cartasPosibles.Count > 1) {
+					EmblemaEfectos.Activar(new EfectoSobreCarta(hechizo, new SubEnviarMano(), cartasPosibles[1]));
+				}
+			}
 
 			if (dato.tipo == "DESCARTE_BUSCA_MATERIALES_ID") {
 				EmblemaEfectos.Activar(new EfectoEncuentraMaterialesID(hechizo, jugador, descarte));

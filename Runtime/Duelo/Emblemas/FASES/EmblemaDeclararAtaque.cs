@@ -55,6 +55,16 @@ namespace Bounds.Duelo.Emblemas.Fases {
 				EmblemaEfectos.Activar(new EfectoSobreJugador(atacante, adversario, new SubMoler(5)));
 			}
 
+			if (efectoAtacante.TieneClave("IMPACTO_ROSA")) {
+				CondicionMultiple condicionMultiple = new CondicionMultiple(CondicionMultiple.Tipo.Y);
+				condicionMultiple.AgregarCondicion(new CondicionClase("CRIATURA"));
+				condicionMultiple.AgregarCondicion(new CondicionNivel(1));
+				int cantidad = new SubCartasEnMano(infoAtacante.controlador, condicionMultiple).Generar().Count;
+				if (cantidad > 0) {
+					EmblemaEfectos.Activar(new EfectoSobreJugador(atacante, adversario, new SubModificarLP(-1000 * cantidad)));
+				}
+			}
+
 			foreach (var aura in new SubCartasControladas(infoAtacado.controlador, new CondicionClase("AURA")).Generar()) {
 				if (aura.GetComponent<CartaEfecto>().TieneClave("VINCULO_SOMBRA")) {
 					//GameObject.FindAnyObjectByType<GestorDeSonidos>().ReproducirSonido("FxRebote");

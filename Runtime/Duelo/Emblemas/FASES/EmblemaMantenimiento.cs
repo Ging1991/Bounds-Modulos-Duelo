@@ -43,6 +43,16 @@ namespace Bounds.Duelo.Emblemas.Fases {
 						)
 					);
 				}
+				if (cartaEfecto.TieneClave("ABSORBER_VIDA")) {
+					EmblemaEfectos.Activar(
+						new EfectoSobreJugador(
+							carta,
+							adversario,
+							new SubModificarLP(-500),
+							"PERDER_LP"
+						)
+					);
+				}
 			}
 
 			ActivarVacios(jugador);

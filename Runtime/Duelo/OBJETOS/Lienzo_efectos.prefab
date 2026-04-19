@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 9220949303407865104}
   - component: {fileID: 4296701981069051435}
   - component: {fileID: 1423528242355500641}
+  - component: {fileID: 8709230907403729668}
   m_Layer: 5
   m_Name: Texto
   m_TagString: Untagged
@@ -155,6 +156,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Pila de efectos
+--- !u!114 &8709230907403729668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075097439047432200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0b2f36aa315fd43a3f77652506b25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetivo: {fileID: 1423528242355500641}
+  codigo: TEXTO
 --- !u!1 &1444296154867390661
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,6 +328,7 @@ GameObject:
   - component: {fileID: 8503533093544862008}
   - component: {fileID: 4424258391179878651}
   - component: {fileID: 775546490816178157}
+  - component: {fileID: 9178801573954289955}
   m_Layer: 5
   m_Name: Titulo
   m_TagString: Untagged
@@ -393,6 +409,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rellenoOBJ: {fileID: 3382544848661011715}
   textoOBJ: {fileID: 1075097439047432200}
+--- !u!114 &9178801573954289955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3121540899267823843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0b2f36aa315fd43a3f77652506b25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetivo: {fileID: 4424258391179878651}
+  codigo: BORDE
 --- !u!1 &3382544848661011715
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.05882353, g: 0.74509805, b: 0.54901963, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -795,6 +825,7 @@ GameObject:
   - component: {fileID: 5271215834197555050}
   - component: {fileID: 4497776428489742538}
   - component: {fileID: 3089949398139469706}
+  - component: {fileID: 4223612343138903669}
   m_Layer: 5
   m_Name: FondoPila
   m_TagString: Untagged
@@ -846,7 +877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.3137255, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -876,6 +907,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rellenoOBJ: {fileID: 6807475543863805501}
+--- !u!114 &4223612343138903669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754788370007048158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0b2f36aa315fd43a3f77652506b25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetivo: {fileID: 4497776428489742538}
+  codigo: BORDE
 --- !u!1 &6807475543863805501
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,7 +980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.039215688, g: 0.4509804, b: 0.33333334, a: 1}
+  m_Color: {r: 0.995283, g: 1, b: 0.9986523, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -90,13 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1567ca7797c29428187e183d4fe8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temaRelleno: RELLENO_CARTEL
-  esPersonalizado: 1
-  temaBorde: 
   rellenoOBJ: {fileID: 1248885567882577279}
   textoOBJ: {fileID: 3291970104581307280}
-  temaTexto: 
-  codigoIdioma: 
 --- !u!1 &664377755268287161
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.019607844, g: 0.1764706, b: 0.09803922, a: 1}
+  m_Color: {r: 0.09433961, g: 0.010136918, b: 0.008454963, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -287,7 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.05882353, g: 0.74509805, b: 0.54901963, a: 1}
+  m_Color: {r: 0.78431374, g: 0.43137255, b: 0.43137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -395,13 +390,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1567ca7797c29428187e183d4fe8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temaRelleno: 
-  esPersonalizado: 1
-  temaBorde: 
   rellenoOBJ: {fileID: 0}
   textoOBJ: {fileID: 0}
-  temaTexto: 
-  codigoIdioma: 
 --- !u!1 &2932678921139676335
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,13 +481,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726f180da6435f64e97866f16b502b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temaRelleno: 
-  esPersonalizado: 1
-  temaBorde: 
   rellenoOBJ: {fileID: 0}
   textoOBJ: {fileID: 0}
-  temaTexto: 
-  codigoIdioma: 
   candadoOBJ: {fileID: 0}
 --- !u!1 &3077053869112669139
 GameObject:
@@ -557,7 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.039215688, g: 0.4509804, b: 0.33333334, a: 1}
+  m_Color: {r: 0.5882353, g: 0.23529412, b: 0.23529412, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -632,7 +617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.019607844, g: 0.1764706, b: 0.09803922, a: 1}
+  m_Color: {r: 0.09433961, g: 0.010136918, b: 0.008454963, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -711,7 +696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.05882353, g: 0.74509805, b: 0.54901963, a: 1}
+  m_Color: {r: 0.78431374, g: 0.43137255, b: 0.43137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -821,9 +806,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aff734d3518a7646a2909382763bd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temaRelleno: TEMA_RELLENO
-  esPersonalizado: 1
-  temaBorde: TEMA_BORDE
   rellenoOBJ: {fileID: 3077053869112669139}
 --- !u!1 &6102824745451804507
 GameObject:
@@ -883,7 +865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.019607844, g: 0.1764706, b: 0.09803922, a: 1}
+  m_Color: {r: 0.1509434, g: 0.007831969, b: 0.010663897, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -964,7 +946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3137255, g: 0.9411765, b: 0.74509805, a: 1}
+  m_Color: {r: 0.78431374, g: 0.43137255, b: 0.43137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
