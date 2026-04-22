@@ -10,6 +10,7 @@ using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
 using Bounds.Persistencia;
+using Bounds.Duelo.Efectos;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -76,6 +77,12 @@ namespace Bounds.Duelo.Emblemas {
 					EfectoBD efecto = carta.GetComponent<CartaEfecto>().GetEfecto("MISION_N");
 					if (carta.GetComponent<CartaInfo>().TraerContadores("mision") < efecto.parametroN)
 						EmblemaEfectos.Activar(new EfectoSobreCarta(carta, new SubColocarContador("mision", 1), carta));
+				}
+			}
+
+			foreach (var carta in new SubCartasControladas(0, new CondicionClase("VACIO")).Generar()) {
+				if (carta.GetComponent<CartaInfo>().original.datoVacio.tipo == "BOSQUE_MISTICO") {
+					EmblemaEfectos.Activar(new EfectoCrearFicha(carta, jugador, 629, 1));
 				}
 			}
 

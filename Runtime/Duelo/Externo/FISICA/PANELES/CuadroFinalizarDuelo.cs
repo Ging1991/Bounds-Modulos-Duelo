@@ -73,10 +73,12 @@ namespace Bounds.Duelo.Utiles {
 
 
 		public void Aceptar() {
-			Cofre cofre = ControlDuelo.Instancia.cofre;
-			CartaCofreBD linea = new($"{carta.cartaID}_{carta.imagen}_{rareza}_1");
-			cofre.AgregarCarta(linea);
-			cofre.Guardar();
+			if (carta != null) {
+				Cofre cofre = ControlDuelo.Instancia.cofre;
+				CartaCofreBD linea = new($"{carta.cartaID}_{carta.imagen}_{rareza}_1");
+				cofre.AgregarCarta(linea);
+				cofre.Guardar();
+			}
 
 			if (accion != null)
 				accion.Ejecutar();
