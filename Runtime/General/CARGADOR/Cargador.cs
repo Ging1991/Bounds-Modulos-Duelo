@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using Ging1991.Relojes;
-using Bounds.Global.Mazos;
+using Bounds.Mazos;
 
 namespace Bounds.Duelo {
 

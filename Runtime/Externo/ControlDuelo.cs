@@ -30,6 +30,7 @@ using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Visor.Persistencia;
 using Ging1991.Interfaces.Entrada;
 using Ging1991.Persistencia.Proveedores;
+using Ging1991.Ventanas;
 
 namespace Bounds.Duelo {
 
@@ -46,6 +47,7 @@ namespace Bounds.Duelo {
 		public IFinalizarDuelo finalizarDuelo;
 		public Cofre cofre;
 		public DireccionRecursos carpetaColecciones;
+		public VentanaControl ventanaControl;
 
 		public ParametrosControlDuelo parametrosControl;
 		public IProveedor<int, string> selectorNombres;
@@ -89,7 +91,6 @@ namespace Bounds.Duelo {
 				parametrosControl.parametros.direcciones["CARTAS_RECURSO"],
 				parametrosControl.parametros.direcciones["CARTAS_DINAMICA"]
 			);
-
 
 			foreach (var campo in FindObjectsByType<CampoLugar>(FindObjectsSortMode.None)) {
 				campo.controlador = this;

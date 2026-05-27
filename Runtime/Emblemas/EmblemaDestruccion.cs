@@ -202,10 +202,11 @@ namespace Bounds.Duelo.Emblemas {
 					}
 				}
 
-				if (infoVacio.original.datoVacio.tipo == "ALMA_DRAGON") {
-					if (!cartaTipo.ContieneTipo("dragon")) {
-						EmblemaEfectos.Activar(new EfectoCrearFicha(vacio, info.controlador, 393, 1));
-					}
+				if (infoVacio.original.datoVacio.tipo == "ALMA_DRAGON"
+						&& info.original.clase == "CRIATURA"
+						&& info.original.datoCriatura.perfeccion != "FICHA") {
+
+					EmblemaEfectos.Activar(new EfectoCrearFicha(vacio, info.controlador, 393, 1));
 				}
 
 				if (infoVacio.original.datoVacio.tipo == "IMPERIO_REPTIL" && info.original.clase == "CRIATURA") {
@@ -238,8 +239,9 @@ namespace Bounds.Duelo.Emblemas {
 		}
 
 
-		private static void ActivarTrampas(GameObject criatura) {
-			int controlador = criatura.GetComponent<CartaInfo>().controlador;
+		private static void ActivarTrampas(GameObject carta) {
+			CartaInfo info = carta.GetComponent<CartaInfo>();
+			int controlador = info.controlador;
 			int adversario = Adversario(controlador);
 			Fisica fisica = Fisica.Instancia;
 
@@ -277,9 +279,9 @@ namespace Bounds.Duelo.Emblemas {
 					break;
 				}
 
-				if (infoTrampa.original.datoTrampa.tipo == "REVIVIR") {
+				if (infoTrampa.original.datoTrampa.tipo == "REVIVIR" && info.original.clase == "CRIATURA") {
 					EmblemaTrampa.ActivarTrampa(trampa);
-					EmblemaEfectos.Activar(new EfectoInvocacionEspecial(trampa, criatura, controlador));
+					EmblemaEfectos.Activar(new EfectoInvocacionEspecial(trampa, carta, controlador));
 					break;
 				}
 
@@ -313,19 +315,6 @@ namespace Bounds.Duelo.Emblemas {
 						break;
 				}
 
-				if (infoTrampa.original.datoTrampa.tipo == "VENGANZA_TRUENO") {
-					if (criatura.GetComponent<CartaTipo>().ContieneTipo("trueno")) {
-						CondicionClase condicionCriatura = new CondicionClase("CRIATURA");
-						List<GameObject> criaturasDelAdversario = condicionCriatura.CumpleLista(fisica.TraerCartasEnCampo(adversario));
-						if (criaturasDelAdversario.Count > 0) {
-							EmblemaTrampa.ActivarTrampa(trampa);
-							EmblemaEfectos.Activar(new EfectoSobreCarta(trampa, new SubDestruir(), criaturasDelAdversario[0]));
-							EmblemaEfectos.Activar(new EfectoSobreJugador(trampa, adversario, new SubModificarLP(-500)));
-							break;
-						}
-					}
-				}
-
 				if (infoTrampa.original.datoTrampa.tipo == "VENGANZA_NIVEL") {
 					CondicionClase condicionCriatura = new CondicionClase("CRIATURA");
 					List<GameObject> cartasEnCampo = new List<GameObject>(fisica.TraerCartasEnCampo(controlador));
@@ -334,7 +323,7 @@ namespace Bounds.Duelo.Emblemas {
 
 					foreach (GameObject criaturaEnCampo in condicionCriatura.CumpleLista(cartasEnCampo)) {
 						CartaInfo infoCriaturaEnCampo = criaturaEnCampo.GetComponent<CartaInfo>();
-						if (infoCriaturaEnCampo.original.nivel <= criatura.GetComponent<CartaInfo>().original.nivel)
+						if (infoCriaturaEnCampo.original.nivel <= carta.GetComponent<CartaInfo>().original.nivel)
 							criaturasParaDestruir.Add(criaturaEnCampo);
 					}
 
@@ -360,6 +349,31 @@ namespace Bounds.Duelo.Emblemas {
 
 			if (cartaEfecto.TieneClave("RECICLAR")) {
 				EmblemaEfectos.Activar(new EfectoSobreJugador(carta, info.controlador, new SubRobar(1), "ROBAR"));
+			}
+
+			if (cartaEfecto.TieneClave("ECLOSIONAR_T")) {
+				CondicionMultiple condicionMultiple = new CondicionMultiple(CondicionMultiple.Tipo.Y);
+				condicionMultiple.AgregarCondicion(new CondicionTipoCriatura(cartaEfecto.GetEfecto("ECLOSIONAR_T").parametroTipo));
+				condicionMultiple.AgregarCondicion(new CondicionPerfeccion(soloPerfectos: true));
+
+				List<GameObject> opciones = new SubCartasEnMazo(info.controlador, condicionMultiple).Generar();
+				if (opciones.Count > 0) {
+					GameObject cartaEclosionada = opciones[0];
+					int nivelMaximo = -1;
+					foreach (GameObject cartaEnMazo in opciones) {
+						if (cartaEnMazo.GetComponent<CartaInfo>().original.nivel > nivelMaximo) {
+							nivelMaximo = cartaEnMazo.GetComponent<CartaInfo>().original.nivel;
+							cartaEclosionada = cartaEnMazo;
+						}
+					}
+					EmblemaEfectos.Activar(
+						new EfectoInvocacionEspecial(
+							carta,
+							cartaEclosionada,
+							info.controlador
+						)
+					);
+				}
 			}
 
 			if (cartaEfecto.TieneClave("VENGANZA")) {

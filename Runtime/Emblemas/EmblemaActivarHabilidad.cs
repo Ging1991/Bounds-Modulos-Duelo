@@ -89,7 +89,7 @@ namespace Bounds.Duelo.Emblemas {
 				return;
 			}
 
-			//VentanaControl.CrearVentanaConfirmar("¿Desea activar la habilidad?", this);
+			ControlDuelo.Instancia.ventanaControl.MostrarVentanaConfirmar("¿Desea activar la habilidad?", this);
 		}
 
 

@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Duelo.Pila.Efectos;
@@ -8,7 +7,6 @@ using Bounds.Duelo.Pila;
 using Bounds.Duelo.Fila;
 using Bounds.Duelo.Fila.Fases.Subfases;
 using Bounds.Duelo.Emblemas.Fases;
-using Ging1991.Core;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
 using Ging1991.Musica;

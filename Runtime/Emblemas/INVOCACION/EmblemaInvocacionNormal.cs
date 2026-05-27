@@ -125,15 +125,12 @@ namespace Bounds.Duelo.Emblemas {
 					EmblemaEfectos.Activar(new EfectoSobreJugador(vacio, adversario, new SubDescartar(1), "VENENO"));
 				}
 
-				if (infoVacio.original.datoVacio.tipo == "TRUENO" && cartaTipo.ContieneTipo("TRUENO")) {
-					CondicionTipoCriatura condicionTrueno = new("TRUENO");
+				if (infoVacio.original.datoVacio.tipo == "TRUENO") {
 					EmblemaEfectos.Activar(
 						new EfectoSobreCartas(
 							vacio,
-							new SubColocarContador("debilidad", 1),
-							condicionTrueno.NoCumpleLista(
-								condicionCriatura.CumpleLista(new SubCartasControladas(0).Generar())
-							)
+							new SubColocarContador("poder", 1),
+							new SubCartasControladas(jugador, new CondicionClase("CRIATURA")).Generar()
 						)
 					);
 				}

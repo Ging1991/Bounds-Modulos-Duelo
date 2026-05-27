@@ -11,7 +11,6 @@ using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Duelo.Utiles;
 using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Duelo.Fisicas;
-using Ging1991.Core;
 using UnityEngine;
 
 namespace Bounds.Duelo.Emblemas.Fases {
@@ -41,11 +40,20 @@ namespace Bounds.Duelo.Emblemas.Fases {
 		private static void ActivarEfectos(GameObject atacante, GameObject atacado) {
 
 			CartaEfecto efectoAtacante = atacante.GetComponent<CartaEfecto>();
+			CartaEfecto efectoAtacado = atacado.GetComponent<CartaEfecto>();
 			CartaInfo infoAtacante = atacante.GetComponent<CartaInfo>();
 			CartaInfo infoAtacado = atacado.GetComponent<CartaInfo>();
 
 			Fisica fisica = Fisica.Instancia;
 			int adversario = JugadorDuelo.Adversario(infoAtacante.controlador);
+
+			if (efectoAtacante.TieneClave("ANTIMATERIA") && (infoAtacado.original.nivel > infoAtacante.original.nivel)) {
+				EmblemaEfectos.Activar(new EfectoSobreCartas(atacante, new SubEnviarMateriales(), new List<GameObject> { atacante, atacado }));
+			}
+
+			if (efectoAtacado.TieneClave("ANTIMATERIA") && (infoAtacante.original.nivel > infoAtacado.original.nivel)) {
+				EmblemaEfectos.Activar(new EfectoSobreCartas(atacado, new SubEnviarMateriales(), new List<GameObject> { atacante, atacado }));
+			}
 
 			if (efectoAtacante.TieneClave("ROBAR")) {
 				EmblemaEfectos.Activar(new EfectoSobreJugador(atacante, infoAtacante.controlador, new SubRobar(1)));
@@ -92,6 +100,12 @@ namespace Bounds.Duelo.Emblemas.Fases {
 
 				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
 				CartaGeneral generalTrampa = trampa.GetComponent<CartaGeneral>();
+
+				if (infoTrampa.original.datoTrampa.tipo == "DESTRUCCION_MUTUA") {
+					generalTrampa.ColocarBocaArriba();
+					EmblemaEfectos.Activar(new EfectoSobreCartas(trampa, new SubDestruir(), new List<GameObject> { criaturaAtacante, objetivoAtacado }));
+					break;
+				}
 
 				if (infoTrampa.original.datoTrampa.tipo == "CAMBIO_OBJETIVO") {
 					CondicionClase condicionCriatura = new CondicionClase("CRIATURA");
@@ -168,6 +182,18 @@ namespace Bounds.Duelo.Emblemas.Fases {
 					break;
 				}
 
+			}
+
+			foreach (GameObject trampa in EmblemaPadre.TraerTrampasBocaAbajo(jugadorAtacante)) {
+
+				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
+				CartaGeneral generalTrampa = trampa.GetComponent<CartaGeneral>();
+
+				if (infoTrampa.original.datoTrampa.tipo == "DESTRUCCION_MUTUA") {
+					generalTrampa.ColocarBocaArriba();
+					EmblemaEfectos.Activar(new EfectoSobreCartas(trampa, new SubDestruir(), new List<GameObject> { criaturaAtacante, objetivoAtacado }));
+					break;
+				}
 			}
 
 		}

@@ -129,7 +129,7 @@ namespace Bounds.Duelo.Emblemas {
 
 
 			if (dato.tipo == "SACRIFICIO_DRAGONES_GEMELOS") {
-				CondicionTipoCriatura condicionDragon = new CondicionTipoCriatura("dragon");
+				CondicionTipoCriatura condicionDragon = new CondicionTipoCriatura("DRAGON");
 				List<GameObject> dragones = condicionDragon.CumpleLista(fisica.TraerCartasEnMazo(jugador));
 				Dictionary<int, GameObject> mapaNivelCarta = new Dictionary<int, GameObject>();
 
@@ -183,6 +183,10 @@ namespace Bounds.Duelo.Emblemas {
 
 			if (dato.tipo == "DESTRUIR_OBJETIVO") {
 				EmblemaEfectos.Activar(new EfectoSobreCarta(hechizo, new SubDestruir(), objetivo));
+			}
+
+			if (dato.tipo == "BARAJAR_OBJETIVO") {
+				EmblemaEfectos.Activar(new EfectoSobreCarta(hechizo, new SubEnviarMazo(), objetivo));
 			}
 
 			if (dato.tipo == "PARADOJA_OBJETIVO") {

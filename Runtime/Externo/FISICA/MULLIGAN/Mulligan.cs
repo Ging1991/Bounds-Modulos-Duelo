@@ -1,14 +1,11 @@
 ﻿using System.Collections.Generic;
-using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblemas;
 using Bounds.Duelo.Emblemas.Jugar;
 using Bounds.Duelo.Fila;
 using Bounds.Duelo.Fila.Fases;
 using Bounds.Fisicas.Carta;
-using Bounds.Global.Mazos;
+using Bounds.Mazos;
 using Bounds.Modulos.Cartas;
-using Bounds.Modulos.Cartas.Ilustradores;
-using Bounds.Modulos.Cartas.Persistencia;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Cartas.Tinteros;
 using Bounds.Modulos.Duelo.Fisicas;

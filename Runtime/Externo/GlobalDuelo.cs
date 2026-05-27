@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Bounds.Global.Mazos;
+using Bounds.Mazos;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,7 +19,7 @@ public class GlobalDuelo {
 		jugadorMiniatura1 = "LAUNIX";
 		jugadorMiniatura2 = "PESADILLA";
 
-		Bounds.Global.Mazo mazoJugador = new MazoJugador(MazoJugador.GetPredeterminado());
+		Bounds.Mazos.Mazo mazoJugador = new Bounds.Mazos.MazoJugador(Bounds.Mazos.MazoJugador.GetPredeterminado());
 		mazo1 = mazoJugador.cartas;
 		mazo2 = mazoJugador.cartas;
 		mazoVacio1 = mazoJugador.principalVacio;
