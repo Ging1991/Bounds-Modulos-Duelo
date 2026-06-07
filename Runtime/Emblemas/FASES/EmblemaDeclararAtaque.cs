@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Condiciones;
 using Bounds.Duelo.Efectos;
-using Bounds.Duelo.Emblemas.Trampas;
 using Bounds.Duelo.Fila;
 using Bounds.Duelo.Fila.Fases;
 using Bounds.Duelo.Pila;

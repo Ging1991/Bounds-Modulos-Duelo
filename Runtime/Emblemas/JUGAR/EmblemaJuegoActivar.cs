@@ -1,11 +1,8 @@
 ﻿using UnityEngine;
 using Bounds.Duelo.Carta;
-using Bounds.Duelo.Emblemas.Trampas;
 using Bounds.Duelo.Pila.Efectos;
 using Bounds.Duelo.Pila.Subefectos;
 using Ging1991.Core;
-using Bounds.Cartas;
-using Bounds.Modulos.Cartas;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
 using Bounds.Fisicas.Campos;

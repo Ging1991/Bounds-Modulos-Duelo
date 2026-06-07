@@ -4,7 +4,6 @@ using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Condiciones;
 using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Duelo.Pila.Efectos;
-using Bounds.Duelo.Emblemas.Trampas;
 using Bounds.Visuales;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;

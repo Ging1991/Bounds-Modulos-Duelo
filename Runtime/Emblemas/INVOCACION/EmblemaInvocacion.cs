@@ -7,7 +7,6 @@ using Bounds.Duelo.Condiciones;
 using Bounds.Duelo.Pila;
 using Bounds.Duelo.Pila.Efectos;
 using Bounds.Duelo.Pila.Subefectos;
-using Bounds.Duelo.Emblemas.Trampas;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Duelo.Efectos;
 using Bounds.Fisicas.Carta;

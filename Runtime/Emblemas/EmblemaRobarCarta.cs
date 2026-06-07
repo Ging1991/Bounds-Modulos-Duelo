@@ -4,7 +4,6 @@ using Bounds.Duelo.Utiles;
 using Bounds.Duelo.Pila.Efectos;
 using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Duelo.Emblema;
-using Bounds.Duelo.Emblemas.Trampas;
 using Bounds.Duelo.Condiciones;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
@@ -41,7 +40,7 @@ namespace Bounds.Duelo.Emblemas {
 			}
 
 			int adversario = JugadorDuelo.Adversario(jugador);
-			ActivarTrampas(adversario);
+			ActivarTrampas(adversario, 1);
 			ActivarVacios(jugador);
 			ActivarEfectos(jugador, carta);
 		}
@@ -75,7 +74,7 @@ namespace Bounds.Duelo.Emblemas {
 		}
 
 
-		private static void ActivarTrampas(int adversario) {
+		private static void ActivarTrampas(int adversario, int cantidad) {
 
 			Fisica fisica = Fisica.Instancia;
 
@@ -93,8 +92,8 @@ namespace Bounds.Duelo.Emblemas {
 				}
 
 				if (infoTrampa.original.datoTrampa.tipo == "ROBO_X_ROBO_N") {
-					EmblemaTrampa.ActivarTrampa(trampa);
-					EmblemaEfectos.Activar(new EfectoSobreJugador(trampa, adversario, new SubRobar(infoTrampa.original.datoTrampa.cantidad)));
+					EmblemaTrampa.ActivarRobarCartas(trampa, adversario, cantidad);
+					break;
 				}
 			}
 
