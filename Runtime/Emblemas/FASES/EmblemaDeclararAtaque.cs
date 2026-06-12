@@ -81,6 +81,11 @@ namespace Bounds.Duelo.Emblemas.Fases {
 				}
 			}
 
+			foreach (var carta in new SubCartasControladas(infoAtacante.controlador).Generar()) {
+				if (carta.GetComponent<CartaEfecto>().TieneClave("QUEMADURA_ATAQUE")) {
+					EmblemaEfectos.Activar(new EfectoSobreJugador(carta, infoAtacado.controlador, new SubModificarLP(-500)));
+				}
+			}
 
 		}
 
@@ -164,8 +169,7 @@ namespace Bounds.Duelo.Emblemas.Fases {
 				}
 
 				if (infoTrampa.original.datoTrampa.tipo == "RUGIDO") {
-					generalTrampa.ColocarBocaArriba();
-					EmblemaEfectos.Activar(new EfectoSobreCarta(trampa, new SubColocarContador("debilidad", 4), criaturaAtacante));
+					EmblemaTrampa.ActivarDeclararAtaque(trampa, criaturaAtacante, objetivoAtacado);
 					break;
 				}
 

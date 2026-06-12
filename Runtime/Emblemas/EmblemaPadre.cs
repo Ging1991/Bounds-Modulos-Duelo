@@ -63,6 +63,14 @@ namespace Bounds.Duelo.Emblemas {
 				EmblemaEfectos.Activar(new EfectoSobreCartas(carta, new SubDestruir(), objetivos));
 			}
 
+			if (cartaEfecto.TieneClave("ATERRORIZAR_N")) {
+				List<GameObject> objetivos = new SubCartasControladas(adversario, new CondicionClase("CRIATURA")).Generar();
+				if (objetivos.Count > 0) {
+					ISubSobreCarta subefecto = new SubColocarContador("debilidad", cartaEfecto.GetEfecto("ATERRORIZAR_N").parametroN);
+					EmblemaEfectos.Activar(new EfectoSobreCartas(carta, subefecto, objetivos));
+				}
+			}
+
 			if (cartaEfecto.TieneClave("ACOMPAÑAR")) {
 				pila.Agregar(new EfectoGanarInvocacion(carta, info.controlador, 1));
 			}
@@ -75,6 +83,22 @@ namespace Bounds.Duelo.Emblemas {
 				CondicionMultiple condicionObjetivos = new CondicionMultiple(CondicionMultiple.Tipo.Y);
 				condicionObjetivos.AgregarCondicion(new CondicionNivel(1));
 				condicionObjetivos.AgregarCondicion(new CondicionClase("CRIATURA"));
+				condicionObjetivos.AgregarCondicion(new CondicionEsPerfecta());
+				List<GameObject> objetivos = condicionObjetivos.CumpleLista(new SubCartasEnMazo(jugador).Generar());
+				if (objetivos.Count > 0) {
+					int limite = BuscadorCampo.getInstancia().buscarCampoLibreN(jugador, 5).Count;
+					foreach (GameObject objetivo in objetivos) {
+						EmblemaEfectos.Activar(new EfectoInvocacionEspecial(carta, objetivo, jugador));
+						limite--;
+						if (limite == 0)
+							break;
+					}
+				}
+			}
+
+			if (cartaEfecto.TieneClave("COMANDAR_T")) {
+				CondicionMultiple condicionObjetivos = new CondicionMultiple(CondicionMultiple.Tipo.Y);
+				condicionObjetivos.AgregarCondicion(new CondicionTipoCriatura(cartaEfecto.GetEfecto("COMANDAR_T").parametroTipo));
 				condicionObjetivos.AgregarCondicion(new CondicionEsPerfecta());
 				List<GameObject> objetivos = condicionObjetivos.CumpleLista(new SubCartasEnMazo(jugador).Generar());
 				if (objetivos.Count > 0) {

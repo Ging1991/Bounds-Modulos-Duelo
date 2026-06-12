@@ -348,6 +348,20 @@ namespace Bounds.Duelo.Emblemas {
 				}
 			}
 
+			if (dato.tipo == "VALPURGIS") {
+				foreach (GameObject cartaEnMano in new SubCartasEnMano(jugador).Generar()) {
+					EmblemaDescartarCarta.Descartar(cartaEnMano);
+				}
+				List<GameObject> cartasDemonio = new SubCartasEnMazo(jugador, new CondicionTipoCriatura("DEMONIO")).Generar();
+				int cantidadN = 0;
+				foreach (GameObject cartaDemonio in cartasDemonio) {
+					EmblemaTutor.Agregar(jugador, cartaDemonio);
+					cantidadN++;
+					if (cantidadN > 4)
+						break;
+				}
+			}
+
 			if (dato.tipo == "EXPEDICION") {
 				List<GameObject> cartasSiguientes = new List<GameObject>(fisica.TraerSiguientesCartasEnMazo(jugador, 10));
 				foreach (var cartaSuperior in cartasSiguientes) {
