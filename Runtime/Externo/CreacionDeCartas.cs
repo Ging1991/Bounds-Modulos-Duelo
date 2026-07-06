@@ -1,12 +1,10 @@
+using Bounds.Cartas;
 using Bounds.Duelo;
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Utiles;
 using Bounds.Fisicas.Carta;
-using Bounds.Modulos.Cartas;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
-using Bounds.Modulos.Cartas.Tinteros;
 using Bounds.Visuales;
-using Ging1991.Core.Interfaces;
 using UnityEngine;
 
 public class CreacionDeCartas : MonoBehaviour {
@@ -25,8 +23,9 @@ public class CreacionDeCartas : MonoBehaviour {
 		carta.GetComponentInChildren<GestorEfectosVisuales>().Inicializar(ControlDuelo.Instancia.gestorDeSonidos);
 
 		CartaGeneral general = carta.GetComponent<CartaGeneral>();
+		general.cartaImagenID.generador = ControlDuelo.Instancia.cartaGenerador;
 
-		general.Iniciar(cartaID, imagen, rareza, ControlDuelo.Instancia.proveedorCartas, ControlDuelo.Instancia.ilustradorDeCartas, new TinteroBounds(), Entrada.GetInstancia());
+		general.Iniciar(Entrada.GetInstancia());
 
 		CartaBD datoCarta = ControlDuelo.Instancia.proveedorCartas.GetElemento(cartaID).Clonar();
 		CartaInfo info = carta.GetComponent<CartaInfo>();
@@ -42,7 +41,12 @@ public class CreacionDeCartas : MonoBehaviour {
 		if (protector != null) {
 			carta.GetComponentInChildren<CartaFisica>().SetReverso(protector);
 		}
-		//carta.GetComponentInChildren<CartaFisica>().ColocarBocaAbajo(true);
+		carta.GetComponentInChildren<CartaFisica>().ColocarBocaAbajo();
+		string borde = info.original.clase;
+		if (borde == "CRIATURA") {
+			borde = info.original.datoCriatura.perfeccion;
+		}
+		general.Mostrar(cartaID, imagen, rareza, datoCarta.clase, borde, info.calcularAtaque(), info.calcularDefensa(), info.original.nivel);
 		//carta.GetComponentInChildren<GestorVisual>().gestorDeSonidos = ControlDuelo.Instancia.gestorDeSonidos;
 		return carta;
 	}

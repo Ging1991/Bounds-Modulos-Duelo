@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
+using Bounds.Cartas;
 using Bounds.Modulos.Cartas;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
-using Bounds.Modulos.Cartas.Tinteros;
 using Ging1991.Core.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,12 +17,14 @@ namespace Bounds.Duelo.Paneles {
 		public Text rarezaProbabilidad;
 		private bool fueCobrada;
 
-		public void Inicializar(int cartaID, string imagen, string rareza, Color tinta, Color fondo, IEjecutable accion, int probabilidad,
-				IProveedor<int, CartaBD> proveedorCartas, IProveedor<string, Sprite> ilustrador, ITintero tintero) {
+		public void Inicializar(int cartaID, string imagen, string rareza,
+				Color tinta, Color fondo, IEjecutable accion, int probabilidad, CartaGenerador generador) {
+
 			fueCobrada = false;
 
-			GetComponentInChildren<CartaFrente>().Inicializar(proveedorCartas, ilustrador, tintero);
-			GetComponentInChildren<CartaFrente>().Mostrar(cartaID, imagen, rareza);
+			GetComponentInChildren<CartaImagenID>().generador = generador;
+			GetComponentInChildren<CartaImagenID>().MostrarCartaID(cartaID, imagen, rareza);
+
 			this.accion = accion;
 			foreach (var objeto in objetosConTinta)
 				objeto.GetComponent<Image>().color = tinta;
@@ -30,6 +32,7 @@ namespace Bounds.Duelo.Paneles {
 				objeto.GetComponent<Image>().color = fondo;
 			rarezaProbabilidad.text = $"Poder {probabilidad}%";
 		}
+
 
 		public void OnMouseDown() {
 			if (!fueCobrada) {

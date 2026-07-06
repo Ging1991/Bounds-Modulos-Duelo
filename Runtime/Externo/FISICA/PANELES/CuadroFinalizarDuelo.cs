@@ -1,7 +1,6 @@
 ﻿using Bounds.Cofres;
 using Bounds.Duelo.Paneles;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
-using Bounds.Modulos.Cartas.Tinteros;
 using Bounds.Persistencia;
 using Bounds.Persistencia.Datos;
 using Ging1991.Core;
@@ -56,12 +55,10 @@ namespace Bounds.Duelo.Utiles {
 				carta = Azar<CartaColeccionBD>.ValorAleatorio(coleccion.secretas);
 				rareza = "SEC";
 			}
-
-			ITintero tintero = new TinteroBounds();
-			Color tinta = tintero.GetColor($"TINTA_{rareza}");
-			Color fondo = tintero.GetColor($"NIVEL_{rareza}");
+			Color tinta = ControlDuelo.Instancia.cartaGenerador.proveedorColores.GetElemento($"TINTA_{rareza}");
+			Color fondo = ControlDuelo.Instancia.cartaGenerador.proveedorColores.GetElemento($"NIVEL_{rareza}");
 			GetComponentInChildren<RecompensaDuelo>().Inicializar(
-				carta.cartaID, carta.imagen, rareza, tinta, fondo, this, probabilidad, proveedorCartas, ilustrador, tintero
+				carta.cartaID, carta.imagen, rareza, tinta, fondo, this, probabilidad, ControlDuelo.Instancia.cartaGenerador
 			);
 		}
 

@@ -1,118 +1,104 @@
 ﻿using UnityEngine;
 using Bounds.Duelo.Carta;
-using System.Collections.Generic;
-using Bounds.Modulos.Cartas.Tinteros;
-using Bounds.Modulos.Visor;
-using Bounds.Modulos.Cartas.Persistencia.Datos;
-using Bounds.Fisicas.Carta;
 using Ging1991.Core.Interfaces;
-using Bounds.Modulos.Visor.Persistencia;
+using Bounds.Visor;
+using Bounds.Fisicas.Carta;
+using System.Collections.Generic;
+using Bounds.Modulos.Cartas.Persistencia.Datos;
+using UnityEngine.UI;
 
 namespace Bounds.Infraestructura.Visores {
 
 	public class VisorDuelo : MonoBehaviour {
 
-		public IProveedor<int, CartaBD> proveedorCartas;
-		public IProveedor<string, EfectoTraduccion> selectorHabilidades;
-		private ITintero tintero;
-		public VisorGeneral visorGeneral;
 		public VisorContador visorContador;
-		protected IProveedor<int, string> selectorNombres;
-		protected IProveedor<string, string> selectorClases;
-		protected IProveedor<string, string> selectorTipos;
-		protected IProveedor<string, string> selectorInvocaciones;
-		protected IProveedor<string, string> selectorSistema;
-		protected IProveedor<int, string> selectorEfectos;
-		protected IProveedor<int, string> selectorAmbientacion;
+		public VisorCartaID visorCartaID;
+		public VisorGenerador visorGenerador;
+		public GameObject reversoOBJ;
 
-		public void Inicializar(
-				IProveedor<string, EfectoTraduccion> selectorHabilidades,
-				IProveedor<int, CartaBD> proveedorCartas,
-				IProveedor<int, string> selectorNombres,
-				IProveedor<int, string> selectorEfectos,
-				IProveedor<int, string> selectorAmbientacion,
-				IProveedor<string, string> selectorSistema,
-				IProveedor<string, string> selectorClases,
-				IProveedor<string, string> selectorTipos,
-				IProveedor<string, string> selectorInvocaciones,
-				IProveedor<string, Sprite> ilustrador) {
-
-			tintero = new TinteroBounds();
-			this.selectorNombres = selectorNombres;
-			this.selectorClases = selectorClases;
-			this.selectorTipos = selectorTipos;
-			this.selectorInvocaciones = selectorInvocaciones;
-			this.selectorSistema = selectorSistema;
-			this.selectorHabilidades = selectorHabilidades;
-			this.selectorEfectos = selectorEfectos;
-			this.selectorAmbientacion = selectorAmbientacion;
-
-			visorGeneral.Inicializar(
-				proveedorCartas, selectorHabilidades, ilustrador, tintero, selectorSistema, selectorClases,
-				selectorTipos, selectorInvocaciones, selectorNombres, selectorAmbientacion, selectorEfectos
-			);
+		public void SetBocaAbajo(Sprite reverso) {
+			reversoOBJ.GetComponent<Image>().sprite = reverso;
+			reversoOBJ.SetActive(true);
 		}
-
 
 		public void Mostrar(GameObject carta) {
 
+			reversoOBJ.SetActive(false);
+
 			CartaInfo info = carta.GetComponent<CartaInfo>();
 			CartaTipo cartaTipo = carta.GetComponent<CartaTipo>();
-			Color tintaGeneral = tintero.GetColor($"TINTA_{info.rareza}");
+			Color tintaGeneral = visorGenerador.proveedorColor.GetElemento($"TINTA_{info.rareza}");
 
-			visorGeneral.SetImagen(info.cartaID, info.imagen, tintaGeneral);
+			visorCartaID.primitiva.SetIlustracionImagen(visorGenerador.GetImagen(info.cartaID, info.imagen));
 
-			visorGeneral.visorTitulo.SetNivel(info.original.nivel, tintero.GetColor($"NIVEL_{info.rareza}"), tintaGeneral);
+			visorCartaID.primitiva.nivel.SetValor(info.original.nivel);
+			visorCartaID.primitiva.nivel.SetColorBorde(tintaGeneral);
+			visorCartaID.primitiva.nivel.SetColorTexto(tintaGeneral);
+			visorCartaID.primitiva.nivel.SetColorRelleno(visorGenerador.proveedorColor.GetElemento($"NIVEL_{info.rareza}"));
 
 			// NOMBRE
 			string nombre = info.original.nombre;
 			try {
-				string piv = selectorNombres.GetElemento(info.cartaID);
+				string piv = visorGenerador.proveedorNombres.GetElemento(info.cartaID);
 				if (piv != null)
 					nombre = piv;
 			}
 			catch (System.Exception) {
 				Debug.LogWarning($"No se encontró el nombre {info.cartaID}");
 			}
-			visorGeneral.visorTitulo.SetNombre(GetNombre(selectorNombres, info.cartaID, info.original.nombre), tintaGeneral);
-
-			visorGeneral.visorTitulo.SetCartaID(info.cartaID, tintaGeneral);
-
+			visorCartaID.primitiva.SetNombre(nombre, tintaGeneral);
+			visorCartaID.primitiva.SetCartaID(info.cartaID, tintaGeneral);
 			string claseExtendida = info.original.clase != "CRIATURA" ? info.original.clase : info.original.datoCriatura.perfeccion;
-			visorGeneral.SetFondo(tintero.GetColor($"RELLENO_{claseExtendida}"), tintaGeneral);
-			visorGeneral.SetSubFondo(tintero.GetColor($"RELLENO_CLARO_{claseExtendida}"), tintaGeneral);
+			visorCartaID.primitiva.SetBordeColor(tintaGeneral);
+			visorCartaID.primitiva.SetRellenoColor(visorGenerador.proveedorColor.GetElemento($"RELLENO_{claseExtendida}"));
+			visorCartaID.primitiva.SetRellenoTextoColor(visorGenerador.proveedorColor.GetElemento($"RELLENO_CLARO_{claseExtendida}"));
 
 			if (info.original.clase == "EQUIPO")
-				visorGeneral.visorDescripcion.SetEstadisticas(info.original.defensa);
+				visorCartaID.primitiva.SetEstadisticas($"________________\nDEF {info.calcularDefensa()}");
 			else if (info.original.clase == "CRIATURA")
-				visorGeneral.visorDescripcion.SetEstadisticas(info.calcularAtaque(), info.calcularDefensa());
+				visorCartaID.primitiva.SetEstadisticas($"________________\nATK {info.calcularAtaque()} / DEF {info.calcularDefensa()}");
 			else
-				visorGeneral.visorDescripcion.SetEstadisticas();
+				visorCartaID.primitiva.SetEstadisticas("");
 
-			string encabezado = (info.original.clase != "CRIATURA") ? visorGeneral.GenerarEncabezado(info.original.clase) :
-				visorGeneral.GenerarEncabezado(
+
+			string encabezado = (info.original.clase != "CRIATURA") ? visorGenerador.GenerarEncabezado(info.original.clase) :
+				visorGenerador.GenerarEncabezado(
 					info.original.clase,
 					info.original.datoCriatura.perfeccion,
 					cartaTipo.tipos
 				);
+
+
+			string materiales = "";
+			if (info.original.clase == "CRIATURA") {
+				materiales += visorGenerador.GenerarMateriales(info.original.materiales);
+			}
+
+			string textoEfecto = GetNombre(visorGenerador.proveedorEfectos, info.cartaID, info.original.efecto);
+			if (string.IsNullOrWhiteSpace(info.original.efecto))
+				textoEfecto = "";
+
+			if (info.original.datoCriatura.perfeccion == "BASICO") {
+				visorCartaID.primitiva.SetAmbientacion($"<i>{GetNombre(visorGenerador.proveedorAmbientacion, info.cartaID, info.original.ambientacion)}</i>");
+			}
+			else {
+				visorCartaID.primitiva.SetAmbientacion("");
+			}
 
 			List<EfectoBD> efectos = new List<EfectoBD>(info.original.efectos);
 			efectos.AddRange(carta.GetComponent<CartaEfecto>().efectos);
 			if (info.original.clase == "CRIATURA" && info.original.datoCriatura.efectos != null)
 				efectos.AddRange(info.original.datoCriatura.efectos);
 
-			string materiales = "";
-			if (info.original.clase == "CRIATURA") {
-				materiales += visorGeneral.GenerarMateriales(info.original.materiales);
-				if (info.original.datoCriatura.perfeccion == "BASICO") {
-					materiales += $"<i>{GetNombre(selectorAmbientacion, info.cartaID, info.original.ambientacion)}</i>";
-				}
-			}
-			string textoEfecto = GetNombre(selectorEfectos, info.cartaID, info.original.efecto);
-			if (string.IsNullOrWhiteSpace(info.original.efecto))
-				textoEfecto = "";
 
-			visorGeneral.SetDescripcion(encabezado, materiales, visorGeneral.GenerarEfectos(efectos), textoEfecto);
+			visorCartaID.primitiva.SetDescripcion(
+				visorGenerador.GenerarDescripcion(
+					encabezado,
+					materiales,
+					visorGenerador.GenerarEfectos(efectos),
+					textoEfecto
+				)
+			);
 
 			// contadores
 			visorContador.SetContador("supervivencia", info.TraerContadores("supervivencia"));

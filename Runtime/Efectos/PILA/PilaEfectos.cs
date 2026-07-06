@@ -61,6 +61,7 @@ namespace Bounds.Duelo.Pila {
 		public class CartaPila {
 			public int cartaID;
 			public string imagen;
+			public string rareza;
 		}
 
 

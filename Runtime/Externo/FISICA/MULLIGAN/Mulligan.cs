@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Bounds.Cartas;
 using Bounds.Duelo.Emblemas;
 using Bounds.Duelo.Emblemas.Jugar;
 using Bounds.Duelo.Fila;
@@ -7,7 +8,6 @@ using Bounds.Fisicas.Carta;
 using Bounds.Mazos;
 using Bounds.Modulos.Cartas;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
-using Bounds.Modulos.Cartas.Tinteros;
 using Bounds.Modulos.Duelo.Fisicas;
 using Ging1991.Core.Interfaces;
 using UnityEngine;
@@ -17,12 +17,12 @@ namespace Bounds.Duelo {
 	public class Mulligan : MonoBehaviour {
 
 		public GameObject ventanaMulligan;
-		public IProveedor<int, CartaBD> proveedorCartas;
+		public CartaGenerador cartaGenerador;
 
-		public void Iniciar(IProveedor<int, CartaBD> proveedorCartas) {
+		public void Iniciar(CartaGenerador cartaGenerador) {
 			Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();
 			List<GameObject> cartas = fisica.TraerCartasEnMazo(1);
-			this.proveedorCartas = proveedorCartas;
+			this.cartaGenerador = cartaGenerador;
 
 			AgregarCarta(cartas[0], 0);
 			AgregarCarta(cartas[1], 1);
@@ -33,11 +33,11 @@ namespace Bounds.Duelo {
 
 
 		private void AgregarCarta(GameObject carta, int posicion) {
-			CartaFrente cartaFrente = transform.GetChild(posicion).GetComponent<CartaFrente>();
+			CartaImagenID cartaFrente = transform.GetChild(posicion).GetComponent<CartaImagenID>();
 			cartaFrente.gameObject.SetActive(true);
 			CartaInfo info = carta.GetComponent<CartaInfo>();
-			cartaFrente.Inicializar(proveedorCartas, ControlDuelo.Instancia.ilustradorDeCartas, new TinteroBounds());
-			cartaFrente.Mostrar(info.cartaID, info.imagen, info.rareza);
+			cartaFrente.generador = cartaGenerador;
+			cartaFrente.MostrarCartaID(info.cartaID, info.imagen, info.rareza);
 		}
 
 

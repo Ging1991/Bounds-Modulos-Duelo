@@ -2,6 +2,7 @@
 using Bounds.Duelo.Carta;
 using Bounds.Modulos.Cartas;
 using Bounds.Fisicas.Carta;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Paneles {
 
@@ -14,7 +15,7 @@ namespace Bounds.Duelo.Paneles {
 		public void Iniciar(GameObject carta) {
 			this.carta = carta;
 			CartaInfo info = carta.GetComponent<CartaInfo>();
-			GetComponentInChildren<CartaFrente>().Mostrar(info.cartaID);
+			GetComponentInChildren<CartaImagenID>().MostrarCartaID(info.cartaID);
 			//tieneHabilidad = info.tieneHabilidad("recobrar");
 		}
 

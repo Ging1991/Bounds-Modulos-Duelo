@@ -13,7 +13,7 @@ namespace Bounds.Duelo.Carta {
 
 		public bool esPefecta;
 		private static Color32 colorApagado = new Color(0.196f, 0.3137f, 0.4705f);
-		public CartaFrente cartaFrente;
+		//public CartaFrente cartaFrente;
 
 		public bool CalcularPerfeccion() {
 			if (!EsPerfeccionable())
@@ -32,7 +32,7 @@ namespace Bounds.Duelo.Carta {
 						fisica.TraerCartasEnMateriales(info.controlador)
 					);
 			}
-			cartaFrente.SetIlustracionColor((!esPefecta) ? colorApagado : Color.white);
+			//cartaFrente.SetIlustracionColor((!esPefecta) ? colorApagado : Color.white);
 			return esPefecta;
 		}
 

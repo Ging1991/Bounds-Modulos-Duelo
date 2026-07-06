@@ -7,13 +7,13 @@ namespace Bounds.Duelo.Emblemas {
 
 	public class EmblemaConvertirEnCriatura : EmblemaPadre {
 
-		private static readonly float DIVISOR = 255f;
+		//private static readonly float DIVISOR = 255f;
 
 		public static void ConvertirID(GameObject carta, int cartaID) {
 			CartaBD datos = ControlDuelo.Instancia.proveedorCartas.GetElemento(cartaID);
 			CartaInfo info = carta.GetComponent<CartaInfo>();
 			info.cargar(datos);
-			carta.GetComponentInChildren<CartaFrente>().Mostrar(cartaID);
+			//carta.GetComponentInChildren<CartaFrente>().Mostrar(cartaID);
 			info.cartaID = cartaID;
 		}
 
@@ -31,10 +31,10 @@ namespace Bounds.Duelo.Emblemas {
 			info.original.efectos = new();
 			info.RecalcularEstadisticas();
 			info.cargar(info.original);
-			carta.GetComponentInChildren<CartaFrente>().SetFondo(
+			/*carta.GetComponentInChildren<CartaFrente>().SetFondo(
 				new Color(230 / DIVISOR, 110 / DIVISOR, 30 / DIVISOR),
 				new Color(240 / DIVISOR, 180 / DIVISOR, 80 / DIVISOR)
-			);
+			);*/
 		}
 
 

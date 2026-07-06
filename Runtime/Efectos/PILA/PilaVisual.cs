@@ -1,10 +1,5 @@
 using System.Collections.Generic;
-using Bounds.Modulos.Cartas;
-using Bounds.Modulos.Cartas.Ilustradores;
-using Bounds.Modulos.Cartas.Persistencia;
-using Bounds.Modulos.Cartas.Persistencia.Datos;
-using Bounds.Modulos.Cartas.Tinteros;
-using Ging1991.Core.Interfaces;
+using Bounds.Cartas;
 using UnityEngine;
 
 namespace Bounds.Duelo.Pila {
@@ -18,13 +13,12 @@ namespace Bounds.Duelo.Pila {
 			VisualizarEfectos(cartasID);
 		}
 
-
 		private void VisualizarEfectos(List<PilaEfectos.CartaPila> cartasID) {
 
 			int posicion = 0;
 			foreach (var carta in cartasID) {
 				efectos[posicion].SetActive(true);
-				efectos[posicion].GetComponent<CartaFrente>().Mostrar(carta.cartaID, carta.imagen);
+				efectos[posicion].GetComponent<CartaImagenID>().MostrarCartaID(carta.cartaID, carta.imagen, "N");
 				posicion++;
 				if (posicion >= 5)
 					break;
@@ -37,14 +31,6 @@ namespace Bounds.Duelo.Pila {
 			foreach (GameObject efecto in efectos)
 				efecto.SetActive(false);
 		}
-
-		public void InicializarVisuales() {
-			ITintero tintero = new TinteroBounds();
-
-			foreach (GameObject efecto in efectos)
-				efecto.GetComponent<CartaFrente>().Inicializar(ControlDuelo.Instancia.proveedorCartas, ControlDuelo.Instancia.ilustradorDeCartas, tintero);
-		}
-
 
 	}
 

@@ -158,12 +158,12 @@ namespace Bounds.Fisicas.Carta {
 
 
 		public void RecalcularEstadisticas() {
-			CartaFrente cartaFrente = GetComponentInChildren<CartaFrente>();
+			/*CartaFrente cartaFrente = GetComponentInChildren<CartaFrente>();
 			cartaFrente.SetEstadisticas();
 			if (original.clase == "CRIATURA")
 				cartaFrente.SetEstadisticas(calcularAtaque(), calcularDefensa());
 			if (original.clase == "EQUIPO")
-				cartaFrente.SetEstadisticas(calcularDefensa());
+				cartaFrente.SetEstadisticas(calcularDefensa());*/
 		}
 
 	}

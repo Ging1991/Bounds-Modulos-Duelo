@@ -44,12 +44,11 @@ namespace Bounds.Duelo.Utiles {
 			CartaInfo info = carta.GetComponent<CartaInfo>();
 			CartaGeneral cartaGeneral = carta.GetComponent<CartaGeneral>();
 			if (jugador == 1 && (info.controlador == 1 || cartaGeneral.bocaArriba)) {
-				visor.GetComponentInChildren<VisorGeneral>().ColocarBocaAbajo(false, null);
 				visor.Mostrar(carta);
 			}
 
 			if (jugador == 1 && info.controlador == 2 && !cartaGeneral.bocaArriba) {
-				visor.GetComponentInChildren<VisorGeneral>().ColocarBocaAbajo(true, carta.GetComponentInChildren<CartaFisica>().GetReverso());
+				visor.SetBocaAbajo(carta.GetComponentInChildren<CartaFisica>().GetReverso());
 			}
 
 			if (panelPerfectoVisible || PanelZona.getInstancia() != null)

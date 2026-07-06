@@ -1511,6 +1511,8 @@ GameObject:
   - component: {fileID: 1902117140}
   - component: {fileID: 1902117141}
   - component: {fileID: 1902117142}
+  - component: {fileID: 1902117143}
+  - component: {fileID: 1902117144}
   m_Layer: 0
   m_Name: Control
   m_TagString: Untagged
@@ -1559,6 +1561,8 @@ MonoBehaviour:
   parametrosControl: {fileID: 1902117141}
   musicaDeFondo: {fileID: 2000173735}
   personalizarUI: {fileID: 314109336}
+  cartaGenerador: {fileID: 1902117143}
+  visorGenerador: {fileID: 1902117144}
 --- !u!114 &1902117135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1611,6 +1615,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxInstancias: 5
+--- !u!114 &1902117143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902117130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd0c2e325c6a134f9c9c56700085928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1902117144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902117130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de24c33eb55e2df4d828f139e678871c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1922705830
 GameObject:
   m_ObjectHideFlags: 0
@@ -2045,6 +2073,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2529440265550679518, guid: c0ed265e868504d42900c561a6e074d7, type: 3}
+      propertyPath: visorGenerador
+      value: 
+      objectReference: {fileID: 1902117144}
+    - target: {fileID: 2529440265550679518, guid: c0ed265e868504d42900c561a6e074d7, type: 3}
       propertyPath: traductorClases
       value: 
       objectReference: {fileID: 0}
@@ -2059,6 +2091,14 @@ PrefabInstance:
     - target: {fileID: 2577470226772512871, guid: c0ed265e868504d42900c561a6e074d7, type: 3}
       propertyPath: m_Name
       value: Lienzo_campo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630283920475369469, guid: c0ed265e868504d42900c561a6e074d7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 210
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630283920475369469, guid: c0ed265e868504d42900c561a6e074d7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -330
       objectReference: {fileID: 0}
     - target: {fileID: 2683089175079603796, guid: c0ed265e868504d42900c561a6e074d7, type: 3}
       propertyPath: m_Pivot.x
@@ -2161,10 +2201,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 36254505058384276, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
+      propertyPath: generador
+      value: 
+      objectReference: {fileID: 1902117143}
+    - target: {fileID: 61914958548564584, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
+      propertyPath: generador
+      value: 
+      objectReference: {fileID: 1902117143}
+    - target: {fileID: 367269819052026211, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
+      propertyPath: generador
+      value: 
+      objectReference: {fileID: 1902117143}
+    - target: {fileID: 747473142779404175, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
+      propertyPath: generador
+      value: 
+      objectReference: {fileID: 1902117143}
     - target: {fileID: 1680991304204528988, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 471303005}
+    - target: {fileID: 2030337077831198061, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
+      propertyPath: generador
+      value: 
+      objectReference: {fileID: 1902117143}
     - target: {fileID: 3721180222913573083, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
       propertyPath: datosDeCartas
       value: 
@@ -2173,6 +2233,10 @@ PrefabInstance:
       propertyPath: ilustradorDeCartas
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4496869150542480959, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
+      propertyPath: generador
+      value: 
+      objectReference: {fileID: 1902117143}
     - target: {fileID: 4672377727510383174, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2261,14 +2325,30 @@ PrefabInstance:
       propertyPath: ilustradorDeCartas
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5052497123812665601, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
+      propertyPath: generador
+      value: 
+      objectReference: {fileID: 1902117143}
     - target: {fileID: 7508288089374872751, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
       propertyPath: m_Name
       value: nicialanoInicial
       objectReference: {fileID: 0}
+    - target: {fileID: 7878293023664777537, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
+      propertyPath: generador
+      value: 
+      objectReference: {fileID: 1902117143}
     - target: {fileID: 8159062034044396565, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
       propertyPath: m_Name
       value: Lienzo_efectos
       objectReference: {fileID: 0}
+    - target: {fileID: 8172459287439057944, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
+      propertyPath: generador
+      value: 
+      objectReference: {fileID: 1902117143}
+    - target: {fileID: 8863597980704080973, guid: a5e0d7d5cd6302048862665227e40f6e, type: 3}
+      propertyPath: generador
+      value: 
+      objectReference: {fileID: 1902117143}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

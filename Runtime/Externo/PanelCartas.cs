@@ -4,7 +4,6 @@ using Bounds.Duelo.Paneles.Seleccion;
 using Bounds.Modulos.Cartas;
 using Bounds.Modulos.Cartas.Persistencia;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
-using Bounds.Modulos.Cartas.Tinteros;
 using Ging1991.Core;
 using Ging1991.Core.Interfaces;
 using UnityEngine;
@@ -107,12 +106,12 @@ namespace Bounds.Duelo.Paneles {
 
 		}
 
-
-		public void InicializarVisuales(IProveedor<int, CartaBD> proveedorCartas, IProveedor<string, Sprite> ilustradorDeCartas, ITintero tintero) {
-			foreach (GameObject opcion in opciones)
-				opcion.GetComponentInChildren<CartaFrente>().Inicializar(proveedorCartas, ilustradorDeCartas, tintero);
-		}
-
+		/*
+				public void InicializarVisuales(IProveedor<int, CartaBD> proveedorCartas, IProveedor<string, Sprite> ilustradorDeCartas, ITintero tintero) {
+					foreach (GameObject opcion in opciones)
+						opcion.GetComponentInChildren<CartaFrente>().Inicializar(proveedorCartas, ilustradorDeCartas, tintero);
+				}
+		*/
 
 		public void Seleccionar(GameObject carta) {
 			if (cartasSeleccionadas.Contains(carta)) {

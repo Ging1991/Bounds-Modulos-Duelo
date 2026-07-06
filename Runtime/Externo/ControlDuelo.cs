@@ -15,7 +15,6 @@ using Bounds.Modulos.Cartas.Ilustradores;
 using Bounds.Infraestructura.Visores;
 using Bounds.Duelo.Pila;
 using Bounds.Duelo.Paneles;
-using Bounds.Modulos.Cartas.Tinteros;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Campos;
 using Bounds.Modulos.Duelo;
@@ -31,6 +30,9 @@ using Bounds.Modulos.Visor.Persistencia;
 using Ging1991.Interfaces.Entrada;
 using Ging1991.Persistencia.Proveedores;
 using Ging1991.Ventanas;
+using Bounds.Cartas;
+using Bounds.Persistencia.proveedores;
+using Bounds.Visor;
 
 namespace Bounds.Duelo {
 
@@ -57,15 +59,42 @@ namespace Bounds.Duelo {
 		public IProveedor<string, string> selectorTipos;
 		public IProveedor<string, string> selectorInvocaciones;
 		public IProveedor<string, string> selectorSistema;
+		public IProveedor<string, Color> selectorColores;
 
 		public Configuracion configuracion;
 		public Billetera billetera;
 		public MusicaDeFondo musicaDeFondo;
 		public ControlUIBounds personalizarUI;
+		public CartaGenerador cartaGenerador;
+		public VisorGenerador visorGenerador;
 
 		public void TocarMusica(string clave) {
 			musicaDeFondo.Inicializar(parametrosControl.parametros.direcciones[clave]);
 		}
+
+
+		public void InicializarGeneradores() {
+			cartaGenerador.Inicializar(
+				ilustradorDeCartas,
+				proveedorCartas,
+				selectorColores
+			);
+
+			visorGenerador.Inicializar(
+				proveedorCartas,
+				selectorHabilidades,
+				ilustradorDeCartas,
+				selectorColores,
+				selectorSistema,
+				selectorClases,
+				selectorTipos,
+				selectorInvocaciones,
+				selectorNombres,
+				selectorAmbientacion,
+				selectorEfectos
+			);
+		}
+
 
 		void Start() {
 			parametrosControl.Inicializar();
@@ -84,6 +113,10 @@ namespace Bounds.Duelo {
 			gestorDeSonidos.Inicializar(new DireccionRecursos(parametrosEscena.direcciones["SONIDOS"]));
 			selectorHabilidades = new LectorHabilidades(parametrosControl.parametros.direcciones["CARTAS_HABILIDADES"]);
 			carpetaColecciones = new(parametrosControl.parametros.direcciones["COLECCIONES"]);
+			selectorColores = new ProveedorColores(
+				parametrosControl.parametros.direcciones["COLORES"],
+				TipoLector.RECURSOS
+			);
 			billetera = new(parametrosEscena.direcciones["BILLETERA"]);
 			cofre = new(parametrosEscena.direcciones["COFRE"], parametrosEscena.direcciones["COFRE_RECURSOS"]);
 			TocarMusica("MUSICA_TIENDA");
@@ -96,24 +129,11 @@ namespace Bounds.Duelo {
 				campo.controlador = this;
 			}
 
-			visorDuelo.Inicializar(
-				selectorHabilidades,
-				proveedorCartas,
-				selectorNombres,
-				selectorEfectos,
-				selectorAmbientacion,
-				selectorSistema,
-				selectorClases,
-				selectorTipos,
-				selectorInvocaciones,
-				ilustradorDeCartas
-			);
+
+			InicializarGeneradores();
 
 			CPUReloj cpuReloj = GameObject.Find("CPU").GetComponent<CPUReloj>();
 			cpuReloj.Inicializacion();
-
-			pilaVisual.InicializarVisuales();
-			panelCartas.InicializarVisuales(proveedorCartas, ilustradorDeCartas, new TinteroBounds());
 
 			Cargador cargador = GameObject.Find("Cargador").GetComponent<Cargador>();
 			Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();

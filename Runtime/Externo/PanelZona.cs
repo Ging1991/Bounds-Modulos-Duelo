@@ -7,11 +7,11 @@ using Bounds.Duelo.Emblemas;
 using Bounds.Modulos.Cartas;
 using Bounds.Modulos.Cartas.Persistencia;
 using Bounds.Modulos.Cartas.Ilustradores;
-using Bounds.Modulos.Cartas.Tinteros;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
 using Bounds.Duelo;
 using Bounds.Duelo.Pila.Subefectos;
+using Bounds.Cartas;
 
 public class PanelZona : MonoBehaviour {
 
@@ -22,14 +22,9 @@ public class PanelZona : MonoBehaviour {
 	public bool estaMostrandoMateriales;
 
 	public void Inicializar() {
-		ITintero tintero = new TinteroBounds();
 
 		foreach (var carta in opciones) {
-			carta.GetComponentInChildren<CartaFrente>().Inicializar(
-				ControlDuelo.Instancia.proveedorCartas,
-				ControlDuelo.Instancia.ilustradorDeCartas,
-				tintero
-			);
+			carta.GetComponentInChildren<CartaImagenID>().generador = ControlDuelo.Instancia.cartaGenerador;
 		}
 	}
 
