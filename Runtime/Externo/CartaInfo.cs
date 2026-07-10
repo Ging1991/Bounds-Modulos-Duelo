@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using Bounds.Cartas;
 using Bounds.Modulos.Cartas;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
+using Bounds.Visuales.Primitivas;
 using UnityEngine;
 
 namespace Bounds.Fisicas.Carta {
@@ -158,12 +160,23 @@ namespace Bounds.Fisicas.Carta {
 
 
 		public void RecalcularEstadisticas() {
-			/*CartaFrente cartaFrente = GetComponentInChildren<CartaFrente>();
-			cartaFrente.SetEstadisticas();
-			if (original.clase == "CRIATURA")
-				cartaFrente.SetEstadisticas(calcularAtaque(), calcularDefensa());
-			if (original.clase == "EQUIPO")
-				cartaFrente.SetEstadisticas(calcularDefensa());*/
+			CartaPrimitiva primitiva = GetComponentInChildren<CartaImagenID>().primitiva;
+			if (original.clase == "CRIATURA") {
+				primitiva.ataque.gameObject.SetActive(true);
+				primitiva.defensa.gameObject.SetActive(true);
+				primitiva.ataque.SetValor(calcularAtaque());
+				primitiva.defensa.SetValor(calcularDefensa());
+
+			}
+			else if (original.clase == "EQUIPO") {
+				primitiva.ataque.gameObject.SetActive(false);
+				primitiva.defensa.gameObject.SetActive(true);
+				primitiva.defensa.SetValor(calcularDefensa());
+			}
+			else {
+				primitiva.ataque.gameObject.SetActive(false);
+				primitiva.defensa.gameObject.SetActive(false);
+			}
 		}
 
 	}

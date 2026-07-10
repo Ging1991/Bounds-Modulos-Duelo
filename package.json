@@ -1,6 +1,6 @@
 {
 	"name": "com.bounds.duelo",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"displayName": "Bounds - Duelo",
 	"unity": "2021.3",
 	"description": "Módulo de duelo de Bounds TCG.",
