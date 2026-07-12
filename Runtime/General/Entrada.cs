@@ -51,7 +51,7 @@ namespace Bounds.Duelo.Utiles {
 				visor.SetBocaAbajo(carta.GetComponentInChildren<CartaFisica>().GetReverso());
 			}
 
-			if (panelPerfectoVisible || PanelZona.getInstancia() != null)
+			if (panelPerfectoVisible || PanelZona.GetInstancia() != null)
 				return;
 
 			EmblemaActivarHabilidad habilidad = EmblemaActivarHabilidad.GetInstancia();
@@ -87,7 +87,7 @@ namespace Bounds.Duelo.Utiles {
 			Seleccionador seleccionador = Seleccionador.Instancia;
 			List<string> lista = new() { "TRAMPA", "EQUIPO", "VACIO", "MISION" };
 
-			if (panelPerfectoVisible || PanelZona.getInstancia() != null)
+			if (panelPerfectoVisible || PanelZona.GetInstancia() != null)
 				return;
 
 			if (seleccionador.cartaParaJugar == null)
@@ -112,7 +112,7 @@ namespace Bounds.Duelo.Utiles {
 
 
 		public void PresionarBotonFase() {
-			if (panelPerfectoVisible || PanelZona.getInstancia() != null)
+			if (panelPerfectoVisible || PanelZona.GetInstancia() != null)
 				return;
 			EmblemaTurnos turnos = GameObject.Find("EmblemaTurnos").GetComponent<EmblemaTurnos>();
 			turnos.CambiarFase();

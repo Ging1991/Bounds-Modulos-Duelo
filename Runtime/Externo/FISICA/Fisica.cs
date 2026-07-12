@@ -12,6 +12,7 @@ namespace Bounds.Modulos.Duelo.Fisicas {
 		public ZonaCampo campo2;
 		public GameObject panel;
 		public ListadorDeZonas listador;
+		public PanelZona panelZona;
 
 		public void OrganizarMano(int jugador, List<GameObject> cartas) {
 			Vector3 posicionBase = Constantes.VECTOR_MANO1;

@@ -337,6 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esPefecta: 0
+  cartaImagenID: {fileID: 4024089530848437818}
 --- !u!114 &7471462136678998163
 MonoBehaviour:
   m_ObjectHideFlags: 0

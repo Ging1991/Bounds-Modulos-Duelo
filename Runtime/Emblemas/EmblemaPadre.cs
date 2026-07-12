@@ -174,9 +174,24 @@ namespace Bounds.Duelo.Emblemas {
 			}
 
 			if (cartaEfecto.TieneClave("ANTI_T")) {
-				CondicionTipoCriatura condicion = new CondicionTipoCriatura(cartaEfecto.GetEfecto("ANTI_T").parametroTipo);
-				ISubSobreCarta subefecto = new SubColocarContador("debilidad", 1);
-				pila.Agregar(new EfectoSobreCartas(carta, subefecto, condicion.CumpleLista(cartasEnCampo)));
+				CondicionTipoCriatura condicion = new(cartaEfecto.GetEfecto("ANTI_T").parametroTipo);
+				EmblemaEfectos.Activar(
+					new EfectoSobreCartas(
+						carta,
+						new SubDestruir(),
+						condicion.CumpleLista(cartasEnCampo)
+					)
+				);
+			}
+
+			if (cartaEfecto.TieneClave("REFLEJO")) {
+				EmblemaEfectos.Activar(
+					new EfectoSobreCarta(
+						carta,
+						new SubReflejar(),
+						carta
+					)
+				);
 			}
 
 			if (cartaEfecto.TieneClave("REFORZAR_T") && tiposDeCriatura.Contains(cartaEfecto.GetEfecto("REFORZAR_T").parametroTipo)) {

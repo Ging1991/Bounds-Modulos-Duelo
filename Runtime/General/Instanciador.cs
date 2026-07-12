@@ -19,8 +19,6 @@ namespace Bounds.Duelo.Utiles {
 		public GameObject claseCuadroFinalizarDuelo;
 		public GameObject clasePopipAtaqueDirecto;
 		public GameObject clasePanelSeleccionar;
-		public GameObject clasePanelVisualizar;
-		public GameObject clasePanelVisualizarV2;
 		public GameObject claseOpcionSeleccion;
 		public GameObject claseOpcionVisualizacion;
 		public GameObject claseTextoCreciente;
@@ -159,28 +157,6 @@ namespace Bounds.Duelo.Utiles {
 		public GameObject CrearPanelSeleccionarCarta() {
 			GameObject panel = Instantiate(clasePanelSeleccionar, new Vector3(0, 150, 0), Quaternion.identity);
 			panel.name = "PanelSeleccionar";
-			GameObject lienzo = GameObject.Find("Lienzo_efectos");
-			panel.transform.SetParent(lienzo.transform);
-			panel.transform.localScale = new Vector3(1, 1, 1);
-			panel.transform.localPosition = new Vector3(0, 0, 0);
-			return panel;
-		}
-
-
-		public GameObject CrearPanelVisualizacion() {
-			GameObject panel = Instantiate(clasePanelVisualizar, new Vector3(0, 150, 0), Quaternion.identity);
-			panel.name = "PanelVisualizar";
-			GameObject lienzo = GameObject.Find("Lienzo_efectos");
-			panel.transform.SetParent(lienzo.transform);
-			panel.transform.localScale = new Vector3(1, 1, 1);
-			panel.transform.localPosition = new Vector3(0, 0, 0);
-			return panel;
-		}
-
-
-		public GameObject CrearPanelVisualizacionV2() {
-			GameObject panel = Instantiate(clasePanelVisualizarV2, new Vector3(0, 150, 0), Quaternion.identity);
-			panel.name = "PanelZonas";
 			GameObject lienzo = GameObject.Find("Lienzo_efectos");
 			panel.transform.SetParent(lienzo.transform);
 			panel.transform.localScale = new Vector3(1, 1, 1);

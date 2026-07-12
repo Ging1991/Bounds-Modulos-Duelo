@@ -114,6 +114,25 @@ namespace Bounds.Duelo.Emblemas {
 
 			}
 
+			foreach (GameObject trampa in TraerTrampasBocaAbajo(controlador)) {
+				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
+
+				if (infoTrampa.original.datoTrampa.tipo == "SUPREMACIA" && criatura.GetComponent<CartaTipo>().ContieneTipo(infoTrampa.original.datoTrampa.habilidad)) {
+					EmblemaTrampa.ActivarTrampa(trampa);
+					List<GameObject> cartasEnCampo = new SubCartasControladas(0, new CondicionClase("CRIATURA")).Generar();
+					EmblemaEfectos.Activar(
+						new EfectoSobreCartas(
+							trampa,
+							new SubDestruir(),
+							new CondicionTipoCriatura(infoTrampa.original.datoTrampa.habilidad).NoCumpleLista(cartasEnCampo)
+						)
+					);
+					break;
+				}
+			}
+
+
+
 		}
 
 	}

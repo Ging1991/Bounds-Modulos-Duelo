@@ -21,7 +21,7 @@ namespace Bounds.Duelo.Paneles {
 
 
 		public void OnMouseDown() {
-			padre.seleccionarCarta(carta);
+			padre.SeleccionarCarta(carta);
 		}
 
 

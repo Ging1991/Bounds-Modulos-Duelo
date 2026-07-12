@@ -154,6 +154,11 @@ namespace Bounds.Duelo.Emblemas {
 				EmblemaEfectos.Activar(new EfectoSobreJugador(hechizo, jugador, new SubModificarLP(sacrificioInfo.calcularDefensa()), "REVITALIZAR"));
 			}
 
+			if (dato.tipo == "SACRIFICIO_MISTICO_NIVEL") {
+				CartaInfo sacrificioInfo = sacrificio.GetComponent<CartaInfo>();
+				EmblemaEfectos.Activar(new EfectoInvocacionMisticaNivel(hechizo, jugador, sacrificioInfo.original.nivel));
+			}
+
 			if (dato.tipo == "SACRIFICIO_MODIFICA_VIDA_ATK") {
 				CartaInfo sacrificioInfo = sacrificio.GetComponent<CartaInfo>();
 				EmblemaEfectos.Activar(new EfectoSobreJugador(hechizo, jugador, new SubModificarLP(sacrificioInfo.calcularAtaque()), "REVITALIZAR"));

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
+using Bounds.Cartas;
 using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Utiles;
 using Bounds.Fisicas.Carta;
-using Bounds.Modulos.Cartas;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
 using UnityEngine;
@@ -13,7 +13,7 @@ namespace Bounds.Duelo.Carta {
 
 		public bool esPefecta;
 		private static Color32 colorApagado = new Color(0.196f, 0.3137f, 0.4705f);
-		//public CartaFrente cartaFrente;
+		public CartaImagenID cartaImagenID;
 
 		public bool CalcularPerfeccion() {
 			if (!EsPerfeccionable())
@@ -26,25 +26,28 @@ namespace Bounds.Duelo.Carta {
 						info.original.materiales,
 						fisica.TraerCartasEnMateriales(JugadorDuelo.Adversario(info.controlador))
 					);
-				else
+
+				else if (info.original.datoCriatura.perfeccion != "MISTICO") {
 					esPefecta = ListaCompletaMaterialesOBJ(
 						info.original.materiales,
 						fisica.TraerCartasEnMateriales(info.controlador)
 					);
+				}
 			}
-			//cartaFrente.SetIlustracionColor((!esPefecta) ? colorApagado : Color.white);
+			cartaImagenID.primitiva.SetIlustracionColor((!esPefecta) ? colorApagado : Color.white);
 			return esPefecta;
 		}
 
 
 		public bool PuedeInvocar() {
 
-
 			if (!EsPerfeccionable()) {
 				return false;
 			}
 			else {
 				CartaInfo cartaInfo = GetComponent<CartaInfo>();
+				if (cartaInfo.original.datoCriatura.perfeccion == "MISTICO")
+					return false;
 
 				if (GetComponent<CartaEfecto>().TieneClave("INVOCACION_UNICA") &&
 					JugadorDuelo.GetInstancia(cartaInfo.controlador).invocacionesRestringidas.Contains(cartaInfo.cartaID)) {

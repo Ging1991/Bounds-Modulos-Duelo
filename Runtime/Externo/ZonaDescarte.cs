@@ -11,17 +11,17 @@ namespace Bounds.Duelo {
 		public int jugador;
 
 
-		void OnMouseDown() {
+		void OnMouseDown() {/*
 			Instanciador instanciador = GameObject.Find("Instanciador").GetComponent<Instanciador>();
-			GameObject panel = instanciador.CrearPanelVisualizacion();
-			PanelVisualizacion componente = panel.GetComponent<PanelVisualizacion>();
+			//GameObject panel = instanciador.CrearPanelVisualizacion();
+			//PanelVisualizacion componente = panel.GetComponent<PanelVisualizacion>();
 			Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();
 
 			if (tipo == "descarte")
 				componente.Iniciar(fisica.TraerCartasEnCementerio(jugador), "Visualizar cartas en el descarte");
 
 			if (tipo == "materiales")
-				componente.Iniciar(fisica.TraerCartasEnMateriales(jugador), "Visualizar cartas en materiales");
+				componente.Iniciar(fisica.TraerCartasEnMateriales(jugador), "Visualizar cartas en materiales");*/
 		}
 
 	}

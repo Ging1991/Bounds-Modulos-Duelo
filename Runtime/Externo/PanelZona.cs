@@ -1,17 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Bounds.Duelo.Carta;
-using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Paneles;
 using Bounds.Duelo.Emblemas;
-using Bounds.Modulos.Cartas;
-using Bounds.Modulos.Cartas.Persistencia;
-using Bounds.Modulos.Cartas.Ilustradores;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
 using Bounds.Duelo;
-using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Cartas;
+using Ging1991.Interfaces.Personalizacion;
+using Ging1991.Core;
 
 public class PanelZona : MonoBehaviour {
 
@@ -20,6 +16,7 @@ public class PanelZona : MonoBehaviour {
 	public int jugador;
 	public GameObject cartaSeleccionada;
 	public bool estaMostrandoMateriales;
+	public TextoUI titulo;
 
 	public void Inicializar() {
 
@@ -28,13 +25,11 @@ public class PanelZona : MonoBehaviour {
 		}
 	}
 
-	public void iniciar(int jugador, List<GameObject> cartas, string texto = "Panel de visualización") {
-
-		// Seteo el texto para el titulo
-		Cartel cartel = transform.GetChild(0).GetChild(0).GetChild(0).GetComponentInChildren<Cartel>();
-		cartel.setTexto(texto);
-
+	public void Visualizar(int jugador, List<GameObject> cartas, string texto = "Panel de visualización") {
+		gameObject.SetActive(true);
+		Bloqueador.BloquearGrupo("GLOBAL", true);
 		this.jugador = jugador;
+		titulo.SetTexto(texto);
 
 		// Inicializa las variables de paginacion
 		pagina = 1;
@@ -45,45 +40,46 @@ public class PanelZona : MonoBehaviour {
 
 		// Muestro las cartas por primera vez
 		this.cartas = cartas;
-		mostrar();
+		MostrarCartas();
 	}
 
 
-	public void botonCerrar() {
-		Destroy(gameObject);
+	public void BotonCerrar() {
+		Bloqueador.BloquearGrupo("GLOBAL", false);
+		gameObject.SetActive(false);
 	}
 
 
-	public void botonSiguiente() {
+	public void BotonSiguiente() {
 		pagina++;
 		if (pagina > paginaMax)
 			pagina = paginaMin;
-		mostrar();
+		MostrarCartas();
 	}
 
 
-	public void botonAnterior() {
+	public void BotonAnterior() {
 		pagina--;
 		if (pagina < paginaMin)
 			pagina = paginaMax;
-		mostrar();
+		MostrarCartas();
 	}
 
 
-	public void botonDescarte() {
+	public void BotonDescarte() {
 		estaMostrandoMateriales = false;
 		Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();
-		iniciar(jugador, fisica.TraerCartasEnCementerio(jugador), "Visualizar cartas en el descarte");
+		Visualizar(jugador, fisica.TraerCartasEnCementerio(jugador), $"Cartas en el descarte del jugador {jugador}");
 	}
 
 
-	public void botonMateriales() {
+	public void BotonMateriales() {
 		estaMostrandoMateriales = true;
-		iniciar(jugador, FindAnyObjectByType<Fisica>().TraerCartasEnMateriales(jugador), "Visualizar cartas en materiales");
+		Visualizar(jugador, FindAnyObjectByType<Fisica>().TraerCartasEnMateriales(jugador), $"Cartas en materiales del jugador {jugador}");
 	}
 
 
-	public void mostrar() {
+	public void MostrarCartas() {
 
 		// deshabilito mis opciones
 		foreach (GameObject opcion in opciones)
@@ -111,7 +107,7 @@ public class PanelZona : MonoBehaviour {
 	}
 
 
-	public void seleccionarCarta(GameObject carta) {
+	public void SeleccionarCarta(GameObject carta) {
 		if (estaMostrandoMateriales)
 			return;
 		cartaSeleccionada = carta;
@@ -121,18 +117,18 @@ public class PanelZona : MonoBehaviour {
 	}
 
 
-	public void botonActivar() {
+	public void BotonActivar() {
 		if (estaMostrandoMateriales)
 			return;
 
 		Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();
 		fisica.EnviarHaciaMateriales(cartaSeleccionada, 1);
 		EmblemaRobo.RobarCartas(1, 1);
-		botonCerrar();
+		BotonCerrar();
 	}
 
 
-	public static PanelZona getInstancia() {
+	public static PanelZona GetInstancia() {
 		GameObject instancia = GameObject.Find("PanelZonas");
 		if (instancia != null)
 			return instancia.GetComponent<PanelZona>();
