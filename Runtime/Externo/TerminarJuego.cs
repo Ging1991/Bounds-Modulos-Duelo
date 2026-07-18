@@ -23,9 +23,9 @@ namespace Bounds.Duelo {
 				Destroy(cpu);
 
 			if (ganar)
-				ControlDuelo.Instancia.TocarMusica("MUSICA_VICTORIA");
+				ControlDuelo.Instancia.TocarMusica("VICTORIA");
 			else
-				ControlDuelo.Instancia.TocarMusica("MUSICA_DERROTA");
+				ControlDuelo.Instancia.TocarMusica("DERROTA");
 			StartCoroutine(MostrarCuadroRecompensas(ganar));
 		}
 

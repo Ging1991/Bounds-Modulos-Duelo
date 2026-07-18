@@ -6,6 +6,7 @@ namespace Bounds.Modulos.Duelo {
 	public class ParametrosControlDuelo : ParametrosControl {
 
 		public override void SetParametros() {
+			parametros.direcciones["MUSICA_AMBIENTAL"] = "Sonidos/Ambiente";
 			parametros.direcciones["COLORES"] = new DireccionRecursos("Configuracion", "COLORES").Generar();
 			parametros.direcciones["SISTEMA"] = new DireccionRecursos("Configuracion", "IDIOMA").Generar();
 			parametros.direcciones["COLECCIONES"] = "COLECCIONES";

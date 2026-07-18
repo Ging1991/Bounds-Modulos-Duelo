@@ -63,13 +63,22 @@ namespace Bounds.Duelo {
 
 		public Configuracion configuracion;
 		public Billetera billetera;
-		public MusicaDeFondo musicaDeFondo;
 		public ControlUIBounds personalizarUI;
 		public CartaGenerador cartaGenerador;
 		public VisorGenerador visorGenerador;
 
+		private void InicializarMusica(string direccion) {
+			MusicaAmbiental musicaAmbiental = MusicaAmbiental.Instancia;
+			if (musicaAmbiental.actual != "GENERAL") {
+				musicaAmbiental.Inicializar(new ProveedorAudios(new DireccionRecursos(direccion)));
+				musicaAmbiental.Reproducir("GENERAL");
+			}
+		}
+
+
 		public void TocarMusica(string clave) {
-			musicaDeFondo.Inicializar(parametrosControl.parametros.direcciones[clave]);
+			MusicaAmbiental musicaAmbiental = MusicaAmbiental.Instancia;
+			musicaAmbiental.Reproducir(clave);
 		}
 
 
@@ -119,7 +128,8 @@ namespace Bounds.Duelo {
 			);
 			billetera = new(parametrosEscena.direcciones["BILLETERA"]);
 			cofre = new(parametrosEscena.direcciones["COFRE"], parametrosEscena.direcciones["COFRE_RECURSOS"]);
-			TocarMusica("MUSICA_TIENDA");
+			InicializarMusica(parametrosEscena.direcciones["MUSICA_AMBIENTAL"]);
+
 			ilustradorDeCartas = new IlustradorDeCartas(
 				parametrosControl.parametros.direcciones["CARTAS_RECURSO"],
 				parametrosControl.parametros.direcciones["CARTAS_DINAMICA"]
