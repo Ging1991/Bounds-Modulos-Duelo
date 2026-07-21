@@ -15,7 +15,7 @@ namespace Bounds.Duelo.Emblemas.Fases {
 			EmblemaTurnos.DesmarcarMuro(jugadorActivo);
 
 			if (jugadorActivo == 1) {
-				GameObject boton = GameObject.Find("BotonInvocacion");
+				GameObject boton = GameObject.Find("BotonInvocar");
 				boton.GetComponent<Boton>().SetColorTexto(Color.black);
 				boton.GetComponent<Boton>().SetColorBorde(Color.black);
 				boton.GetComponent<Boton>().SetColorRelleno(Color.gray);

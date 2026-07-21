@@ -9,7 +9,6 @@ using Ging1991.Persistencia.Lectores.Demandas;
 using Ging1991.Persistencia.Direcciones;
 using Ging1991.Persistencia.Lectores;
 using Ging1991.Core;
-using Ging1991.Interfaces;
 using Bounds.Modulos.Cartas.Persistencia;
 using Bounds.Modulos.Cartas.Ilustradores;
 using Bounds.Infraestructura.Visores;
@@ -241,7 +240,7 @@ namespace Bounds.Duelo {
 					break;
 				}
 			}
-			GameObject boton = GameObject.Find("BotonInvocacion");
+			GameObject boton = GameObject.Find("BotonInvocar");
 			EmblemaTurnos controlTurnos = EmblemaTurnos.GetInstancia();
 			if (tieneInvocaciones && controlTurnos.jugadorActivo == 1 && controlTurnos.fase == EmblemaTurnos.Fase.FASE_PRINCIPAL)
 				boton.GetComponent<Boton>().SetColorRelleno(Color.green);

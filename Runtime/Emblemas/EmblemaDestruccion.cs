@@ -133,6 +133,7 @@ namespace Bounds.Duelo.Emblemas {
 			ActivarEfectosDeOtrasCartas(carta);
 			ActivarTrampas(carta);
 			Desanexar(carta);
+			//carta.GetComponent<CartaGeneral>().Sacudir();
 			return true;
 		}
 
