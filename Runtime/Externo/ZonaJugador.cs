@@ -3,6 +3,7 @@ using Bounds.Modulos.Cartas.Ilustradores;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
 using Ging1991.Core.Interfaces;
+using Ging1991.Interfaces.Personalizacion;
 using UnityEngine;
 
 public class ZonaJugador : MonoBehaviour {
@@ -10,6 +11,8 @@ public class ZonaJugador : MonoBehaviour {
 	public int jugador;
 	public IProveedor<int, CartaBD> proveedorCartas;
 	public IlustradorDeCartas ilustradorDeCartas;
+	public TextoUI materialesOBJ;
+	public TextoUI descarteOBJ;
 
 	void OnMouseDown() {
 		Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();
@@ -20,14 +23,12 @@ public class ZonaJugador : MonoBehaviour {
 
 
 	public void SetDescarte(int cantidad) {
-		Cartel cartel = gameObject.transform.GetChild(1).GetComponent<Cartel>();
-		cartel.setTexto("Descarte\n" + cantidad);
+		descarteOBJ.SetTexto($"Descarte\n{cantidad}");
 	}
 
 
 	public void SetMateriales(int cantidad) {
-		Cartel cartel = gameObject.transform.GetChild(0).GetComponent<Cartel>();
-		cartel.setTexto("Materiales\n" + cantidad);
+		materialesOBJ.SetTexto($"Materiales\n{cantidad}");
 	}
 
 

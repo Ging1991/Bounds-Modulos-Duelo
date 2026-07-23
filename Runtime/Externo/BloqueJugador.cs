@@ -1,14 +1,17 @@
-﻿using UnityEngine;
+﻿using Ging1991.Interfaces.Personalizacion;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class BloqueJugador : MonoBehaviour {
 
 	public int vida;
 	public Image miniatura;
+	public TextoUI nombreOBJ;
+	public TextoUI mazoOBJ;
+	public TextoUI vidaOBJ;
 
 	public void SetNombre(string nombre) {
-		Cartel cartelNombre = gameObject.transform.GetChild(0).GetComponent<Cartel>();
-		cartelNombre.setTexto(nombre);
+		nombreOBJ.SetTexto(nombre);
 	}
 
 
@@ -17,14 +20,12 @@ public class BloqueJugador : MonoBehaviour {
 		if (this.vida < 0) {
 			this.vida = 0;
 		}
-		Cartel cartelNombre = gameObject.transform.GetChild(1).GetComponent<Cartel>();
-		cartelNombre.setTexto("Vida " + this.vida);
+		vidaOBJ.SetTexto($"Vida {this.vida}");
 	}
 
 
 	public void setMazo(int cantidad) {
-		Cartel cartelNombre = gameObject.transform.GetChild(2).GetComponent<Cartel>();
-		cartelNombre.setTexto("Mazo " + cantidad);
+		mazoOBJ.SetTexto($"Mazo {cantidad}");
 	}
 
 
