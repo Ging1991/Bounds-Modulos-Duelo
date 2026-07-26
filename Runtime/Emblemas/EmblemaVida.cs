@@ -10,6 +10,7 @@ using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
 using Bounds.Persistencia;
 using Bounds.Duelo.Efectos;
+using Bounds.Sistema;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -50,7 +51,7 @@ namespace Bounds.Duelo.Emblemas {
 			bloque.GetComponentInChildren<GestorEfectosVisuales>().Animar(visual);
 
 			TerminarJuego terminar = GameObject.Find("TerminarJuego").GetComponent<TerminarJuego>();
-			Billetera billetera = GameObject.FindAnyObjectByType<ControlDuelo>().billetera;
+			Billetera billetera = RegistroGlobal.Instancia.billetera;
 
 			if (bloque.vida < 1) {
 				if (jugador == 1) {

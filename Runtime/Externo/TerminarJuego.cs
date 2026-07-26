@@ -4,6 +4,7 @@ using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Utiles;
 using Ging1991.Core.Interfaces;
 using Bounds.Persistencia;
+using Bounds.Sistema;
 
 namespace Bounds.Duelo {
 
@@ -33,7 +34,7 @@ namespace Bounds.Duelo {
 		IEnumerator MostrarCuadroRecompensas(bool haGanado) {
 			this.haGanado = haGanado;
 			ControlDuelo controlDuelo = GameObject.FindAnyObjectByType<ControlDuelo>();
-			Billetera billetera = controlDuelo.billetera;
+			Billetera billetera = RegistroGlobal.Instancia.billetera;
 			ilustradorDeCartas = controlDuelo.ilustradorDeCartas;
 
 			yield return new WaitForSeconds(1);

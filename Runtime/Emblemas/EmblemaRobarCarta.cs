@@ -8,6 +8,7 @@ using Bounds.Duelo.Condiciones;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
 using Bounds.Persistencia;
+using Bounds.Sistema;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -106,7 +107,7 @@ namespace Bounds.Duelo.Emblemas {
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			Fisica fisica = conocimiento.traerFisica();
 			ControlDuelo controlDuelo = GameObject.FindAnyObjectByType<ControlDuelo>();
-			Billetera billetera = GameObject.FindAnyObjectByType<ControlDuelo>().billetera;
+			Billetera billetera = RegistroGlobal.Instancia.billetera;
 
 			bool haGanado = false;
 			foreach (GameObject carta in fisica.TraerCartasEnCampo(jugador)) {

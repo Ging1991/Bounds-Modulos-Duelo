@@ -10,14 +10,12 @@ using Ging1991.Persistencia.Direcciones;
 using Ging1991.Persistencia.Lectores;
 using Ging1991.Core;
 using Bounds.Modulos.Cartas.Persistencia;
-using Bounds.Modulos.Cartas.Ilustradores;
 using Bounds.Infraestructura.Visores;
 using Bounds.Duelo.Pila;
 using Bounds.Duelo.Paneles;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Campos;
 using Bounds.Modulos.Duelo;
-using Bounds.Persistencia.Parametros;
 using Bounds.Persistencia;
 using Bounds.Modulos.Persistencia;
 using Ging1991.Core.Interfaces;
@@ -32,6 +30,9 @@ using Ging1991.Ventanas;
 using Bounds.Cartas;
 using Bounds.Persistencia.proveedores;
 using Bounds.Visor;
+using Bounds.Sistema;
+using Bounds.Sistema.Parametros;
+using Bounds.Sistema.Ilustradores;
 
 namespace Bounds.Duelo {
 
@@ -59,21 +60,9 @@ namespace Bounds.Duelo {
 		public IProveedor<string, string> selectorInvocaciones;
 		public IProveedor<string, string> selectorSistema;
 		public IProveedor<string, Color> selectorColores;
-
-		public Configuracion configuracion;
-		public Billetera billetera;
 		public ControlUIBounds personalizarUI;
 		public CartaGenerador cartaGenerador;
 		public VisorGenerador visorGenerador;
-
-		private void InicializarMusica(string direccion) {
-			MusicaAmbiental musicaAmbiental = MusicaAmbiental.Instancia;
-			if (musicaAmbiental.actual != "GENERAL") {
-				musicaAmbiental.Inicializar(new ProveedorAudios(new DireccionRecursos(direccion)));
-				musicaAmbiental.Reproducir("GENERAL");
-			}
-		}
-
 
 		public void TocarMusica(string clave) {
 			MusicaAmbiental musicaAmbiental = MusicaAmbiental.Instancia;
@@ -104,40 +93,47 @@ namespace Bounds.Duelo {
 		}
 
 
+		private void InicializarMusica(Direccion direccion) {
+			MusicaAmbiental musicaAmbiental = MusicaAmbiental.Instancia;
+			if (musicaAmbiental.actual != "GENERAL") {
+				musicaAmbiental.Inicializar(new ProveedorAudios(direccion));
+				musicaAmbiental.Reproducir("GENERAL");
+			}
+		}
+
 		void Start() {
 			parametrosControl.Inicializar();
-			ParametrosEscena parametrosEscena = parametrosControl.parametros;
-			personalizarUI.Personalizar(parametrosEscena.direcciones["SISTEMA"], parametrosEscena.direcciones["COLORES"]);
-			proveedorCartas = new LectorCartas(new DireccionRecursos(parametrosControl.parametros.direcciones["CARTAS_DATOS"]));
-			selectorNombres = new TraductorCartaID(parametrosEscena.direcciones["CARTA_NOMBRES"]);
-			selectorNombres = new TraductorCartaID(parametrosEscena.direcciones["CARTA_NOMBRES"]);
-			selectorEfectos = new TraductorCartaID(parametrosEscena.direcciones["CARTA_EFECTOS"]);
-			selectorAmbientacion = new TraductorCartaID(parametrosEscena.direcciones["CARTA_AMBIENTACION"]);
-			selectorClases = new ProveedorTexto(parametrosEscena.direcciones["CARTA_CLASES"], TipoLector.RECURSOS);
-			selectorTipos = new ProveedorTexto(parametrosEscena.direcciones["CARTA_TIPOS"], TipoLector.RECURSOS);
-			selectorSistema = new ProveedorTexto(parametrosEscena.direcciones["SISTEMA"], TipoLector.RECURSOS);
-			selectorInvocaciones = new ProveedorTexto(parametrosEscena.direcciones["CARTA_INVOCACIONES"], TipoLector.RECURSOS);
-			configuracion = new(parametrosEscena.direcciones["CONFIGURACION"]);
-			gestorDeSonidos.Inicializar(new DireccionRecursos(parametrosEscena.direcciones["SONIDOS"]));
-			selectorHabilidades = new LectorHabilidades(parametrosControl.parametros.direcciones["CARTAS_HABILIDADES"]);
-			carpetaColecciones = new(parametrosControl.parametros.direcciones["COLECCIONES"]);
+			ParametrosGlobales parametros = parametrosControl.parametros;
+			if (!RegistroGlobal.Instancia.inicializado)
+				RegistroGlobal.Instancia.Inicializar(parametros);
+			InicializarMusica(parametros.direcciones["MUSICA_AMBIENTAL"]);
+			personalizarUI.Personalizar(parametros.direccionesGeneradas["SISTEMA"], parametros.direccionesGeneradas["COLORES"]);
+
+			proveedorCartas = new LectorCartas(new DireccionRecursos(parametrosControl.parametros.direccionesGeneradas["CARTAS_DATOS"]));
+			selectorNombres = new TraductorCartaID(parametros.direccionesGeneradas["CARTA_NOMBRES"]);
+			selectorNombres = new TraductorCartaID(parametros.direccionesGeneradas["CARTA_NOMBRES"]);
+			selectorEfectos = new TraductorCartaID(parametros.direccionesGeneradas["CARTA_EFECTOS"]);
+			selectorAmbientacion = new TraductorCartaID(parametros.direccionesGeneradas["CARTA_AMBIENTACION"]);
+			selectorClases = new ProveedorTexto(parametros.direccionesGeneradas["CARTA_CLASES"], TipoLector.RECURSOS);
+			selectorTipos = new ProveedorTexto(parametros.direccionesGeneradas["CARTA_TIPOS"], TipoLector.RECURSOS);
+			selectorSistema = new ProveedorTexto(parametros.direccionesGeneradas["SISTEMA"], TipoLector.RECURSOS);
+			selectorInvocaciones = new ProveedorTexto(parametros.direccionesGeneradas["CARTA_INVOCACIONES"], TipoLector.RECURSOS);
+			gestorDeSonidos.Inicializar(new DireccionRecursos(parametros.direccionesGeneradas["SONIDOS"]));
+			selectorHabilidades = new LectorHabilidades(parametrosControl.parametros.direccionesGeneradas["CARTAS_HABILIDADES"]);
+			carpetaColecciones = new(parametrosControl.parametros.direccionesGeneradas["COLECCIONES"]);
 			selectorColores = new ProveedorColores(
-				parametrosControl.parametros.direcciones["COLORES"],
+				parametrosControl.parametros.direccionesGeneradas["COLORES"],
 				TipoLector.RECURSOS
 			);
-			billetera = new(parametrosEscena.direcciones["BILLETERA"]);
-			cofre = new(parametrosEscena.direcciones["COFRE"], parametrosEscena.direcciones["COFRE_RECURSOS"]);
-			InicializarMusica(parametrosEscena.direcciones["MUSICA_AMBIENTAL"]);
-
+			cofre = new(parametros.direccionesGeneradas["COFRE"], parametros.direccionesGeneradas["COFRE_RECURSOS"]);
 			ilustradorDeCartas = new IlustradorDeCartas(
-				parametrosControl.parametros.direcciones["CARTAS_RECURSO"],
-				parametrosControl.parametros.direcciones["CARTAS_DINAMICA"]
+				new DireccionRecursos(parametrosControl.parametros.direccionesGeneradas["CARTAS_RECURSO"]),
+				new DireccionDinamica(parametrosControl.parametros.direccionesGeneradas["CARTAS_DINAMICA"])
 			);
 
 			foreach (var campo in FindObjectsByType<CampoLugar>(FindObjectsSortMode.None)) {
 				campo.controlador = this;
 			}
-
 
 			InicializarGeneradores();
 
@@ -149,13 +145,13 @@ namespace Bounds.Duelo {
 			fisica.Inicializar();
 
 			// MAZOS
-			GlobalDuelo parametros = GlobalDuelo.GetInstancia();
-			finalizarDuelo = parametros.finalizarDuelo;
+			GlobalDuelo parametrosDuelo = GlobalDuelo.GetInstancia();
+			finalizarDuelo = parametrosDuelo.finalizarDuelo;
 
-			foreach (GameObject carta in cargador.CargarCartasPorCartaCofre(1, parametros.mazo1, parametros.protector1))
+			foreach (GameObject carta in cargador.CargarCartasPorCartaCofre(1, parametrosDuelo.mazo1, parametrosDuelo.protector1))
 				fisica.EnviarHaciaMazo(carta, 1);
 
-			foreach (GameObject carta in cargador.CargarCartasPorCartaCofre(2, parametros.mazo2, parametros.protector2))
+			foreach (GameObject carta in cargador.CargarCartasPorCartaCofre(2, parametrosDuelo.mazo2, parametrosDuelo.protector2))
 				fisica.EnviarHaciaMazo(carta, 2);
 
 			EmblemaMezclarMazo.Mezclar(1);
@@ -165,14 +161,14 @@ namespace Bounds.Duelo {
 
 			EmblemaIniciarDuelo.SetSonidos(1);
 			EmblemaIniciarDuelo.SetSonidos(2);
-			EmblemaIniciarDuelo.SetLP(1, parametros.jugadorLP1);
-			EmblemaIniciarDuelo.SetLP(2, parametros.jugadorLP2);
-			EmblemaIniciarDuelo.SetNombre(1, parametros.jugadorNombre1);
-			EmblemaIniciarDuelo.SetNombre(2, parametros.jugadorNombre2);
+			EmblemaIniciarDuelo.SetLP(1, parametrosDuelo.jugadorLP1);
+			EmblemaIniciarDuelo.SetLP(2, parametrosDuelo.jugadorLP2);
+			EmblemaIniciarDuelo.SetNombre(1, parametrosDuelo.jugadorNombre1);
+			EmblemaIniciarDuelo.SetNombre(2, parametrosDuelo.jugadorNombre2);
 
 			proveedorMiniatura = new ProveedorImagenPersonaje(new DireccionRecursos("PERSONAJES/MINIATURAS"));
-			EmblemaIniciarDuelo.SetAvatar(1, proveedorMiniatura.GetElemento(parametros.jugadorMiniatura1));
-			EmblemaIniciarDuelo.SetAvatar(2, proveedorMiniatura.GetElemento(parametros.jugadorMiniatura2));
+			EmblemaIniciarDuelo.SetAvatar(1, proveedorMiniatura.GetElemento(parametrosDuelo.jugadorMiniatura1));
+			EmblemaIniciarDuelo.SetAvatar(2, proveedorMiniatura.GetElemento(parametrosDuelo.jugadorMiniatura2));
 
 			EmblemaTurnos.GetInstancia().jugadorActivo = 1;
 			EmblemaTurnos.GetInstancia().SetFase(EmblemaTurnos.Fase.FASE_MANTENIMIENTO);

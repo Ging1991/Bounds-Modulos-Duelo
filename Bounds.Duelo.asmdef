@@ -8,6 +8,7 @@
         "Bounds.Cofres",
         "Bounds.Mazos",
         "Bounds.Visuales",
+        "Bounds.Sistema",
         "Bounds.Modulos.Duelo.Fisicas",
         "Ging1991.Core",
         "Ging1991.Musica",

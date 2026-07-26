@@ -1,7 +1,6 @@
-﻿using Bounds.Duelo.Utiles;
-using Bounds.Modulos.Cartas.Ilustradores;
-using Bounds.Modulos.Cartas.Persistencia.Datos;
+﻿using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Sistema.Ilustradores;
 using Ging1991.Core.Interfaces;
 using Ging1991.Interfaces.Personalizacion;
 using UnityEngine;
