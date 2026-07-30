@@ -32,7 +32,7 @@ namespace Bounds.Duelo.Utiles {
 				return;
 			}
 
-			Coleccion coleccion = new Coleccion("PRINCIPIANTE", ControlDuelo.Instancia.carpetaColecciones.Generar("PRINCIPIANTE"));
+			Coleccion coleccion = new Coleccion("ETERNO", ControlDuelo.Instancia.carpetaColecciones.Generar("ETERNO"));
 			int probabilidad = Azar<int>.GenerarEnteroEntre(1, 100);
 
 			if (probabilidad <= 40) {
