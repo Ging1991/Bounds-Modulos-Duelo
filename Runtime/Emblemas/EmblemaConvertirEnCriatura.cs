@@ -13,7 +13,17 @@ namespace Bounds.Duelo.Emblemas {
 			CartaBD datos = ControlDuelo.Instancia.proveedorCartas.GetElemento(cartaID);
 			CartaInfo info = carta.GetComponent<CartaInfo>();
 			info.cargar(datos);
-			//carta.GetComponentInChildren<CartaFrente>().Mostrar(cartaID);
+			string borde = (info.original.clase == "CRIATURA") ? info.original.datoCriatura.perfeccion : info.original.clase;
+			carta.GetComponentInChildren<CartaGeneral>().Mostrar(
+				cartaID,
+				info.imagen,
+				info.rareza,
+				info.original.clase,
+				borde,
+				info.calcularAtaque(),
+				info.calcularDefensa(),
+				info.original.nivel
+			);
 			info.cartaID = cartaID;
 		}
 

@@ -234,6 +234,12 @@ namespace Bounds.Duelo.Emblemas {
 					break;
 				}
 
+				if (infoTrampa.original.datoTrampa.tipo == "SINROSTRO_BLANCO") {
+					EmblemaTrampa.ActivarTrampa(trampa);
+					EmblemaEfectos.Activar(new EfectoSobreCarta(trampa, new SubConvertirID(677), criatura));
+					break;
+				}
+
 				if (infoTrampa.original.datoTrampa.tipo == "TRAMPA_PEZ" && infoCriatura.calcularDefensa() <= 3000) {
 					EmblemaTrampa.ActivarTrampa(trampa);
 					EmblemaEfectos.Activar(new EfectoSobreJugador(trampa, controlador, new SubRobar(1)));
