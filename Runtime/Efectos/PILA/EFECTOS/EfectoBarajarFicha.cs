@@ -4,6 +4,7 @@ using Bounds.Duelo.Pila;
 using Bounds.Duelo.Carta;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Efectos {
 
@@ -25,7 +26,7 @@ namespace Bounds.Duelo.Efectos {
 			for (var i = 0; i < cantidad; i++) {
 				GameObject campo = GameObject.Find("Cartas" + jugador);
 				GameObject ficha = creador.CrearCarta(jugador, cartaID, $"J{jugador}_FICHA{cartaID}", Vector3.zero, campo, "N", "A");
-				ficha.GetComponent<CartaGeneral>().ColocarBocaArriba();
+				ficha.GetComponent<CartaFisica>().ColocarBocaArriba();
 				Fisica.Instancia.EnviarHaciaMazo(ficha, jugador);
 			}
 			EmblemaMezclarMazo.Mezclar(jugador);

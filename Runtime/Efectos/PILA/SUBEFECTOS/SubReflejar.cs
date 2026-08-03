@@ -1,3 +1,4 @@
+using Bounds.Cartas;
 using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Emblemas;
 using Bounds.Fisicas.Carta;
@@ -18,7 +19,7 @@ namespace Bounds.Duelo.Pila.Subefectos {
 				GameObject campo = GameObject.Find("Cartas" + info.controlador);
 				GameObject ficha = creador.CrearCarta(info.controlador, info.cartaID, $"J{info.controlador}_FICHA{info.cartaID}", Vector3.zero, campo, info.rareza, info.imagen);
 				//ficha.GetComponent<CartaGeneral>().ColocarBocaArriba();
-				ficha.GetComponent<CartaGeneral>().ColocarBocaAbajo();
+				ficha.GetComponent<CartaFisica>().ColocarBocaAbajo();
 				ficha.GetComponent<CartaInfo>().original.datoCriatura.efectos.RemoveAll(efecto => efecto.clave == "REFLEJO");
 				EmblemaInvocacionEspecial.Invocar(info.controlador, ficha, campoLibre);
 			}

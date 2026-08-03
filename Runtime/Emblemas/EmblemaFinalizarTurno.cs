@@ -8,6 +8,7 @@ using Bounds.Duelo.Efectos;
 using Bounds.Duelo.Pila;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Emblema {
 
@@ -63,8 +64,8 @@ namespace Bounds.Duelo.Emblema {
 			CondicionClase condicionTrampa = new CondicionClase(clase: "TRAMPA");
 			foreach (GameObject trampa in TraerCartasEnCampo(adversario, condicionTrampa)) {
 				CartaInfo info = trampa.GetComponent<CartaInfo>();
-				CartaGeneral trampaGeneral = trampa.GetComponent<CartaGeneral>();
-				if (trampaGeneral.bocaArriba)
+				CartaFisica trampaFisica = trampa.GetComponent<CartaFisica>();
+				if (!trampaFisica.estaAbajo)
 					continue;
 
 				if (info.original.datoTrampa.tipo == "invoca_evolucion") {
@@ -73,7 +74,7 @@ namespace Bounds.Duelo.Emblema {
 					condicionMultiple.AgregarCondicion(new CondicionCriaturaPerfeccion(perfeccion: "EVOLUCION"));
 					List<GameObject> cartasEnDescarte = condicionMultiple.CumpleLista(fisica.TraerCartasEnCementerio(adversario));
 					if (cartasEnDescarte.Count > 0) {
-						trampaGeneral.ColocarBocaArriba();
+						trampaFisica.ColocarBocaArriba();
 						foreach (GameObject criatura in cartasEnDescarte) {
 							pila.Agregar(new EfectoInvocacionEspecial(trampa, criatura, adversario));
 						}
@@ -90,7 +91,7 @@ namespace Bounds.Duelo.Emblema {
 					condicionMultiple.AgregarCondicion(new CondicionCriaturaPerfeccion(perfeccion: "FUSION"));
 					List<GameObject> cartasEnDescarte = condicionMultiple.CumpleLista(fisica.TraerCartasEnCementerio(adversario));
 					if (cartasEnDescarte.Count > 0) {
-						trampaGeneral.ColocarBocaArriba();
+						trampaFisica.ColocarBocaArriba();
 						foreach (GameObject criatura in cartasEnDescarte) {
 							pila.Agregar(new EfectoInvocacionEspecial(trampa, criatura, adversario));
 						}

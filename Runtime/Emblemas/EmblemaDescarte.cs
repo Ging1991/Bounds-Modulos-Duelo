@@ -3,6 +3,7 @@ using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblema;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -18,7 +19,7 @@ namespace Bounds.Duelo.Emblemas {
 			info.restablecer();
 			//cartaEfecto.Restablecer();
 
-			CartaGeneral componente = carta.GetComponent<CartaGeneral>();
+			CartaFisica componente = carta.GetComponentInChildren<CartaFisica>();
 			componente.ColocarBocaArriba();
 			//Emblema.ActivarEfectosDeDejarElCampo(carta);
 

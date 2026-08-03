@@ -11,6 +11,7 @@ using Bounds.Fisicas.Carta;
 using Bounds.Persistencia;
 using Bounds.Duelo.Efectos;
 using Bounds.Sistema;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -28,9 +29,9 @@ namespace Bounds.Duelo.Emblemas {
 
 			foreach (GameObject trampa in trampas) {
 				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-				CartaGeneral generalTrampa = trampa.GetComponent<CartaGeneral>();
+				CartaFisica generalTrampa = trampa.GetComponent<CartaFisica>();
 
-				if (!generalTrampa.bocaArriba) {
+				if (generalTrampa.estaAbajo) {
 
 					if (infoTrampa.original.datoTrampa.tipo == "gana_vida") {
 						cantidad = cantidad * (-1);

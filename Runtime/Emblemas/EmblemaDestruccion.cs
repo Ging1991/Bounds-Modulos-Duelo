@@ -10,6 +10,7 @@ using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
 using Bounds.Visuales;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -52,8 +53,8 @@ namespace Bounds.Duelo.Emblemas {
 				CondicionClase condicion = new("TRAMPA");
 				foreach (GameObject trampa in condicion.CumpleLista(new SubCartasControladas(info.controlador).Generar())) {
 					CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-					CartaGeneral componenteTrampa = trampa.GetComponent<CartaGeneral>();
-					if (!componenteTrampa.bocaArriba) {
+					CartaFisica componenteTrampa = trampa.GetComponent<CartaFisica>();
+					if (componenteTrampa.estaAbajo) {
 						if (infoTrampa.original.datoTrampa.tipo == "perfecta") {
 							componenteTrampa.ColocarBocaArriba();
 							return true;
@@ -133,7 +134,7 @@ namespace Bounds.Duelo.Emblemas {
 			ActivarEfectosDeOtrasCartas(carta);
 			ActivarTrampas(carta);
 			Desanexar(carta);
-			//carta.GetComponent<CartaGeneral>().Sacudir();
+			//carta.GetComponent<CartaFisica>().Sacudir();
 			return true;
 		}
 
@@ -215,7 +216,7 @@ namespace Bounds.Duelo.Emblemas {
 					if (opciones.Count > 0) {
 						fisica.EnviarHaciaMano(opciones[0], info.controlador);
 						if (info.controlador == 1) {
-							CartaGeneral componente = opciones[0].GetComponent<CartaGeneral>();
+							CartaFisica componente = opciones[0].GetComponent<CartaFisica>();
 							componente.ColocarBocaArriba();
 						}
 					}
@@ -247,7 +248,7 @@ namespace Bounds.Duelo.Emblemas {
 
 			foreach (var trampa in TraerTrampasBocaAbajo(controlador)) {
 				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-				CartaGeneral generalTrampa = trampa.GetComponent<CartaGeneral>();
+				CartaFisica generalTrampa = trampa.GetComponent<CartaFisica>();
 
 				if (infoTrampa.original.datoTrampa.tipo == "AGUILA_DE_FUEGO") {
 
@@ -303,7 +304,7 @@ namespace Bounds.Duelo.Emblemas {
 
 				if (infoTrampa.original.clase == "TRAMPA"
 						&& infoTrampa.original.datoTrampa.tipo == "destruye_venganza"
-						&& !generalTrampa.bocaArriba) {
+						&& generalTrampa.estaAbajo) {
 
 					generalTrampa.ColocarBocaArriba();
 					// destruyo una criatura del oponente

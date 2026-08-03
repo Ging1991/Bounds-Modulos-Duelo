@@ -9,6 +9,7 @@ using Ging1991.Core;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Duelo.Utiles;
 using Bounds.Fisicas.Carta;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -112,7 +113,7 @@ namespace Bounds.Duelo.Emblemas {
 
 			foreach (GameObject trampa in condicionTrampa.CumpleLista(cartasDelAdversario)) {
 				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-				CartaGeneral generalTrampa = trampa.GetComponent<CartaGeneral>();
+				CartaFisica generalTrampa = trampa.GetComponent<CartaFisica>();
 
 				if (infoTrampa.original.datoTrampa.tipo == "INVOCACION_PERFECTA_DESTRUYE") {
 					generalTrampa.ColocarBocaArriba();

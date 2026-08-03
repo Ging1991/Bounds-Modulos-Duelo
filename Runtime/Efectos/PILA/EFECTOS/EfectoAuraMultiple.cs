@@ -4,6 +4,7 @@ using Bounds.Duelo.Pila;
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblemas.Jugar;
 using Bounds.Fisicas.Carta;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Efectos {
 
@@ -31,7 +32,7 @@ namespace Bounds.Duelo.Efectos {
 				EmblemaJuegoSeleccionar.SeleccionarParaVincular(criatura);
 				EmblemaJuegoJugarAura.Jugar(jugador, campoLibre);
 				EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
-				copia.GetComponent<CartaGeneral>().ColocarBocaArriba();
+				copia.GetComponent<CartaFisica>().ColocarBocaArriba();
 				conocimiento.traerDuelo().HabilitarInvocacionPerfecta();
 			}
 		}

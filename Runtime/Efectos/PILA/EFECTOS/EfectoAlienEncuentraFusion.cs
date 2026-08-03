@@ -7,6 +7,7 @@ using Bounds.Duelo.Emblemas;
 using Bounds.Duelo.Utiles;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Efectos {
 
@@ -35,7 +36,7 @@ namespace Bounds.Duelo.Efectos {
 					fisica.EnviarHaciaMano(carta, jugador);
 					contador++;
 					if (jugador == 1) {
-						CartaGeneral componente = carta.GetComponent<CartaGeneral>();
+						CartaFisica componente = carta.GetComponent<CartaFisica>();
 						componente.ColocarBocaArriba();
 					}
 				}

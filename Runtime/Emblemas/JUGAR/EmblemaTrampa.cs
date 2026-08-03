@@ -1,4 +1,5 @@
-﻿using Bounds.Duelo.Pila.Efectos;
+﻿using Bounds.Cartas;
+using Bounds.Duelo.Pila.Efectos;
 using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Fisicas.Carta;
 using UnityEngine;
@@ -8,7 +9,7 @@ namespace Bounds.Duelo.Emblemas {
 	public class EmblemaTrampa {
 
 		public static void ActivarTrampa(GameObject trampa) {
-			trampa.GetComponent<CartaGeneral>().ColocarBocaArriba();
+			trampa.GetComponent<CartaFisica>().ColocarBocaArriba();
 			ControlDuelo.Instancia.gestorDeSonidos.ReproducirSonido("FxEspadas");
 			EmblemaPadre.ActivarEfectosDeActivacion(trampa);
 		}

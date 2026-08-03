@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Bounds.Cartas;
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Condiciones;
 using Bounds.Duelo.Efectos;
@@ -256,7 +257,7 @@ namespace Bounds.Duelo.Emblemas {
 				if (tesoro != null) {
 					fisica.EnviarHaciaMano(tesoro, info.controlador);
 					if (info.controlador == 1) {
-						tesoro.GetComponent<CartaGeneral>().ColocarBocaArriba();
+						tesoro.GetComponent<CartaFisica>().ColocarBocaArriba();
 					}
 				}
 			}
@@ -268,7 +269,7 @@ namespace Bounds.Duelo.Emblemas {
 				if (cartasEnMazo.Count > 0) {
 					fisica.EnviarHaciaMano(cartasEnMazo[0], info.controlador);
 					if (info.controlador == 1) {
-						cartasEnMazo[0].GetComponent<CartaGeneral>().ColocarBocaArriba();
+						cartasEnMazo[0].GetComponent<CartaFisica>().ColocarBocaArriba();
 					}
 				}
 			}

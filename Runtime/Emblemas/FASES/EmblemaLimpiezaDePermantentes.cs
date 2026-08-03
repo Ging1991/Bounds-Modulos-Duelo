@@ -5,6 +5,7 @@ using Bounds.Duelo.Emblema;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Emblemas.Fases {
 
@@ -34,7 +35,7 @@ namespace Bounds.Duelo.Emblemas.Fases {
 			if (info.original.clase == "HECHIZO")
 				return true;
 
-			if (info.original.clase == "TRAMPA" && carta.GetComponent<CartaGeneral>().bocaArriba)
+			if (info.original.clase == "TRAMPA" && !carta.GetComponent<CartaFisica>().estaAbajo)
 				return true;
 
 			if (info.original.clase == "MISION") {

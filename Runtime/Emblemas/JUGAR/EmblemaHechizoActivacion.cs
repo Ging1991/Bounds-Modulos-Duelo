@@ -15,6 +15,7 @@ using Ging1991.Core;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -82,7 +83,7 @@ namespace Bounds.Duelo.Emblemas {
 				foreach (GameObject encontrada in cartas) {
 					fisica.EnviarHaciaMano(encontrada, jugador);
 					if (jugador == 1) {
-						encontrada.GetComponent<CartaGeneral>().ColocarBocaArriba();
+						encontrada.GetComponent<CartaFisica>().ColocarBocaArriba();
 					}
 				}
 			}
@@ -297,7 +298,7 @@ namespace Bounds.Duelo.Emblemas {
 						fisica.EnviarHaciaMano(sirviente, jugador);
 						contador++;
 						if (jugador == 1)
-							sirviente.GetComponent<CartaGeneral>().ColocarBocaArriba();
+							sirviente.GetComponent<CartaFisica>().ColocarBocaArriba();
 					}
 				}
 				EfectoBase efectoBase = new EfectoSobreJugador(hechizo, adversario, new SubModificarLP(-500 * contador));
@@ -626,7 +627,7 @@ namespace Bounds.Duelo.Emblemas {
 				fisica.EnviarHaciaMano(invocable, jugador);
 				EmblemaEnviarMaterial.EnviarMateriales(materiales);
 				if (jugador == 1) {
-					invocable.GetComponent<CartaGeneral>().ColocarBocaArriba();
+					invocable.GetComponent<CartaFisica>().ColocarBocaArriba();
 				}
 			}
 

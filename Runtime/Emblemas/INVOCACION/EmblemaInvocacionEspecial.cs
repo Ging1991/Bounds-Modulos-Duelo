@@ -4,6 +4,7 @@ using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblema;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -24,8 +25,8 @@ namespace Bounds.Duelo.Emblemas {
 			if (info.original.clase == "CRIATURA" && info.original.datoCriatura.perfeccion == "MAGICO") {
 				foreach (GameObject cartaAdversario in cartasAdversario) {
 					CartaInfo infoAdversario = cartaAdversario.GetComponent<CartaInfo>();
-					CartaGeneral scrAdversario = cartaAdversario.GetComponent<CartaGeneral>();
-					if (infoAdversario.original.clase == "TRAMPA" && !scrAdversario.bocaArriba) {
+					CartaFisica scrAdversario = cartaAdversario.GetComponent<CartaFisica>();
+					if (infoAdversario.original.clase == "TRAMPA" && scrAdversario.estaAbajo) {
 						if (infoAdversario.original.datoTrampa.tipo == "destruye_prisma") {
 							scrAdversario.ColocarBocaArriba();
 							//EmblemaDestruccion.Destruir(carta, 0);

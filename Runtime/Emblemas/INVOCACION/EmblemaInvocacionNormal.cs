@@ -13,6 +13,7 @@ using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
 using Bounds.Fisicas.Campos;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -81,13 +82,13 @@ namespace Bounds.Duelo.Emblemas {
 				List<GameObject> trampasAntimeta = condicionClase.CumpleLista(fisica.TraerCartasEnMazo(adversario));
 				foreach (GameObject trampa in trampasAntimeta) {
 					CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-					CartaGeneral trampaGeneral = trampa.GetComponent<CartaGeneral>();
+					CartaFisica trampaFisica = trampa.GetComponent<CartaFisica>();
 
 					if (infoTrampa.original.clase == "TRAMPA"
 							&& infoTrampa.original.datoTrampa.tipo == "invoca_contadores_4000"
 							&& info.calcularAtaque() >= 4000) {
 
-						trampaGeneral.ColocarBocaArriba();
+						trampaFisica.ColocarBocaArriba();
 						EmblemaEfectos.Activar(new EfectoSobreCarta(trampa, new SubColocarContador("debilidad", 8), carta));
 						//EfectosDeSonido.Tocar("FxLanzarCarta");	
 						fisica.EnviarHaciaCampo(jugador, trampa, lugarTrampa);
@@ -172,7 +173,7 @@ namespace Bounds.Duelo.Emblemas {
 			foreach (GameObject trampa in TraerTrampasBocaAbajo(adversario)) {
 
 				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-				CartaGeneral generalTrampa = trampa.GetComponent<CartaGeneral>();
+				CartaFisica generalTrampa = trampa.GetComponent<CartaFisica>();
 
 				if (infoTrampa.original.datoTrampa.tipo == "invoca_contadores_4000" && infoCriatura.calcularAtaque() >= 4000) {
 					generalTrampa.ColocarBocaArriba();
@@ -280,7 +281,31 @@ namespace Bounds.Duelo.Emblemas {
 
 			bool activado = false;
 
+			foreach (var cartaEnCementerio in new SubCartasEnCementerio(adversario).Generar()) {
+
+				if (cartaEnCementerio.GetComponent<CartaEfecto>().TieneClave("POSEER_ATADURAS")) {
+					EmblemaEfectos.Activar(
+						new EfectoSobreCarta(
+							cartaEnCementerio,
+							new SubPoseer(cartaEnCementerio),
+							carta
+						)
+					);
+				}
+			}
+
 			foreach (var cartaEnCementerio in new SubCartasEnCementerio(jugador).Generar()) {
+
+				if (cartaEnCementerio.GetComponent<CartaEfecto>().TieneClave("POSEER_REFUERZOS")) {
+					EmblemaEfectos.Activar(
+						new EfectoSobreCarta(
+							cartaEnCementerio,
+							new SubPoseer(cartaEnCementerio),
+							carta
+						)
+					);
+				}
+
 				if (cartaEnCementerio.GetComponent<CartaEfecto>().TieneClave("REFUERZOS_MAS_ALLA")) {
 					EmblemaEfectos.Activar(
 						new EfectoSobreCartas(

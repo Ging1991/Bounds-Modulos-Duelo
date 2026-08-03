@@ -4,6 +4,7 @@ using Bounds.Duelo.Carta;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Efectos {
 
@@ -25,7 +26,7 @@ namespace Bounds.Duelo.Efectos {
 						if (cartaMazo.GetComponent<CartaInfo>().cartaID == material.parametroID) {
 							fisica.EnviarHaciaMano(cartaMazo, jugador);
 							if (jugador == 1) {
-								CartaGeneral componente = cartaMazo.GetComponent<CartaGeneral>();
+								CartaFisica componente = cartaMazo.GetComponent<CartaFisica>();
 								componente.ColocarBocaArriba();
 							}
 							break;

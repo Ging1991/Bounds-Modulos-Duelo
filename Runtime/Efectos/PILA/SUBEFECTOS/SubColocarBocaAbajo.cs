@@ -1,3 +1,4 @@
+using Bounds.Cartas;
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblema;
 using Bounds.Fisicas.Carta;
@@ -22,7 +23,7 @@ namespace Bounds.Duelo.Pila.Subefectos {
 			GameObject campo = buscador.buscarCampoLibre(jugador);
 			if (campo != null) {
 				fisica.EnviarHaciaCampo(jugador, carta, campo);
-				carta.GetComponent<CartaGeneral>().ColocarBocaAbajo();
+				carta.GetComponent<CartaFisica>().ColocarBocaAbajo();
 			}
 		}
 

@@ -10,6 +10,7 @@ using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Duelo.Efectos;
 using Bounds.Fisicas.Carta;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -19,7 +20,7 @@ namespace Bounds.Duelo.Emblemas {
 
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			Fisica fisica = conocimiento.traerFisica();
-			CartaGeneral componente = carta.GetComponent<CartaGeneral>();
+			CartaFisica componente = carta.GetComponentInChildren<CartaFisica>();
 			CartaMovimiento movimiento = carta.GetComponent<CartaMovimiento>();
 
 			ControlDuelo.Instancia.gestorDeSonidos.ReproducirSonido("FxLanzar");

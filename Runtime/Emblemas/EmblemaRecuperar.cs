@@ -4,6 +4,7 @@ using Bounds.Duelo.Emblema;
 using Ging1991.Animaciones;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -27,7 +28,7 @@ namespace Bounds.Duelo.Emblemas {
 
 			carta.GetComponent<CartaMovimiento>().Enderezar();
 
-			CartaGeneral componente = carta.GetComponent<CartaGeneral>();
+			CartaFisica componente = carta.GetComponent<CartaFisica>();
 			if (info.controlador == 1)
 				componente.ColocarBocaArriba();
 			else

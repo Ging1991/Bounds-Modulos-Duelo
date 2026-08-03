@@ -6,6 +6,7 @@ using Bounds.Duelo.Pila;
 using Bounds.Duelo.Condiciones;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Efectos {
 
@@ -23,7 +24,7 @@ namespace Bounds.Duelo.Efectos {
 
 			if (cartasEnDescarte.Count > 0) {
 				fisica.EnviarHaciaMazo(cartasEnDescarte[0], jugador);
-				CartaGeneral componente = cartasEnDescarte[0].GetComponent<CartaGeneral>();
+				CartaFisica componente = cartasEnDescarte[0].GetComponent<CartaFisica>();
 				componente.ColocarBocaAbajo();
 				return cartasEnDescarte[0];
 			}

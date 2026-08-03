@@ -1,4 +1,5 @@
-﻿using Bounds.Duelo.Carta;
+﻿using Bounds.Cartas;
+using Bounds.Duelo.Carta;
 using Bounds.Duelo.Efectos;
 using Bounds.Duelo.Pila;
 using Bounds.Duelo.Pila.Efectos;
@@ -24,7 +25,7 @@ namespace Bounds.Duelo.Emblemas {
 			int adversario = EmblemaPadre.Adversario(jugador);
 
 			foreach (var trampa in EmblemaPadre.TraerTrampasBocaAbajo(jugador)) {
-				CartaGeneral trampaGeneral = trampa.GetComponent<CartaGeneral>();
+				CartaFisica trampaGeneral = trampa.GetComponent<CartaFisica>();
 				if (trampa.GetComponent<CartaInfo>().original.datoTrampa.tipo == "EXPLOSION2" && efecto.GetEtiquetas().Contains("EXPLOSION")) {
 					trampaGeneral.ColocarBocaArriba();
 					EfectoBase efectoBase = new EfectoSobreJugador(trampa, adversario, new SubModificarLP(-500));
@@ -36,7 +37,7 @@ namespace Bounds.Duelo.Emblemas {
 
 
 			foreach (var trampa in EmblemaPadre.TraerTrampasBocaAbajo(adversario)) {
-				CartaGeneral trampaGeneral = trampa.GetComponent<CartaGeneral>();
+				CartaFisica trampaGeneral = trampa.GetComponent<CartaFisica>();
 				CartaInfo trampaInfo = trampa.GetComponent<CartaInfo>();
 
 				if (trampaInfo.original.datoTrampa.tipo == "CANCELAR_EFECTO") {

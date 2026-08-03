@@ -1,3 +1,4 @@
+using Bounds.Cartas;
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Emblemas;
 using Bounds.Fisicas.Carta;
@@ -15,10 +16,10 @@ namespace Bounds.Duelo.Pila.Subefectos {
 			fisica.EnviarHaciaMazo(carta, cartaInfo.propietario);
 
 			if (cartaInfo.propietario == 1) {
-				carta.GetComponent<CartaGeneral>().ColocarBocaArriba();
+				carta.GetComponent<CartaFisica>().ColocarBocaArriba();
 			}
 			if (cartaInfo.propietario == 2) {
-				carta.GetComponent<CartaGeneral>().ColocarBocaAbajo();
+				carta.GetComponent<CartaFisica>().ColocarBocaAbajo();
 			}
 			EmblemaMezclarMazo.Mezclar(cartaInfo.propietario);
 		}

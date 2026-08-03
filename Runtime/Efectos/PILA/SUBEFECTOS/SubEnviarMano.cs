@@ -1,3 +1,4 @@
+using Bounds.Cartas;
 using Bounds.Duelo.Carta;
 using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Duelo.Fisicas;
@@ -13,10 +14,10 @@ namespace Bounds.Duelo.Pila.Subefectos {
 			if (fisica.TraerCartasEnMano(cartaInfo.propietario).Count < 5) {
 				fisica.EnviarHaciaMano(carta, cartaInfo.propietario);
 				if (cartaInfo.propietario == 1) {
-					carta.GetComponent<CartaGeneral>().ColocarBocaArriba();
+					carta.GetComponent<CartaFisica>().ColocarBocaArriba();
 				}
 				if (cartaInfo.propietario == 2) {
-					carta.GetComponent<CartaGeneral>().ColocarBocaAbajo();
+					carta.GetComponent<CartaFisica>().ColocarBocaAbajo();
 				}
 			}
 		}

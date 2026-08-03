@@ -1,3 +1,4 @@
+using Bounds.Cartas;
 using Bounds.Duelo.Carta;
 using Bounds.Fisicas.Carta;
 using UnityEngine;
@@ -10,7 +11,7 @@ namespace Bounds.Duelo.Condiciones {
 
 
 		public override bool GetValor(GameObject carta) {
-			return !carta.GetComponent<CartaGeneral>().bocaArriba;
+			return carta.GetComponent<CartaFisica>().estaAbajo;
 		}
 
 

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Bounds.Cartas;
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.Condiciones;
 using Bounds.Duelo.Efectos;
@@ -87,6 +88,14 @@ namespace Bounds.Duelo.Emblemas.Fases {
 				}
 			}
 
+			// cartas en mano
+			foreach (var carta in new SubCartasEnMano(infoAtacado.controlador).Generar()) {
+				if (carta.GetComponent<CartaEfecto>().TieneClave("VALENTIA")) {
+					EmblemaEfectos.Activar(new EfectoSobreCarta(carta, new SubValentia(), carta));
+					break;
+				}
+			}
+
 		}
 
 
@@ -103,7 +112,7 @@ namespace Bounds.Duelo.Emblemas.Fases {
 			foreach (GameObject trampa in EmblemaPadre.TraerTrampasBocaAbajo(jugadorAtacado)) {
 
 				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-				CartaGeneral generalTrampa = trampa.GetComponent<CartaGeneral>();
+				CartaFisica generalTrampa = trampa.GetComponent<CartaFisica>();
 
 				if (infoTrampa.original.datoTrampa.tipo == "DESTRUCCION_MUTUA") {
 					generalTrampa.ColocarBocaArriba();
@@ -190,7 +199,7 @@ namespace Bounds.Duelo.Emblemas.Fases {
 			foreach (GameObject trampa in EmblemaPadre.TraerTrampasBocaAbajo(jugadorAtacante)) {
 
 				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-				CartaGeneral generalTrampa = trampa.GetComponent<CartaGeneral>();
+				CartaFisica generalTrampa = trampa.GetComponent<CartaFisica>();
 
 				if (infoTrampa.original.datoTrampa.tipo == "DESTRUCCION_MUTUA") {
 					generalTrampa.ColocarBocaArriba();

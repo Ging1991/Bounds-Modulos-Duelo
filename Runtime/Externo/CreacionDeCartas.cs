@@ -47,7 +47,6 @@ public class CreacionDeCartas : MonoBehaviour {
 			borde = info.original.datoCriatura.perfeccion;
 		}
 		general.Mostrar(cartaID, imagen, rareza, datoCarta.clase, borde, info.calcularAtaque(), info.calcularDefensa(), info.original.nivel);
-		//carta.GetComponentInChildren<GestorVisual>().gestorDeSonidos = ControlDuelo.Instancia.gestorDeSonidos;
 		return carta;
 	}
 

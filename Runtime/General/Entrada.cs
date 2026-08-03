@@ -42,12 +42,12 @@ namespace Bounds.Duelo.Utiles {
 			// La muestro en el visor
 			VisorDuelo visor = conocimiento.traerVisor();
 			CartaInfo info = carta.GetComponent<CartaInfo>();
-			CartaGeneral cartaGeneral = carta.GetComponent<CartaGeneral>();
-			if (jugador == 1 && (info.controlador == 1 || cartaGeneral.bocaArriba)) {
+			CartaFisica cartaGeneral = carta.GetComponentInChildren<CartaFisica>();
+			if (jugador == 1 && (info.controlador == 1 || !cartaGeneral.estaAbajo)) {
 				visor.Mostrar(carta);
 			}
 
-			if (jugador == 1 && info.controlador == 2 && !cartaGeneral.bocaArriba) {
+			if (jugador == 1 && info.controlador == 2 && cartaGeneral.estaAbajo) {
 				visor.SetBocaAbajo(carta.GetComponentInChildren<CartaFisica>().GetReverso());
 			}
 

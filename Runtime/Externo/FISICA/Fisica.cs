@@ -3,6 +3,7 @@ using UnityEngine;
 using Bounds.Duelo.Carta;
 using Ging1991.Core;
 using Bounds.Fisicas.Carta;
+using Bounds.Cartas;
 
 namespace Bounds.Modulos.Duelo.Fisicas {
 
@@ -43,7 +44,7 @@ namespace Bounds.Modulos.Duelo.Fisicas {
 			if (jugador == 2)
 				carta.GetComponent<CartaMovimiento>().Desplazar(Constantes.VECTOR_MAZO2);
 			ActualizarTextoMazo(jugador);
-			carta.GetComponent<CartaGeneral>().ColocarBocaAbajo();
+			carta.GetComponentInChildren<CartaFisica>().ColocarBocaAbajo();
 		}
 
 
@@ -67,7 +68,7 @@ namespace Bounds.Modulos.Duelo.Fisicas {
 			if (campo2.ContieneCampo(campo))
 				campo2.Agregar(carta, campo);
 
-			CartaGeneral componente = carta.GetComponent<CartaGeneral>();
+			CartaFisica componente = carta.GetComponentInChildren<CartaFisica>();
 			componente.ColocarBocaArriba();
 
 			ActualizarTextoMazo(1);
@@ -121,9 +122,9 @@ namespace Bounds.Modulos.Duelo.Fisicas {
 
 		private void ColocarBocaArriba(GameObject carta, bool estaBocaArriba) {
 			if (estaBocaArriba)
-				carta.GetComponent<CartaGeneral>().ColocarBocaArriba(true);
+				carta.GetComponentInChildren<CartaFisica>().ColocarBocaArriba();
 			else
-				carta.GetComponent<CartaGeneral>().ColocarBocaAbajo(true);
+				carta.GetComponentInChildren<CartaFisica>().ColocarBocaAbajo();
 		}
 
 

@@ -6,6 +6,7 @@ using Ging1991.Core;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
 using Bounds.Fisicas.Campos;
+using Bounds.Cartas;
 
 namespace Bounds.Duelo.Emblemas.Jugar {
 
@@ -40,7 +41,7 @@ namespace Bounds.Duelo.Emblemas.Jugar {
 		}
 
 
-		private static void ColocarSobreElCampo(int jugador, GameObject carta, GameObject lugar, string clase) {
+		public static void ColocarSobreElCampo(int jugador, GameObject carta, GameObject lugar, string clase) {
 			ControlDuelo.Instancia.gestorDeSonidos.ReproducirSonido("FxLanzar");
 			Seleccionador seleccionador = Seleccionador.Instancia;
 			Fisica fisica = Fisica.Instancia;
@@ -48,9 +49,9 @@ namespace Bounds.Duelo.Emblemas.Jugar {
 			bool bocaAbajo = clase == "TRAMPA";
 
 			if (bocaAbajo)
-				carta.GetComponent<CartaGeneral>().ColocarBocaAbajo();
+				carta.GetComponentInChildren<CartaFisica>().ColocarBocaAbajo();
 			else {
-				carta.GetComponent<CartaGeneral>().ColocarBocaArriba();
+				carta.GetComponentInChildren<CartaFisica>().ColocarBocaArriba();
 				ActivarEfectosDeActivacion(carta);
 			}
 
