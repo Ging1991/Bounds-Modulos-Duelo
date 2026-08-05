@@ -29,6 +29,7 @@ namespace Bounds.Infraestructura.Visores {
 			CartaTipo cartaTipo = carta.GetComponent<CartaTipo>();
 			Color tintaGeneral = visorGenerador.proveedorColor.GetElemento($"TINTA_{info.rareza}");
 
+			visorCartaID.primitiva.SetArteExtendido(info.rareza == "SEC" || info.rareza == "LEG");
 			visorCartaID.primitiva.SetIlustracionImagen(visorGenerador.GetImagen(info.cartaID, info.imagen));
 
 			visorCartaID.primitiva.nivel.SetValor(info.original.nivel);
