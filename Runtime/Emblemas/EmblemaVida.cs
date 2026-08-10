@@ -22,6 +22,12 @@ namespace Bounds.Duelo.Emblemas {
 			if (VidaActual(jugador) <= 0)
 				return;
 
+			int adversario = Adversario(jugador);
+			foreach (GameObject carta in new SubCartasControladas(adversario).Generar()) {
+				if (carta.GetComponent<CartaEfecto>().TieneClave("SENTENCIA_DOBLE"))
+					cantidad *= 2;
+			}
+
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			Fisica fisica = conocimiento.traerFisica();
 			CondicionClase condicionClase = new CondicionClase(clase: "TRAMPA");

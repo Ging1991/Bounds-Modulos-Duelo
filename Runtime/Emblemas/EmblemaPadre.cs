@@ -269,7 +269,19 @@ namespace Bounds.Duelo.Emblemas {
 				if (cartasEnMazo.Count > 0) {
 					fisica.EnviarHaciaMano(cartasEnMazo[0], info.controlador);
 					if (info.controlador == 1) {
-						cartasEnMazo[0].GetComponent<CartaFisica>().ColocarBocaArriba();
+						cartasEnMazo[0].GetComponentInChildren<CartaFisica>().ColocarBocaArriba();
+					}
+				}
+			}
+
+			if (cartaEfecto.TieneClave("ADQUIRIR_C")) {
+				string clase = cartaEfecto.GetEfecto("ADQUIRIR_C").parametroClase;
+				CondicionClase condicion = new(clase);
+				List<GameObject> cartasEnMazo = condicion.CumpleLista(fisica.TraerCartasEnMazo(info.controlador));
+				if (cartasEnMazo.Count > 0) {
+					fisica.EnviarHaciaMano(cartasEnMazo[0], info.controlador);
+					if (info.controlador == 1) {
+						cartasEnMazo[0].GetComponentInChildren<CartaFisica>().ColocarBocaArriba();
 					}
 				}
 			}
