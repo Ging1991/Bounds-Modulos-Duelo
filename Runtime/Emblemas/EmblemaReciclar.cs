@@ -20,7 +20,7 @@ namespace Bounds.Duelo.Emblemas {
 			info.restablecer();
 			carta.GetComponent<CartaMovimiento>().Enderezar();
 
-			CartaFisica componente = carta.GetComponent<CartaFisica>();
+			CartaFisica componente = carta.GetComponentInChildren<CartaFisica>();
 			componente.ColocarBocaAbajo();
 
 			// AURAS Y EQUIPOS

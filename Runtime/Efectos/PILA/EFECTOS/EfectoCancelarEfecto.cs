@@ -7,15 +7,18 @@ namespace Bounds.Duelo.Efectos {
 	public class EfectoCancelarEfecto : EfectoBase {
 
 		private readonly IEfecto efecto;
+		private bool destruirFuente;
 
-		public EfectoCancelarEfecto(GameObject fuente, IEfecto efecto) : base(fuente) {
+		public EfectoCancelarEfecto(GameObject fuente, IEfecto efecto, bool destruirFuente) : base(fuente) {
 			this.efecto = efecto;
+			this.destruirFuente = destruirFuente;
 		}
 
 
 		public override void Resolver() {
 			EmblemaEfectos.Cancelar(efecto);
-			EmblemaDestruccion.DestruirPorEfectos(efecto.GetFuente());
+			if (destruirFuente)
+				EmblemaDestruccion.DestruirPorEfectos(efecto.GetFuente());
 		}
 
 

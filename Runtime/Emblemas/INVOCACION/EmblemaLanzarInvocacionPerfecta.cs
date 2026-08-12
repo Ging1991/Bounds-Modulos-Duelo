@@ -113,7 +113,7 @@ namespace Bounds.Duelo.Emblemas {
 
 			foreach (GameObject trampa in condicionTrampa.CumpleLista(cartasDelAdversario)) {
 				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-				CartaFisica generalTrampa = trampa.GetComponent<CartaFisica>();
+				CartaFisica generalTrampa = trampa.GetComponentInChildren<CartaFisica>();
 
 				if (infoTrampa.original.datoTrampa.tipo == "INVOCACION_PERFECTA_DESTRUYE") {
 					generalTrampa.ColocarBocaArriba();

@@ -25,7 +25,7 @@ namespace Bounds.Duelo.Emblemas {
 			int adversario = EmblemaPadre.Adversario(jugador);
 
 			foreach (var trampa in EmblemaPadre.TraerTrampasBocaAbajo(jugador)) {
-				CartaFisica trampaGeneral = trampa.GetComponent<CartaFisica>();
+				CartaFisica trampaGeneral = trampa.GetComponentInChildren<CartaFisica>();
 				if (trampa.GetComponent<CartaInfo>().original.datoTrampa.tipo == "EXPLOSION2" && efecto.GetEtiquetas().Contains("EXPLOSION")) {
 					trampaGeneral.ColocarBocaArriba();
 					EfectoBase efectoBase = new EfectoSobreJugador(trampa, adversario, new SubModificarLP(-500));
@@ -37,18 +37,31 @@ namespace Bounds.Duelo.Emblemas {
 
 
 			foreach (var trampa in EmblemaPadre.TraerTrampasBocaAbajo(adversario)) {
-				CartaFisica trampaGeneral = trampa.GetComponent<CartaFisica>();
+				CartaFisica trampaGeneral = trampa.GetComponentInChildren<CartaFisica>();
 				CartaInfo trampaInfo = trampa.GetComponent<CartaInfo>();
+
+				if (trampaInfo.original.datoTrampa.tipo == "IMPLOSION" && efecto.GetEtiquetas().Contains("DAÑO")) {
+					trampaGeneral.ColocarBocaArriba();
+					Activar(new EfectoCancelarEfecto(trampa, efecto, true));
+					break;
+				}
+
+				if (trampaInfo.original.datoTrampa.tipo == "REACCION_NEGATIVA" && efecto.GetEtiquetas().Contains("DAÑO")) {
+					trampaGeneral.ColocarBocaArriba();
+					Activar(new EfectoCancelarEfecto(trampa, efecto, false));
+					Activar(new EfectoSobreJugador(trampa, jugador, new SubModificarLP(-800), "DAÑO"));
+					break;
+				}
 
 				if (trampaInfo.original.datoTrampa.tipo == "CANCELAR_EFECTO") {
 					trampaGeneral.ColocarBocaArriba();
-					Activar(new EfectoCancelarEfecto(trampa, efecto));
+					Activar(new EfectoCancelarEfecto(trampa, efecto, true));
 					break;
 				}
 
 				if (trampaInfo.original.datoTrampa.tipo == "CANCELAR_HECHIZO" && efecto.GetFuente().GetComponent<CartaInfo>().original.clase == "HECHIZO") {
 					trampaGeneral.ColocarBocaArriba();
-					Activar(new EfectoCancelarEfecto(trampa, efecto));
+					Activar(new EfectoCancelarEfecto(trampa, efecto, true));
 					break;
 				}
 

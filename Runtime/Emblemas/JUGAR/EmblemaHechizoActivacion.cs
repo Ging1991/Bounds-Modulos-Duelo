@@ -83,7 +83,7 @@ namespace Bounds.Duelo.Emblemas {
 				foreach (GameObject encontrada in cartas) {
 					fisica.EnviarHaciaMano(encontrada, jugador);
 					if (jugador == 1) {
-						encontrada.GetComponent<CartaFisica>().ColocarBocaArriba();
+						encontrada.GetComponentInChildren<CartaFisica>().ColocarBocaArriba();
 					}
 				}
 			}
@@ -298,7 +298,7 @@ namespace Bounds.Duelo.Emblemas {
 						fisica.EnviarHaciaMano(sirviente, jugador);
 						contador++;
 						if (jugador == 1)
-							sirviente.GetComponent<CartaFisica>().ColocarBocaArriba();
+							sirviente.GetComponentInChildren<CartaFisica>().ColocarBocaArriba();
 					}
 				}
 				EfectoBase efectoBase = new EfectoSobreJugador(hechizo, adversario, new SubModificarLP(-500 * contador));
@@ -499,16 +499,18 @@ namespace Bounds.Duelo.Emblemas {
 			}
 
 			if (dato.tipo == "EXPLOSION_FINAL") {
-				List<GameObject> criaturasControladas = new SubCartasControladas(jugador, new CondicionClase("CRIATURA")).Generar();
-				EmblemaEfectos.Activar(
-					new EfectoSobreJugador(
-						hechizo,
-						adversario,
-						new SubModificarLP(-500 * criaturasControladas.Count)
-					)
-				);
-				foreach (GameObject criaturaControlada in criaturasControladas) {
-					EmblemaEnviarAlCementerio.DesdeElCampo(criaturaControlada);
+				CondicionMultiple condicion = new CondicionMultiple(CondicionMultiple.Tipo.Y);
+				condicion.AgregarCondicion(new CondicionTipoCriatura("PYRO"));
+				condicion.AgregarCondicion(new CondicionPerfeccion(soloPerfectos: true));
+				List<GameObject> pyrosEnCementerio = new SubCartasEnCementerio(jugador, condicion).Generar();
+				foreach (GameObject pyroEnCementerio in pyrosEnCementerio) {
+					EmblemaEfectos.Activar(
+						new EfectoInvocacionEspecial(
+							hechizo,
+							pyroEnCementerio,
+							jugador
+						)
+					);
 				}
 			}
 
@@ -627,7 +629,7 @@ namespace Bounds.Duelo.Emblemas {
 				fisica.EnviarHaciaMano(invocable, jugador);
 				EmblemaEnviarMaterial.EnviarMateriales(materiales);
 				if (jugador == 1) {
-					invocable.GetComponent<CartaFisica>().ColocarBocaArriba();
+					invocable.GetComponentInChildren<CartaFisica>().ColocarBocaArriba();
 				}
 			}
 

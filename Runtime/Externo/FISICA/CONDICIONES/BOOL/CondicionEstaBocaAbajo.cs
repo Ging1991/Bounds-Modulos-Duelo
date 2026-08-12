@@ -11,7 +11,7 @@ namespace Bounds.Duelo.Condiciones {
 
 
 		public override bool GetValor(GameObject carta) {
-			return carta.GetComponent<CartaFisica>().estaAbajo;
+			return carta.GetComponentInChildren<CartaFisica>().estaAbajo;
 		}
 
 

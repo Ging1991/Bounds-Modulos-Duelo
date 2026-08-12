@@ -25,7 +25,7 @@ namespace Bounds.Duelo.Emblemas {
 			if (info.original.clase == "CRIATURA" && info.original.datoCriatura.perfeccion == "MAGICO") {
 				foreach (GameObject cartaAdversario in cartasAdversario) {
 					CartaInfo infoAdversario = cartaAdversario.GetComponent<CartaInfo>();
-					CartaFisica scrAdversario = cartaAdversario.GetComponent<CartaFisica>();
+					CartaFisica scrAdversario = cartaAdversario.GetComponentInChildren<CartaFisica>();
 					if (infoAdversario.original.clase == "TRAMPA" && scrAdversario.estaAbajo) {
 						if (infoAdversario.original.datoTrampa.tipo == "destruye_prisma") {
 							scrAdversario.ColocarBocaArriba();

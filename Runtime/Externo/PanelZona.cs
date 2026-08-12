@@ -100,8 +100,7 @@ public class PanelZona : MonoBehaviour {
 			GameObject opcion = opciones[i];
 			opcion.SetActive(true);
 			OpcionVisualizacion scr = opcion.GetComponentInChildren<OpcionVisualizacion>();
-			scr.Iniciar(carta);
-			scr.padre = this;
+			scr.Iniciar(carta, this);
 		}
 
 	}

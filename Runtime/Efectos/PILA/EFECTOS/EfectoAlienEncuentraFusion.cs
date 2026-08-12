@@ -36,7 +36,7 @@ namespace Bounds.Duelo.Efectos {
 					fisica.EnviarHaciaMano(carta, jugador);
 					contador++;
 					if (jugador == 1) {
-						CartaFisica componente = carta.GetComponent<CartaFisica>();
+						CartaFisica componente = carta.GetComponentInChildren<CartaFisica>();
 						componente.ColocarBocaArriba();
 					}
 				}

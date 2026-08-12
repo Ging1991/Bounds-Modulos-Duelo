@@ -9,7 +9,7 @@ namespace Bounds.Duelo.Emblemas {
 	public class EmblemaTrampa {
 
 		public static void ActivarTrampa(GameObject trampa) {
-			trampa.GetComponent<CartaFisica>().ColocarBocaArriba();
+			trampa.GetComponentInChildren<CartaFisica>().ColocarBocaArriba();
 			ControlDuelo.Instancia.gestorDeSonidos.ReproducirSonido("FxEspadas");
 			EmblemaPadre.ActivarEfectosDeActivacion(trampa);
 		}

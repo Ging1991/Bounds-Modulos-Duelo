@@ -35,7 +35,7 @@ namespace Bounds.Duelo.Emblemas.Fases {
 			if (info.original.clase == "HECHIZO")
 				return true;
 
-			if (info.original.clase == "TRAMPA" && !carta.GetComponent<CartaFisica>().estaAbajo)
+			if (info.original.clase == "TRAMPA" && !carta.GetComponentInChildren<CartaFisica>().estaAbajo)
 				return true;
 
 			if (info.original.clase == "MISION") {

@@ -35,7 +35,7 @@ namespace Bounds.Duelo.Emblemas {
 
 			foreach (GameObject trampa in trampas) {
 				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-				CartaFisica generalTrampa = trampa.GetComponent<CartaFisica>();
+				CartaFisica generalTrampa = trampa.GetComponentInChildren<CartaFisica>();
 
 				if (generalTrampa.estaAbajo) {
 

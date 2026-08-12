@@ -26,7 +26,7 @@ namespace Bounds.Duelo.Efectos {
 						if (cartaMazo.GetComponent<CartaInfo>().cartaID == material.parametroID) {
 							fisica.EnviarHaciaMano(cartaMazo, jugador);
 							if (jugador == 1) {
-								CartaFisica componente = cartaMazo.GetComponent<CartaFisica>();
+								CartaFisica componente = cartaMazo.GetComponentInChildren<CartaFisica>();
 								componente.ColocarBocaArriba();
 							}
 							break;

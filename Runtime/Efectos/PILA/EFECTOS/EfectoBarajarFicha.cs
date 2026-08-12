@@ -26,7 +26,7 @@ namespace Bounds.Duelo.Efectos {
 			for (var i = 0; i < cantidad; i++) {
 				GameObject campo = GameObject.Find("Cartas" + jugador);
 				GameObject ficha = creador.CrearCarta(jugador, cartaID, $"J{jugador}_FICHA{cartaID}", Vector3.zero, campo, "N", "A");
-				ficha.GetComponent<CartaFisica>().ColocarBocaArriba();
+				ficha.GetComponentInChildren<CartaFisica>().ColocarBocaArriba();
 				Fisica.Instancia.EnviarHaciaMazo(ficha, jugador);
 			}
 			EmblemaMezclarMazo.Mezclar(jugador);

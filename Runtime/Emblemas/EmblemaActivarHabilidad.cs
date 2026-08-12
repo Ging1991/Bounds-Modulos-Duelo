@@ -10,7 +10,6 @@ using Bounds.Duelo.Utiles;
 using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Duelo.Fisicas;
 using Ging1991.Core.Interfaces;
-using Ging1991.Ventanas;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,7 +27,8 @@ namespace Bounds.Duelo.Emblemas {
 			"ACTIVADO_DESCARTA_ROBO",
 			"ACTIVADO_DESCARTA_DAÑO",
 			"ACTIVADO_RECUPERA_CRIATURA",
-			"ANIQUILACION"
+			"ANIQUILACION",
+			"CONSUMIR_PYRO"
 		};
 
 		private EmblemaActivarHabilidad() { }
@@ -52,6 +52,7 @@ namespace Bounds.Duelo.Emblemas {
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			Fisica fisica = conocimiento.traerFisica();
 			CartaInfo info = carta.GetComponent<CartaInfo>();
+			CartaEfecto cartaEfecto = carta.GetComponent<CartaEfecto>();
 			CartaMovimiento movimiento = carta.GetComponent<CartaMovimiento>();
 			int controlador = info.controlador;
 			EmblemaTurnos turnos = conocimiento.traerControlTurnos();
@@ -65,8 +66,10 @@ namespace Bounds.Duelo.Emblemas {
 				return;
 
 			// debe estar enderezada
-			if (movimiento.estaGirado)
+			if (movimiento.estaGirado && !cartaEfecto.TieneClave("CONSUMIR_PYRO")) {
+
 				return;
+			}
 
 			// debe ser turno del controlador
 			if (turnos.jugadorActivo != controlador)
@@ -174,6 +177,18 @@ namespace Bounds.Duelo.Emblemas {
 				}
 			}
 
+			if (cartaInfo.GetComponent<CartaEfecto>().TieneClave("CONSUMIR_PYRO")) {
+				List<GameObject> objetivos = new SubCartasControladas(jugador, new CondicionClase("CRIATURA")).Generar();
+				if (objetivos.Count > 0) {
+					SeleccionarConsumir seleccionar = new(adversario, carta);
+					if (cartaInfo.controlador == 2) {
+						seleccionar.Seleccionar(objetivos[0]);
+						return;
+					}
+					fisica.panel.GetComponent<PanelCartas>().Iniciar(objetivos, seleccionar, 1, "Selecciona una carta para consumir.");
+				}
+			}
+
 			if (cartaInfo.GetComponent<CartaEfecto>().TieneClave("CARBONIZAR")) {
 				EfectoBase efecto = new EfectoSobreJugador(carta, adversario, new SubModificarLP(-500));
 				efecto.AgregarEtiqueta("EXPLOSION");
@@ -215,7 +230,6 @@ namespace Bounds.Duelo.Emblemas {
 
 			return ret;
 		}
-
 
 
 		public void Ejecutar() {

@@ -82,7 +82,7 @@ namespace Bounds.Duelo.Emblemas {
 				List<GameObject> trampasAntimeta = condicionClase.CumpleLista(fisica.TraerCartasEnMazo(adversario));
 				foreach (GameObject trampa in trampasAntimeta) {
 					CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-					CartaFisica trampaFisica = trampa.GetComponent<CartaFisica>();
+					CartaFisica trampaFisica = trampa.GetComponentInChildren<CartaFisica>();
 
 					if (infoTrampa.original.clase == "TRAMPA"
 							&& infoTrampa.original.datoTrampa.tipo == "invoca_contadores_4000"
@@ -173,7 +173,7 @@ namespace Bounds.Duelo.Emblemas {
 			foreach (GameObject trampa in TraerTrampasBocaAbajo(adversario)) {
 
 				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-				CartaFisica generalTrampa = trampa.GetComponent<CartaFisica>();
+				CartaFisica generalTrampa = trampa.GetComponentInChildren<CartaFisica>();
 
 				if (infoTrampa.original.datoTrampa.tipo == "invoca_contadores_4000" && infoCriatura.calcularAtaque() >= 4000) {
 					generalTrampa.ColocarBocaArriba();

@@ -112,7 +112,7 @@ namespace Bounds.Duelo.Emblemas.Fases {
 			foreach (GameObject trampa in EmblemaPadre.TraerTrampasBocaAbajo(jugadorAtacado)) {
 
 				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-				CartaFisica generalTrampa = trampa.GetComponent<CartaFisica>();
+				CartaFisica generalTrampa = trampa.GetComponentInChildren<CartaFisica>();
 
 				if (infoTrampa.original.datoTrampa.tipo == "DESTRUCCION_MUTUA") {
 					generalTrampa.ColocarBocaArriba();
@@ -199,7 +199,7 @@ namespace Bounds.Duelo.Emblemas.Fases {
 			foreach (GameObject trampa in EmblemaPadre.TraerTrampasBocaAbajo(jugadorAtacante)) {
 
 				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-				CartaFisica generalTrampa = trampa.GetComponent<CartaFisica>();
+				CartaFisica generalTrampa = trampa.GetComponentInChildren<CartaFisica>();
 
 				if (infoTrampa.original.datoTrampa.tipo == "DESTRUCCION_MUTUA") {
 					generalTrampa.ColocarBocaArriba();

@@ -28,7 +28,7 @@ namespace Bounds.Duelo.Emblemas {
 
 			carta.GetComponent<CartaMovimiento>().Enderezar();
 
-			CartaFisica componente = carta.GetComponent<CartaFisica>();
+			CartaFisica componente = carta.GetComponentInChildren<CartaFisica>();
 			if (info.controlador == 1)
 				componente.ColocarBocaArriba();
 			else

@@ -64,11 +64,11 @@ namespace Bounds.Duelo.Emblema {
 			CondicionClase condicionTrampa = new CondicionClase(clase: "TRAMPA");
 			foreach (GameObject trampa in TraerCartasEnCampo(adversario, condicionTrampa)) {
 				CartaInfo info = trampa.GetComponent<CartaInfo>();
-				CartaFisica trampaFisica = trampa.GetComponent<CartaFisica>();
+				CartaFisica trampaFisica = trampa.GetComponentInChildren<CartaFisica>();
 				if (!trampaFisica.estaAbajo)
 					continue;
 
-				if (info.original.datoTrampa.tipo == "invoca_evolucion") {
+				if (info.original.datoTrampa.tipo == "INVOCA_EVOLUCION") {
 					CondicionMultiple condicionMultiple = new CondicionMultiple(CondicionMultiple.Tipo.Y);
 					condicionMultiple.AgregarCondicion(new CondicionEsPerfecta());
 					condicionMultiple.AgregarCondicion(new CondicionCriaturaPerfeccion(perfeccion: "EVOLUCION"));

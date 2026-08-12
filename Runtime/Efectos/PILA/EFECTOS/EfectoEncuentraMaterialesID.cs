@@ -40,7 +40,7 @@ namespace Bounds.Duelo.Efectos {
 			foreach (GameObject encontrada in encontradas) {
 				fisica.EnviarHaciaMano(encontrada, jugador);
 				if (jugador == 1) {
-					encontrada.GetComponent<CartaFisica>().ColocarBocaArriba();
+					encontrada.GetComponentInChildren<CartaFisica>().ColocarBocaArriba();
 				}
 			}
 		}

@@ -53,7 +53,7 @@ namespace Bounds.Duelo.Emblemas {
 				CondicionClase condicion = new("TRAMPA");
 				foreach (GameObject trampa in condicion.CumpleLista(new SubCartasControladas(info.controlador).Generar())) {
 					CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-					CartaFisica componenteTrampa = trampa.GetComponent<CartaFisica>();
+					CartaFisica componenteTrampa = trampa.GetComponentInChildren<CartaFisica>();
 					if (componenteTrampa.estaAbajo) {
 						if (infoTrampa.original.datoTrampa.tipo == "perfecta") {
 							componenteTrampa.ColocarBocaArriba();
@@ -134,7 +134,7 @@ namespace Bounds.Duelo.Emblemas {
 			ActivarEfectosDeOtrasCartas(carta);
 			ActivarTrampas(carta);
 			Desanexar(carta);
-			//carta.GetComponent<CartaFisica>().Sacudir();
+			//carta.GetComponentInChildren<CartaFisica>().Sacudir();
 			return true;
 		}
 
@@ -216,7 +216,7 @@ namespace Bounds.Duelo.Emblemas {
 					if (opciones.Count > 0) {
 						fisica.EnviarHaciaMano(opciones[0], info.controlador);
 						if (info.controlador == 1) {
-							CartaFisica componente = opciones[0].GetComponent<CartaFisica>();
+							CartaFisica componente = opciones[0].GetComponentInChildren<CartaFisica>();
 							componente.ColocarBocaArriba();
 						}
 					}
@@ -248,7 +248,7 @@ namespace Bounds.Duelo.Emblemas {
 
 			foreach (var trampa in TraerTrampasBocaAbajo(controlador)) {
 				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
-				CartaFisica generalTrampa = trampa.GetComponent<CartaFisica>();
+				CartaFisica generalTrampa = trampa.GetComponentInChildren<CartaFisica>();
 
 				if (infoTrampa.original.datoTrampa.tipo == "AGUILA_DE_FUEGO") {
 

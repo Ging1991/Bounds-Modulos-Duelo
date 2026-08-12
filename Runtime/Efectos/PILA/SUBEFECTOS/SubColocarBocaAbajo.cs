@@ -23,7 +23,7 @@ namespace Bounds.Duelo.Pila.Subefectos {
 			GameObject campo = buscador.buscarCampoLibre(jugador);
 			if (campo != null) {
 				fisica.EnviarHaciaCampo(jugador, carta, campo);
-				carta.GetComponent<CartaFisica>().ColocarBocaAbajo();
+				carta.GetComponentInChildren<CartaFisica>().ColocarBocaAbajo();
 			}
 		}
 

@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using Bounds.Duelo.Carta;
-using Bounds.Modulos.Cartas;
 using Bounds.Fisicas.Carta;
 using Bounds.Cartas;
 
@@ -9,21 +7,19 @@ namespace Bounds.Duelo.Paneles {
 	public class OpcionVisualizacion : MonoBehaviour {
 
 		private GameObject carta;
-		public bool tieneHabilidad;
+		public CartaImagenID cartaImagenID;
 		public PanelZona padre;
 
-		public void Iniciar(GameObject carta) {
+		public void Iniciar(GameObject carta, PanelZona padre) {
 			this.carta = carta;
-			CartaInfo info = carta.GetComponent<CartaInfo>();
-			GetComponentInChildren<CartaImagenID>().MostrarCartaID(info.cartaID);
-			//tieneHabilidad = info.tieneHabilidad("recobrar");
+			this.padre = padre;
+			CartaInfo cartaInfo = carta.GetComponent<CartaInfo>();
+			cartaImagenID.MostrarCartaID(cartaInfo.cartaID, cartaInfo.imagen, cartaInfo.rareza);
 		}
-
 
 		public void OnMouseDown() {
 			padre.SeleccionarCarta(carta);
 		}
-
 
 	}
 

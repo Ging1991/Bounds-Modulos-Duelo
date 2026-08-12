@@ -29,7 +29,7 @@ namespace Bounds.Duelo.Efectos {
 			foreach (GameObject encontrada in condicion.CumpleLista(cartasEnMazo)) {
 				fisica.EnviarHaciaMano(encontrada, jugador);
 				if (jugador == 1) {
-					CartaFisica componente = encontrada.GetComponent<CartaFisica>();
+					CartaFisica componente = encontrada.GetComponentInChildren<CartaFisica>();
 					componente.ColocarBocaArriba();
 				}
 			}

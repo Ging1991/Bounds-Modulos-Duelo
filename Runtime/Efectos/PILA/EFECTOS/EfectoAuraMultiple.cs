@@ -32,7 +32,7 @@ namespace Bounds.Duelo.Efectos {
 				EmblemaJuegoSeleccionar.SeleccionarParaVincular(criatura);
 				EmblemaJuegoJugarAura.Jugar(jugador, campoLibre);
 				EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
-				copia.GetComponent<CartaFisica>().ColocarBocaArriba();
+				copia.GetComponentInChildren<CartaFisica>().ColocarBocaArriba();
 				conocimiento.traerDuelo().HabilitarInvocacionPerfecta();
 			}
 		}

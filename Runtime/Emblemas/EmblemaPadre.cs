@@ -159,13 +159,15 @@ namespace Bounds.Duelo.Emblemas {
 			if (cartaEfecto.TieneClave("ARDER_T") && tiposDeCriatura.Contains(cartaEfecto.GetEfecto("ARDER_T").parametroTipo)) {
 				EfectoBase efectoBase = new EfectoSobreJugador(carta, Adversario(info.controlador), new SubModificarLP(-500));
 				efectoBase.AgregarEtiqueta("EXPLOSION");
+				efectoBase.AgregarEtiqueta("DAÑO");
 				EmblemaEfectos.Activar(efectoBase);
 			}
 
 			if (cartaEfecto.TieneClave("EXPLOSION")) {
-				EmblemaEfectos.Activar(
-					new EfectoSobreJugador(carta, Adversario(info.controlador), new SubModificarLP(-400), "EXPLOSION")
-				);
+				EfectoBase efectoBase = new EfectoSobreJugador(carta, Adversario(info.controlador), new SubModificarLP(-400));
+				efectoBase.AgregarEtiqueta("EXPLOSION");
+				efectoBase.AgregarEtiqueta("DAÑO");
+				EmblemaEfectos.Activar(efectoBase);
 			}
 
 			if (cartaEfecto.TieneClave("DRENAR_T") && tiposDeCriatura.Contains(cartaEfecto.GetEfecto("DRENAR_T").parametroTipo)) {
@@ -257,7 +259,7 @@ namespace Bounds.Duelo.Emblemas {
 				if (tesoro != null) {
 					fisica.EnviarHaciaMano(tesoro, info.controlador);
 					if (info.controlador == 1) {
-						tesoro.GetComponent<CartaFisica>().ColocarBocaArriba();
+						tesoro.GetComponentInChildren<CartaFisica>().ColocarBocaArriba();
 					}
 				}
 			}

@@ -14,7 +14,7 @@ namespace Bounds.Duelo.Pila.Subefectos {
 			if (fisica.TraerCartasEnMano(cartaInfo.propietario).Count < 5) {
 				fisica.EnviarHaciaMano(carta, cartaInfo.propietario);
 				if (cartaInfo.propietario == 2) {
-					carta.GetComponent<CartaFisica>().ColocarBocaAbajo();
+					carta.GetComponentInChildren<CartaFisica>().ColocarBocaAbajo();
 				}
 			}
 			else {

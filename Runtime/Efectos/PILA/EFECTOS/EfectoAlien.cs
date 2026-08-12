@@ -24,7 +24,7 @@ namespace Bounds.Duelo.Efectos {
 
 			if (cartasEnDescarte.Count > 0) {
 				fisica.EnviarHaciaMazo(cartasEnDescarte[0], jugador);
-				CartaFisica componente = cartasEnDescarte[0].GetComponent<CartaFisica>();
+				CartaFisica componente = cartasEnDescarte[0].GetComponentInChildren<CartaFisica>();
 				componente.ColocarBocaAbajo();
 				return cartasEnDescarte[0];
 			}

@@ -16,10 +16,10 @@ namespace Bounds.Duelo.Pila.Subefectos {
 			fisica.EnviarHaciaMazo(carta, cartaInfo.propietario);
 
 			if (cartaInfo.propietario == 1) {
-				carta.GetComponent<CartaFisica>().ColocarBocaArriba();
+				carta.GetComponentInChildren<CartaFisica>().ColocarBocaArriba();
 			}
 			if (cartaInfo.propietario == 2) {
-				carta.GetComponent<CartaFisica>().ColocarBocaAbajo();
+				carta.GetComponentInChildren<CartaFisica>().ColocarBocaAbajo();
 			}
 			EmblemaMezclarMazo.Mezclar(cartaInfo.propietario);
 		}

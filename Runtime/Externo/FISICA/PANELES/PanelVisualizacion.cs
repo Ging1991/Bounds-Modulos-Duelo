@@ -49,14 +49,14 @@ namespace Bounds.Duelo.Paneles {
 		}
 
 
-		public void Mostrar () {
+		public void Mostrar() {
 
 			// deshabilito mis opciones
 			foreach (GameObject opcion in opciones)
 				opcion.SetActive(false);
-				
+
 			// muestro solo las opciones correspondientes a la pagina actual
-			int desplazamiento = (pagina-1)*5;
+			int desplazamiento = (pagina - 1) * 5;
 
 			for (int i = 0; i < 5; i++) {
 
@@ -70,7 +70,7 @@ namespace Bounds.Duelo.Paneles {
 				GameObject opcion = opciones[i];
 				opcion.SetActive(true);
 				OpcionVisualizacion scr = opcion.GetComponentInChildren<OpcionVisualizacion>();
-				scr.Iniciar(carta);
+				scr.Iniciar(carta, null);
 			}
 
 		}
