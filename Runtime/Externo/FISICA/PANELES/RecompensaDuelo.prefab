@@ -502,6 +502,7 @@ GameObject:
   - component: {fileID: 8101327659329085920}
   - component: {fileID: 6076304081532745347}
   - component: {fileID: 5397317780359291697}
+  - component: {fileID: 1849131439255383446}
   m_Layer: 0
   m_Name: Texto
   m_TagString: Untagged
@@ -570,6 +571,23 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "M\xEDtico 25%"
+--- !u!114 &1849131439255383446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7979437230330138934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab57d110d60e354aaf90a970e296f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoOBJ: {fileID: 5397317780359291697}
+  clave: RAREZA_N
+  destruirAlTraducir: 0
+  esEspecial: 1
+  esAutotraducible: 0
 --- !u!1 &8615734971521114268
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,6 +675,7 @@ GameObject:
   - component: {fileID: 7821353447436392902}
   - component: {fileID: 2361869549400064598}
   - component: {fileID: 6759366227696079507}
+  - component: {fileID: 4952263879733896305}
   m_Layer: 0
   m_Name: Texto
   m_TagString: Untagged
@@ -725,6 +744,23 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\xA1Toca aqu\xED para revelar la carta!"
+--- !u!114 &4952263879733896305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8644615634781824711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab57d110d60e354aaf90a970e296f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoOBJ: {fileID: 6759366227696079507}
+  clave: TOCA_AQUI
+  destruirAlTraducir: 1
+  esEspecial: 0
+  esAutotraducible: 0
 --- !u!1001 &1501169011751563927
 PrefabInstance:
   m_ObjectHideFlags: 0

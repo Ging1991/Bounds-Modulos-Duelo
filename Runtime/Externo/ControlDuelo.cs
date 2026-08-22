@@ -16,7 +16,6 @@ using Bounds.Duelo.Paneles;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Campos;
 using Bounds.Modulos.Duelo;
-using Bounds.Persistencia;
 using Bounds.Modulos.Persistencia;
 using Ging1991.Core.Interfaces;
 using Bounds.Cofres;
@@ -37,7 +36,8 @@ using Bounds.Sistema.Ilustradores;
 namespace Bounds.Duelo {
 
 	public class ControlDuelo : SingletonMonoBehaviour<ControlDuelo>, ICampoLugarControlador {
-
+		public ControlBounds controlBounds;
+		private ParametrosGlobales parametros;
 		private ProveedorImagenPersonaje proveedorMiniatura;
 		public GestorDeSonidos gestorDeSonidos;
 		public IProveedor<int, CartaBD> proveedorCartas;
@@ -51,7 +51,6 @@ namespace Bounds.Duelo {
 		public DireccionRecursos carpetaColecciones;
 		public VentanaControl ventanaControl;
 
-		public ParametrosControlDuelo parametrosControl;
 		public IProveedor<int, string> selectorNombres;
 		public IProveedor<int, string> selectorEfectos;
 		public IProveedor<int, string> selectorAmbientacion;
@@ -60,15 +59,14 @@ namespace Bounds.Duelo {
 		public IProveedor<string, string> selectorInvocaciones;
 		public IProveedor<string, string> selectorSistema;
 		public IProveedor<string, Color> selectorColores;
-		public ControlUIBounds personalizarUI;
 		public CartaGenerador cartaGenerador;
 		public VisorGenerador visorGenerador;
+		public TraductorDuelo traductorDuelo;
 
 		public void TocarMusica(string clave) {
 			MusicaAmbiental musicaAmbiental = MusicaAmbiental.Instancia;
 			musicaAmbiental.Reproducir(clave);
 		}
-
 
 		public void InicializarGeneradores() {
 			cartaGenerador.Inicializar(
@@ -92,43 +90,32 @@ namespace Bounds.Duelo {
 			);
 		}
 
-
-		private void InicializarMusica(Direccion direccion) {
-			MusicaAmbiental musicaAmbiental = MusicaAmbiental.Instancia;
-			if (musicaAmbiental.actual != "GENERAL") {
-				musicaAmbiental.Inicializar(new ProveedorAudios(direccion));
-				musicaAmbiental.Reproducir("GENERAL");
-			}
-		}
-
 		void Start() {
-			parametrosControl.Inicializar();
-			ParametrosGlobales parametros = parametrosControl.parametros;
-			if (!RegistroGlobal.Instancia.inicializado)
-				RegistroGlobal.Instancia.Inicializar(parametros);
-			InicializarMusica(parametros.direcciones["MUSICA_AMBIENTAL"]);
-			personalizarUI.Personalizar(parametros.direccionesGeneradas["SISTEMA"], parametros.direccionesGeneradas["COLORES"]);
+			Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();
+			fisica.Inicializar();
 
-			proveedorCartas = new LectorCartas(new DireccionRecursos(parametrosControl.parametros.direccionesGeneradas["CARTAS_DATOS"]));
+			parametros = controlBounds.InicializarEscena("GENERAL", traductorDuelo);
+
+			proveedorCartas = new LectorCartas(new DireccionRecursos(parametros.direccionesGeneradas["CARTAS_DATOS"]));
 			selectorNombres = new TraductorCartaID(parametros.direccionesGeneradas["CARTA_NOMBRES"]);
 			selectorNombres = new TraductorCartaID(parametros.direccionesGeneradas["CARTA_NOMBRES"]);
 			selectorEfectos = new TraductorCartaID(parametros.direccionesGeneradas["CARTA_EFECTOS"]);
 			selectorAmbientacion = new TraductorCartaID(parametros.direccionesGeneradas["CARTA_AMBIENTACION"]);
 			selectorClases = new ProveedorTexto(parametros.direccionesGeneradas["CARTA_CLASES"], TipoLector.RECURSOS);
 			selectorTipos = new ProveedorTexto(parametros.direccionesGeneradas["CARTA_TIPOS"], TipoLector.RECURSOS);
-			selectorSistema = new ProveedorTexto(parametros.direccionesGeneradas["SISTEMA"], TipoLector.RECURSOS);
+			selectorSistema = new ProveedorTexto(parametros.direccionesGeneradas["IDIOMA"], TipoLector.RECURSOS);
 			selectorInvocaciones = new ProveedorTexto(parametros.direccionesGeneradas["CARTA_INVOCACIONES"], TipoLector.RECURSOS);
 			gestorDeSonidos.Inicializar(new DireccionRecursos(parametros.direccionesGeneradas["SONIDOS"]));
-			selectorHabilidades = new LectorHabilidades(parametrosControl.parametros.direccionesGeneradas["CARTAS_HABILIDADES"]);
-			carpetaColecciones = new(parametrosControl.parametros.direccionesGeneradas["COLECCIONES"]);
+			selectorHabilidades = new LectorHabilidades(parametros.direccionesGeneradas["CARTAS_HABILIDADES"]);
+			carpetaColecciones = new(parametros.direccionesGeneradas["COLECCIONES"]);
 			selectorColores = new ProveedorColores(
-				parametrosControl.parametros.direccionesGeneradas["COLORES"],
+				parametros.direccionesGeneradas["COLORES"],
 				TipoLector.RECURSOS
 			);
 			cofre = new(parametros.direccionesGeneradas["COFRE"], parametros.direccionesGeneradas["COFRE_RECURSOS"]);
 			ilustradorDeCartas = new IlustradorDeCartas(
-				new DireccionRecursos(parametrosControl.parametros.direccionesGeneradas["CARTAS_RECURSO"]),
-				new DireccionDinamica(parametrosControl.parametros.direccionesGeneradas["CARTAS_DINAMICA"])
+				new DireccionRecursos(parametros.direccionesGeneradas["CARTAS_RECURSO"]),
+				new DireccionDinamica(parametros.direccionesGeneradas["CARTAS_DINAMICA"])
 			);
 
 			foreach (var campo in FindObjectsByType<CampoLugar>(FindObjectsSortMode.None)) {
@@ -141,8 +128,6 @@ namespace Bounds.Duelo {
 			cpuReloj.Inicializacion();
 
 			Cargador cargador = GameObject.Find("Cargador").GetComponent<Cargador>();
-			Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();
-			fisica.Inicializar();
 
 			// MAZOS
 			GlobalDuelo parametrosDuelo = GlobalDuelo.GetInstancia();
@@ -175,7 +160,6 @@ namespace Bounds.Duelo {
 			EmblemaIniciarDuelo.IniciarMulligan();
 		}
 
-
 		public void PresionarBotonFase() {
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			EmblemaTurnos turnos = conocimiento.traerControlTurnos();
@@ -190,11 +174,9 @@ namespace Bounds.Duelo {
 			entrada.PresionarBotonFase();
 		}
 
-
 		public void PresionarBotonSugerencia() {
 			PresionarBotonFase();
 		}
-
 
 		public void PresionarBotonInvocacion() {
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
@@ -205,12 +187,10 @@ namespace Bounds.Duelo {
 			entrada.PresionarBotonInvocacion();
 		}
 
-
 		public void PresionarBotonAbandonar() {
 			TerminarJuego componente = GameObject.Find("TerminarJuego").GetComponent<TerminarJuego>();
 			componente.Terminar(false);
 		}
-
 
 		void Update() {
 			if (Input.GetKeyDown(KeyCode.Space))
@@ -218,7 +198,6 @@ namespace Bounds.Duelo {
 			if (Input.GetKeyDown(KeyCode.R))
 				EmblemaVida.DisminuirVida(2, 5000);
 		}
-
 
 		public void HabilitarInvocacionPerfecta() {
 
@@ -264,7 +243,6 @@ namespace Bounds.Duelo {
 			}
 
 		}
-
 
 	}
 

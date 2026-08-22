@@ -8,6 +8,7 @@ using Bounds.Duelo;
 using Bounds.Cartas;
 using Ging1991.Interfaces.Personalizacion;
 using Ging1991.Core;
+using Ging1991.Idiomas;
 
 public class PanelZona : MonoBehaviour {
 
@@ -16,7 +17,7 @@ public class PanelZona : MonoBehaviour {
 	public int jugador;
 	public GameObject cartaSeleccionada;
 	public bool estaMostrandoMateriales;
-	public TextoUI titulo;
+	public Traduccion titulo;
 
 	public void Inicializar() {
 
@@ -69,13 +70,21 @@ public class PanelZona : MonoBehaviour {
 	public void BotonDescarte() {
 		estaMostrandoMateriales = false;
 		Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();
-		Visualizar(jugador, fisica.TraerCartasEnCementerio(jugador), $"Cartas en el descarte del jugador {jugador}");
+		Visualizar(
+			jugador,
+			fisica.TraerCartasEnCementerio(jugador),
+			ControlDuelo.Instancia.selectorSistema.GetElemento("VISUALIZAR_DESCARTE").Replace("[N]", $"{jugador}")
+		);
 	}
 
 
 	public void BotonMateriales() {
 		estaMostrandoMateriales = true;
-		Visualizar(jugador, FindAnyObjectByType<Fisica>().TraerCartasEnMateriales(jugador), $"Cartas en materiales del jugador {jugador}");
+		Visualizar(
+			jugador,
+			FindAnyObjectByType<Fisica>().TraerCartasEnMateriales(jugador),
+			ControlDuelo.Instancia.selectorSistema.GetElemento("VISUALIZAR_MATERIALES").Replace("[N]", $"{jugador}")
+		);
 	}
 
 

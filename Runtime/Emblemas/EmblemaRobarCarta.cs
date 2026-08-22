@@ -7,7 +7,6 @@ using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Condiciones;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
-using Bounds.Persistencia;
 using Bounds.Sistema;
 
 namespace Bounds.Duelo.Emblemas {

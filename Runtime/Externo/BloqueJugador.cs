@@ -1,4 +1,5 @@
-﻿using Ging1991.Interfaces.Personalizacion;
+﻿using Ging1991.Idiomas;
+using Ging1991.Interfaces.Personalizacion;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,9 +7,9 @@ public class BloqueJugador : MonoBehaviour {
 
 	public int vida;
 	public Image miniatura;
-	public TextoUI nombreOBJ;
-	public TextoUI mazoOBJ;
-	public TextoUI vidaOBJ;
+	public Traduccion nombreOBJ;
+	public Traduccion mazoOBJ;
+	public Traduccion vidaOBJ;
 
 	public void SetNombre(string nombre) {
 		nombreOBJ.SetTexto(nombre);
@@ -20,12 +21,12 @@ public class BloqueJugador : MonoBehaviour {
 		if (this.vida < 0) {
 			this.vida = 0;
 		}
-		vidaOBJ.SetTexto($"Vida {this.vida}");
+		Traductor.Instancia.Traducir(vidaOBJ);
 	}
 
 
 	public void setMazo(int cantidad) {
-		mazoOBJ.SetTexto($"Mazo {cantidad}");
+		Traductor.Instancia.Traducir(mazoOBJ);
 	}
 
 

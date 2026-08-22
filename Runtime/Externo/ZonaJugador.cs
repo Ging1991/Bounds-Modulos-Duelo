@@ -1,8 +1,9 @@
-﻿using Bounds.Modulos.Cartas.Persistencia.Datos;
+﻿using Bounds.Duelo;
+using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Sistema.Ilustradores;
 using Ging1991.Core.Interfaces;
-using Ging1991.Interfaces.Personalizacion;
+using Ging1991.Idiomas;
 using UnityEngine;
 
 public class ZonaJugador : MonoBehaviour {
@@ -10,24 +11,28 @@ public class ZonaJugador : MonoBehaviour {
 	public int jugador;
 	public IProveedor<int, CartaBD> proveedorCartas;
 	public IlustradorDeCartas ilustradorDeCartas;
-	public TextoUI materialesOBJ;
-	public TextoUI descarteOBJ;
+	public Traduccion materialesOBJ;
+	public Traduccion descarteOBJ;
 
 	void OnMouseDown() {
 		Fisica fisica = GameObject.Find("Fisica").GetComponent<Fisica>();
 		PanelZona panelZona = fisica.panelZona;
 		panelZona.Inicializar();
-		panelZona.Visualizar(jugador, fisica.TraerCartasEnCementerio(jugador), "Visualizar cartas en el descarte");
+		panelZona.Visualizar(
+			jugador,
+			fisica.TraerCartasEnCementerio(jugador),
+			ControlDuelo.Instancia.selectorSistema.GetElemento("VISUALIZAR_DESCARTE").Replace("[N]", $"{jugador}")
+		);
 	}
 
 
 	public void SetDescarte(int cantidad) {
-		descarteOBJ.SetTexto($"Descarte\n{cantidad}");
+		Traductor.Instancia.Traducir(descarteOBJ);
 	}
 
 
 	public void SetMateriales(int cantidad) {
-		materialesOBJ.SetTexto($"Materiales\n{cantidad}");
+		Traductor.Instancia.Traducir(materialesOBJ);
 	}
 
 

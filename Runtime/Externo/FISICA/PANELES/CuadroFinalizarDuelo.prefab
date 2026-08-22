@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 8384905247680543045}
   - component: {fileID: 6611378609866415922}
   - component: {fileID: 6993225781062322306}
+  - component: {fileID: 2758601329738878723}
   m_Layer: 5
   m_Name: Texto
   m_TagString: Untagged
@@ -224,6 +225,23 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Ganancia: 99'
+--- !u!114 &2758601329738878723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916934553486460832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab57d110d60e354aaf90a970e296f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoOBJ: {fileID: 6993225781062322306}
+  clave: GANANCIA_N
+  destruirAlTraducir: 0
+  esEspecial: 1
+  esAutotraducible: 0
 --- !u!1 &1248885567882577279
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +588,7 @@ GameObject:
   - component: {fileID: 6146248721385325941}
   - component: {fileID: 8851441961826362114}
   - component: {fileID: 4619034654895469746}
+  - component: {fileID: 1237463089951794578}
   m_Layer: 5
   m_Name: Texto
   m_TagString: Untagged
@@ -638,6 +657,23 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Resultado: Victoria'
+--- !u!114 &1237463089951794578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3291970104581307280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab57d110d60e354aaf90a970e296f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoOBJ: {fileID: 4619034654895469746}
+  clave: RESULTADO_S
+  destruirAlTraducir: 0
+  esEspecial: 1
+  esAutotraducible: 0
 --- !u!1 &3477368862843959631
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +854,7 @@ GameObject:
   - component: {fileID: 3690575304263675479}
   - component: {fileID: 3070522368043026878}
   - component: {fileID: 4062561002277011858}
+  - component: {fileID: 7946777130129352240}
   m_Layer: 5
   m_Name: Texto
   m_TagString: Untagged
@@ -886,6 +923,23 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Aceptar
+--- !u!114 &7946777130129352240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6102824745451804507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab57d110d60e354aaf90a970e296f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoOBJ: {fileID: 4062561002277011858}
+  clave: ACEPTAR
+  destruirAlTraducir: 1
+  esEspecial: 0
+  esAutotraducible: 0
 --- !u!1 &8022333317289076880
 GameObject:
   m_ObjectHideFlags: 0

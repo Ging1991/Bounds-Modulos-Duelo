@@ -113,7 +113,12 @@ public class Invocador : MonoBehaviour, ISeleccionarCarta {
 		TieneInvocacionesPerfectas invocaciones = new TieneInvocacionesPerfectas(1);
 		List<GameObject> lista = invocaciones.GetCartas();
 		if (lista.Count > 0) {
-			CrearPanelSeleccion(lista, "Selecciona la criatura que quieres invocar.", "INVOCACION", false);
+			CrearPanelSeleccion(
+				lista,
+				ControlDuelo.Instancia.selectorSistema.GetElemento("SELECCION_INVOCACION"),
+				"INVOCACION",
+				false
+			);
 			return true;
 		}
 		return false;
