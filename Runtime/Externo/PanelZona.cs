@@ -9,6 +9,7 @@ using Bounds.Cartas;
 using Ging1991.Interfaces.Personalizacion;
 using Ging1991.Core;
 using Ging1991.Idiomas;
+using Bounds.Sistema;
 
 public class PanelZona : MonoBehaviour {
 
@@ -73,7 +74,7 @@ public class PanelZona : MonoBehaviour {
 		Visualizar(
 			jugador,
 			fisica.TraerCartasEnCementerio(jugador),
-			ControlDuelo.Instancia.selectorSistema.GetElemento("VISUALIZAR_DESCARTE").Replace("[N]", $"{jugador}")
+			RegistroGlobal.Instancia.proveedorIdioma.GetElemento("VISUALIZAR_DESCARTE").Replace("[N]", $"{jugador}")
 		);
 	}
 
@@ -83,7 +84,7 @@ public class PanelZona : MonoBehaviour {
 		Visualizar(
 			jugador,
 			FindAnyObjectByType<Fisica>().TraerCartasEnMateriales(jugador),
-			ControlDuelo.Instancia.selectorSistema.GetElemento("VISUALIZAR_MATERIALES").Replace("[N]", $"{jugador}")
+			RegistroGlobal.Instancia.proveedorIdioma.GetElemento("VISUALIZAR_MATERIALES").Replace("[N]", $"{jugador}")
 		);
 	}
 

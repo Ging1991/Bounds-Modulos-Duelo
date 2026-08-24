@@ -1,6 +1,7 @@
 ﻿using Bounds.Duelo;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Sistema;
 using Bounds.Sistema.Ilustradores;
 using Ging1991.Core.Interfaces;
 using Ging1991.Idiomas;
@@ -21,7 +22,7 @@ public class ZonaJugador : MonoBehaviour {
 		panelZona.Visualizar(
 			jugador,
 			fisica.TraerCartasEnCementerio(jugador),
-			ControlDuelo.Instancia.selectorSistema.GetElemento("VISUALIZAR_DESCARTE").Replace("[N]", $"{jugador}")
+			RegistroGlobal.Instancia.proveedorIdioma.GetElemento("VISUALIZAR_DESCARTE").Replace("[N]", $"{jugador}")
 		);
 	}
 

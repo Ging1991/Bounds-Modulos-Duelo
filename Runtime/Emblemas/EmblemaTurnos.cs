@@ -13,6 +13,7 @@ using Bounds.Fisicas.Carta;
 using Ging1991.Musica;
 using Ging1991.Interfaces.Salida;
 using Ging1991.Idiomas;
+using Bounds.Sistema;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -40,19 +41,19 @@ namespace Bounds.Duelo.Emblemas {
 			Color colorActivo = (jugadorActivo == 1) ? Color.green : Color.red;
 			if (fase == Fase.FASE_MANTENIMIENTO) {
 				SetColorFase("FaseMantenimiento", Color.black, colorActivo, Color.black);
-				SetBotonAvance(colorActivo, ControlDuelo.Instancia.selectorSistema.GetElemento("ESPERAR_MANTENIMIENTO"), false);
+				SetBotonAvance(colorActivo, RegistroGlobal.Instancia.proveedorIdioma.GetElemento("ESPERAR_MANTENIMIENTO"), false);
 			}
 			if (fase == Fase.FASE_PRINCIPAL) {
 				SetColorFase("FasePrincipal", Color.black, colorActivo, Color.black);
-				SetBotonAvance(colorActivo, ControlDuelo.Instancia.selectorSistema.GetElemento("CONTINUAR_IR_BATALLA"), jugadorActivo == 1);
+				SetBotonAvance(colorActivo, RegistroGlobal.Instancia.proveedorIdioma.GetElemento("CONTINUAR_IR_BATALLA"), jugadorActivo == 1);
 			}
 			if (fase == Fase.FASE_DE_BATALLA) {
 				SetColorFase("FaseBatalla", Color.black, colorActivo, Color.black);
-				SetBotonAvance(colorActivo, ControlDuelo.Instancia.selectorSistema.GetElemento("CONTINUAR_TERMINAR_TURNO"), jugadorActivo == 1);
+				SetBotonAvance(colorActivo, RegistroGlobal.Instancia.proveedorIdioma.GetElemento("CONTINUAR_TERMINAR_TURNO"), jugadorActivo == 1);
 			}
 			if (fase == Fase.FASE_FINAL) {
 				SetColorFase("FaseFinal", Color.black, colorActivo, Color.black);
-				SetBotonAvance(colorActivo, ControlDuelo.Instancia.selectorSistema.GetElemento("ESPERAR_FIN_TURNO"), false);
+				SetBotonAvance(colorActivo, RegistroGlobal.Instancia.proveedorIdioma.GetElemento("ESPERAR_FIN_TURNO"), false);
 			}
 		}
 
@@ -87,7 +88,7 @@ namespace Bounds.Duelo.Emblemas {
 				MarcarPotencialesAtaques();
 				MarcarMuro();
 				Instanciador instanciador = GameObject.Find("Instanciador").GetComponent<Instanciador>();
-				instanciador.CrearTextoCreciente(ControlDuelo.Instancia.selectorSistema.GetElemento("FASE_BATALLA"));
+				instanciador.CrearTextoCreciente(RegistroGlobal.Instancia.proveedorIdioma.GetElemento("FASE_BATALLA"));
 				return;
 			}
 
@@ -126,12 +127,12 @@ namespace Bounds.Duelo.Emblemas {
 				CPUReloj cpuReloj = GameObject.Find("CPU").GetComponent<CPUReloj>();
 				if (cpuReloj != null) {
 					cpuReloj.ComenzarTurno();
-					instanciador.CrearTextoCreciente(ControlDuelo.Instancia.selectorSistema.GetElemento("TURNO_OPONENTE"));
+					instanciador.CrearTextoCreciente(RegistroGlobal.Instancia.proveedorIdioma.GetElemento("TURNO_OPONENTE"));
 					ControlDuelo.Instancia.GetComponent<GestorDeSonidos>().ReproducirSonido("FxAdquisicion");
 				}
 			}
 			else {
-				instanciador.CrearTextoCreciente(ControlDuelo.Instancia.selectorSistema.GetElemento("ES_TU_TURNO"));
+				instanciador.CrearTextoCreciente(RegistroGlobal.Instancia.proveedorIdioma.GetElemento("ES_TU_TURNO"));
 			}
 
 			Traductor.Instancia.Traducir(contadorTurno);

@@ -57,8 +57,6 @@ namespace Bounds.Duelo {
 		public IProveedor<string, string> selectorClases;
 		public IProveedor<string, string> selectorTipos;
 		public IProveedor<string, string> selectorInvocaciones;
-		public IProveedor<string, string> selectorSistema;
-		public IProveedor<string, Color> selectorColores;
 		public CartaGenerador cartaGenerador;
 		public VisorGenerador visorGenerador;
 		public TraductorDuelo traductorDuelo;
@@ -72,15 +70,15 @@ namespace Bounds.Duelo {
 			cartaGenerador.Inicializar(
 				ilustradorDeCartas,
 				proveedorCartas,
-				selectorColores
+				RegistroGlobal.Instancia.proveedorColores
 			);
 
 			visorGenerador.Inicializar(
 				proveedorCartas,
 				selectorHabilidades,
 				ilustradorDeCartas,
-				selectorColores,
-				selectorSistema,
+				RegistroGlobal.Instancia.proveedorColores,
+				RegistroGlobal.Instancia.proveedorIdioma,
 				selectorClases,
 				selectorTipos,
 				selectorInvocaciones,
@@ -103,15 +101,10 @@ namespace Bounds.Duelo {
 			selectorAmbientacion = new TraductorCartaID(parametros.direccionesGeneradas["CARTA_AMBIENTACION"]);
 			selectorClases = new ProveedorTexto(parametros.direccionesGeneradas["CARTA_CLASES"], TipoLector.RECURSOS);
 			selectorTipos = new ProveedorTexto(parametros.direccionesGeneradas["CARTA_TIPOS"], TipoLector.RECURSOS);
-			selectorSistema = new ProveedorTexto(parametros.direccionesGeneradas["IDIOMA"], TipoLector.RECURSOS);
 			selectorInvocaciones = new ProveedorTexto(parametros.direccionesGeneradas["CARTA_INVOCACIONES"], TipoLector.RECURSOS);
 			gestorDeSonidos.Inicializar(new DireccionRecursos(parametros.direccionesGeneradas["SONIDOS"]));
 			selectorHabilidades = new LectorHabilidades(parametros.direccionesGeneradas["CARTAS_HABILIDADES"]);
 			carpetaColecciones = new(parametros.direccionesGeneradas["COLECCIONES"]);
-			selectorColores = new ProveedorColores(
-				parametros.direccionesGeneradas["COLORES"],
-				TipoLector.RECURSOS
-			);
 			cofre = new(parametros.direccionesGeneradas["COFRE"], parametros.direccionesGeneradas["COFRE_RECURSOS"]);
 			ilustradorDeCartas = new IlustradorDeCartas(
 				new DireccionRecursos(parametros.direccionesGeneradas["CARTAS_RECURSO"]),

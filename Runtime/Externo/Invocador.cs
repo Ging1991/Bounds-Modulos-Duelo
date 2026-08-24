@@ -10,6 +10,7 @@ using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
+using Bounds.Sistema;
 using Ging1991.Core;
 using UnityEngine;
 
@@ -115,7 +116,7 @@ public class Invocador : MonoBehaviour, ISeleccionarCarta {
 		if (lista.Count > 0) {
 			CrearPanelSeleccion(
 				lista,
-				ControlDuelo.Instancia.selectorSistema.GetElemento("SELECCION_INVOCACION"),
+				RegistroGlobal.Instancia.proveedorIdioma.GetElemento("SELECCION_INVOCACION"),
 				"INVOCACION",
 				false
 			);
