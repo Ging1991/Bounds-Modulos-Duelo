@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Bounds.Duelo.Emblemas;
 using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Modulos.Duelo.Fisicas;
@@ -10,7 +11,7 @@ namespace Bounds.Modulos.Duelo {
 
 		public EmblemaTurnos emblemaTurnos;
 
-		public string Traducir(string clave, string traduccionParcial) {
+		public string Traducir(string clave, string traduccionParcial, List<string> opciones) {
 			if (clave == "TURNO_N")
 				return traduccionParcial.Replace("[N]", $"{emblemaTurnos.turnos}");
 			if (clave == "VIDA_N_1")
