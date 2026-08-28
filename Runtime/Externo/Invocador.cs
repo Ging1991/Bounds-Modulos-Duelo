@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Bounds.Duelo;
 using Bounds.Duelo.Carta;
 using Bounds.Duelo.CPU.Condiciones;
 using Bounds.Duelo.Emblema;
@@ -11,7 +10,6 @@ using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Sistema;
-using Ging1991.Core;
 using UnityEngine;
 
 public class Invocador : MonoBehaviour, ISeleccionarCarta {
@@ -84,7 +82,7 @@ public class Invocador : MonoBehaviour, ISeleccionarCarta {
 				opciones.Add(opcionDisponible);
 			}
 		}
-		CrearPanelSeleccion(opciones, "Selecciona el material a utilizar.", "MATERIAL", true);
+		CrearPanelSeleccion(opciones, RegistroGlobal.Instancia.proveedorIdioma.GetElemento("SELECCION_MATERIAL"), "MATERIAL", true);
 	}
 
 
