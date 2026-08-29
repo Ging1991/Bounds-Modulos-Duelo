@@ -169,6 +169,10 @@ namespace Bounds.Duelo.Emblemas {
 				EmblemaEfectos.Activar(new EfectoSobreJugador(hechizo, adversario, new SubModificarLP(-1000), "VENENO"));
 			}
 
+			if (dato.tipo == "SACRIFICIO_GUIA") {
+				EmblemaEfectos.Activar(new EfectoSobreCarta(hechizo, new SubGuia(dato.habilidad), sacrificio));
+			}
+
 			if (dato.tipo == "SACRIFICIO_ROBAR_CARTAS") {
 				EmblemaEfectos.Activar(new EfectoSobreJugador(hechizo, jugadorObjetivo, new SubRobar(dato.cantidad)));
 			}
