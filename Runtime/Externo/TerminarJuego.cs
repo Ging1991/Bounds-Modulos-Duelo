@@ -44,13 +44,19 @@ namespace Bounds.Duelo {
 
 			if (haGanado) {
 				BloqueJugador bloque1 = BloqueJugador.getInstancia("BloqueJugador" + 1);
-				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar("Resultado: VICTORIA", $"Recompensa ${bloque1.vida / 10}");
-				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(this, true, ControlDuelo.Instancia.proveedorCartas, ilustradorDeCartas);
+				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(
+					RegistroGlobal.Instancia.proveedorIdioma.GetElemento("RESULTADO_VICTORIA"),
+					RegistroGlobal.Instancia.proveedorIdioma.GetElemento("RECOMPENSA_N").Replace("[N]", (bloque1.vida / 10).ToString())
+				);
+				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(this, true);
 				billetera.GanarOro(bloque1.vida / 10);
 			}
 			else {
-				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar("Resultado: DERROTA", "Recompensa $100");
-				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(this, false, ControlDuelo.Instancia.proveedorCartas, ilustradorDeCartas);
+				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(
+					RegistroGlobal.Instancia.proveedorIdioma.GetElemento("RESULTADO_DERROTA"),
+					RegistroGlobal.Instancia.proveedorIdioma.GetElemento("RECOMPENSA_N").Replace("[N]", "100")
+				);
+				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(this, false);
 				billetera.GanarOro(100);
 			}
 		}

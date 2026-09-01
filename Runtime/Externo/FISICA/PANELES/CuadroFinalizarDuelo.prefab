@@ -238,10 +238,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoOBJ: {fileID: 6993225781062322306}
-  clave: GANANCIA_N
-  destruirAlTraducir: 0
-  esEspecial: 1
+  clave: 
+  destruirAlTraducir: 1
+  esEspecial: 0
   esAutotraducible: 0
+  opciones: []
 --- !u!1 &1248885567882577279
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,10 +671,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoOBJ: {fileID: 4619034654895469746}
-  clave: RESULTADO_S
-  destruirAlTraducir: 0
-  esEspecial: 1
+  clave: 
+  destruirAlTraducir: 1
+  esEspecial: 0
   esAutotraducible: 0
+  opciones: []
 --- !u!1 &3477368862843959631
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +924,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Aceptar
+  m_Text: Aceptar1
 --- !u!114 &7946777130129352240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -939,7 +941,8 @@ MonoBehaviour:
   clave: ACEPTAR
   destruirAlTraducir: 1
   esEspecial: 0
-  esAutotraducible: 0
+  esAutotraducible: 1
+  opciones: []
 --- !u!1 &8022333317289076880
 GameObject:
   m_ObjectHideFlags: 0

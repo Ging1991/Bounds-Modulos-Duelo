@@ -81,6 +81,13 @@ namespace Bounds.Duelo.Emblemas.Fases {
 				if (infoVacio.original.datoVacio.tipo == "DIAMANTE") {
 					EmblemaEfectos.Activar(new EfectoSobreJugador(vacio, jugador, new SubRobar(1), "ROBAR"));
 				}
+				if (infoVacio.original.datoVacio.tipo == "ENSUEÑO") {
+					List<GameObject> cementerio = new SubCartasEnCementerio(jugador, new CondicionNivel(1)).Generar();
+					if (cementerio.Count > 0) {
+						GameObject cartaRecuperada = cementerio[Random.Range(0, cementerio.Count)];
+						EmblemaEfectos.Activar(new EfectoSobreCarta(vacio, new SubRecuperar(), cartaRecuperada));
+					}
+				}
 			}
 
 		}
