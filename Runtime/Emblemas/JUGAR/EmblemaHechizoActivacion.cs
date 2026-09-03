@@ -485,10 +485,16 @@ namespace Bounds.Duelo.Emblemas {
 			}
 
 			if (dato.tipo == "ROBAR_CARTAS_CRIATURA") {
-				CondicionClase condicion = new("CRIATURA");
-				EmblemaEfectos.Activar(
-					new EfectoSobreJugador(hechizo, jugador, new SubRobar(condicion.CumpleLista(fisica.TraerCartasEnCampo(jugador)).Count))
-				);
+				List<GameObject> criaturas = new SubCartasControladas(0, new CondicionClase("CRIATURA")).Generar();
+				if (criaturas.Count > 0) {
+					EmblemaEfectos.Activar(
+						new EfectoSobreJugador(
+							hechizo,
+							jugador,
+							new SubRobar(criaturas.Count)
+						)
+					);
+				}
 			}
 
 			if (dato.tipo == "RENOVAR_CARTAS") {

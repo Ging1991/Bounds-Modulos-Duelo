@@ -64,6 +64,12 @@ namespace Bounds.Duelo.Emblemas {
 				EmblemaEfectos.Activar(new EfectoSobreCartas(carta, new SubDestruir(), objetivos));
 			}
 
+			if (cartaEfecto.TieneClave("SOBERANO_PEZ")) {
+				List<GameObject> objetivos = new SubCartasControladas(0, new CondicionClase("CRIATURA")).Generar();
+				objetivos.Remove(carta);
+				EmblemaEfectos.Activar(new EfectoSobreCartas(carta, new SubConvertirID(146), objetivos));
+			}
+
 			if (cartaEfecto.TieneClave("ATERRORIZAR_N")) {
 				List<GameObject> objetivos = new SubCartasControladas(adversario, new CondicionClase("CRIATURA")).Generar();
 				if (objetivos.Count > 0) {
@@ -78,6 +84,10 @@ namespace Bounds.Duelo.Emblemas {
 
 			if (cartaEfecto.TieneClave("INICIAR")) {
 				EmblemaEfectos.Activar(new EfectoSobreJugador(carta, jugador, new SubRobar(1), "ROBAR"));
+			}
+
+			if (cartaEfecto.TieneClave("INICIAR_FUGA")) {
+				EmblemaEfectos.Activar(new EfectoSobreJugador(carta, jugador, new SubRobar(5), "ROBAR"));
 			}
 
 			if (cartaEfecto.TieneClave("COMANDAR_NOVATOS")) {
