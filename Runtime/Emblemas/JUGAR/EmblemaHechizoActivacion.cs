@@ -436,7 +436,30 @@ namespace Bounds.Duelo.Emblemas {
 			}
 
 			if (dato.tipo == "CEMENTERIO_MATERIAL") {
-				EmblemaEnviarMaterial.EnviarMateriales(new List<GameObject>(fisica.TraerCartasEnCementerio(jugador)));
+				CondicionCriaturaPerfeccion condicionFusion = new CondicionCriaturaPerfeccion("FUSION");
+				List<GameObject> objetivosPosibles = new SubCartasEnMazo(jugador, condicionFusion).Generar();
+				objetivosPosibles.AddRange(new SubCartasEnMano(jugador, condicionFusion).Generar());
+				objetivosPosibles.AddRange(new SubCartasEnCementerio(jugador, condicionFusion).Generar());
+
+				if (objetivosPosibles.Count > 0) {
+					List<GameObject> cartasEnCementerio = new SubCartasEnCementerio(jugador).Generar();
+					bool exito = false;
+					foreach (GameObject objetivo in objetivosPosibles) {
+						if (CartaPerfeccion.ListaCompletaMaterialesOBJ(objetivo.GetComponent<CartaInfo>().original.materiales, cartasEnCementerio)) {
+							exito = true;
+							EmblemaEfectos.Activar(
+								new EfectoSobreCarta(hechizo, new SubInvocacionDesdeCementerio(jugador), objetivo)
+							);
+							break;
+						}
+					}
+					if (!exito)
+						ControlDuelo.Instancia.gestorDeSonidos.ReproducirSonido("FxRebote");
+
+				}
+				else {
+					ControlDuelo.Instancia.gestorDeSonidos.ReproducirSonido("FxRebote");
+				}
 			}
 
 			if (dato.tipo == "APOCALIPSIS") {

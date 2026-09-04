@@ -104,7 +104,7 @@ namespace Bounds.Duelo.Carta {
 		}
 
 
-		private bool ListaCompletaMaterialesOBJ(List<MaterialBD> materialesOBJ, List<GameObject> cartasEnCampo) {
+		public static bool ListaCompletaMaterialesOBJ(List<MaterialBD> materialesOBJ, List<GameObject> cartasEnCampo) {
 			List<GameObject> materialesConsiderados = new List<GameObject>();
 
 			foreach (var materialOBJ in materialesOBJ) {
