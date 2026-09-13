@@ -70,6 +70,12 @@ namespace Bounds.Duelo.Emblemas {
 				EmblemaEfectos.Activar(new EfectoSobreCartas(carta, new SubConvertirID(146), objetivos));
 			}
 
+			if (cartaEfecto.TieneClave("SOBERANA_ZANGANOS")) {
+				List<GameObject> objetivos = new SubCartasControladas(0, new CondicionClase("CRIATURA")).Generar();
+				objetivos.Remove(carta);
+				EmblemaEfectos.Activar(new EfectoSobreCartas(carta, new SubConvertirID(506), objetivos));
+			}
+
 			if (cartaEfecto.TieneClave("ATERRORIZAR_N")) {
 				List<GameObject> objetivos = new SubCartasControladas(adversario, new CondicionClase("CRIATURA")).Generar();
 				if (objetivos.Count > 0) {

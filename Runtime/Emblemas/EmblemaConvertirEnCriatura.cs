@@ -2,6 +2,7 @@ using UnityEngine;
 using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Cartas;
+using Bounds.Duelo.Carta;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -26,6 +27,7 @@ namespace Bounds.Duelo.Emblemas {
 				info.original.nivel
 			);
 			info.cartaID = cartaID;
+			carta.GetComponentInChildren<CartaPerfeccion>().CalcularPerfeccion();
 		}
 
 		public static void Convertir(GameObject carta) {

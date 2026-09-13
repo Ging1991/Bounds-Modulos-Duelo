@@ -435,8 +435,18 @@ namespace Bounds.Duelo.Emblemas {
 				EmblemaEfectos.Activar(new EfectoSobreCartas(hechizo, new SubDestruir(), lista));
 			}
 
-			if (dato.tipo == "CEMENTERIO_MATERIAL") {
-				CondicionCriaturaPerfeccion condicionFusion = new CondicionCriaturaPerfeccion("FUSION");
+			if (dato.tipo == "CONVERTIR_ZANGANO") {
+				EmblemaEfectos.Activar(
+					new EfectoSobreCartas(
+						hechizo,
+						new SubConvertirID(506),
+						new SubCartasControladas(0, new CondicionClase("CRIATURA")).Generar()
+					)
+				);
+			}
+
+			if (dato.tipo == "PERFECCION_CEMENTERIO") {
+				CondicionCriaturaPerfeccion condicionFusion = new CondicionCriaturaPerfeccion(dato.habilidad);
 				List<GameObject> objetivosPosibles = new SubCartasEnMazo(jugador, condicionFusion).Generar();
 				objetivosPosibles.AddRange(new SubCartasEnMano(jugador, condicionFusion).Generar());
 				objetivosPosibles.AddRange(new SubCartasEnCementerio(jugador, condicionFusion).Generar());
