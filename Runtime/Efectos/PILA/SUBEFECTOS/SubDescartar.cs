@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Bounds.Duelo.Emblema;
 using Bounds.Modulos.Duelo.Fisicas;
-using Ging1991.Animaciones;
+using Bounds.Visuales;
 using UnityEngine;
 
 namespace Bounds.Duelo.Pila.Subefectos {
@@ -17,7 +17,7 @@ namespace Bounds.Duelo.Pila.Subefectos {
 		public void AplicarEfecto(int jugador, List<string> etiquetas) {
 
 			BloqueJugador bloque = BloqueJugador.getInstancia("BloqueJugador" + jugador);
-			//bloque.GetComponentInChildren<EfectoVisual>().Animar("VENENO");
+			bloque.GetComponentInChildren<GestorEfectosVisuales>().Animar("VENENO");
 
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			Fisica fisica = conocimiento.traerFisica();

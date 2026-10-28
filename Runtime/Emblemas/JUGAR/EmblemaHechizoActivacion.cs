@@ -229,6 +229,16 @@ namespace Bounds.Duelo.Emblemas {
 				fisica.EnviarHaciaMazo(objetivo, objetivo.GetComponent<CartaInfo>().propietario);
 			}
 
+			if (dato.tipo == "OBJETIVO_BRILLANTE") {
+				EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
+				Fisica fisica = conocimiento.traerFisica();
+				CondicionCarta condicionCartaID = new CondicionCartaID(objetivo.GetComponent<CartaInfo>().cartaID);
+				List<GameObject> objetivos = new();
+				objetivos.AddRange(condicionCartaID.CumpleLista(fisica.TraerCartasEnCementerio(1)));
+				objetivos.AddRange(condicionCartaID.CumpleLista(fisica.TraerCartasEnCementerio(2)));
+				EmblemaEfectos.Activar(new EfectoSobreCartas(hechizo, new SubBarajar(), objetivos));
+			}
+
 			if (dato.tipo == "CLONAR_OBJETIVO") {
 				EmblemaEfectos.Activar(new EfectoCrearFicha(hechizo, controlador, objetivo.GetComponent<CartaInfo>().cartaID, 1));
 			}
@@ -270,6 +280,19 @@ namespace Bounds.Duelo.Emblemas {
 				List<GameObject> ondas = condicion.CumpleLista(fisica.TraerCartasEnMazo(jugador));
 				if (ondas.Count > 0) {
 					EmblemaEfectos.Activar(new EfectoSobreCarta(hechizo, new SubEnviarMano(), ondas[0]));
+				}
+			}
+
+			if (dato.tipo == "REINICIO") {
+				EmblemaEfectos.Activar(new EfectoSobreJugador(hechizo, 0, new SubRobar(5)));
+				List<GameObject> objetivos = new();
+				objetivos.AddRange(fisica.TraerCartasEnMano(1));
+				objetivos.AddRange(fisica.TraerCartasEnMano(2));
+				objetivos.AddRange(fisica.TraerCartasEnCampo(1));
+				objetivos.AddRange(fisica.TraerCartasEnCampo(2));
+				objetivos.Remove(hechizo);
+				if (objetivos.Count > 0) {
+					EmblemaEfectos.Activar(new EfectoSobreCartas(hechizo, new SubBarajar(), objetivos));
 				}
 			}
 

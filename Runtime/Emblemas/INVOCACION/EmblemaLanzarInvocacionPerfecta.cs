@@ -108,8 +108,21 @@ namespace Bounds.Duelo.Emblemas {
 			condicionTrampa.AgregarCondicion(new CondicionClase("TRAMPA"));
 			condicionTrampa.AgregarCondicion(new CondicionEstaBocaAbajo());
 
+			List<GameObject> cartasDelControlador = new List<GameObject>(fisica.TraerCartasEnCampo(controlador));
 			List<GameObject> cartasDelAdversario = new List<GameObject>(fisica.TraerCartasEnCampo(adversario));
 			CartaInfo infoCriatura = criatura.GetComponent<CartaInfo>();
+
+			foreach (GameObject trampa in condicionTrampa.CumpleLista(cartasDelControlador)) {
+				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
+				CartaFisica generalTrampa = trampa.GetComponentInChildren<CartaFisica>();
+
+				if (infoTrampa.original.datoTrampa.tipo == "FUSION_DESCARTA" && infoCriatura.original.datoCriatura.perfeccion == "FUSION") {
+					generalTrampa.ColocarBocaArriba();
+					EmblemaEfectos.Activar(new EfectoSobreJugador(trampa, adversario, new SubDescartar(2)));
+					break;
+				}
+
+			}
 
 			foreach (GameObject trampa in condicionTrampa.CumpleLista(cartasDelAdversario)) {
 				CartaInfo infoTrampa = trampa.GetComponent<CartaInfo>();
@@ -121,6 +134,7 @@ namespace Bounds.Duelo.Emblemas {
 				}
 
 			}
+
 		}
 
 

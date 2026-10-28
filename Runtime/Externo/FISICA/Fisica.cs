@@ -43,6 +43,7 @@ namespace Bounds.Modulos.Duelo.Fisicas {
 				carta.GetComponent<CartaMovimiento>().Desplazar(Constantes.VECTOR_MAZO1);
 			if (jugador == 2)
 				carta.GetComponent<CartaMovimiento>().Desplazar(Constantes.VECTOR_MAZO2);
+			ActualizarContadorCementerio(jugador);
 			ActualizarTextoMazo(jugador);
 			carta.GetComponentInChildren<CartaFisica>().ColocarBocaAbajo();
 		}
