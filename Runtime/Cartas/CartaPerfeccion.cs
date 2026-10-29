@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Bounds.Cartas;
 using Bounds.Duelo.Emblema;
+using Bounds.Duelo.Pila.Subefectos;
 using Bounds.Duelo.Utiles;
 using Bounds.Fisicas.Carta;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
@@ -48,6 +49,11 @@ namespace Bounds.Duelo.Carta {
 				CartaInfo cartaInfo = GetComponent<CartaInfo>();
 				if (cartaInfo.original.datoCriatura.perfeccion == "MISTICO")
 					return false;
+
+				if (cartaInfo.original.datoCriatura.perfeccion == "AVANZADO") {
+					if (!new SubCartasEnMano(cartaInfo.propietario).Generar().Contains(gameObject))
+						return false;
+				}
 
 				if (GetComponent<CartaEfecto>().TieneClave("INVOCACION_UNICA") &&
 					JugadorDuelo.GetInstancia(cartaInfo.controlador).invocacionesRestringidas.Contains(cartaInfo.cartaID)) {

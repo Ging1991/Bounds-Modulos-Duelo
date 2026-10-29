@@ -65,8 +65,6 @@ public class Invocador : MonoBehaviour, ISeleccionarCarta {
 
 		if (criatura.GetComponent<CartaInfo>().original.datoCriatura.perfeccion == "ROMPECABEZAS") {
 			opcionesDisponibles = new SubCartasEnMano(jugador).Generar();
-
-
 		}
 
 		foreach (var opcionDisponible in opcionesDisponibles) {
