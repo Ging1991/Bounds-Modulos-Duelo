@@ -75,12 +75,19 @@ namespace Bounds.Duelo.Emblemas {
 
 
 		private static void ActivarVacios(GameObject criatura) {
-			int adversario = Adversario(criatura.GetComponent<CartaInfo>().controlador);
+			CartaInfo criaturaInfo = criatura.GetComponent<CartaInfo>();
+			int jugador = criaturaInfo.controlador;
+			int adversario = Adversario(jugador);
 
 			foreach (GameObject vacio in new SubCartasControladas(0, new CondicionClase("VACIO")).Generar()) {
 				CartaInfo infoVacio = vacio.GetComponent<CartaInfo>();
+
 				if (infoVacio.original.datoVacio.tipo == "PERFECCION") {
 					EmblemaEfectos.Activar(new EfectoSobreJugador(vacio, adversario, new SubModificarLP(-500), "EXPLOSION"));
+				}
+
+				if (infoVacio.original.datoVacio.tipo == "PERFECCION_MOLER_NIVEL") {
+					EmblemaEfectos.Activar(new EfectoSobreJugador(vacio, adversario, new SubMoler(criaturaInfo.original.nivel), "VENENO"));
 				}
 
 				if (infoVacio.original.datoVacio.tipo == "VENENO") {

@@ -62,6 +62,7 @@ namespace Bounds.Duelo.Emblemas {
 					|| infoCriatura.original.datoCriatura.perfeccion == "FANTASMA"
 					|| infoCriatura.original.datoCriatura.perfeccion == "VECTOR"
 					|| infoCriatura.original.datoCriatura.perfeccion == "AVANZADO"
+					|| infoCriatura.original.datoCriatura.perfeccion == "NECRO"
 					|| infoCriatura.original.datoCriatura.perfeccion == "FUSION") {
 
 				List<MaterialBD> materiales = infoCriatura.original.materiales;

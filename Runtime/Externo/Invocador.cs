@@ -67,6 +67,11 @@ public class Invocador : MonoBehaviour, ISeleccionarCarta {
 			opcionesDisponibles = new SubCartasEnMano(jugador).Generar();
 		}
 
+		if (criatura.GetComponent<CartaInfo>().original.datoCriatura.perfeccion == "NECRO") {
+			opcionesDisponibles = new SubCartasEnCementerio(jugador).Generar();
+			opcionesDisponibles.Remove(criatura);
+		}
+
 		foreach (var opcionDisponible in opcionesDisponibles) {
 			bool resultado = EsEnesimoMaterial(opcionDisponible, materiales.Count);
 

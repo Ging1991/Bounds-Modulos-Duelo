@@ -27,7 +27,6 @@ using Ging1991.Interfaces.Entrada;
 using Ging1991.Persistencia.Proveedores;
 using Ging1991.Ventanas;
 using Bounds.Cartas;
-using Bounds.Persistencia.proveedores;
 using Bounds.Visor;
 using Bounds.Sistema;
 using Bounds.Sistema.Parametros;

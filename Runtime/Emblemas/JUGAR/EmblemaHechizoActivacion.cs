@@ -656,8 +656,8 @@ namespace Bounds.Duelo.Emblemas {
 			}
 
 
-			if (dato.tipo == "FUSION_HEREJE") {
-				//pila.Agregar(new EfectoCrearFicha(hechizo, jugador, dato.parametroID, 1));
+			if (dato.tipo == "DESCARTAR_N") {
+				EmblemaEfectos.Activar(new EfectoSobreJugador(hechizo, adversario, new SubDescartar(dato.cantidad), "VENENO"));
 			}
 
 			HechizoActivadoCorrectamente(jugador);

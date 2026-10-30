@@ -19,7 +19,8 @@ namespace Bounds.Duelo.Emblemas {
 			zona1.SetMateriales(fisica.TraerCartasEnMateriales(1).Count);
 			ZonaJugador zona2 = ZonaJugador.GetInstancia("ZonaJugador2");
 			zona2.SetMateriales(fisica.TraerCartasEnMateriales(2).Count);
-
+			zona1.SetDescarte(1);
+			zona2.SetDescarte(2);
 			CalcularPerfecciones(1);
 			CalcularPerfecciones(2);
 		}

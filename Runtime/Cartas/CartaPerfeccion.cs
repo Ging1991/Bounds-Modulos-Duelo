@@ -64,7 +64,8 @@ namespace Bounds.Duelo.Carta {
 				return ListaCompletaParaInvocar(
 					fisica.TraerCartasEnCampo(cartaInfo.controlador),
 					fisica.TraerCartasEnCampo(JugadorDuelo.Adversario(cartaInfo.controlador)),
-					fisica.TraerCartasEnMano(cartaInfo.controlador)
+					fisica.TraerCartasEnMano(cartaInfo.controlador),
+					fisica.TraerCartasEnCementerio(cartaInfo.controlador)
 				);
 			}
 		}
@@ -95,7 +96,8 @@ namespace Bounds.Duelo.Carta {
 		public bool ListaCompletaParaInvocar(
 				List<GameObject> campoJugador,
 				List<GameObject> campoAdversario,
-				List<GameObject> manoJugador) {
+				List<GameObject> manoJugador,
+				List<GameObject> descarteJugador) {
 
 			CartaInfo info = GetComponent<CartaInfo>();
 			if (info.original.datoCriatura.perfeccion == "REFLEJO")
@@ -103,6 +105,12 @@ namespace Bounds.Duelo.Carta {
 			if (info.original.datoCriatura.perfeccion == "ROMPECABEZAS") {
 				List<GameObject> nuevaLista = new();
 				nuevaLista.AddRange(manoJugador);
+				nuevaLista.Remove(gameObject);
+				return ListaCompletaMaterialesOBJ(info.original.materiales, nuevaLista);
+			}
+			if (info.original.datoCriatura.perfeccion == "NECRO") {
+				List<GameObject> nuevaLista = new();
+				nuevaLista.AddRange(descarteJugador);
 				nuevaLista.Remove(gameObject);
 				return ListaCompletaMaterialesOBJ(info.original.materiales, nuevaLista);
 			}
