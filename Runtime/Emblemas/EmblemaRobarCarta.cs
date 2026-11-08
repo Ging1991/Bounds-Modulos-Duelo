@@ -115,23 +115,23 @@ namespace Bounds.Duelo.Emblemas {
 
 			if (!haGanado) {
 				if (jugador == 1) {
-					terminar.Terminar(false);
+					terminar.Terminar(false, "MAZO");
 					billetera.GanarOro(100);
 				}
 				else {
 					BloqueJugador bloque = BloqueJugador.getInstancia("BloqueJugador" + 1);
 					billetera.GanarOro(bloque.vida / 10);
-					terminar.Terminar(true);
+					terminar.Terminar(true, "MAZO");
 				}
 			}
 			else {
 				if (jugador == 1) {
 					BloqueJugador bloque = BloqueJugador.getInstancia("BloqueJugador" + 1);
 					billetera.GanarOro(bloque.vida / 10);
-					terminar.Terminar(true);
+					terminar.Terminar(true, "EFECTO");
 				}
 				else {
-					terminar.Terminar(false);
+					terminar.Terminar(false, "EFECTO");
 					billetera.GanarOro(100);
 				}
 			}

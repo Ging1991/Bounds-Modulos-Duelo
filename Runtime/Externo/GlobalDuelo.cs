@@ -54,6 +54,11 @@ public class GlobalDuelo {
 	public CartaMazo mazoVacio2;
 	public IFinalizarDuelo finalizarDuelo;
 
+	public int final_lp_restante;
+	public int final_turnos;
+	public string final_condicion_victoria;
+	public string final_tipo_ganador;
+
 	public class Fin : IFinalizarDuelo {
 
 		public void FinalizarDuelo(int jugadorGanador) {

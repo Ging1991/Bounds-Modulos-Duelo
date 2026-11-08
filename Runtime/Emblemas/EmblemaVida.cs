@@ -8,7 +8,6 @@ using Bounds.Visuales;
 using Bounds.Modulos.Cartas.Persistencia.Datos;
 using Bounds.Modulos.Duelo.Fisicas;
 using Bounds.Fisicas.Carta;
-using Bounds.Persistencia;
 using Bounds.Duelo.Efectos;
 using Bounds.Sistema;
 using Bounds.Cartas;
@@ -63,12 +62,12 @@ namespace Bounds.Duelo.Emblemas {
 			if (bloque.vida < 1) {
 				if (jugador == 1) {
 					billetera.GanarOro(100);
-					terminar.Terminar(false);
+					terminar.Terminar(false, "LP");
 
 				}
 				else {
 					billetera.GanarOro(bloque.vida / 10);
-					terminar.Terminar(true);
+					terminar.Terminar(true, "LP");
 				}
 			}
 		}

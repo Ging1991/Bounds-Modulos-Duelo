@@ -3,8 +3,8 @@ using System.Collections;
 using Bounds.Duelo.Emblema;
 using Bounds.Duelo.Utiles;
 using Ging1991.Core.Interfaces;
-using Bounds.Persistencia;
 using Bounds.Sistema;
+using Bounds.Duelo.Emblemas;
 
 namespace Bounds.Duelo {
 
@@ -18,7 +18,7 @@ namespace Bounds.Duelo {
 		}
 
 
-		public void Terminar(bool ganar) {
+		public void Terminar(bool ganar, string condicionVictoria) {
 			GameObject cpu = GameObject.Find("CPU");
 			if (cpu != null)
 				Destroy(cpu);
@@ -27,11 +27,11 @@ namespace Bounds.Duelo {
 				ControlDuelo.Instancia.TocarMusica("VICTORIA");
 			else
 				ControlDuelo.Instancia.TocarMusica("DERROTA");
-			StartCoroutine(MostrarCuadroRecompensas(ganar));
+			StartCoroutine(MostrarCuadroRecompensas(ganar, condicionVictoria));
 		}
 
 
-		IEnumerator MostrarCuadroRecompensas(bool haGanado) {
+		IEnumerator MostrarCuadroRecompensas(bool haGanado, string condicionVictoria) {
 			this.haGanado = haGanado;
 			ControlDuelo controlDuelo = GameObject.FindAnyObjectByType<ControlDuelo>();
 			Billetera billetera = RegistroGlobal.Instancia.billetera;
@@ -41,9 +41,13 @@ namespace Bounds.Duelo {
 			EmblemaConocimiento conocimiento = EmblemaConocimiento.getInstancia();
 			Instanciador instanciador = conocimiento.traerInstanciador();
 			GameObject cuadro = instanciador.CrearCuadroFinalizarDuelo(new Vector3(0, 0, 0));
+			GlobalDuelo.GetInstancia().final_condicion_victoria = condicionVictoria;
 
 			if (haGanado) {
 				BloqueJugador bloque1 = BloqueJugador.getInstancia("BloqueJugador" + 1);
+				GlobalDuelo.GetInstancia().final_tipo_ganador = "JUGADOR";
+				GlobalDuelo.GetInstancia().final_lp_restante = bloque1.vida;
+				GlobalDuelo.GetInstancia().final_turnos = GameObject.FindAnyObjectByType<EmblemaTurnos>().turnos;
 				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(
 					RegistroGlobal.Instancia.proveedorIdioma.GetElemento("RESULTADO_VICTORIA"),
 					RegistroGlobal.Instancia.proveedorIdioma.GetElemento("RECOMPENSA_N").Replace("[N]", (bloque1.vida / 10).ToString())
@@ -52,6 +56,11 @@ namespace Bounds.Duelo {
 				billetera.GanarOro(bloque1.vida / 10);
 			}
 			else {
+				BloqueJugador bloque2 = BloqueJugador.getInstancia("BloqueJugador" + 2);
+				GlobalDuelo.GetInstancia().final_tipo_ganador = "CPU";
+				GlobalDuelo.GetInstancia().final_lp_restante = bloque2.vida;
+				GlobalDuelo.GetInstancia().final_turnos = GameObject.FindAnyObjectByType<EmblemaTurnos>().turnos;
+
 				cuadro.GetComponent<CuadroFinalizarDuelo>().Iniciar(
 					RegistroGlobal.Instancia.proveedorIdioma.GetElemento("RESULTADO_DERROTA"),
 					RegistroGlobal.Instancia.proveedorIdioma.GetElemento("RECOMPENSA_N").Replace("[N]", "100")
