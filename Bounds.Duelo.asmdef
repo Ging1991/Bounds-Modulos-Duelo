@@ -18,9 +18,9 @@
         "Ging1991.Ventanas",
         "Ging1991.Animaciones",
         "Ging1991.Interfaces",
-        "Ging1991.Persistencia"
+        "Ging1991.Persistencia",
+        "Bounds.Duelo.Campo"
     ],
-
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

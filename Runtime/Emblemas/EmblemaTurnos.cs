@@ -14,6 +14,7 @@ using Ging1991.Musica;
 using Ging1991.Interfaces.Salida;
 using Ging1991.Idiomas;
 using Bounds.Sistema;
+using Bounds.Duelo.Campo;
 
 namespace Bounds.Duelo.Emblemas {
 
@@ -28,7 +29,7 @@ namespace Bounds.Duelo.Emblemas {
 		}
 		public Fase fase;
 		public int turnos = 1;
-		public Traduccion contadorTurno;
+		public ContadorTurnos contadorTurno;
 
 
 		public void SetFase(Fase fase) {
@@ -135,7 +136,7 @@ namespace Bounds.Duelo.Emblemas {
 				instanciador.CrearTextoCreciente(RegistroGlobal.Instancia.proveedorIdioma.GetElemento("ES_TU_TURNO"));
 			}
 
-			Traductor.Instancia.Traducir(contadorTurno);
+			contadorTurno.SetTurno(turnos);
 		}
 
 
